@@ -5,6 +5,14 @@ theme = "hugo-theme-yelee"
 Paginate= 8
 Copyright = "All rights reserved - 2018"
 canonifyurls = true
+googleAnalytics = "UA-119892182-1"
+enableRobotsTXT = true
+
+[sitemap]
+  changefreq = "monthly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
 [params]
   disqusShortname = "nicky-chen"
   description = "路在脚下，心向远方"

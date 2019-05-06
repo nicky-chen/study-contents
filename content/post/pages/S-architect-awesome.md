@@ -1,6 +1,13 @@
-title: 技术图谱
-date: 2018-06-17 
 
+---
+title: 技术图谱 
+author: "nicky_chin"
+date: 2018-06-17T11:18:15+08:00
+share: true
+slug: architect
+draft: false
+aliases: [/post/external/teach_pic.html]
+---
 
 <h1>《后端架构师技术图谱》</h1>
 

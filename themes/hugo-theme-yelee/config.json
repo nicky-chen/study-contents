@@ -26,15 +26,15 @@
       },
       {
         "label": "在线工具",
-        "link": "/post/"
+        "link": "/post/external/tools.html"
       },
       {
         "label": "开源项目",
-        "link": "/tags/"
+        "link": "/post/external/open_source.html"
       },
       {
         "label": "技术图谱",
-        "link": "/categories/"
+        "link": "/post/external/teach_pic.html"
       },
       {
         "label": "归档日志",
