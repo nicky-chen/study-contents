@@ -1,0 +1,57 @@
+{
+  "disablePathToLower": false,
+  "params": {
+    "author": "nicky_chin",
+    "title": "南乡清水",
+    "subtitle": "I can accept failure,but I can't accept not trying",
+    "root_url": "/",
+    "avatar": "img/avatar.png",
+    "tagcloud": true,
+    "aboutme": "大家好，我叫 陈星，来自杭州。平时喜欢打打球，看看书。 我的人生格言：机会是留给有准备的人的，厚积薄发总归会有收获，沉下心来做事情, 才能一往无前......",
+    "friends": {
+      "阿里中间件团队博客": "http://jm.taobao.org/",
+      "alibaba开源项目": "https://github.com/alibaba",
+      "google开源项目":"https://github.com/google"
+    },
+    "subnav": {
+      "Email": "mailto:shuilianpiying@163.com",
+      "GitHub": "https://github.com/nicky-chen",
+      "stackoverflow":"https://stackoverflow.com/users/7444060/nicky-chen",
+      "简书":"https://www.jianshu.com/u/c44ed4847c3d"
+    },
+    "menu": [
+      {
+        "label": "主页",
+        "link": "/"
+      },
+      {
+        "label": "在线工具",
+        "link": "/post/"
+      },
+      {
+        "label": "开源项目",
+        "link": "/tags/"
+      },
+      {
+        "label": "技术图谱",
+        "link": "/categories/"
+      },
+      {
+        "label": "归档日志",
+        "link": "/post/"
+      }
+    ],
+    "visit_counter": {
+      "on": true,
+      "site_visit": "本站到访数",
+      "page_visit": "本页阅读量"
+    },
+    "jquery_ui": false,
+    "mathjax": false,
+    "background_image": 5,
+    "google_analytics": "",
+    "fancybox": true,
+    "open_in_new": true,
+    "animate": true
+  }
+}

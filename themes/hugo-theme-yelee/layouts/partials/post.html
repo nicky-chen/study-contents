@@ -1,0 +1,254 @@
+<article id="post-js-android" class="article article-type-post" itemscope="" itemprop="blogPost">
+
+    <div class="article-meta">
+        <a href="{{ .Permalink }}" class="article-date">
+            <time datetime="{{.Date}}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
+        </a>
+    </div>
+
+    <div class="article-inner">
+        {{ if $.Site.Params.fancybox}}
+        <input type="hidden" class="isFancy">
+        {{ end }}
+
+        <header class="article-header">
+
+
+            <h1 class="article-title" itemprop="name">
+                <a class="article-title" href="{{ .Permalink }}">{{ .Title }}</a>
+            </h1>
+
+
+        </header>
+
+        <div class="article-info article-info-post">
+
+            {{ if .Params.categories }}
+            <div class="article-category tagcloud">
+                {{ range .Params.categories }}
+                <a class="article-category-link" href="/categories/{{.|lower}}/" style="font-size: 12px;">{{.}}</a>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            {{ if .Params.tags }}
+            <div class="article-tag tagcloud">
+                <ul class="article-tag-list">
+                    {{ range .Params.tags }}
+                    <li class="article-tag-list-item">
+                        <a class="article-tag-list-link color1" href="/tags/{{.|lower}}/"
+                           style="font-size: 12px;">{{.}}</a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="article-entry" itemprop="articleBody">
+
+            {{.Content}}
+
+        </div>
+
+    </div>
+
+    {{ if eq .Type "post" }}
+    <nav id="article-nav">
+
+        {{ with .NextInSection }}
+        <div id="article-nav-newer" class="article-nav-title">
+            <a href="{{.RelPermalink}}">
+                {{.Title}}
+            </a>
+        </div>
+        {{ else }}
+        {{ end }}
+
+        {{ with .PrevInSection }}
+        <div id="article-nav-older" class="article-nav-title">
+            <a href="{{.RelPermalink}}">
+                {{.Title}}
+            </a>
+        </div>
+        {{ else }}
+        {{ end }}
+
+    </nav>
+    {{ end }}
+
+
+</article>
+
+<div id="toc" class="toc-article" >
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc">
+        {{ .TableOfContents }}
+    </ol>
+</div>
+<style>
+    {{ if eq .Type "post" }}
+    .left-col .switch-btn {
+        display: none;
+    }
+
+    .left-col .switch-area {
+        display: none;
+    }
+    {{ else }}
+
+    #tocButton{
+        display: none;
+    }
+    #toc{
+        display: none;
+    }
+
+    {{ end }}
+
+
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录" >
+
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function () {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    // if ($(".toc").length < 1) {
+    //     $("#toc, #tocButton").show();
+    //     $(".switch-btn, .switch-area").hide();
+        // $(".switch-btn, .switch-area").show();
+    // }
+</script>
+
+
+<div class="share">
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a>
+        <a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+    </div>
+    <script>
+        window._bd_share_config = {
+            "common": {
+                "bdSnsKey": {},
+                "bdText": "",
+                "bdMini": "2",
+                "bdMiniList": false,
+                "bdPic": "",
+                "bdStyle": "0",
+                "bdSize": "24"
+            }, "share": {}
+        };
+        with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = '//bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+</div>
+
+
+<!--放评论模块-->
+{{ if $.Site.Params.disqusShortname }}
+<div style="margin-left: 30px;margin-right: 30px;background: white;padding-left: 30px;padding-right: 30px">
+    <div class="comments">
+        <h3>文章评论</h3>
+        <script type="text/javascript">
+            (function() {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://nicky-chen.disqus.com/embed.js';
+                dsq.setAttribute('data-timestamp', +new Date());
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <div id="disqus_thread"></div>
+
+    </div>
+</div>
+
+{{ end }}
+
+<!--评论模块结束-->
+
+
+{{ if eq .Type "post" }}
+<div class="scroll" id="post-nav-button">
+
+    {{ with .NextInSection }}
+    <a href="{{.RelPermalink}}" title="上一篇: {{.Title}}">
+        <i class="fa fa-angle-left"></i>
+    </a>
+    {{ else }}
+    <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+    {{ end }}
+
+
+    <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+
+    {{ with .PrevInSection }}
+    <a href="{{.RelPermalink}}" title="下一篇: {{.Title}}">
+        <i class="fa fa-angle-right"></i>
+    </a>
+    {{ else }}
+    {{ end }}
+
+</div>
+{{ end }}
+
+<ul class="post-list toc-article">
+    <!--{{/* range where (where $.Site.Pages.ByDate.Reverse "Section" "post") "IsNode" false */}}-->
+    {{ range where (where .Site.Pages "Type" "post").ByDate.Reverse "Kind" "page" }}
+    <li class="post-list-item"><a class="post-list-link" href="{{.RelPermalink}}" target="_blank">{{ .Title }}</a></li>
+    {{ end }}
+</ul>
+
+<script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    $(".post-list").addClass("toc-article");
+    $(".post-list-item a").attr("target", "_blank");
+    $("#post-nav-button > a:nth-child(2)").click(function () {
+        $(".fa-bars, .fa-times").toggle();
+        $(".post-list").toggle(300);
+        if ($(".toc").length > 0) {
+            $("#toc, #tocButton").toggle(200, function () {
+                if ($(".switch-area").is(":visible")) {
+                    $("#toc, .switch-btn, .switch-area").toggle();
+                    $("#tocButton").attr("value", valueHide);
+                }
+            })
+        }
+        else {
+            $(".switch-btn, .switch-area").fadeToggle(300);
+        }
+    })
+</script>
+
+
+<script>
+
+</script>
+
