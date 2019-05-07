@@ -1,8 +1,17 @@
-Title: JNDI知识摘要
-Date: 2018-06-25 20:01
-Tags: 框架基础
-Category: java-base
-Slug: jndi-introdution
+
+
+---
+title: JNDI知识摘要
+date: 2018-06-25T11:18:15+08:00
+weight: 70
+slug: jndi-introdution
+tags: ["基础"]
+categories: ["java-base"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
@@ -29,7 +38,6 @@ Javax.naming.spi：这个包提供了一个方法，通过javax.naming和有关�
 
 引入依赖
 ```
-:::java
         <dependency>
             <groupId>com.sun.messaging.mq</groupId>
             <artifactId>fscontext</artifactId>
@@ -45,7 +53,6 @@ Javax.naming.spi：这个包提供了一个方法，通过javax.naming和有关�
 ```
 文件操作实例
 ```
-:::java
    public static void main(String[] args) throws NamingException {
         Hashtable<String,String> env = new Hashtable<>();
         //指明初始化的factory是我们下载的jar包中的RefFSContextFactory
@@ -71,5 +78,5 @@ Javax.naming.spi：这个包提供了一个方法，通过javax.naming和有关�
     }
 ```
 
-#Reference
+# Reference
 具体使用方式可参考：[JNDI简介与SPI实现](http://shift-alt-ctrl.iteye.com/blog/1971329)

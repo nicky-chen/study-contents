@@ -1,8 +1,16 @@
-Title: ClassLoader类加载分析（一）
-Date: 2018-03-08 21:15
-Tags: 源码
-Category: Classloader
-Slug: classloader-chapter01
+
+---
+title: ClassLoader类加载分析（一）
+date: 2018-03-08T11:18:15+08:00
+weight: 70
+slug: classloader-chapter01
+tags: ["源码"]
+categories: ["Classloader"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 

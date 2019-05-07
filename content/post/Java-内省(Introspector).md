@@ -1,13 +1,17 @@
-Title: Java 内省(Introspector)
-Date: 2018-03-13 15:15
-Tags: 基础
-Category: java-base
-Slug: introspector
 
 
-
-
-
+---
+title: Java 内省(Introspector)
+date: 2018-03-13T11:18:15+08:00
+weight: 70
+slug: introspector
+tags: ["基础"]
+categories: ["java-base"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 

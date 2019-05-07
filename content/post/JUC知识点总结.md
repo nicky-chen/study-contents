@@ -1,10 +1,16 @@
-Title: JUC知识点总结
-Date: 2018-05-13 20:16
-Tags: 思维导图
-Category: concurrent
-Slug: juc-tree-info
 
-
+---
+title: JUC知识点总结
+date: 2018-05-13T11:18:15+08:00
+weight: 70
+slug: juc-tree-info
+tags: ["思维导图"]
+categories: ["concurrent"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 

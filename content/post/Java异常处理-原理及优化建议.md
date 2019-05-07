@@ -1,9 +1,17 @@
-Title: Java异常处理-原理及优化建议
-Date: 2018-04-17 19:00
-Tags: 基础
-Category: java-base
-Slug: exception-introduce
 
+
+---
+title: Java异常处理-原理及优化建议
+date: 2018-04-17T11:18:15+08:00
+weight: 70
+slug: exception-introduce
+tags: ["基础"]
+categories: ["java-base"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 # 1 异常层次结构
@@ -776,7 +784,7 @@ java.lang.IllegalArgumentException: incorrect argument passed
 
 我们可以清晰的定位在哪个流程中函数调用出现了异常
 
-#Reference
+# Reference
 [Java Exception Handling](http://tutorials.jenkov.com/java-exception-handling/index.html)
 [JVM 对 Java 异常的处理原理](https://unmi.cc/jvm-java-handle-try-catch/)
 [JAVA异常处理](http://ifeve.com/java-exception/)

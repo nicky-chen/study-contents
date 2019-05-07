@@ -1,9 +1,17 @@
-Title: Java反射优化之方法句柄
-Date: 2018-08-22 21:11
-Tags: 基础
-Category: java-base
-Slug: java-methodHandler
 
+
+---
+title: Java反射优化之方法句柄
+date: 2018-08-22T11:18:15+08:00
+weight: 70
+slug: java-methodHandler
+tags: ["基础"]
+categories: ["java-base"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 # 1 简介
@@ -24,7 +32,6 @@ java7中为间接调用方法引入了新的api，即 **方法句柄**
 
 ### 2.1 demo测试
 ```
-:::java
 public class MethodHandleDemo {
     
     public static void main(String[] args) throws Throwable{
@@ -78,7 +85,7 @@ class Test {
 ### 2.3 效率比较
 
 ```
-:::java
+
  //12244 12893 12434 12647 12473
     public void testReflect() throws Exception{
         Test test = new Test();

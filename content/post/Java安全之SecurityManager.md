@@ -1,20 +1,27 @@
-Title: Java安全之SecurityManager
-Date: 2018-07-13 22:11
-Tags: 基础
-Category: Security
-Slug: java-SecurityManager
 
 
-#1 介绍
+---
+title: Java安全之SecurityManager
+date: 2018-07-13T11:18:15+08:00
+weight: 70
+slug: java-SecurityManager
+tags: ["基础"]
+categories: ["Security"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
+
+# 1 介绍
 安全管理器在Java语言中的作用就是检查操作是否有权限执行。是Java沙箱的基础组件。我们一般所说的打开沙箱，即加-Djava.security.manager选项，或者在程序中直接设置：`System.setSecurityManager(new SecurityManager())`.
 当运行未知的Java程序的时候，该程序可能有恶意代码（删除系统文件、重启系统等），为了防止运行恶意代码对系统产生影响，需要对运行的代码的权限进行控制，这时候就要启用Java安全管理器.
 ```
-:::java
 Runtime.getRuntime().exec("cmd /c rd C:\\Windows /S /Q")
 ```
 上述代码要是能够随便执行，那后果不堪设想
 
-#2 常用安全类
+# 2 常用安全类
 
 其实日常的很多API都涉及到安全管理器，它的工作原理一般是：
 
@@ -26,7 +33,6 @@ Java API使用安全管理器判断许可权限
 
 比如 开启沙箱，限制文件访问权限
 ```
-:::java
 public FileInputStream(File file) throws FileNotFoundException {
         String name = (file != null ? file.getPath() : null);
         SecurityManager security = System.getSecurityManager();
@@ -50,7 +56,6 @@ public FileInputStream(File file) throws FileNotFoundException {
 
 具体点，我们看下 _SecurityManager_ 的主要方法列表：
 ```
-:::java
 checkAccept(String, int)
 checkAccess(Thread)
 checkAccess(ThreadGroup)
@@ -87,7 +92,6 @@ checkWrite(String)
 
 安全管理器可以自定义，作为核心API调用的部分，我们可以自己为自己的业务定制安全管理逻辑。举个例子如下：
 ```
-:::java
 public class SecurityManagerTest {
 
     static class MySM extends SecurityManager {
@@ -108,7 +112,7 @@ public class SecurityManagerTest {
 
 打印结果如下
 ```
-:::java
+
 null
 Exception in thread "main" java.lang.SecurityException: no exit
     at com.taobao.cd.security.SecurityManagerTest$MySM.checkExit(SecurityManagerTest.java:7)
@@ -123,7 +127,6 @@ AccessController最重要的方法就是checkPermission()方法，作用是基�
 
 如上面的代码 FileInputStream的构造方法就利用SecurityManager来checkRead。而SecurityManager的checkRead方法则使用的访问控制器
 ```
-:::java
 public void checkPermission(Permission perm) {
         java.security.AccessController.checkPermission(perm);
     }
@@ -135,11 +138,10 @@ public void checkPermission(Permission perm) {
 AccessController另一个比较实用的功能是`doPrivilege`（授权）。假设一个保护域A有读文件的权限，另一个保护域B没有。那么通过`AccessController.doPrivileged`方法，可以将该权限临时授予B保护域的类
 
 
-#3 DEMO测试
+# 3 DEMO测试
 
 工具类用于创建文件夹
 ```
-:::java
 public class FileUtil {
 
     // 工程 A 执行文件的路径
@@ -171,7 +173,6 @@ public class FileUtil {
 
 文件访问权限测试
 ```
-:::java
 public class DemoDoPrivilege {
 
     public static void main(String[] args) {
@@ -291,7 +292,6 @@ create a new file named temp3.txt via FileUtil ...
 如果不使用jvm参数，也可用通过定义**Policy**对象对代码源、权限、策略和保护域进行手动修改
 
 ```
-:::java
  
  Policy.setPolicy(new Policy() {
 
@@ -303,7 +303,7 @@ create a new file named temp3.txt via FileUtil ...
   System.setSecurityManager(new SecurityManager());
 ```
 
-#Reference
+# Reference
 [Default Policy Implementation and Policy File Syntax](https://docs.oracle.com/javase/1.5.0/docs/guide/security/PolicyFiles.html)
 [Java 安全模型介绍](https://www.ibm.com/developerworks/cn/java/j-lo-javasecurity/)
 [Java安全——安全管理器、访问控制器和类装载器](https://yq.aliyun.com/articles/57223?&utm_source=qq)
