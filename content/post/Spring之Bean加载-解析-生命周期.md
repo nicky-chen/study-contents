@@ -1,18 +1,26 @@
-Title: Spring之Bean加载-解析-生命周期
-Date: 2018-08-12 19:31
-Tags: spring-base
-Category: spring
-Slug: spring-bean-lifecycle
+
+---
+title: Spring之Bean加载-解析-生命周期
+date: 2018-08-12T11:18:15+08:00
+weight: 70
+slug: spring-bean-lifecycle
+tags: ["spring-base"]
+categories: ["spring"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
-#1 概要
+# 1 概要
 使用Spring框架，我们需要了解Bean的创建加载过程，需要熟悉Bean是如何获取和使用的。
 下面我们通过分析下Spring加载XML文件的过程来分析Bean的数据流。
 当前调试的Spring 版本是最新的  _4.1.0 release_  版本
 
 **调试代码主入口**
 ```
-:::java
+
  ApplicationContext context = new ClassPathXmlApplicationContext("consumer.xml");
         System.out.println("Consumer Started");
         ConsumerBean bean = context.getBean(ConsumerBean.class);
@@ -21,11 +29,11 @@ Slug: spring-bean-lifecycle
 ```
 
 
-#2 解析过程
+# 2 解析过程
 
 创建 **ClassPathXmlApplicationContext**对象，会调用`refresh()`方法
 ```
-:::java
+
 public void refresh() throws BeansException, IllegalStateException {
 		synchronized (this.startupShutdownMonitor) {
 			// Prepare this context for refreshing.
@@ -50,7 +58,7 @@ public void refresh() throws BeansException, IllegalStateException {
 之后会进入**AbstractApplicationContext**对象，处理如下方法：
 
 ```
-:::java
+
 protected ConfigurableListableBeanFactory obtainFreshBeanFactory() {
 //初始化DefaultListableBeanFactory对象和DefaultSingletonBeanRegistry对象
 		refreshBeanFactory(); 
@@ -67,7 +75,7 @@ protected ConfigurableListableBeanFactory obtainFreshBeanFactory() {
 **getBeanFactory() --> loadBeanDefinitions(beanFactory)**
 
 ```
-:::java
+
 protected void loadBeanDefinitions(DefaultListableBeanFactory beanFactory) throws BeansException, IOException {
 		//创建XmlBeanDefinitionReader对象用于解析xml
 		XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReader(beanFactory);
@@ -88,7 +96,7 @@ protected void loadBeanDefinitions(DefaultListableBeanFactory beanFactory) throw
 
 最终会进入`loadBeanDefinitions()`方法，来载入xml
 ```
-:::java
+
 public int loadBeanDefinitions(EncodedResource encodedResource) throws BeanDefinitionStoreException {
 		Assert.notNull(encodedResource, "EncodedResource must not be null");
 		if (logger.isInfoEnabled()) {
@@ -135,7 +143,7 @@ public int loadBeanDefinitions(EncodedResource encodedResource) throws BeanDefin
 
 解析XML文件内容，得到一个Document对象
 ```
-:::java
+
 protected int doLoadBeanDefinitions(InputSource inputSource, Resource resource)
 			throws BeanDefinitionStoreException {
 		try {
@@ -150,7 +158,7 @@ protected int doLoadBeanDefinitions(InputSource inputSource, Resource resource)
 
 封装成BeanDefinition对象过程
 ```
-:::java
+
 public int registerBeanDefinitions(Document doc, Resource resource) throws BeanDefinitionStoreException {
 		BeanDefinitionDocumentReader documentReader = createBeanDefinitionDocumentReader();
 		documentReader.setEnvironment(this.getEnvironment());
@@ -172,7 +180,7 @@ public void registerBeanDefinitions(Document doc, XmlReaderContext readerContext
 最终处理的方法
 
 ```
-:::java
+
 public void registerBeanDefinition(String beanName, BeanDefinition beanDefinition)
 			throws BeanDefinitionStoreException {
 
@@ -219,7 +227,7 @@ public void registerBeanDefinition(String beanName, BeanDefinition beanDefinitio
 
 在执行`invokeBeanFactoryPostProcessors(beanFactory)`方法和`finishBeanFactoryInitialization(beanFactory)`方法的时候，会将beanDefinitionMap中的信息实例化具体bean对象，其主要过程如下：
 ```
-:::java
+
 public void preInstantiateSingletons() throws BeansException {
 		if (this.logger.isDebugEnabled()) {
 			this.logger.debug("Pre-instantiating singletons in " + this);
@@ -247,7 +255,7 @@ public void preInstantiateSingletons() throws BeansException {
 
 缓存Bean的过程
 ```
-:::java
+
 	protected void addSingleton(String beanName, Object singletonObject) {
 		synchronized (this.singletonObjects) {
 			this.singletonObjects.put(beanName, (singletonObject != null ? singletonObject : NULL_OBJECT));
@@ -260,12 +268,12 @@ public void preInstantiateSingletons() throws BeansException {
 在 DefaultSingletonBeanRegistry中`private final Map<String, Object> singletonObjects`属性中缓存bean对象
 
 
-#3 获取Bean
+# 3 获取Bean
 
 方法调用链如下：
 **getBeanFactory().getBean(requiredType)   -->   doGetBean(name, requiredType, args, false)    -->   Object sharedInstance = getSingleton(beanName)**
 ```
-:::java
+
 protected Object getSingleton(String beanName, boolean allowEarlyReference) {
 		Object singletonObject = this.singletonObjects.get(beanName);
 		if (singletonObject == null && isSingletonCurrentlyInCreation(beanName)) {
@@ -296,7 +304,7 @@ Spring Bean 的生命周期状态图如下：
 Spring Bean存活于容器之中，如果需要知道Bean的beanName，即可让该bean的类实现BeanNameAware接口
 
 ```
-:::java
+
 class UserBean implements BeanNameAware{
 
     private String name;
@@ -318,7 +326,7 @@ consumer.xml中注入bean
 ```
 运行代码
 ```
-:::java
+
 ApplicationContext context = new ClassPathXmlApplicationContext("consumer.xml");
         UserBean userBean = context.getBean(UserBean.class);
         System.out.println(userBean.getName());
@@ -458,6 +466,6 @@ public class SpringBootTest implements DisposableBean{
 ```
 该方法会在自定义销毁方法前调用
 
-#Reference
+# Reference
 
 [Life Cycle Management of a Spring Bean](https://link.jianshu.com/?t=http://www.javabeat.net/life-cycle-management-of-a-spring-bean/)

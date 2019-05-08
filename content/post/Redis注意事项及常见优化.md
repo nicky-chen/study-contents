@@ -1,11 +1,18 @@
-Title: Redis注意事项及常见优化
-Date: 2018-08-07 19:01
-Tags: redis
-Category: cache
-Slug: cache-redis-optimize
 
+---
+title: Redis注意事项及常见优化
+date: 2018-08-07T11:18:15+08:00
+weight: 70
+slug: cache-redis-optimize
+tags: ["redis"]
+categories: ["cache"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
-#1 键值设计
+# 1 键值设计
 #### 1.1  key名设计
 
 *   (1)【建议】: 可读性和可管理性
@@ -108,7 +115,7 @@ Redis的事务功能较弱(不支持回滚)，而且集群版本(自研和官方
 
 7.【建议】必要情况下使用monitor命令时，要注意不要长时间使用,否则内出会飙高
 
-#3 配置属性优化
+# 3 配置属性优化
 
 *maxclients*
 限制同时连接的客户数量。当连接数超过这个值时， redis 将不再接收其他连接请求，客户端尝试连接时将收到 error 信息。特殊值"0"表示没有限制。
@@ -137,7 +144,7 @@ config set client-output-buffer-limit ‘slave 256mb 64mb 60’
 6、noeviction ： 永不过期，返回错误
 
 
-#4 集群批量操作优化
+# 4 集群批量操作优化
 
 首先要知道一个概念叫**缓存无底洞问题**，该问题由 facebook 的工作人员提出的， facebook 在 2010 年左右，memcached 节点就已经达3000 个，缓存数千 G 内容。他们发现了一个问题---memcached 连接频率，效率下降了，于是加 memcached 节点，添加了后，发现因为连接频率导致的问题，仍然存在，并没有好转，称之为”无底洞现象”。
 
@@ -164,7 +171,7 @@ redis引入cluster模式后，批量获取操作mget也面临同样的问题。r
 
 ①串行命令：由于n个key是比较均匀地分布在Redis Cluster的各个节点上，因此无法使用mget命令一次性获取，所以通常来讲要获取n个key的值，最简单的方法就是逐次执行n个get命令，这种操作时间复杂度较高，它的操作时间=n次网络时间+n次命令时间，网络次数是n。很显然这种方案不是最优的，但是实现起来比较简单。
 ```
-:::java
+
 List<string> serialMGet (List<String> keys) { 
 //结果集
 List<string> values - new ArrayList<String>();
@@ -177,7 +184,7 @@ return values;
 
 ②串行IO：Redis Cluster使用CRC16算法计算出散列值，再取对16383的余数就可以算出slot值，同时Smart客户端会保存slot和节点的对应关系，有了这两个数据就可以将属于同一个节点的key进行归档，得到每个节点的key子列表，之后对每个节点执行mget或者Pipeline操作，它的操作时间=node次网络时间+n次命令时间，网络次数是node的个数，整个过程如下图所示，很明显这种方案比第一种要好很多，但是如果节点数太多，还是有一定的性能问题。
 ```
-:::java
+
 Map<String, String> serialIOMget (List<String> keys) {
 
         //结果集
@@ -230,7 +237,7 @@ Map<String, String> serialIOMget (List<String> keys) {
 
 
 
-#其他工具及优化
+# 其他工具及优化
 *  **数据同步**
 
 redis间数据同步可以使用：redis-port
@@ -249,6 +256,6 @@ redis间数据同步可以使用：redis-port
 [JedisPool资源池优化](https://yq.aliyun.com/articles/236383)
 
 
-#Reference
+# Reference
 数据库技术丛书 REDIS开发与运维
 [阿里云Redis开发规范](https://yq.aliyun.com/articles/531067)

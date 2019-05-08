@@ -1,20 +1,27 @@
-Title: synchronized实现原理及锁优化
-Date: 2018-05-14 19:16
-Tags: 锁优化
-Category: concurrent
-Slug: synchronized-principle
+
+
+---
+title: synchronized实现原理及锁优化
+date: 2018-05-14T11:18:15+08:00
+weight: 70
+slug: synchronized-principle
+tags: ["锁优化"]
+categories: ["concurrent"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
-
-
-#1.引言
+# 1.引言
 并发编程中synchronized是重量级锁，但随着JVM1.6对synchronized进行优化后，有些情况下它并不那么重，本文介绍了Java SE1.6中为了减少获得锁和释放锁带来的性能消耗而引入的偏向锁和轻量级锁，以及锁的存储结构和升级过程。
 
-#2.术语定义
+# 2.术语定义
 **CAS(Compare and Swap):**	比较并交换。用于在硬件层面上提供原子性操作。在 Intel 处理器中，比较并交换通过指令cmpxchg实现。比较是否和给定的数值一致，如果一致则修改，不一致则不修改。
 
-#3.同步的基础
+# 3.同步的基础
 Java中的每一个对象都可以作为锁。
 对于同步方法，锁是当前实例对象。
 对于静态同步方法，锁是当前对象的Class对象。
@@ -117,7 +124,7 @@ public static synchronized void divide();
 
 当一个线程访问同步代码块时，根据happens-before原则，它必须获取锁才能进入代码块，退出或抛出异常时必须释放锁。那么锁存在哪里？锁里面会存储什么信息？
 
-#4. 同步的原理
+# 4. 同步的原理
 **4.1 Java对象头**
 HotSpot虚拟机中，对象在内存中存储分为三块区域：对象头、实例数据和对齐填充 
 HotSpot虚拟机的对象头(Object Header)包括两部分信息:
@@ -181,7 +188,7 @@ ObjectMonitor对象中有两个队列：_WaitSet 和 _EntryList，用来保存Ob
 ![monitor](https://upload-images.jianshu.io/upload_images/10175660-d31da0ecab6cd54c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#5. JVM中锁的优化
+# 5. JVM中锁的优化
 
 **5.1 锁机制升级流程**
 偏向锁--》轻量级锁--》重量级锁
@@ -332,7 +339,7 @@ public class LockCoarsening {
 **5.7 适应性自旋**
 当前锁处于膨胀，会进行自旋。自旋是需要消耗CPU的，如果一直获取不到锁的话，那线程一直处在自旋状态，消耗CPU资源。为了解决这个问题JDK采用—**适应性自旋**，线程如果自旋成功了，则下次自旋的次数会更多，如果自旋失败了，则自旋的次数就会减少。另外自旋虽然会占用CPU资源，但不会一直占用CPU资源，每隔一段时间会通过**os::NakedYield方法**放弃CPU资源，或通过**park方法**挂起；如果其他线程完成锁的膨胀操作，则退出自旋并返回
 
-#Reference
+# Reference
 [并发编程网-Java SE1.6中的synchronized](http://ifeve.com/java-synchronized/)
 [JVM源码分析之synchronized实现](http://www.jianshu.com/p/c5058b6fe8e5)
 [Implementing Fast Java Monitors with Relaxed-Locks](https://www.usenix.org/legacy/event/jvm01/full_papers/dice/dice.pdf)

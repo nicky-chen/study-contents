@@ -1,8 +1,17 @@
-Title: Spring之动手实现IOC功能
-Date: 2018-08-16 20:31
-Tags: spring-base
-Category: spring
-Slug: spring-bean-IOC
+
+
+---
+title: Spring之动手实现IOC功能
+date: 2018-08-16T11:18:15+08:00
+weight: 70
+slug: spring-bean-IOC
+tags: ["spring-base"]
+categories: ["spring"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
@@ -27,7 +36,6 @@ DI，**Dependency Injection**，即依赖注入。具体含义表示组件之间
 
 user.xml
 ```
-:::java
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
     <bean id="studentA" class="iockids.xml.Student" scope="singleton">
@@ -45,7 +53,6 @@ user.xml
 
 Student对象
 ```
-:::java
 @Data
 public class Student {
 
@@ -59,7 +66,6 @@ public class Student {
 ```
 
 ```
-:::java
  /**
      * 单例对象容器
      */
@@ -243,7 +249,7 @@ public class Student {
 
 测试
 ```
-:::java
+
 public class SpringBeanTest {
 
     public static void main(String[] args) {
@@ -295,7 +301,6 @@ Student(name=nicky, age=22, address=ningbo)---是否是单例：false
 为了更贴合实际，我们创建Spring中使用的自定义注解即如下代码：
 
 ```
-:::java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Component {
@@ -326,7 +331,6 @@ public @interface Autowired {
 
 枚举类标识是单例和是原型
 ```
-:::java
 public enum SCOPE {
     SINGLETON,
     PROTOTYPE;
@@ -335,7 +339,6 @@ public enum SCOPE {
 
 注解方式标记需要注入的Bean
 ```
-:::java
 @Component(scope = SCOPE.SINGLETON, value = "studentA")
 @ToString
 public class Student {
@@ -371,7 +374,6 @@ class User {
 
 Bean上下文
 ```
-:::java
 public class ApplicationContext {
 
     /**
@@ -561,7 +563,6 @@ public class ApplicationContext {
 
 测试
 ```
-:::java
 public class SpringBeanTest {
 
     public static void main(String[] args) {
@@ -586,7 +587,7 @@ Student(name=nana, age=22, address=hangzhou)对象是否是单例： true
 ```
 通过注解方式创建Bean成功
 
-#3 IOC
+# 3 IOC
 
 IoC即 **控制反转**， 是一种思想，一个重要的面向对象编程的法则，它能指导我们如何设计出松耦合、更优良的程序。传统应用程序都是由我们在类内部主动创建依赖对象，从而导致类与类之间高耦合，难于测试；有了IoC容器后，把创建和查找依赖对象的控制权交给了容器，由容器进行注入组合对象，所以对象与对象之间是松散耦合，这样也方便测试，利于功能复用，更重要的是使得程序的整个体系结构变得非常灵活。
 
@@ -596,7 +597,6 @@ IoC很好的体现了面向对象设计法则之一—— 好莱坞法则：“�
 
 Bean对象
 ```
-:::java
 @Component(scope=SCOPE.PROTOTYPE)
 @Data
 public class Teacher {
@@ -617,7 +617,6 @@ public class Teacher {
 
 业务层
 ```
-:::java
 @Component
 public class UserService {
 
@@ -637,7 +636,6 @@ public class UserService {
 
 编写测试类
 ```
-:::java
 public class SpringJunitTest extends TestCase {
 
 

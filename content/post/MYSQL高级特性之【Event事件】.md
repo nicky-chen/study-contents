@@ -1,8 +1,17 @@
-Title: MYSQL高级特性之【Event事件】
-Date: 2018-04-28 20:18
-Tags: 基础
-Category: MySql
-Slug: high-event
+
+
+---
+title: MYSQL高级特性之【Event事件】
+date: 2018-04-28T11:18:15+08:00
+weight: 70
+slug: high-event
+tags: ["基础"]
+categories: ["MySql"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 **一、基本概念** mysql5.1版本开始引进event概念。event既“时间触发器”，与triggers的事件触发不同，event类似与linux crontab计划任务，用于时间触发。通过单独或调用存储过程使用，在某一特定的时间点，触发相关的SQL语句或存储过程。

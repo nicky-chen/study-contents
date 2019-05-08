@@ -1,13 +1,18 @@
-Title: volatile关键字原理实现及应用
-Date: 2018-05-04 22:46
-Tags: 基础
-Category: concurrent
-Slug: volatile-feature
 
+---
+title: volatile关键字原理实现及应用
+date: 2018-05-04T11:18:15+08:00
+weight: 70
+slug: volatile-feature
+tags: ["锁优化"]
+categories: ["concurrent"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
-
-
-#1.并发编程中的三个概念
+# 1.并发编程中的三个概念
 
 在并发编程中, 需要了解线程的三个概念：原子性，可见性，有序性：
 
@@ -102,8 +107,8 @@ doSomethingwithconfig(context);
 　　也就是说，要想并发程序正确地执行，必须要保证原子性、可见性以及有序性。只要有一个没有被保证，就有可能会导致程序运行不正确。
 
 
-#2.volatile作用
- ###2.1 防止重排序
+# 2.volatile作用
+### 2.1 防止重排序
 从双重检查加锁（DCL)看指令重排序问题。
 
 我们先看不加volatile的单例
@@ -156,7 +161,7 @@ public static Singleton getInstance()
 ```
 volatile根据jsr133规范,它可以禁止编译器对初始化instance对象的重排序，从而保证了创建对象的流程以及可见性
 
-###2.2 可见性
+### 2.2 可见性
 可见性问题主要指一个线程修改了共享变量值，而另一个线程却看不到。引起可见性问题的主要原因是每个线程拥有自己的一个高速缓存区——线程工作内存。volatile关键字能有效的解决这个问题，我们看下下面的例子，就可以知道其作用：
 
 ```
@@ -253,7 +258,7 @@ person-[2]-- lock = false
 person-[0]-- lock = false
 ```
 
-###2.3 原子性
+### 2.3 原子性
 　关于原子性的问题，volatile只能保证对单次读/写的原子性。这个问题可以看下JLS中的描述：
 ```
 volatile只能保证可见性不能保证原子性，但用volatile修饰long和double可以保证其操作原子性。因为
@@ -262,8 +267,8 @@ long和double两种数据类型的操作可分为高32位和低32位两部分，
 况下对long和double的单次读/写操作都具有原子性。
 ```
 
-#3. volatile关键字原理
-###3.1 内存模型语义层面原理
+# 3. volatile关键字原理
+### 3.1 内存模型语义层面原理
 
 　　**1、可见性实现：**
 
@@ -298,7 +303,7 @@ long和double两种数据类型的操作可分为高32位和低32位两部分，
 
 
 
-###3.2 cpu层面原理
+### 3.2 cpu层面原理
 
 在了解volatile实现原理之前，我们先来看下与其实现原理相关的CPU术语与说明。表2-1
 是CPU术语的定义。
@@ -324,7 +329,7 @@ instance = new Singleton(); // instance是volatile变量
 
 为了提高处理速度，处理器不直接和内存进行通信，而是先将系统内存的数据读到内部缓存（L1，L2或其他）后再进行操作，但操作完不知道何时会写到内存。如果对声明了volatile的变量进行写操作，JVM就会向处理器发送一条Lock前缀的指令，将这个变量所在缓存行的数据写回到系统内存。但是，就算写回到内存，如果其他处理器缓存的值还是旧的，再执行计算操作就会有问题。所以，在多处理器下，为了保证各个处理器的缓存是一致的，就会实现缓存一致性协议，每个处理器通过嗅探在总线上传播的数据来检查自己缓存的值是不是过期了，当处理器发现自己缓存行对应的内存地址被修改，就会将当前处理器的缓存行设置成无效状态，当处理器对这个数据进行修改操作的时候，会重新从系统内存中把数据读到处理器缓存里。
 
-#4. volatile的使用优化
+# 4. volatile的使用优化
 著名的Java并发编程大师Doug lea在JDK 7的并发包里新增一个队列集合类Linked-
 TransferQueue，它在使用volatile变量时，用一种追加字节的方式来优化队列出队和入队的性
 能。LinkedTransferQueue的代码如下。
@@ -352,7 +357,7 @@ private volatile V value;
 
 不懂伪共享可以看这里 ---> [伪共享问题详解](http://ifeve.com/伪共享/)
 
-#5.应用场景
+# 5.应用场景
 下面列举几个Java中使用volatile的几个场景。
 **1.状态标记量***
 
@@ -389,7 +394,7 @@ class Singleton{
 
 ```
 
-#Reference
+# Reference
 1.  深入理解Java虚拟机
 2.  Java并发编程的艺术 - volatile的定义与实现原理
 3.  [Java并发编程：volatile关键字解析](http://www.cnblogs.com/dolphin0520/p/3920373.html)

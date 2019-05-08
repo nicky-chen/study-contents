@@ -1,8 +1,16 @@
-Title:初窥门径之JUnit源码分析
-Date: 2018-07-16 21:58
-Tags: junit
-Category:  Source-code
-Slug: junit-code=analysis
+
+---
+title: 初窥门径之JUnit源码分析
+date: 2018-07-16T11:18:15+08:00
+weight: 70
+slug: junit-code=analysis
+tags: ["junit"]
+categories: ["Source-code"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 #1 源码分析流程
@@ -15,7 +23,7 @@ Slug: junit-code=analysis
 5. 画 **类图 和 时序图**
 6. 复盘
 
-#2 Junit架构详解
+# 2 Junit架构详解
 
 ### 2.1 包功能概述
 
@@ -54,7 +62,6 @@ JUnit的完整生命周期分为3个阶段：_初始化阶段、运行阶段、 
 **测试案例demo**
 
 ```
-:::java
 public class CalculatorTest extends TestCase {
 
 
@@ -120,7 +127,6 @@ public class CalculatorTest extends TestCase {
 通过分析源码，可以看到JUnit的入口点在 `junit.textui.TestRunner 的 main` 方法，在这个方法中，首先创建一个 _TestRunner_  实例 aTestRunner ，然后 main 函数中主体工作函数为 `TestResult r = aTestRunner.start(args) `。此时 TestRunner 实例存在并开始工作。接下来进入 `start()` 方法中：
 
 ```
-:::java
  public static void main(String args[]) {
         TestRunner aTestRunner= new TestRunner();
         try {
@@ -174,7 +180,6 @@ _Test suite= getTest(testCase)_;  该测试组件包含了多个 TestCase测试�
 **进入getTest方法**
 
 ```
-:::java
 /**
 	 * Returns the Test corresponding to the given suite. This is
 	 * 返回对应的测试组件，这是一个模版方法，子类重写两个方法
@@ -213,7 +218,6 @@ _Test suite= getTest(testCase)_;  该测试组件包含了多个 TestCase测试�
 
 为每个测试方法创建 TestCase, 并存入 Vector fTests 向量集合中
 ```
-:::java
  public TestSuite(final Class theClass) {
 		fName= theClass.getName();
 		try {//判断是否有公共的带String参数的构造器或者无参构造器，如果没有打印错误信息
@@ -247,7 +251,6 @@ _Test suite= getTest(testCase)_;  该测试组件包含了多个 TestCase测试�
 最终添加进入 _fTests_ 集合
 
 ```
-:::java
 private void addTestMethod(Method m, Vector names, Class theClass) {
 		String name= m.getName();
 		if (names.contains(name))
@@ -271,7 +274,6 @@ private void addTestMethod(Method m, Vector names, Class theClass) {
 在 TestRunner 中的 `start()` 方法中可以看到开始调用 `doRun(`) 方法开始执行测试
 
 ```
-:::java
 	public TestResult doRun(Test suite, boolean wait) {
 		TestResult result= createTestResult();
 		result.addListener(fPrinter); //增加一个TestRunner的打印监听器
@@ -291,7 +293,6 @@ private void addTestMethod(Method m, Vector names, Class theClass) {
 接下来我们查看run方法，可以看到：
 
 ```
-:::java
 public void run(TestResult result) {
 		for (Enumeration e= tests(); e.hasMoreElements(); ) {//遍历测试方法
 	  		if (result.shouldStop() ) //是否停止继续运行
@@ -305,7 +306,6 @@ public void run(TestResult result) {
 运行具体测试用例方法TestCase,在`runTest(test, result)`方法中
 
 ```
-:::java
 protected void run(final TestCase test) {
 		startTest(test);
 		Protectable p= new Protectable() {
@@ -336,7 +336,6 @@ protected void run(final TestCase test) {
 运行已经完成，日志输出阶段
     
 ```
-:::java
 public void runProtected(final Test test, Protectable p) {
 		try {
 			p.protect();
@@ -363,7 +362,6 @@ protected Vector fListeners;//观察者 监听器列表 TestListener
 控制台最终打印结果
 
 ```
-:::java
 .set up
 testAdd
 3
@@ -390,7 +388,6 @@ Tests run: 4,  Failures: 1,  Errors: 0
 在执行完`testMultiply`方法后，因为断言的预期结果和实际结果不一致，所以首先会打印一个F表示有错误信息，当所有方法执行完，会执行`fPrinter.print(result, runTime)`方法: **同步答应  耗时 异常信息 断言错误信息 统计结果**
 
 ```
-:::java
 	synchronized void print(TestResult result, long runTime) {
 	   printHeader(runTime);
 	    printErrors(result);

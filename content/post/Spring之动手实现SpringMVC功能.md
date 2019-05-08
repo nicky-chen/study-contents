@@ -1,8 +1,16 @@
-Title: Spring之动手实现SpringMVC功能
-Date: 2018-08-25 20:31
-Tags: spring-base
-Category: spring
-Slug: spring-springMvc
+
+---
+title: Spring之动手实现SpringMVC功能
+date: 2018-08-25T11:18:15+08:00
+weight: 70
+slug: spring-springMvc
+tags: ["spring-base"]
+categories: ["spring"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
@@ -58,7 +66,6 @@ FrameworkServlet初始化了WebApplicationContext，DispatcherServlet初始化�
 
 DispatcherServlet初始化方法
 ```
-:::java
 protected void onRefresh(ApplicationContext context) {
 		initStrategies(context);
 	}
@@ -134,7 +141,6 @@ DispatcherServlet是整个Spring MVC的核心。它负责接收HTTP请求组织�
 
 注解
 ```
-:::java
 @Target({ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
@@ -203,7 +209,6 @@ public @interface Service {
 
 IOC方法
 ```
-:::java
 @ComponentScan(basePackages = "com.nicky")
 public class ApplicationContext {
 
@@ -444,7 +449,6 @@ public class UserServiceImpl implements UserService {
 接下来是核心类
 DispatcherServlet
 ```
-:::java
 @NoArgsConstructor
 @Service
 public class DispatcherServlet extends FrameworkServlet {
@@ -566,7 +570,7 @@ public abstract class FrameworkServlet extends HttpServlet {
 之后get请求会进入`doGet`方法,因为考虑到servlet是单例的，所以请求会有并发线程安全问题，所以我们通过**ThreadLocal**去解决，在`processRequest(request, response)`;方法中,最后会调用RequestContextHolder这个类的方法，具体代码如下：
 
 ```
-:::java
+
 public final class RequestContextHolder {
 
     private static final ThreadLocal<ServletRequestAttributes> requestHolder =
@@ -668,7 +672,6 @@ public class NamedThreadLocal<T> extends ThreadLocal<T> {
 当进入`doPost`方法的时候，会通过HandlerAdapter对象来处理具体的请求，通过分析 HandlerMapping 查询，当前请求的地址是否可以分发到已有的controller中，如果没有则，直接向前端页面报错 404，如果有，则通过 HandlerAdapter继续处理
 
 ```
-:::java
 @Service(beanName = "handlerAdapter")
 public class HttpRequestHandlerAdapter implements HandlerAdapter, BeanFactoryAware {
 
@@ -773,7 +776,7 @@ HttpRequestHandlerAdapter为HandlerAdapter的具体实现，它同时实现了Be
 `handle`方法中首先会获取到需要请求的HandlerMapping,它包含了controller的信息，然后对 controller对应路由的方法中所持有的参数做拦截处理即 HandlerMethodArgumentResolver 对象:
 
 ```
-:::java
+
 public interface HandlerMethodArgumentResolver {
     
     boolean supportsParameter(MethodParameter methodParameter);
@@ -911,7 +914,7 @@ public class MethodParameter {
 我们先借用springboot的IOC容器来构建我们的SpringMVC框架
 
 ```
-:::java
+
 @Configuration
 public class ContainerConfig {
 
@@ -940,7 +943,7 @@ public class ContainerConfig {
 当然我们也可以通过springboot基于SPI来实现，通过Servlet3.0的规范来实现
 
 ```
-:::java
+
 public class ServletConfig implements ServletContainerInitializer {
 
     @Override
@@ -965,5 +968,5 @@ public class ServletConfig implements ServletContainerInitializer {
 
 
 
-#Reference
+# Reference
 [【SpringMVC】9大组件概览](https://blog.csdn.net/hu_zhiting/article/details/73648939)

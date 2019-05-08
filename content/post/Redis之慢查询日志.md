@@ -1,8 +1,16 @@
-Title: Redis之慢查询日志
-Date: 2018-08-01 19:01
-Tags: redis
-Category: cache
-Slug: cache-redis-slowlog
+
+---
+title: Redis之慢查询日志
+date: 2018-08-01T11:18:15+08:00
+weight: 70
+slug: cache-redis-slowlog
+tags: ["redis"]
+categories: ["cache"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
@@ -128,5 +136,5 @@ slowlog reset
 
 *   由于慢查询日志是一个先进先出的队列,也就是说如果慢查询比较多的情况下,可能会丢失部分慢查询命令,为了防止这种情况发生,可以定期执行`slowlog get`命令将慢查询日志持久化到其他存储中(例如:`MySQL`、`ElasticSearch`等),然后可以通过可视化工具进行查询.
 
-#Reference
+# Reference
  [Redis高级功能 - 慢查询日志](https://segmentfault.com/a/1190000009915519)

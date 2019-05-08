@@ -1,14 +1,21 @@
-Title: 并发基础之Condition(等待队列)
-Date: 2018-08-09 22:32
-Tags: 多线程
-Category: concurrent
-Slug: aqs-condition
+
+---
+title: 并发基础之Condition(等待队列)
+date: 2018-08-09T11:18:15+08:00
+weight: 70
+slug: aqs-condition
+tags: ["多线程"]
+categories: ["concurrent"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
 
-
-#1 定义
+# 1 定义
 **Condition**是在AQS中配合使用的`wait/nofity`线程通信协调工具类，我们可以称之为**等待队列**
 
 Condition定义了等待/通知两种类型的方法，当前线程调用这些方法时，需要提前获取到Condition对象关联的锁。Condition对象是调用Lock对象的`newCondition()方法`创建出来的，换句话说，Condition是依赖Lock对象。
@@ -20,11 +27,10 @@ conditon的signal 是唤醒等待队列头部的线程节点， Object的notify�
 condition对象的属性对开发者透明
 
 
-#2 Condition使用
+# 2 Condition使用
 
 **demo代码如下**
 ```
-:::java
 public class MyService {
 
     private Lock lock = new ReentrantLock();
@@ -97,7 +103,7 @@ B
 锁释放了
 ```
 
-####2.1 等待队列信息
+#### 2.1 等待队列信息
 
 **方法说明**
 
@@ -106,11 +112,10 @@ B
 
 获取一个Condition必须通过Lock的·newCondition()·方法。下面通过一个有界队列的示例来深入了解Condition的使用方式。
 
-####2.2 阻塞队列
+#### 2.2 阻塞队列
 有界队列是一种特殊的队列，当队列为空时，队列的获取操作将会阻塞获取线程，直到队列中有新增元素，当队列已满时，队列的插入操作将会阻塞插入线程，直到队列出现“空位”，代码如下所示。
 
 ```
-:::java
 public class BoundedQueue<T> {
 
     private LinkedList<Object> items;
@@ -175,7 +180,6 @@ public class BoundedQueue<T> {
 一个Condition包含一个等待队列，Condition拥有首节点（ _firstWaiter_ ）和尾节点（ _lastWaiter_ ）。当前线程调用`Condition.await()`方法，将会以当前线程构造节点，并将节点从尾部加入等待队列，等待队列的基本结构如下所示
 
 ```
-:::java
 public class ConditionObject implements Condition, java.io.Serializable {
     private static final long serialVersionUID = 1173984872572414699L;
     
@@ -201,7 +205,7 @@ public class ConditionObject implements Condition, java.io.Serializable {
 如上图所示，Condition的实现是同步器的内部类，因此每个Condition实例都能够访问同步器提供的方法，相当于每个Condition都拥有所属同步器的引用。
 
 
-####3.2 await等待
+#### 3.2 await等待
 
 调用Condition的`await()`方法（或者以await开头的方法），会使当前线程进入等待队列并释放锁，同时线程状态变为等待状态。当从`await()`方法返回时，当前线程一定获取了Condition相关联的锁。
 
@@ -210,7 +214,6 @@ public class ConditionObject implements Condition, java.io.Serializable {
 **Condition的await()方法**
 
 ```
-:::java
 public final void await() throws InterruptedException {
             if (Thread.interrupted()) //如果线程中断则直接异常
                 throw new InterruptedException();
@@ -243,13 +246,12 @@ public final void await() throws InterruptedException {
 
 ![将当前节点加入等待队列.PNG](https://upload-images.jianshu.io/upload_images/10175660-99594d90cf500323.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-####3.3 通知
+#### 3.3 通知
 
 调用Condition的`signal()`方法，将会唤醒在等待队列中等待时间最长的节点（首节点），在唤醒节点之前，会将节点移到同步队列末尾。
 
 **signal方法** 
 ```
-:::java
    public final void signal() {
     //判断是否是独占锁
             if (!isHeldExclusively())
@@ -300,7 +302,6 @@ final boolean transferForSignal(Node node) {
 
 **signalAll**
 ```
-:::java
  public final void signalAll() {
             if (!isHeldExclusively())
                 throw new IllegalMonitorStateException();
@@ -322,5 +323,5 @@ final boolean transferForSignal(Node node) {
 不难看出Condition的`signalAll()`方法，相当于对等待队列中的每个节点均执行一次`signal()`方法，效果就是将等待队列中所有节点全部移动到同步队列中，并唤醒每个节点的线程。
 
 
-#Reference
+# Reference
 java并发编程艺术

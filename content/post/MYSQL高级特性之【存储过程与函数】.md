@@ -1,8 +1,16 @@
-Title: MYSQL高级特性之【存储过程与函数】
-Date: 2018-04-27 22:30
-Tags: 基础
-Category: MySql
-Slug: process-fun
+
+---
+title: MYSQL高级特性之【存储过程与函数】
+date: 2018-04-27T11:18:15+08:00
+weight: 70
+slug: process-fun
+tags: ["基础"]
+categories: ["MySql"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 # 一、定义
@@ -102,7 +110,7 @@ CALL countOrder();
 
 
 
-##2.2 创建函数
+## 2.2 创建函数
 创建函数使用CREATE FUNCTION语句：
 ```
 CREATE FUNCTION f_name([func_parameter])
@@ -116,7 +124,7 @@ func_parameter为存储函数的参数列表，参数列表如下
 
 RETURNS type表示函数的返回类型；routine_body是函数体，函数体中必须包含一个 RETURN value 语句。
 
-##2.3函数示例
+## 2.3函数示例
 同样的，我们创建一个函数来计算平均工资
 ```
 DELIMITER //
@@ -129,8 +137,8 @@ DELIMITER
 调用函数
 >SELECT getAvgAmount()
 
-#3、复杂的存储过程和函数
-##3.1变量的使用
+# 3、复杂的存储过程和函数
+## 3.1变量的使用
 
 变量可以在子程序中声明并使用，这些变量的作用范围是在BEGIN...END程序中
 
@@ -414,7 +422,7 @@ ALTER {PROCEDURE|FUNCTION} sp_name [characteristic]
 DROP {PROCEDURE|FUNCTION} [IF EXISTS] sp_name;
 ```
 
-#4 存储过程与SQL语句对比
+# 4 存储过程与SQL语句对比
 **优势:**
 
 **1、提高性能**
