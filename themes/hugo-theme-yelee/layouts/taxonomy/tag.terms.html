@@ -26,7 +26,7 @@
 
 
                         <h1 class="article-title" itemprop="name">
-                            分类 &amp; 标签
+                            专题分类 &amp; 标签
                         </h1>
 
 
@@ -87,37 +87,23 @@
                         <!-- Tag Cloud Page -->
                         <hr>
                         <br>
-                        <!--<ul class="category-list">-->
-                            <!--<li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span-->
-                                    <!--class="category-list-count">54</span></li>-->
-                            <!--<li class="category-list-item"><a class="category-list-link" href="/categories/Golang/">Golang</a><span-->
-                                    <!--class="category-list-count">1</span></li>-->
-                            <!--<li class="category-list-item"><a class="category-list-link"-->
-                                                              <!--href="/categories/Java/">Java</a><span-->
-                                    <!--class="category-list-count">1</span></li>-->
-                            <!--<li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span-->
-                                    <!--class="category-list-count">3</span></li>-->
-                            <!--<li class="category-list-item"><a class="category-list-link"-->
-                                                              <!--href="/categories/Linux/">Linux</a><span-->
-                                    <!--class="category-list-count">3</span></li>-->
-                            <!--<li class="category-list-item"><a class="category-list-link"-->
-                                                              <!--href="/categories/ReactNative/">ReactNative</a><span-->
-                                    <!--class="category-list-count">1</span></li>-->
-                            <!--<li class="category-list-item"><a class="category-list-link"-->
-                                                              <!--href="/categories/其他/">其他</a><span-->
-                                    <!--class="category-list-count">2</span></li>-->
-                            <!--<li class="category-list-item"><a class="category-list-link"-->
-                                                              <!--href="/categories/随笔/">随笔</a><span-->
-                                    <!--class="category-list-count">1</span></li>-->
-                        <!--</ul>-->
+                        <h4 style="">专题分类</h4>
+                        <ul class="category-list">
+                            <li class="category-list-item" style="background: #a5a8ed "><a class="category-list-link" style="color: #fff" href="/categories/java-base/">Java-base</a></li>
+                            <li class="category-list-item" style="background: #a5a8ed "><a class="category-list-link" style="color: #fff" href="/categories/concurrent/">Concurrent</a></li>
+                            <li class="category-list-item" style="background: #a5a8ed "><a class="category-list-link" style="color: #fff" href="/categories/security/">Security</a></li>
+                            <li class="category-list-item" style="background: #a5a8ed "><a class="category-list-link" style="color: #fff" href="/categories/design-pattern/">Design-pattern</a></li>
+                            <li class="category-list-item" style="background: #a5a8ed "><a class="category-list-link" style="color: #fff" href="/categories/classloader/">Classloader</a></li>
+                            <li class="category-list-item" style="background: #a5a8ed "><a class="category-list-link" style="color: #fff" href="/categories//algorithm/">Algorithm</a></li>
+                        </ul>
 
 
-                        <!--<p class="count">-->
-                        <!--<p id="count">-->
-                            <!--已有<span><script>document.write($(".category-list-item").length)</script>8</span>个分类，-->
-                            <!--共计<span><script>document.write($(".tags > a").length)</script>43</span>个标签。-->
-                        <!--</p>-->
-                        <!--</p>-->
+                        <p class="count">
+                        <p id="count">
+                            已有<span><script>document.write($(".category-list-item").length)</script>8</span>个专题，
+                            共计<span><script>document.write($(".tags > a").length)</script>43</span>个标签。
+                        </p>
+                        </p>
 
                         {{ $data := .Data }}
                         {{ $Data := .Data }}
@@ -139,6 +125,7 @@
                         {{- $.Scratch.Set "sizeStep" ( div $sizeSpread $countSpread ) -}}
                         {{- end -}}
 
+                        <h4 style="">标签分类</h4>
                         <div class="tags">
                             {{ range $data.Terms.Alphabetical }}
                                 {{- $count := .Count -}}

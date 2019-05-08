@@ -9,6 +9,7 @@
     "tagcloud": true,
     "aboutme": "大家好，我叫 陈星，来自杭州。平时喜欢打打球，看看书。 我的人生格言：机会是留给有准备的人的，厚积薄发总归会有收获，沉下心来做事情, 才能一往无前......",
     "friends": {
+      "在线工具": "/2017/02/19/tools/",
       "阿里中间件团队博客": "http://jm.taobao.org/",
       "alibaba开源项目": "https://github.com/alibaba",
       "google开源项目":"https://github.com/google"
@@ -25,8 +26,8 @@
         "link": "/"
       },
       {
-        "label": "在线工具",
-        "link": "/post/external/tools.html"
+        "label": "专题分类",
+        "link": "/tags/"
       },
       {
         "label": "开源项目",
