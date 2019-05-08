@@ -12,7 +12,10 @@
       "在线工具": "/2017/02/19/tools/",
       "阿里中间件团队博客": "http://jm.taobao.org/",
       "alibaba开源项目": "https://github.com/alibaba",
-      "google开源项目":"https://github.com/google"
+      "google开源项目": "https://github.com/google",
+      "美团技术团队": "https://tech.meituan.com/",
+      "数据库内核月报": "http://mysql.taobao.org/monthly/",
+      "系统设计入门": "https://github.com/donnemartin/system-design-primer/blob/master/README-zh-Hans.md"
     },
     "subnav": {
       "Email": "mailto:shuilianpiying@163.com",
