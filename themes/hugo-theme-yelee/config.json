@@ -50,8 +50,8 @@
       "site_visit": "本站到访数",
       "page_visit": "本页阅读量"
     },
-    "jquery_ui": false,
-    "mathjax": false,
+    "jquery_ui": true,
+    "mathjax": true,
     "background_image": 5,
     "google_analytics": "UA-119892182-1",
     "fancybox": true,
