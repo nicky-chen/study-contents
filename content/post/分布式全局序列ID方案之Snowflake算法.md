@@ -15,7 +15,7 @@ draft: false
 
 
 
-#1 背景
+# 1 背景
 在分布式项目中，在业务数据中需要生成一个全局唯一的序列号，比如：消息标识，订单标识，用户标识等等。同时对于id生成的要求如下：
 * 全局唯一
 * 趋势有序
@@ -23,9 +23,9 @@ draft: false
 * 高可用
 * 高并发
 
-#2 基础方案
+# 2 基础方案
 
-###2.1 数据库主键自增
+### 2.1 数据库主键自增
 利用mysql的auto_increment特性
 >优点：
 （1）能够保证唯一性 
@@ -36,7 +36,7 @@ draft: false
 （1）无法高可用：普通的一主多从+读写分离架构，自增ID写入请求，主库挂了就GG
 （2）无法高并发：写入是单点，数据库主库的写性能决定ID的生成性能上限，并且难以扩展
 
-###2.2 UUID
+### 2.2 UUID
 uuid算法是比较常用的算法，根据UUID的特性，可以产生一个唯一的字符串
 
 >优点：
@@ -48,7 +48,7 @@ uuid算法是比较常用的算法，根据UUID的特性，可以产生一个唯
 （2）uuid字符串过长，作为主键建立索引查询效率低，常见优化方案为“转化为两个uint64整数存储”或者“折半存储”（折半后不能保证唯一性）
 （3）如使用实现版本的=不一样，在高并发情况下可能会出现UUID重复情况
 
-###2.3 时间戳
+### 2.3 时间戳
 
 >优点：
 （1）本地生成ID，无需远程调用，低延时
@@ -59,13 +59,13 @@ uuid算法是比较常用的算法，根据UUID的特性，可以产生一个唯
 （1）如果并发量超过1000，会生成重复的ID
 
 
-#3 Twitter Snowflake
+# 3 Twitter Snowflake
 
-###3.1 简介
+### 3.1 简介
 snowflake是twitter开源的分布式ID生成算法，其核心思想是：一个long型的ID，使用其中41bit作为毫秒数，10bit作为机器编号，12bit作为毫秒内序列号。这个算法单机每秒内理论上最多可以生成1000*(2^12)，也就是400W的ID，完全能满足业务的需求
 
 
-###3.2 图示详解
+### 3.2 图示详解
 ![雪花算法数据结构](https://upload-images.jianshu.io/upload_images/10175660-c014113c0fa61193.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 （1）1位：标识部分，在java中由于long的最高位是符号位，正数是0，负数是1，一般生成的ID为正数，所以为0
@@ -78,9 +78,8 @@ snowflake是twitter开源的分布式ID生成算法，其核心思想是：一�
 
 **SnowFlake算法生成的ID大致上是按照时间递增的，用在分布式系统中，需注意数据中心标识和机器标识必须唯一，这样才能保证每个节点生成的ID都是唯一**
 
-###3.3 java实现
+### 3.3 java实现
 ```
-:::java
 public class IdWorker {
 
     //idepoch + datacenterId + workerId + sequence
@@ -237,7 +236,7 @@ IdWorker{workerId=12, datacenterId=21, idepoch=2, lastTimestamp=1529244642433, s
 得到两个二进制是64位的十进制整数
 
 
-###3.4 优缺点
+### 3.4 优缺点
 这样设计的64bit标识，可以保证：
 （1）每个业务线、每个机房、每个机器生成的ID都是不同的
 （2）同一个机器，每个毫秒内生成的ID都是不同的
@@ -248,10 +247,10 @@ IdWorker{workerId=12, datacenterId=21, idepoch=2, lastTimestamp=1529244642433, s
 （1）由于“没有一个全局时钟”，每台服务器分配的ID是绝对递增的，但从全局看，生成的ID只是趋势递增的（有些服务器时间早，有些服务器的时间晚）
 （2）如ID作为取模分库分表的依据，为了分库分表后数据均匀，ID生成往往有“取模随机性”的需求，所以通常把每秒内的序列号放在ID的最末位，保证生成的ID随机，否则取模会不均匀
 
-###3.5 雪花算法第三方库
+### 3.5 雪花算法第三方库
 [baidu / uid-generator](https://github.com/baidu/uid-generator)
 [cloudatee/vesta-id-generator](https://github.com/cloudatee/vesta-id-generator)
 
 
-#Reference
+# Reference
 [细聊分布式ID生成方法](https://mp.weixin.qq.com/s/0H-GEXlFnM1z-THI8ZGV2Q)
