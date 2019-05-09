@@ -1,13 +1,21 @@
-Title: 分布式全局序列ID方案之Flicker优化方案
-Date: 2018-06-20 22:28
-Tags: 分布式ID方案
-Category: distrubuted
-Slug: id-flicker
+
+---
+title: 分布式全局序列ID方案之Flicker优化方案
+date: 2018-09-25T11:18:15+08:00
+weight: 70
+slug: id-flicker
+tags: ["分布式ID方案"]
+categories: ["distribution"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
 
-#1 Flicker的解决方案
+# 1 Flicker的解决方案
 MySQL中id自增的特性，可以借此来生成全局的序列号，Flicker在解决全局ID生成方案里就采用了MySQL自增长ID的机制（auto_increment + replace into + MyISAM）。一个生成64位ID方案具体就是这样的： 
 先创建单独的数据库，然后创建一个表：
 ```
@@ -53,11 +61,11 @@ auto-increment-offset = 2
 缺点：占用两个独立的MySQL实例，有些浪费资源，成本较高
 数据库中记录过多，每次生成id都需要请求数据库
 
-#2 优化方案
+# 2 优化方案
 
 >采用批量生成的方式，内存缓存号段，降低数据库的写压力，提升整体性能
 
-###2.1 方案1 mysql双主架构
+### 2.1 方案1 mysql双主架构
 采用双主架构的方式来显示高可用，数据库只值存在已备用号段的最大值。
 我们新建一张表
 ```
@@ -100,7 +108,7 @@ CREATE TABLE `id_generator` (
 缺点：
 由于有多个service，生成的ID 不是绝对递增的，而是趋势递增的
 
-###2.2 方案2 多实例
+### 2.2 方案2 多实例
 基于Flicker方案
 ```
 REPLACE INTO borrow_order (stub) VALUES ('192.168.1.1');
@@ -117,14 +125,13 @@ id   stub
 每台服务器设置好增幅只更新自己的那条记录，保证了单线程操作单行记录。这时候每个机器拿到的分别是5,2,3,4这4个id。这方案直接通过服务器隔离，解决原子性获得id的问题。
 
 
-###2.3 服务层原子性操作CAS
+### 2.3 服务层原子性操作CAS
 我们可以AtomicLong来实现ID自增，流程图如下：
 
 ![后台服务id获取流量](https://upload-images.jianshu.io/upload_images/10175660-2e24cf2a51dbe094.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 伪代码实现
 ```
-:::java
     private static AtomicLong atomicLong;
 
     private static Long currentMaxId;
@@ -148,6 +155,6 @@ id   stub
 如果再追求极致，可以监听spring或者servlet上下文的销毁事件，把当前即将发出去的用户ID保存起来，下次启动时候加载进入内存。
 
 
-#Reference
+# Reference
 [浅谈CAS在分布式ID生成方案上的应用 ](https://mp.weixin.qq.com/s/QtjpUpl2FF0DKPPHh6HDGg)
 [分布式架构系统生成全局唯一序列号的一个思路](https://mp.weixin.qq.com/s?__biz=MjM5MDI3MjA5MQ==&mid=2697266651&idx=2&sn=77a5b0d4cabcbb00fafeb6a409b93cd7&scene=21#wechat_redirect)

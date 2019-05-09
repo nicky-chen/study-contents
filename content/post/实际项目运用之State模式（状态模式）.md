@@ -2,7 +2,7 @@
 
 ---
 title: 实际项目运用之State模式（状态模式）
-date: 2018-07-19T11:18:15+08:00
+date: 2018-12-19T11:18:15+08:00
 weight: 70
 slug: state-machine
 tags: ["行为型"]

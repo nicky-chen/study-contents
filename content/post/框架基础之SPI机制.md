@@ -1,11 +1,19 @@
-Title: 框架基础之SPI机制
-Date: 2018-07-05 19:22
-Tags: 框架基础
-Category: java-base
-Slug: spi-introduction
+
+---
+title: 框架基础之SPI机制
+date: 2018-07-05T11:18:15+08:00
+weight: 70
+slug: spi-introduction
+tags: ["框架基础"]
+categories: ["java-base"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
-#1 定义
+# 1 定义
 
 **SPI** 的全名为 _Service Provider Interface_ ，用于接口寻找服务实现类
 
@@ -14,13 +22,12 @@ Slug: spi-introduction
 不同厂商编写针对于该接口的实现类，并在jar的“classpath:META-INF/services/全接口名称”文件中指定相应的实现类全类名
 开发者直接引入相应的jar，就可以实现为接口自动寻找实现类的功能
 
-#2 案例实现
+# 2 案例实现
 
 比如我们经常看到的缓存类Cache,现在有非常多的缓存框架都会去实现这个接口
 
 *标准接口*
 ```
-:::java
 public interface Cache {
 
     String getName();
@@ -39,7 +46,6 @@ public interface Cache {
 *厂商的具体接口实现*
 
 ```
-:::java
 public class ConcurrentMapCache implements Cache {
 
     private final String name;
@@ -103,7 +109,6 @@ public class ConcurrentMapCache implements Cache {
 
 **测试**
 ```
-:::java
 public class CacheSpiTest {
 
     public static void main(String[] args) {
@@ -130,13 +135,12 @@ nana
 通过上述例子，我们知道`ServiceLoader`是用于通过接口获取接口实现类的工具
 
 
-#3 SPI机制源码分析
+# 3 SPI机制源码分析
 
-###3.1 load加载过程
+### 3.1 load加载过程
 
 ServiceLoader成员变量
 ```
-:::java
 //SPI约定获取扩展接口路径的文件
 private static final String PREFIX = "META-INF/services/";
 //基础约定接口
@@ -167,10 +171,9 @@ private LazyIterator lookupIterator
 ```
 `load()` 方法并没有实例化具体实现类，而是加载需要实例化的对象路径
 
-###3.2 实例化过程
+### 3.2 实例化过程
 
 ```
-:::java
  Class<S> service;//通用接口
  ClassLoader loader;//类加载器
 Enumeration<URL> configs = null;//厂商接口文件URL的集合
@@ -203,7 +206,6 @@ Enumeration<URL> configs = null;//厂商接口文件URL的集合
 `next()`: 先从provider中直接获取，如果有，返回实现类对象实例；如果没有，通过*LazyIterator* 中 `nextService()` 来进行获取
 
 ```
-:::java
  private S nextService() {
             if (!hasNextService()) //获取nextName 需要加载的类名
                 throw new NoSuchElementException();

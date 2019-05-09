@@ -1,8 +1,16 @@
-Title: 后端开发需要了解的mysql优化方向
-Date: 2018-05-08 18:34
-Tags: 思维导图
-Category: MySql
-Slug: optimize-picture
+
+---
+title: 后端开发需要了解的mysql优化方向
+date: 2017-06-13T11:18:15+08:00
+weight: 70
+slug: optimize-picture
+tags: ["思维导图"]
+categories: ["MySql"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 #优化思维导图

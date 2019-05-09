@@ -1,8 +1,16 @@
-Title: 自定义序列化之Externalizable接口
-Date: 2018-05-23 22:36
-Tags: 基础
-Category: java-base
-Slug: externalizable-interface
+
+---
+title: 自定义序列化之Externalizable接口
+date: 2017-01-23T11:18:15+08:00
+weight: 70
+slug: externalizable-interface
+tags: ["基础"]
+categories: ["java-base"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 **Externalizable简介**

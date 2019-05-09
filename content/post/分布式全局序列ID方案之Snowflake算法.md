@@ -1,8 +1,16 @@
-Title: 分布式全局序列ID方案之Snowflake算法
-Date: 2018-06-17 22:53
-Tags: 分布式ID方案
-Category: distrubuted
-Slug: id-snowflake
+
+---
+title: 分布式全局序列ID方案之Snowflake算法
+date: 2018-09-19T11:18:15+08:00
+weight: 70
+slug: id-snowflake
+tags: ["分布式ID方案"]
+categories: ["distribution"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 

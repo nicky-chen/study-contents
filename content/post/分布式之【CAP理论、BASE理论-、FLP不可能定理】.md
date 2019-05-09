@@ -1,10 +1,19 @@
-Title: 分布式之【CAP理论、BASE理论 、FLP不可能定理】
-Date: 2018-04-25 18:43
-Tags: 理论
-Category: distrubuted
-Slug: cap-base-flp
 
-#1.分布式系统的CAP理论
+
+---
+title: 分布式之【CAP理论、BASE理论 、FLP不可能定理】
+date: 2018-04-25T11:18:15+08:00
+weight: 70
+slug: cap-base-flp
+tags: ["理论"]
+categories: ["distribution"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
+
+# 1.分布式系统的CAP理论
 
 ## 1.1 CAP理论概述
 
@@ -112,7 +121,7 @@ ACID和BASE代表了两种截然相反的设计哲学
 在分布式系统设计的场景中，系统组件对一致性要求是不同的，因此ACID和BASE又会结合使用
 
 
-#3.FLP不可能原理
+# 3.FLP不可能原理
 
 ### **3.1 FLP impossibility背景**
 
@@ -254,5 +263,5 @@ Let C be a bivalent configuration of P, and let e=(p, m) be an event that is app
 
 我们设计一个队列, 把所有进程放到这个队列中, 按照FIFO的顺序每次一个进程出来, 这个进程从message buffer取出第一个此进程的消息, 把计算后发给其他进程的消息放回message buffer尾部, 然后进程自己回到队列尾部等待下一轮调度. 这个模型保证了每个进程总是有机会获得发送给他的消息. 根据Lemma 2我们知道y一定会存在一个bivalent的configuration C0, 从C0开始执行到某一个bivalent的C, 这时候message buffer中第一个C的消息是e. 再根据Lemma 3我们知道如果把e挪到message buffer后面延迟这个消息的送达, 那么C一定会再产生一个bivalent configuration C’进入Ɗ. 这意味着通过延迟e, 可以让一个bivalent configuration再产生一个bivalent configuraiton, 因为可能会永远无法达到一个univalent configuration, 也就永远无法产生结果.
 
-#Reference
+# Reference
 [FLP Impossibility的证明](http://danielw.cn/FLP-proof)

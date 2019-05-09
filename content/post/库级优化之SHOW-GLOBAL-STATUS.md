@@ -1,8 +1,17 @@
-Title: 库级优化之SHOW GLOBAL STATUS
-Date: 2018-05-10 18:11
-Tags: 库级优化
-Category: MySql
-Slug: SHOW-GLOBAL-STATUS
+
+
+---
+title: 库级优化之SHOW GLOBAL STATUS
+date: 2017-09-12T11:18:15+08:00
+weight: 70
+slug: SHOW-GLOBAL-STATUS
+tags: ["优化"]
+categories: ["MySql"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 **慢查询**

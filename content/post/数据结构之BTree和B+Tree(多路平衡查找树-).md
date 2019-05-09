@@ -1,16 +1,21 @@
-Title: 数据结构之BTree和B+Tree(多路平衡查找树 )
-Date: 2018-05-17 19:39
-Tags: 数据结构
-Category: Algorithm
-Slug: btree-info
+
+---
+title: 数据结构之BTree和B+Tree(多路平衡查找树 )
+date: 2018-11-17T11:18:15+08:00
+weight: 70
+slug: btree-info
+tags: ["数据结构"]
+categories: ["Algorithm"]
+author: "nicky_chin"
+comments: true
+share: true
+draft: false
+---
 
 
 
 
-
-
-
-#1 背景
+# 1 背景
 B-Tree是为磁盘等外存储设备设计的一种平衡查找树。因此在讲B-Tree之前先了解下磁盘的相关知识。系统从磁盘读取数据到内存时是以磁盘块（block）为基本单位的，位于同一个磁盘块中的数据会被一次性读取出来，而不是需要什么取什么。
 InnoDB存储引擎中有页（Page）的概念，页是其磁盘管理的最小单位。InnoDB存储引擎中默认每个页的大小为16KB，可通过参数innodb_page_size将页的大小设置为4K、8K、16K，在MySQL中可通过如下命令查看页的大小：
 ```
@@ -20,7 +25,7 @@ mysql> show variables like 'innodb_page_size';
 而系统一个磁盘块的存储空间往往没有这么大，因此InnoDB每次申请磁盘空间时都会是若干地址连续磁盘块来达到页的大小16KB。InnoDB在把磁盘数据读入到磁盘时会以页为基本单位，在查询数据时如果一个页中的每条数据都能有助于定位数据记录的位置，这将会减少磁盘I/O次数，提高查询效率。
 
 
-#2 定义与特性
+# 2 定义与特性
 **B-Tree**
 B-Tree结构的数据可以让系统高效的找到数据所在的磁盘块。为了描述B-Tree，首先定义一条记录为一个二元组[key, data] ，key为记录的键值(关键字)，对应表中的主键值，data为一行记录中除主键外的数据。对于不同的记录，key值互不相同。
 
@@ -86,7 +91,7 @@ B+Tree索引可以分为聚集索引（clustered index）和非聚簇索引（se
 聚集索引的B+Tree中的叶子节点存放的是整张表的行记录数据。非聚簇索引与聚集索引的区别在于非聚簇索引的叶子节点并不包含行记录的全部数据，而是存储相应行数据的聚集索引键，即主键。当通过非聚簇索引来查询数据时，InnoDB存储引擎会遍历非聚簇索引找到主键，然后再通过主键在聚集索引中找到完整的行记录数据
 
 
- #3 B树
+ # 3 B树
 **3.1 分支关键字个数以及度数的范围简要总结**
 ```
 一个m阶B-树：
@@ -139,7 +144,7 @@ c、被删关键字Ki所在结点和其相邻兄弟结点中的的关键字数�
 **3.3 java实现**
 [B树java代码](https://github.com/nicky-chen/Alogmi/tree/master/src/com/nicky/tree/btree)
 
-#Referfence
+# Referfence
 [B-树小结汇总](http://www.cnblogs.com/biyeymyhjob/archive/2012/07/25/2608412.html)
 [BTree和B+Tree详解](http://www.cnblogs.com/vianzhang/p/7922426.html)
 [MySQL索引背后的数据结构及算法原理](http://blog.codinglabs.org/articles/theory-of-mysql-index.html)
