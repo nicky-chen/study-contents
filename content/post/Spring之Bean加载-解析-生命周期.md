@@ -298,7 +298,7 @@ protected Object getSingleton(String beanName, boolean allowEarlyReference) {
 # 4 Bean生命周期
 
 Spring Bean 的生命周期状态图如下：
-![生命周期](https://upload-images.jianshu.io/upload_images/10175660-ab40e888600f671b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![生命周期](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165227.png)
 
 ### 4.1 BeanNameAware
 Spring Bean存活于容器之中，如果需要知道Bean的beanName，即可让该bean的类实现BeanNameAware接口

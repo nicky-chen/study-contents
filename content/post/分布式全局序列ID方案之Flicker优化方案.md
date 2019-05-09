@@ -78,7 +78,7 @@ CREATE TABLE `id_generator` (
 
 ```
 如此我们可以通过 **getIdService服务** 来对单实例数据库批量获取id，具体步骤如下：
-![号段逻辑](https://upload-images.jianshu.io/upload_images/10175660-05df5de3d21e30f4.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![号段逻辑](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164753.png)
 
 **优缺点**
 >优点
@@ -128,7 +128,7 @@ id   stub
 ### 2.3 服务层原子性操作CAS
 我们可以AtomicLong来实现ID自增，流程图如下：
 
-![后台服务id获取流量](https://upload-images.jianshu.io/upload_images/10175660-2e24cf2a51dbe094.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![后台服务id获取流量](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164823.png)
 
 伪代码实现
 ```

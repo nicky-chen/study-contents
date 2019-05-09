@@ -41,7 +41,7 @@ draft: false
 不同点是状态模式是在一个类中通过不同的动作切换不同的状态，而策略模式是为一个类选择某个策略，即状态模式中的Context是和多个状态关联的，而策略模式中的Context只和一个策略关联
 
 **状态模式角色介绍：**
-![状态模式类图](https://upload-images.jianshu.io/upload_images/10175660-113c92a20076e368.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![状态模式类图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509163258.png)
 
 （1）Context类，依赖倒置原则，通过适配器模式维护状态类
 （2）State：抽象状态类或状态接口，用以抽象封装行为
@@ -68,15 +68,16 @@ if(审核){
 
 状态模式本质上是一种基于状态和事件的 _状态机_ ,下面是订单流程的状态图
 
-![订单流程](https://upload-images.jianshu.io/upload_images/10175660-b6ccaa815dbe7c7b.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![订单流程](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509163509.png)
+
 
 通过状态图，我们再设计一张横纵坐标关系表来比较，图如下：
 
-![关系表](https://upload-images.jianshu.io/upload_images/10175660-bb5334e225393713.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![关系表](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509163620.png)
 
 通过上述表 我们可以细化为一个二维数组，来表示状态与事件直接的关系：
 
-![二维数组](https://upload-images.jianshu.io/upload_images/10175660-39476dcf8ce242e4.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![二维数组](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509163701.png)
 
 
 ### 2.2 代码实现

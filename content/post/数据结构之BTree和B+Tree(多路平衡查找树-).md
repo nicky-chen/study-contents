@@ -43,7 +43,7 @@ B-Tree结构的数据可以让系统高效的找到数据所在的磁盘块。�
 B树中的每个节点根据实际情况可以包含大量的关键字信息和分支
 如下图所示为一个3阶的B-Tree：
 
-![b树](https://upload-images.jianshu.io/upload_images/10175660-3248451368a5f4d4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![b树](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509163823.png)
 
 每个节点占用一个盘块的磁盘空间，一个节点上有两个升序排序的关键字和三个指向子树根节点的指针，指针存储的是子节点所在磁盘块的地址。两个关键词划分成的三个范围域对应三个指针指向的子树的数据的范围域。以根节点为例，关键字为17和35，P1指针指向的子树的数据范围小于17，P2指针指向的子树的数据范围为17~35，P3指针指向的子树的数据范围大于35
 
@@ -72,7 +72,7 @@ B+Tree相对于B-Tree有几点不同：
 
 将B-Tree优化，由于B+Tree的非叶子节点只存储键值信息，假设每个磁盘块能存储4个键值及指针信息，则变成B+Tree后其结构如下图所示:
 
-![b+树](https://upload-images.jianshu.io/upload_images/10175660-c1d98d671cac4520.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![b+树](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509163905.png)
 
 通常在B+Tree上有两个头指针，一个指向根节点，另一个指向关键字最小的叶子节点，而且所有叶子节点（即数据节点）之间是一种链式环结构。因此可以对B+Tree进行两种查找运算：一种是对于主键的范围查找和分页查找，另一种是从根节点开始，进行随机查找。
 
@@ -84,9 +84,9 @@ InnoDB存储引擎中页的大小为16KB，一般表的主键类型为INT（占�
 
 B+Tree索引可以分为聚集索引（clustered index）和非聚簇索引（secondary index）。上面B+Tree示例图在数据库中的实现即为聚集索引
 
-![聚集索引](https://upload-images.jianshu.io/upload_images/10175660-a8b91ccfb9e05f08.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![聚集索引](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509163938.png)
 
-![非聚簇索引](https://upload-images.jianshu.io/upload_images/10175660-a2df181e11d23f0d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![非聚簇索引](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164005.png)
 
 聚集索引的B+Tree中的叶子节点存放的是整张表的行记录数据。非聚簇索引与聚集索引的区别在于非聚簇索引的叶子节点并不包含行记录的全部数据，而是存储相应行数据的聚集索引键，即主键。当通过非聚簇索引来查询数据时，InnoDB存储引擎会遍历非聚簇索引找到主键，然后再通过主键在聚集索引中找到完整的行记录数据
 
@@ -110,14 +110,13 @@ B+Tree索引可以分为聚集索引（clustered index）和非聚簇索引（se
 >b.判断该结点是否还有空位,即该结点关键字总数是否满足n<=m-1。若满足，则该结点还有空位置，直接插入关键字到合适位置。若不满足，说明该结点己没空位，需要把结点分裂成两个
 >分裂方法：生成一新结点。把原结点上的关键字和k按升序排序，从中间位置把关键字分成两部分。左部分关键字放在旧结点，右部分关键字放在新结点，中间位关键字连同新结点的存储位置插入到父结点中。如果父结点的关键字个数也超过（m-1），则要再分裂，再往上插。直至这个过程传到根结点为止
 
-![insert1](https://upload-images.jianshu.io/upload_images/10175660-bc72c3b2fad1b2b6.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![insert1](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164032.png)
 
-![insert2](https://upload-images.jianshu.io/upload_images/10175660-d980073e1ecb257f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![insert2](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164052.png)
 
-![insert3](https://upload-images.jianshu.io/upload_images/10175660-e9cda2f73087ae02.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![insert3](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164123.png)
 
-![insert4](https://upload-images.jianshu.io/upload_images/10175660-dc6a23d31fe01e62.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![insert4](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164157.png)
 
 **3.2.2 删除操作**
 
@@ -125,21 +124,21 @@ B+Tree索引可以分为聚集索引（clustered index）和非聚簇索引（se
 
 若该结点为非叶结点，且被删关键字为该结点中第i个关键字key[i]，则可从指针child[i]所指的子树中找出最小关键字Y，代替key[i]的位置，然后在叶结点中删去Y。因此，把在非叶结点删除关键字k的问题就变成了删除叶子结点中的关键字的问题
 
-![del1](https://upload-images.jianshu.io/upload_images/10175660-cb60cbf8005371e4.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![del1](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164235.png)
 
 *在B-树叶结点上删除一个关键字的方法*
 
 a、被删关键字Ki所在结点的关键字数目不小于ceil(m/2)，则只需从结点中删除Ki和相应指针Ai，树的其它部分不变。
-![del2](https://upload-images.jianshu.io/upload_images/10175660-278f56c3febee4ca.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![del2](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164254.png)
 
 b、被删关键字Ki所在结点的关键字数目等于ceil(m/2)-1，则需调整。调整过程如上面所述。
-![del3](https://upload-images.jianshu.io/upload_images/10175660-b477cb2bbf66e206.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![del3](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164317.png)
 
 c、被删关键字Ki所在结点和其相邻兄弟结点中的的关键字数目均等于ceil(m/2)-1，假设该结点有右兄弟，且其右兄弟结点地址由其双亲结点指针Ai所指。则在删除关键字之后，它所在结点的剩余关键字和指针，加上双亲结点中的关键字Ki一起，合并到Ai所指兄弟结点中（若无右兄弟，则合并到左兄弟结点中）。如果因此使双亲结点中的关键字数目少于ceil(m/2)-1，则依次类推.
 
-![del4](https://upload-images.jianshu.io/upload_images/10175660-9dfb72ec5b23a15a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![del4](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164346.png)
 
-![del5](https://upload-images.jianshu.io/upload_images/10175660-15695ec4fafdc96f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![del5](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509164405.png)
 
 **3.3 java实现**
 [B树java代码](https://github.com/nicky-chen/Alogmi/tree/master/src/com/nicky/tree/btree)

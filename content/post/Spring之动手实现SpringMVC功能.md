@@ -23,7 +23,7 @@ SpringMVC大家应该耳熟能详，只要是做Java网站开发的小伙伴，�
 
 springmvc的流程如下：
 
-![流程图](https://upload-images.jianshu.io/upload_images/10175660-d0954b5dd4f6d7ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![流程图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165316.png)
 
 **API说明**
 
@@ -124,7 +124,7 @@ ViewName是根据ViewName查找View，但有的Handler处理完后并没有设�
 
 ### 3.2 SpringMVC的设计思路
 
-![MVC类图](https://upload-images.jianshu.io/upload_images/10175660-36c6355383de4367.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![MVC类图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165410.png)
 
 为了读取web.xml中的配置，我们用到ServletConfig这个类，它代表当前Servlet在web.xml中的配置信息。通过web.xml中加载我们自己写的DispatcherServlet和读取配置文件。
 
@@ -137,7 +137,7 @@ DispatcherServlet是整个Spring MVC的核心。它负责接收HTTP请求组织�
 # 4 动手实现SpringMVC
 
 项目目录结构如下：
-![项目结构.PNG](https://upload-images.jianshu.io/upload_images/10175660-70f9980e4b26f96f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![项目结构.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165443.png)
 
 注解
 ```
@@ -933,10 +933,10 @@ public class ContainerConfig {
 启动项目，访问页面
 
 成功：
-![success.PNG](https://upload-images.jianshu.io/upload_images/10175660-ac407f86bab8102d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![success.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165524.png)
 
 失败：
-![error.PNG](https://upload-images.jianshu.io/upload_images/10175660-f0cfa256faeeda03.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![error.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165544.png)
 
 如果你不使用springboot，你可以使用web.xml来指定servlet来实现
 
@@ -958,9 +958,9 @@ public class ServletConfig implements ServletContainerInitializer {
 }
 ```
 
-![spi.PNG](https://upload-images.jianshu.io/upload_images/10175660-e0b48e8f31aeb880.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![spi.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165610.png)
 
-在javax.servlet.ServletContainerInitializer加入spi.ServletConfig，然后打成jar包，最后向springmvc的项目打成war包，将spi的jar包放入WEB-INF\lib目录下重启服务即可，spi入门可参考我的文章[框架基础之SPI机制](https://www.jianshu.com/p/7b69543c348e)
+在javax.servlet.ServletContainerInitializer加入spi.ServletConfig，然后打成jar包，最后向springmvc的项目打成war包，将spi的jar包放入WEB-INF\lib目录下重启服务即可，spi入门可参考我的文章[框架基础之SPI机制](https://nicky-chen.github.io/2018/07/05/spi-introduction/)
 
 
 

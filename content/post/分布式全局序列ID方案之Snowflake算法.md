@@ -66,7 +66,7 @@ snowflake是twitter开源的分布式ID生成算法，其核心思想是：一�
 
 
 ### 3.2 图示详解
-![雪花算法数据结构](https://upload-images.jianshu.io/upload_images/10175660-c014113c0fa61193.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![雪花算法数据结构](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190509165040.png)
 
 （1）1位：标识部分，在java中由于long的最高位是符号位，正数是0，负数是1，一般生成的ID为正数，所以为0
 
