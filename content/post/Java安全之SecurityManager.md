@@ -242,7 +242,7 @@ permission java.security.AllPermission;
 
 配置jvm参数开启安全管理
 
-![security](https://upload-images.jianshu.io/upload_images/10175660-076c705e4442816f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![security](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093851.png)
 
 启动main方法打印如下：
 

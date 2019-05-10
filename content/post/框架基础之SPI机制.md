@@ -101,7 +101,7 @@ public class ConcurrentMapCache implements Cache {
 
 **配置地址**
 
-![配置文件](https://upload-images.jianshu.io/upload_images/10175660-80ce95ea81d45952.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![配置文件](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510124212.png)
 
 >在resouce下的META-INF\services文件下的spi.Cache文件内容是服务类的全限命名：spi.ConcurrentMapCache
 
@@ -156,7 +156,6 @@ private LazyIterator lookupIterator
 ```
 `load()`初始化
 ```
-:::java
    public void reload() {
         providers.clear();
         lookupIterator = new LazyIterator(service, loader);

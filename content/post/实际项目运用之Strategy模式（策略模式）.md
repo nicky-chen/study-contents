@@ -15,7 +15,7 @@ draft: false
 # 1. 策略模式概要
 策略模式是对算法的包装，是把使用算法的责任和算法本身分割开来，委派给不同的对象管理。策略模式通常把一个系列的算法包装到一系列的策略类里面，作为一个抽象策略类的子类。用一句话来说，就是：“准备一组算法，并将每一个算法封装起来，使得它们可以互换”。
 下面就以一个示意性的实现讲解策略模式实例的结构。
-![策略模式](https://upload-images.jianshu.io/upload_images/10175660-2d9b5e02ce921d8e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![策略模式](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510112825.png)
 
 
 　　这个模式涉及到三个角色：
@@ -362,7 +362,7 @@ https:///www.666.com/salesman/shareRegister?ios&userToken=?#
 ```
 当然当前的设计是存在缺陷的，如果内容的组成有新增一个分享属性，还是需要修改类中的构造器对象，所以我们可以通过builder模式去优化策略模式。
 
-如不了解builder模式，请查看 -----> [设计模式之builder模式](https://www.jianshu.com/p/63e1a821e26c)
+如不了解builder模式，请查看 -----> [设计模式之builder模式](https://nicky-chen.github.io/2017/12/19/builder/)
 
 
 项目中运用策略模式的场景很多，比如不同会员等级购买产品价格计算，比如对不同消费用户做内容营销的时候，都是可以使用策略模式来解决问题的。

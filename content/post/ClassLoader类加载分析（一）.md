@@ -17,7 +17,7 @@ draft: false
 # 一、什么是Classloader
 
 一个Java程序要想运行起来，首先需要经过编译生成 .class文件，然后创建一个运行环境（jvm）来加载字节码文件到内存运行，而.class 文件是怎样被加载中jvm 中的就是Java Classloader所做的事情。
-![class文件执行过程](http://upload-images.jianshu.io/upload_images/10175660-fc4f3b0b39421a8b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![class文件执行过程](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510092858.png)
 
 那么.class文件什么时候会被类加载器加载到jvm中运行那？比如执行new操作时候，当我们使用Class.forName(“包路径+类名”)，Class.forName(“包路径+类名”,classloader),classloader.loadclass(“包路径+类名”);时候就触发了类加载器去类加载对应的路径去查找*.class,并创建Class对象。
 
@@ -36,8 +36,7 @@ draft: false
 
 其中 链接（Link）又分3个步骤，如图所示。类加载到卸载的生命周期流程图如下：
 
-![类加载过程](http://upload-images.jianshu.io/upload_images/10175660-21b86d1b16b11368.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![类加载过程](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510092938.png)
 
 **1) 装载：查找并加载类的二进制数据（查找和导入Class文件）**
 

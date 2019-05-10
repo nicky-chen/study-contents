@@ -39,13 +39,12 @@ memory）中，每个线程都有一个私有的本地内存（local memory）�
 中存储了该线程以读/写共享变量的副本。*本地内存是 JMM 的一个抽象概念，并不
 真实存在。它涵盖了缓存，写缓冲区，寄存器以及其他的硬件和编译器优化。
 Java内存模型的抽象示意图如下：
-![内存模型](https://upload-images.jianshu.io/upload_images/10175660-c853cd1fda3fd2bb.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![内存模型](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093229.png)
 从上图来看，线程 A 与线程 B 之间如要通信的话，必须要经历下面 2 个步骤：
 1. 首先，线程 A 把本地内存 A 中更新过的共享变量刷新到主内存中去。
 2. 然后，线程 B 到主内存中去读取线程 A 之前已更新过的共享变量。
 下面通过示意图来说明这两个步骤：
-![通信](https://upload-images.jianshu.io/upload_images/10175660-cf411cf01d5d85f6.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![通信](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093250.png)
 如上图所示，本地内存 A 和 B 有主内存中共享变量 x 的副本。假设初始时，这三个
 内存中的 x 值都为 0。线程 A 在执行时，把更新后的 x 值（假设值为 1）临时存放
 在自己的本地内存 A 中。当线程 A 和线程 B 需要通信时，线程 A 首先会把自己本
@@ -69,7 +68,7 @@ Parallelism， ILP）来将多条指令重叠执行。如果不存在数据依�
 作看上去可能是在乱序执行。
 ```
 从 java 源代码到最终实际执行的指令序列，会分别经历下面三种重排序：
-![重排序](https://upload-images.jianshu.io/upload_images/10175660-31c9481176c5d59e.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![重排序](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093319.png)
 上述的 1 属于编译器重排序，2 和 3 属于处理器重排序。这些重排序都可能会导致
 多线程程序出现内存可见性问题。对于编译器，JMM 的编译器重排序规则会禁止
 特定类型的编译器重排序（不是所有的编译器重排序都要禁止）。对于处理器重排
@@ -87,7 +86,7 @@ JMM 属于语言级的内存模型，它确保在不同的编译器和不同的�
 址的多次写，可以减少对内存总线的占用。虽然写缓冲区有这么多好处，但每个处
 理器上的写缓冲区，仅仅对它所在的处理器可见。这个特性会对内存操作的执行顺
 序产生重要的影响：处理器对内存的读/写操作的执行顺序，不一定与内存实际发生的读/写操作顺序一致！为了具体说明，请看下面示例：
-![内存屏障](https://upload-images.jianshu.io/upload_images/10175660-38b3c569158b94a3.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![内存屏障](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093345.png)
 这里处理器 A 和处理器 B 可以同时把共享变量写入自己的写缓冲区（A1，B1），
 然后从内存中读取另一个共享变量（A2，B2），最后才把自己写缓存区中保存的
 脏数据刷新到内存中（A3，B3）。当以这种时序执行时，程序就可以得到 x = y =
@@ -100,7 +99,7 @@ JMM 属于语言级的内存模型，它确保在不同的编译器和不同的�
 作的顺序可能会与内存实际的操作执行顺序不一致。由于现代的处理器都会使用写
 缓冲区，因此现代的处理器都会允许对写-读操作重排序。
 下面是常见处理器允许的重排序类型的列表：
-![处理器](https://upload-images.jianshu.io/upload_images/10175660-9e6b7e532486bea2.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![处理器](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093421.png)
 上表单元格中的“N”表示处理器不允许两个操作重排序，“Y”表示允许重排
 序。
 从上表我们可以看出：常见的处理器都允许 Store-Load 重排序；常见的处理器都
@@ -114,7 +113,7 @@ JMM 属于语言级的内存模型，它确保在不同的编译器和不同的�
 ※注 4：数据依赖性后文会专门说明。
 为了保证内存可见性，java 编译器在生成指令序列的适当位置会插入内存屏障指令
 来禁止特定类型的处理器重排序。JMM 把内存屏障指令分为下列四类：
-![内存屏障指令](https://upload-images.jianshu.io/upload_images/10175660-750540dc3dfe2dc6.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![内存屏障指令](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093451.png)
 StoreLoad Barriers 是一个“全能型”的屏障，它同时具有其他三个屏障的效果。
 现代的多处理器大都支持该屏障（其他类型的屏障不一定被所有处理器支持）。执
 行该屏障开销会很昂贵，因为当前处理器通常要把写缓冲区中的数据全部刷新到内
@@ -140,7 +139,7 @@ and ordered before the second）。happens- before 的定义很微妙，后文�
 体说明 happens-before 为什么要这么定义。
 
 happens-before 与 JMM 的关系如下图所示：
-![happens-before](https://upload-images.jianshu.io/upload_images/10175660-328dd730f51e38e4.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![happens-before](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093517.png)
 如上图所示，一个 happens-before 规则对应于一个或多个编译器和处理器重排序
 规则。对于 java 程序员来说，happens-before 规则简单易懂，它避免 java 程序
 员为了理解 JMM 提供的内存可见性保证而去学习复杂的重排序规则以及这些规则
@@ -150,7 +149,7 @@ happens-before 与 JMM 的关系如下图所示：
 ## 3.1数据依赖性
 如果两个操作访问同一个变量，且这两个操作中有一个为写操作，此时这两个操作
 之间就存在数据依赖性。数据依赖分下列三种类型：
-![数据依赖](https://upload-images.jianshu.io/upload_images/10175660-ae7720e36f4af127.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![数据依赖](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093543.png)
 上面三种情况，只要重排序两个操作的执行顺序，程序的执行结果将会被改变。
 前面提到过，编译器和处理器可能会对操作做重排序。编译器和处理器在重排序
 时，会遵守数据依赖性，编译器和处理器不会改变存在数据依赖关系的两个操作的
@@ -172,12 +171,12 @@ double r = 1.0; //B
 double area = pi * r * r; //C
 ```
 上面三个操作的数据依赖关系如下图所示：
-![依赖关系.JPG](https://upload-images.jianshu.io/upload_images/10175660-cfadfaa0fd30af48.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![依赖关系.JPG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093609.png)
 如上图所示，A 和 C 之间存在数据依赖关系，同时 B 和 C 之间也存在数据依赖关
 系。因此在最终执行的指令序列中，C 不能被重排序到 A 和 B 的前面（C 排到 A 和
 B 的前面，程序的结果将会被改变）。但 A 和 B 之间没有数据依赖关系，编译器和
 处理器可以重排序 A 和 B 之间的执行顺序。下图是该程序的两种执行顺序：
-![依赖关系](https://upload-images.jianshu.io/upload_images/10175660-542f588132b904ac.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![依赖关系](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093639.png)
 as-if-serial 语义把单线程程序保护了起来，遵守 as-if-serial 语义的编译器，
 runtime 和处理器共同为编写单线程程序的程序员创建了一个幻觉：单线程程序是按程序的顺序来执行的。as-if-serial 语义使单线程程序员无需担心重排序会干扰他
 们，也无需担心内存可见性问题。
@@ -228,7 +227,7 @@ A 首先执行 writer()方法，随后 B 线程接着执行 reader()方法。线
 序；同样，操作 3 和操作 4 没有数据依赖关系，编译器和处理器也可以对这两个操
 作重排序。让我们先来看看，当操作 1 和操作 2 重排序时，可能会产生什么效果？
 请看下面的程序执行时序图：
-![图1.JPG](https://upload-images.jianshu.io/upload_images/10175660-dec9ecab8c32c08d.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图1.JPG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093708.png)
 如上图所示，操作 1 和操作 2 做了重排序。程序执行时，线程 A 首先写标记变量
 flag，随后线程 B 读这个变量。由于条件判断为真，线程 B 将读取变量 a。此时，
 变量 a 还根本没有被线程 A 写入，在这里多线程程序的语义被重排序破坏了！
@@ -237,7 +236,7 @@ flag，随后线程 B 读这个变量。由于条件判断为真，线程 B 将�
 下面再让我们看看，当操作 3 和操作 4 重排序时会产生什么效果（借助这个重排
 序，可以顺便说明控制依赖性）。下面是操作 3 和操作 4 重排序后，程序的执行时
 序图：
-![图2.JPG](https://upload-images.jianshu.io/upload_images/10175660-e1aa202378374647.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![图2.JPG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093738.png)
 在程序中，操作 3 和操作 4 存在控制依赖关系。当代码中存在控制依赖性时，会影
 响指令序列执行的并行度。为此，编译器和处理器会采用猜测（Speculation）执
 行来克服控制相关性对并行度的影响。以处理器的猜测执行为例，执行线程 B 的处

@@ -28,7 +28,7 @@ draft: false
 
 **1 简单工厂模式**
 
-![简单工厂模式](http://upload-images.jianshu.io/upload_images/10175660-4012e2250133cb61?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![简单工厂模式](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510124336.png)
 
 工厂产品线流程如上图所示：工厂生产汽车通过指定汽车的编号，我们就可以走指定的产品线；调用者只需要选择具体车型而不需要内部车是怎么制造出来的
 
@@ -163,7 +163,8 @@ public static HONDA produceCar(int type) {
  一个抽象工厂，可以派生多个具体工厂 
  每个具体工厂创建一个产品线
 
-![工厂方法模式](http://upload-images.jianshu.io/upload_images/10175660-922ce03d6a042ced?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![工厂方法模式](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510124401.png)
+
 
 如上图所示，工厂方法则有多个工厂实例，每个工厂负责一条流水线
 
@@ -313,7 +314,7 @@ public static void main(String[] args) {
 根据工厂产品需求选择合适的工厂模式
 
 具体的例子比如 mybatis 的SqlSessionFactory接口 
-![SqlSessionFactory](http://upload-images.jianshu.io/upload_images/10175660-2a587ed1bbed05b0?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![SqlSessionFactory](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510124432.png)
 
 有两个具体工厂（SqlSessionManager 和 DefalutSqlSessionFactory） 每个工厂中有 生产SqlSession 和 Configuration 的 流水线 SqlSession 又是抽象产品角色，有很多具体实现
 

@@ -17,7 +17,7 @@ draft: false
 # 1 异常层次结构
 异常指不期而至的各种状况，如：文件找不到、网络连接失败、非法参数等。异常是一个事件，它发生在程序运行期间，干扰了正常的指令流程。Java通 过API中Throwable类的众多子类描述各种不同的异常。因而，Java异常都是对象，是Throwable子类的实例，描述了出现在一段编码中的 错误条件。当条件生成时，错误将引发异常。
       Java异常类层次结构图：
-![Java异常类层次结构图](https://upload-images.jianshu.io/upload_images/10175660-248cd3eb6352bfb8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Java异常类层次结构图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093927.png)
 
   在 Java 中，所有的异常都有一个共同的祖先 Throwable（可抛出）。Throwable 指定代码中可用异常传播机制通过 Java 应用程序传输的任何问题的共性。
        **Throwable**： 有两个重要的子类：*Exception（异常）和 Error（错误）*，二者都是 Java 异常处理的重要子类，各自都包含大量子类。
@@ -37,7 +37,7 @@ Exception 类有一个重要的子类 RuntimeException。RuntimeException 类及
 # 2 JVM字节码分析异常处理机制
 
 我们都知道 try、catch、finally语句块的执行顺序:
-![try-catch-finally 控制流](https://upload-images.jianshu.io/upload_images/10175660-0f52d611affd9a6f.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![try-catch-finally 控制流](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093950.png)
 
 
 
@@ -145,7 +145,7 @@ public class exception.FileDemo {
 通过以上指令，我们能够理解，生成字节码指令的时候，会有一张异常表，记录发生异常情况，跳转到哪一条指令，捕获的异常会在字节码指令中跟踪 try语句块中的代码，当出现该异常的时候跳转到相应catch内部的语句块和最后的finally语句块，如果出现的异常是我们未捕获的，则会走finally的逻辑，并抛出异常错误返回
 
 为了更好的理解我们可以看下面字节码指令结构图：
-![异常字节码指令图](https://upload-images.jianshu.io/upload_images/10175660-f388282f852fc14f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![异常字节码指令图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094022.png)
 
 # 3 Java异常处理的一般性建议
 >try-catch-finally 规则 异常处理语句的语法规则：

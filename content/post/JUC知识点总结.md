@@ -17,7 +17,7 @@ draft: false
 作为并发的基础，我们需要熟悉掌握JUC相关的知识，才能更好的在实际项目中运用，
 下面是整理出来的juc思维导图：
 
-![JUC知识点总结.png](https://upload-images.jianshu.io/upload_images/10175660-4bceb180f4aacafe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![JUC知识点总结.png](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095406.png)
 
 #系列文章
 [java内存模型之[JMM][重排序][happens-before]](https://www.jianshu.com/p/6ac7207d81d3)

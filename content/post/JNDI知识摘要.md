@@ -23,7 +23,7 @@ JNDI(Java Naming and Directory Interface,Java命名和目录接口)是SUN公司�
  比如:**在application的底层创建对象,并将对象bind到特定的context中,对象的创建过程或者"查找"方式只有此底层模块支持,外部程序不可见.对于对象的使用者(调用者)只能通过JNDI的方式获取对象,对象使用者无法直接创建对象等**
 
 #2 JNDI架构
-![架构](https://upload-images.jianshu.io/upload_images/10175660-e3cc6625588ad25d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![架构](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095340.png)
 
 关于JNDI要注意的重要一点是，它提供了应用编程接口(application programming interface，API)和服务提供者接口(service provider interface，SPI)。这一点的真正含义是，要让应用与命名服务或目录服务交互，必须有这个服务的JNDI服务提供者，这正是JNDI SPI发挥作用的地方。服务提供者基本上是一组类，这些类为各种具体的命名和目录服务实现了JNDI接口—很像JDBC驱动为各种具体的数据库系统实现了JDBC接口一样。作为一个应用开发者，我们不必操心JNDI SPI的具体实现。只需要确认要使用的某一个命名或目录服务都有服务提供者。
 

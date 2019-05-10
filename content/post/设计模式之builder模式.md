@@ -24,7 +24,7 @@ draft: false
 假设我们有一个向客户发送新年祝福邮件的需求，而邮件内容可以是纯文档的，也可以是有动画的，也可以是有音频的，可以动态的添加个组件
 
 uml下图所示： 
-![建造者模式](http://upload-images.jianshu.io/upload_images/10175660-73b74bcbd9ee9ba9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![建造者模式](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510124304.png)
 
 如上图所示，邮箱有多个组件，包含收件人，发送人，内容，音乐等 
 通过具体的建造者添加不同的组件模版，最后通过指挥者去调用抽象建造者 

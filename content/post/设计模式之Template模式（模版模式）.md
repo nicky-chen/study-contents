@@ -18,7 +18,7 @@ draft: false
 模版方法模式在一个方法中定义一个算法的骨架，而将一些步骤延迟到子类中。模版方法使得子类可以在不改变算法结构的情况下，重新定义算法中的某些步骤。
 
 **1.2 结构**
-![模版方法](https://upload-images.jianshu.io/upload_images/10175660-4b852101cc35ec28.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![模版方法](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510124501.png)
 
 
 **1.3 模式的组成**

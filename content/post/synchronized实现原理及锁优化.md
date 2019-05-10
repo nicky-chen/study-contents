@@ -134,11 +134,11 @@ HotSpot虚拟机的对象头(Object Header)包括两部分信息:
 
 对象头默认存储结构
 
-![默认存储结构](https://upload-images.jianshu.io/upload_images/10175660-8e2e456b957e939c.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![默认存储结构](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095458.png)
 
 在运行期间，Mark Word里存储的数据会随着锁标志位的变化而变化。Mark Word可能变化为存储以下4种数据（32位系统）
 
-![运行时存储结构变化](https://upload-images.jianshu.io/upload_images/10175660-90c674b807003850.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![运行时存储结构变化](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095530.png)
 
 对象头的数据结构C++源码可以查看 [openjdk\hotspot\src\share\vm\oops.markOop.hpp](https://bitbucket.org/luchsh/openjdk8-hotspot/src/ed621d125d02f61e1f08c86aa43c2e85a79eadea/src/share/vm/oops/markOop.hpp?at=default&fileviewer=file-view-default)
 ```
@@ -185,7 +185,7 @@ ObjectMonitor() {
 ```
 每个线程都有两个ObjectMonitor对象列表，分别为free和used列表，如果当前free列表为空，线程将向全局global list请求分配ObjectMonitor。
 ObjectMonitor对象中有两个队列：_WaitSet 和 _EntryList，用来保存ObjectWaiter对象列表；
-![monitor](https://upload-images.jianshu.io/upload_images/10175660-d31da0ecab6cd54c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![monitor](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095603.png)
 
 
 # 5. JVM中锁的优化
@@ -229,7 +229,7 @@ IRT_END
 ***注意：当锁有竞争关系的时候，需要解除偏向锁，进入轻量级锁。***
 偏向锁执行流程，线程1演示了偏向锁初始化的流程，线程2演示了偏向锁撤销的流程
 
-![偏向锁](https://upload-images.jianshu.io/upload_images/10175660-2b9a1f8e0028dd6e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![偏向锁](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095627.png)
 
 偏向锁在Java 6和Java 7里是默认启用的，但是它在应用程序启动几秒钟之后才激活，如有必要可以使用JVM参数来关闭延迟：**XX:BiasedLockingStartupDelay=0**。如果确定应用的锁通常情况下处于竞争状态，可以通过JVM参数关闭偏向锁：**-XX:-UseBiasedLocking=false**，那么程序默认会进入轻量级锁状态。
 
@@ -263,7 +263,7 @@ void ObjectSynchronizer::fast_enter(Handle obj, BasicLock* lock, bool attempt_re
 轻量级解锁时，会使用原子的CAS操作将Displaced Mark Word替换回到对象头，如果成功，则表示没有竞争发生。如果失败，表示当前锁存在竞争，锁就会膨胀成重量级锁。
 下图展示两个线程同时争夺锁，导致锁膨胀的流程图:
 
-![轻量级锁](https://upload-images.jianshu.io/upload_images/10175660-94e49823fb3588d7.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![轻量级锁](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095657.png)
 
 自旋的线程在自旋过程中，成功获得资源(即之前获的资源的线程执行完成并释放了共享资源)，则整个状态依然处于轻量级锁的状态，如果自旋失败进入重量级锁的状态，这个时候，自旋的线程进行阻塞，等待之前线程执行完成并唤醒自己。因为自旋会消耗CPU，为了避免无用的自旋（比如获得锁的线程被阻塞住了），一旦锁升级成重量级锁，就不会再恢复到轻量级锁状态。当锁处于这个状态下，其他线程试图获取锁时，都会被阻塞住，当持有锁的线程释放锁之后会唤醒这些线程，被唤醒的线程就会进行新一轮的夺锁之争。
 
@@ -312,7 +312,7 @@ void ObjectSynchronizer::slow_enter(Handle obj, BasicLock* lock, TRAPS) {
 
 
 **5.4 锁的优缺点对比**
-![锁对比](https://upload-images.jianshu.io/upload_images/10175660-0c7782fa4c2024c3.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![锁对比](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095744.png)
 
 
 

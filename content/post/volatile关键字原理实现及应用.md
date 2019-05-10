@@ -82,7 +82,7 @@ r = a*a;     //语句4
 
  　　这段代码有4个语句，那么可能的一个执行顺序是：
 
-　　![执行顺序](http://upload-images.jianshu.io/upload_images/10175660-985a37d59c8de767.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+　　![执行顺序](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095834.png)
 
 　　那么可不可能是这个执行顺序呢： 语句2   语句1    语句4   语句3
 
@@ -291,14 +291,14 @@ long和double两种数据类型的操作可分为高32位和低32位两部分，
 　**　3、内存屏障**
 
 　　为了实现volatile可见性和happen-before的语义。JVM底层是通过一个叫做“内存屏障”的东西来完成。内存屏障，也叫做内存栅栏，是一组处理器指令，用于实现对内存操作的顺序限制。下面是完成上述规则所要求的内存屏障：
-![volatile](https://upload-images.jianshu.io/upload_images/10175660-dfca47a25b527180.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![volatile](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510100157.png)
 在NO的地方会插入指令屏障来防止指令重排序
-![volatile读.JPG](https://upload-images.jianshu.io/upload_images/10175660-24646f92fcfd2963.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![volatile读.JPG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510100222.png)
 
-![volatile写.JPG](https://upload-images.jianshu.io/upload_images/10175660-194c952a3f527908.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![volatile写.JPG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510100250.png)
 
 
-具体可参考前文[java内存模型](https://www.jianshu.com/p/6ac7207d81d3)
+具体可参考前文[java内存模型](https://nicky-chen.github.io/2018/04/03/thread-jmm-happens-before/)
 
 
 
@@ -307,9 +307,9 @@ long和double两种数据类型的操作可分为高32位和低32位两部分，
 
 在了解volatile实现原理之前，我们先来看下与其实现原理相关的CPU术语与说明。表2-1
 是CPU术语的定义。
-![cpu术语](https://upload-images.jianshu.io/upload_images/10175660-3839f2f5788ca588.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![cpu术语](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510100406.png)
 
-![image.png](https://upload-images.jianshu.io/upload_images/10175660-a57e7ae9d8316b25.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510103214.png)
 
 
 volatile是如何来保证可见性的呢？让我们在X86处理器下通过工具获取JIT编译器生成的

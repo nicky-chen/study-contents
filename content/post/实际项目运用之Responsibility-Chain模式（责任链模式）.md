@@ -38,7 +38,7 @@ draft: false
 
 ### 2.2 类图及设计
 
-![责任链](https://upload-images.jianshu.io/upload_images/10175660-6a436a7e9d9acb20.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![责任链](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510112242.png)
 
 **代码详解：**
 
@@ -148,7 +148,7 @@ _Client_  客户端调用
 
 初始化过滤器加载数据流如下：
 
-![filter初始化加载时序图](https://upload-images.jianshu.io/upload_images/10175660-34085e1afbe46808.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![filter初始化加载时序图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510112524.png)
 
 _关键性代码_
 ```
@@ -254,7 +254,7 @@ public void onStartup(ServletContext servletContext) throws ServletException {
 在ApplicationFilterChai类的`createFilterChain()`方法中调用ApplicationFilterChain类的`addFilter()`方法
 在ApplicationFilterChain类的`addFilter()`方法中给ApplicationFilterConfig数组赋值
 
-![生成调用链](https://upload-images.jianshu.io/upload_images/10175660-d5efd942580d76d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![生成调用链](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510112549.png)
 
 **3.2.2 执行责任链**
 
@@ -362,7 +362,7 @@ if(message.getTag() == messageTag){
 **具体设计方案如下：**
 
 设计UML类图
-![类图](https://upload-images.jianshu.io/upload_images/10175660-3ea2cd97f3baed59.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![类图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510112612.png)
 
 
 *抽象公共监听器*，主要用到了单例模式获取常量

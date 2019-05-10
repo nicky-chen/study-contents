@@ -240,8 +240,7 @@ public boolean add(E e) {
 这样的好处是不会出现fail-fast,但是只要增删操作就会上锁，影响效率。同时增加对象容量，容易OOM。并且在遍历中，list的元素并不一定是最终的元素集合，所以只能保证最终一致性
 
 ### 2.3 fail-fast和 fail-safe 的区别
-![两者区别](https://upload-images.jianshu.io/upload_images/10175660-eac2b412e2ca676e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![两者区别](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093144.png)
 
 # 3 Reference
 http://www.cnblogs.com/skywang12345/p/3308762.html

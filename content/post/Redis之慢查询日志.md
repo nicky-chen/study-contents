@@ -21,7 +21,7 @@ draft: false
 许多存储系统(如:`MySQL`)提供慢查询日志帮助开发与运维人员定位系统存在的慢操作.所谓慢查询日志就是系统在命令执行前后计算每条命令的执行时间,当超过预设阈值,就将这条命令的相关信息(例如:发生时间,耗时,命令的详细信息)记录到慢查询日志中,`Redis`也提供了类似的功能.
 
 **`Redis`命令执行流程:**
-![执行流程](https://upload-images.jianshu.io/upload_images/10175660-0384383b4cc4a92a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![执行流程](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094707.png)
 
 
 1.  发送命令
@@ -58,7 +58,7 @@ draft: false
 
 如果需要将`Redis`将配置持久化到本地配置文件,要执行`config rewrite`命令.如下:
 
-![配置持久化](https://upload-images.jianshu.io/upload_images/10175660-766efdd5d17dda77.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![配置持久化](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094640.png)
 
 
 虽然慢查询日志存放在`Redis`内存列表中,但是`Redis`并没有暴露这个列表的键,而是通过一组命令来实现对慢查询日志的访问和管理.
@@ -91,7 +91,7 @@ slowlog get [n]
 
 可以看到每个查询日志有4个属性组成,分别是慢查询日志的表示`id`、发生时间戳、命令耗时、执行命令和参数,慢查询列表:
 
-![命令参数](https://upload-images.jianshu.io/upload_images/10175660-0c0ecd7670f6b0e3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![命令参数](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094735.png)
 
 
 (2) 获取慢查询日志列表当前长度

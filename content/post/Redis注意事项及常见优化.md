@@ -152,11 +152,11 @@ config set client-output-buffer-limit ‘slave 256mb 64mb 60’
 
 图一 多IO版本
 
-![io](https://upload-images.jianshu.io/upload_images/10175660-5da6a936ae9d9912.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![io](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094822.png)
 
 图二 单IO版本
 
-![io2](https://upload-images.jianshu.io/upload_images/10175660-c0052c9662a37a60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![io2](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094845.png)
 
 redis引入cluster模式后，批量获取操作mget也面临同样的问题。redis是传统的key-value的存储模式，RedisCluster将数据按key哈希到16384个slot上，每个redis node负责一部分的slot。mget需要执行的操作就是从redis node获取所有的key-value值，然后进行merge然后返回。
 
@@ -222,19 +222,18 @@ Map<String, String> serialIOMget (List<String> keys) {
         return keyValueMap;
     }
 ```
-![串行.png](https://upload-images.jianshu.io/upload_images/10175660-cd1258366d6c78d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![串行.png](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094904.png)
 
 
 ③并行IO：此方案是将方案2中的最后一步改为多线程执行，网络次数虽然还是节点个数，但由于使用多线程网络时间变为O（1），这种方案会增加编程的复杂度。
 
-![并行IO](https://upload-images.jianshu.io/upload_images/10175660-f14efa451ea6ec86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![并行IO](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510094926.png)
 
 
 ④hash_tag实现：Redis Cluster的hash_tag功能，它可以将多个key强制分配到一个节点上，它的操作时间=1次网络时间+n次命令时间。
 
 **四种方案对比**
-![四种批量操作解决方案对比](https://upload-images.jianshu.io/upload_images/10175660-dd499734f74226d5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![四种批量操作解决方案对比](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510095312.png)
 
 
 # 其他工具及优化

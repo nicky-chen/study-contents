@@ -29,7 +29,7 @@ draft: false
 
 通过分析JUnit-3.8.1的源代码文件可以看到，JUnit的源码被分散在6个package中，这个6个package分别为： *junit.awtui* 、 *junit.swingui* 、 *junit.textui* 、 *junit.extensions* 、 *junit.framework* 、 *junit.runner*  具体的文件分布图如下：
 
-![各包情况](https://upload-images.jianshu.io/upload_images/10175660-278a9ef83d38a42d.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![各包情况](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510105901.png)
 
 其中 junit.awtui 、 junit.swingui 、 junit.textui 这三个package是有关JUnit运行时的入口程序以及运行结果显示界面的
 junit.runner中则包含了支持单元测试运行的一些基础类以及自己的类加载器
@@ -41,21 +41,21 @@ junit.extensions则是对framework包在功能上的一些必要功能点的扩�
 
 **junit.framework 类图** 
 
-![famework](https://upload-images.jianshu.io/upload_images/10175660-987c87e79cd5bdf9.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![famework](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510110939.png)
 
 **junit.extensions 类图** 
 
-![extension](https://upload-images.jianshu.io/upload_images/10175660-90287934613de21e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![extension](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510111043.png)
 
 **junit.runner 类图**
-![runner](https://upload-images.jianshu.io/upload_images/10175660-250a20e3ae367902.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![runner](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510111101.png)
 
 
 # 3 运行流程
 
 **时序图**
 
-![junit时序图.PNG](https://upload-images.jianshu.io/upload_images/10175660-c7138d22bd8bbd28.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![junit时序图.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510111134.png)
 
 JUnit的完整生命周期分为3个阶段：_初始化阶段、运行阶段、 结果捕捉阶段_
 

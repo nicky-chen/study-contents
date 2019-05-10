@@ -14,8 +14,7 @@ draft: false
 
 
 在AQS同步器组件原理分析前，我们需要了解同步队列这个概念，了解同步队列中节点的入队和出队的流程，CHL同步队列的由来，可以参考我之前的文章：
-[并发基础之AQS同步器（一）](https://www.jianshu.com/p/afce44b21d77)
-
+[并发基础之AQS同步器（一）](https://nicky-chen.github.io/2018/07/31/aqs_chapter01/)
 
 # 1 同步队列
 
@@ -65,7 +64,7 @@ static final class Node {
 
 **节点属性类型与名称以及描述**
 
-![属性名称](https://upload-images.jianshu.io/upload_images/10175660-50eaea466097ee17.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![属性名称](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113810.png)
  
 >volatile int waitStatus;
         volatile Node prev;
@@ -76,7 +75,7 @@ static final class Node {
 
 同步队列结构图如下：
 
-![同步队列](https://upload-images.jianshu.io/upload_images/10175660-4458697e9594185c.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![同步队列](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113835.png)
 
 
 同步器包含了两个节点类型的引用，一个指向头节点，而另一个指向尾节点。
@@ -85,11 +84,11 @@ static final class Node {
 
 ### 1.1 入队操作
 
-![入队操作](https://upload-images.jianshu.io/upload_images/10175660-e883018e54906887.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![入队操作](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113857.png)
 
 ### 1.2 获取同步状态
 
-![设置首节点](https://upload-images.jianshu.io/upload_images/10175660-f95a12ea2655d585.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![设置首节点](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113924.png)
 
 
 同步队列遵循FIFO，首节点是获取同步状态成功的节点，首节点的线程在释放同步状态时，将会唤醒后继节点，而后继节点将会在获取同步状态成功时将自己设置为首节点由于只有一个线程能够成功获取到同步状态，因此设置头节点的方法并不需要使用CAS来保证,后面代码中会具体分析
@@ -241,11 +240,11 @@ private Node enq(final Node node) {
 * 1 头节点是成功获取到同步状态的节点，而头节点的线程释放了之后，将会唤醒其后继节点，后继节点的线程被唤醒后需要检查自己的前驱节点是否是头节点。
 * 2 维护同步队列的FIFO原则。该方法中，节点自旋获取同步状态的行为如图所示:
 
-![同步状态](https://upload-images.jianshu.io/upload_images/10175660-9435ca33949683ec.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![同步状态](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113958.png)
 
 独占式同步状态获取流程，`acquire(int arg)`方法调用流程，如图：
 
-![独占式获取锁流程](https://upload-images.jianshu.io/upload_images/10175660-4e42520e216e4c64.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![独占式获取锁流程](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510114034.png)
 
 前驱节点为头节点且能够获取同步状态的判断条件和线程进入等待状态是获取同步状态的自旋过程。当同步状态获取成功之后，当前线程从`acquire(int arg)`方法返回，如果对于锁这种并发组件而言，代表着当前线程获取了锁。
 
@@ -254,7 +253,6 @@ private Node enq(final Node node) {
 当前线程获取同步状态并执行了相应逻辑之后，就需要释放同步状态，使得后续节点能够继续获取同步状态。通过调用同步器的`release(int arg)`方法可以释放同步状态，该方法在释放了同步状态之后，会唤醒其后继节点（进而使后继节点重新尝试获取同步状态）。该方法如下:
 
 ```
-:::java
  public final boolean release(int arg) {
         if (tryRelease(arg)) {
             Node h = head;
@@ -368,7 +366,7 @@ AQS提供了`acquire(int arg)`方法以独占式获取同步状态，但是该�
 
 **独占式超时获取同步状态流程如图**
 
-![超时流程图](https://upload-images.jianshu.io/upload_images/10175660-6ee22896a8f7079b.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![超时流程图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510114139.png)
 
 
 # 3 共享锁实现
@@ -378,7 +376,6 @@ AQS提供了`acquire(int arg)`方法以独占式获取同步状态，但是该�
 
 AQS提供`acquireShared(int arg)`方法共享式获取同步状态：
 ```
-:::java
  public final void acquireShared(int arg) {
         if (tryAcquireShared(arg) < 0)
     //获取失败，自旋获取同步状态
@@ -388,7 +385,6 @@ AQS提供`acquireShared(int arg)`方法共享式获取同步状态：
 首先判断自定义的`tryAcquireShared(arg)`是否获取到同步状态，如果获取失败，则进入`doAcquireShared(arg)`方法
 
 ```
-:::java
  private void doAcquireShared(int arg) {
     //构造共享节点
         final Node node = addWaiter(Node.SHARED);
@@ -430,7 +426,6 @@ AQS提供`acquireShared(int arg)`方法共享式获取同步状态：
 
 获取同步状态后，需要调用`release(int arg)`方法释放同步状态，方法如下：
 ```
-:::java
  public final boolean releaseShared(int arg) {
         if (tryReleaseShared(arg)) {//自定义ryReleaseShared方法中释放同步状态成功
             doReleaseShared();

@@ -10,7 +10,7 @@ author: "nicky_chin"
 comments: true
 share: true
 draft: false
----
+--
 
 
 # 1 AQS同步器
@@ -38,7 +38,7 @@ compareAndSetState(int expect,int update)
 
 下图（独占和共享的方法调用）：
 
-![LOCK](http://upload-images.jianshu.io/upload_images/10175660-6574317cafc73f27.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240 "点击查看原始大小图片")
+![LOCK](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113609.png)
 
 `acquire`用来表示是获取资源数的操作，而`release`表示用来释放资源数的操作，不带`Shared`表示是独占的操作。如果我们没有实现红色圆角矩形框的方法却间接调用了，将会抛出著名的`UnsupportedOperationException`异常。
 
@@ -54,11 +54,11 @@ compareAndSetState(int expect,int update)
 
  独占锁操作方法说明如下：
 
-![exclusiveLock](https://upload-images.jianshu.io/upload_images/10175660-fc85fd37fa17e71f.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![exclusiveLock](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113638.png)
 
 共享锁操作方法如下：
 
-![方法2.PNG](https://upload-images.jianshu.io/upload_images/10175660-93bf7f1d84acb5a3.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![方法2.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510113703.png)
 
 
 同步器提供的模板方法基本上分为3类：
@@ -72,7 +72,6 @@ compareAndSetState(int expect,int update)
 ### 自定义同步组件
 
 ```
-:::java
 public class Mutex implements Lock {
 
     public static void main(String[] args) {

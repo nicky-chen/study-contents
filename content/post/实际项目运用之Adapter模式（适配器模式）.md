@@ -47,11 +47,11 @@ draft: false
 
 **2.1 类适配器UML**
 
-![类适配器类图](https://upload-images.jianshu.io/upload_images/10175660-d80f54d37ebaa675.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![类适配器类图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510111526.png)
 
 **2.2 对象适配器模式UML**
 
-![对象适配器类图](https://upload-images.jianshu.io/upload_images/10175660-c43e14eee5fcbbe1.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![对象适配器类图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510111554.png)
 
 **2.3 案例代码：**
 
@@ -312,7 +312,7 @@ public interface AdapteeTarget {
 
 }
 ```
-上面接口使用了java8接口的新特性和[java内省知识对于javabean对象的获取](https://www.jianshu.com/p/086ba5cd3704)
+上面接口使用了java8接口的新特性和[java内省知识对于javabean对象的获取](https://nicky-chen.github.io/2018/03/13/introspector/)
 
 首先基于类适配器思想，让 SysResources去实现AdapteeTarget这个接口，并重写toString方法。代码如下：
 ```

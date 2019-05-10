@@ -193,8 +193,7 @@ AppClassLoader加载的就是java.class.path下的路径。
 
 ## 1.5 三种加载器联系
 
-![jvm类加载器](http://upload-images.jianshu.io/upload_images/10175660-90c729d86ec3c812.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![jvm类加载器](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093029.png)
 
 
   自定义的无参加载器的**父类加载器默认是AppClassloader加载器**，而**AppClassloader加载器的父加载器是ExtClassloader**，我们通过下面代码可以验证：
@@ -245,8 +244,7 @@ Java类加载器使用的是委托机制，也就是子类加载器在加载一�
 
 整个流程可以如下图所示： 
 
-![类加载时序图](https://upload-images.jianshu.io/upload_images/10175660-c1cc4e8ecca728cf.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![类加载时序图](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510093104.png)
 
 ================================================================
 上面已经详细介绍了加载过程，但具体为什么是这样加载，我们还需要了解几个个重要的方法loadClass()、findLoadedClass()、findClass()、defineClass()。

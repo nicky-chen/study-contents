@@ -107,7 +107,7 @@ B
 
 **方法说明**
 
-![condition方法.PNG](https://upload-images.jianshu.io/upload_images/10175660-0ac4505401ef3aa2.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![condition方法.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510114239.png)
 
 
 获取一个Condition必须通过Lock的·newCondition()·方法。下面通过一个有界队列的示例来深入了解Condition的使用方式。
@@ -194,13 +194,13 @@ public class ConditionObject implements Condition, java.io.Serializable {
 }
 ```
 
-![等待队列结构.PNG](https://upload-images.jianshu.io/upload_images/10175660-268967a778c5f20e.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![等待队列结构.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510114332.png)
 
 如图所示，Condition拥有首尾节点的引用，而新增节点只需要将原有的尾节点nextWaiter指向它，并且更新尾节点即可。**上述节点引用更新的过程并没有使用CAS保证，原因在于调用await()方法的线程必定是获取了锁的线程，也就是说该过程是由锁来保证线程安全的**。
 
 在Object的监视器模型上，一个对象拥有一个同步队列和等待队列，而并发包中的Lock实现类拥有一个同步队列和多个等待队列
 
-![同步队列和等待队列.PNG](https://upload-images.jianshu.io/upload_images/10175660-b44490bc23ffe40b.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![同步队列和等待队列.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510114407.png)
 
 如上图所示，Condition的实现是同步器的内部类，因此每个Condition实例都能够访问同步器提供的方法，相当于每个Condition都拥有所属同步器的引用。
 
@@ -244,7 +244,7 @@ public final void await() throws InterruptedException {
 
 如果从队列的角度去看，当前线程加入Condition的等待队列，如图所示，同步队列的首节点并不会直接加入等待队列，而是通过`addConditionWaiter()`方法把当前线程构造成一个新的节点并将其加入等待队列中
 
-![将当前节点加入等待队列.PNG](https://upload-images.jianshu.io/upload_images/10175660-99594d90cf500323.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![将当前节点加入等待队列.PNG](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510114611.png)
 
 #### 3.3 通知
 
@@ -293,7 +293,7 @@ final boolean transferForSignal(Node node) {
 
 节点从等待队列移动到同步队列的过程如下图所示
 
-![唤醒过程](https://upload-images.jianshu.io/upload_images/10175660-d8083a4de28e82ef.PNG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![唤醒过程](https://raw.githubusercontent.com/nicky-chen/pic_store/master/20190510114456.png)
 
 * 通过调用同步器的`enq(Node node)`方法，等待队列中的头节点线程安全地移动到同步队列。
 * 当节点移动到同步队列后，当前线程再使用LockSupport唤醒该节点的线程。
