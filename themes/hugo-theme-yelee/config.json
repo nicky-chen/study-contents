@@ -46,7 +46,7 @@
       }
     ],
     "visit_counter": {
-      "on": true,
+      "on": false,
       "site_visit": "本站到访数",
       "page_visit": "本页阅读量"
     },
