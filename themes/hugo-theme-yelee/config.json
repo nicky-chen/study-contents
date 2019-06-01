@@ -52,7 +52,7 @@
     },
     "jquery_ui": false,
     "mathjax": false,
-    "background_image": 5,
+    "background_image": 10,
     "google_analytics": "UA-119892182-1",
     "fancybox": true,
     "open_in_new": true,
