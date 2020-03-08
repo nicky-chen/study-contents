@@ -1,4 +1,5 @@
 {
+  "baseURL": "http://nicky-chin.cn/",
   "disablePathToLower": false,
   "params": {
     "author": "nicky_chin",
