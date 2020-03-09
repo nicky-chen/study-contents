@@ -5,7 +5,7 @@ theme = "hugo-theme-yelee"
 Paginate= 8
 Copyright = "All rights reserved - 2018"
 canonifyurls = true
-googleAnalytics = "UA-119892182-1"
+googleAnalytics = "UA-159911678-1"
 enableRobotsTXT = true
 
 [sitemap]
@@ -23,7 +23,7 @@ enableRobotsTXT = true
   authorwebsite = "https://nicky-chin.cn/"
   authorbio= "Every man dies, not every man really lives."
   logo = "images/fish.png"
-  googleAnalyticsUserID = "UA-119892182-1"
+  googleAnalyticsUserID = "UA-159911678-1"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   # RSSLink = "http://feeds.feedburner.com/..."
   githubName = "nicky_chin"
