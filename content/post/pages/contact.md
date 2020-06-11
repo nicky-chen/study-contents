@@ -9,7 +9,7 @@ draft: false
 aliases: [/post/external/contact.html]
 ---
 
-### 联系邮箱
+### 联系方式
 
 >__e-mail: shuilianpiying@163.com__
 > 
