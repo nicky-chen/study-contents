@@ -34,16 +34,20 @@
         "link": "/tags/"
       },
       {
-        "label": "开源项目",
-        "link": "/post/external/open_source.html"
-      },
-      {
         "label": "技术图谱",
         "link": "/post/external/teach_pic.html"
       },
       {
         "label": "归档日志",
         "link": "/post/"
+      },
+      {
+        "label": "联系&留言",
+        "link": "/post/external/contact.html"
+      },
+      {
+        "label": "开源项目",
+        "link": "/post/external/open_source.html"
       }
     ],
     "visit_counter": {

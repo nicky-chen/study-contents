@@ -176,16 +176,17 @@
 {{ if $.Site.Params.disqusShortname }}
 <div style="margin-left: 30px;margin-right: 30px;background: white;padding-left: 30px;padding-right: 30px">
     <div class="comments">
-        <h3>COMMENTS</h3>
-        <script type="text/javascript">
-            (function() {
-                var dsq = document.createElement('script');
-                dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'https://nicky-chen.disqus.com/embed.js';
-                dsq.setAttribute('data-timestamp', +new Date());
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
+        <h3>[评论][COMMENTS]</h3>
+        <!--<script type="text/javascript">-->
+            <!--(function() {-->
+                <!--var dsq = document.createElement('script');-->
+                <!--dsq.type = 'text/javascript'; dsq.async = true;-->
+                <!--dsq.src = 'https://nicky-chen.disqus.com/embed.js';-->
+                <!--dsq.setAttribute('data-timestamp', +new Date());-->
+                <!--(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);-->
+            <!--})();-->
+        <!--</script>-->
+        <div id="remark42"></div>
         <div id="disqus_thread"></div>
 
     </div>
@@ -227,6 +228,26 @@
     <li class="post-list-item"><a class="post-list-link" href="{{.RelPermalink}}" target="_blank">{{ .Title }}</a></li>
     {{ end }}
 </ul>
+
+<script>
+    var remark_config = {
+        host: "https://nicky-chin.cn", //评论系统的服务器地址
+        site_id: 'nicky-blog',//一个网站的标示，用来区别和其他的网站
+        components: ['embed'], // 选择基础的模块
+        max_shown_comments: 20, //评论默认显示的数量，默认是15条
+        theme: 'light', //默认是dark主题，也可以选择light主题
+        locale: 'zh'
+    };
+
+    (function(c) {
+        for(var i = 0; i < c.length; i++){
+            var d = document, s = d.createElement('script');
+            s.src = remark_config.host + '/web/' +c[i] +'.js';
+            s.defer = true;
+            (d.head || d.body).appendChild(s);
+        }
+    })(remark_config.components || ['embed']);
+</script>
 
 <script src="//7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 <script>
