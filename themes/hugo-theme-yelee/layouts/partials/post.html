@@ -238,7 +238,7 @@
     var remark_config = {
         host: "https://nicky-chin.cn", //评论系统的服务器地址
         site_id: 'nicky-blog',//一个网站的标示，用来区别和其他的网站
-        components: ['embed'], // 选择基础的模块
+        components: ['embed', 'last-comments'], // 选择基础的模块
         max_shown_comments: 20, //评论默认显示的数量，默认是15条
         theme: 'light', //默认是dark主题，也可以选择light主题
         locale: 'zh'
@@ -273,23 +273,6 @@
             $(".switch-btn, .switch-area").fadeToggle(300);
         }
     })
-</script>
-<script>
-    var remark_config = {
-        host: "https://nicky-chin.cn",
-        site_id: 'nicky-blog',
-        components: ['last-comments'],
-        locale: 'zh'
-    };
-
-    (function(c) {
-        for(var i = 0; i < c.length; i++){
-            var d = document, s = d.createElement('script');
-            s.src = remark_config.host + '/web/' +c[i] +'.js';
-            s.defer = true;
-            (d.head || d.body).appendChild(s);
-        }
-    })(remark_config.components || ['embed']);
 </script>
 
 <script>
