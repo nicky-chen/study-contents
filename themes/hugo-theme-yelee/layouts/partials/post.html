@@ -88,6 +88,11 @@
     <ol class="toc">
         {{ .TableOfContents }}
     </ol>
+    <div style="text-align:center">-----------------------</div>
+    <strong class="toc-title">最新评论</strong>
+    <ol class="toc">
+        <div class="remark42__last-comments" data-max="10"></div>
+    </ol>
 </div>
 <style>
     {{ if eq .Type "post" }}
@@ -269,7 +274,22 @@
         }
     })
 </script>
+<script>
+    var remark_config = {
+        host: "https://nicky-chin.cn",
+        site_id: 'nicky-blog',
+        components: ['last-comments']
+    };
 
+    (function(c) {
+        for(var i = 0; i < c.length; i++){
+            var d = document, s = d.createElement('script');
+            s.src = remark_config.host + '/web/' +c[i] +'.js';
+            s.defer = true;
+            (d.head || d.body).appendChild(s);
+        }
+    })(remark_config.components || ['embed']);
+</script>
 
 <script>
 
