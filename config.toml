@@ -7,6 +7,8 @@ Copyright = "All rights reserved - 2018"
 canonifyurls = true
 googleAnalytics = "UA-159911678-1"
 enableRobotsTXT = true
+PygmentsCodeFences = true
+summaryLength = 15
 
 [sitemap]
   changefreq = "monthly"

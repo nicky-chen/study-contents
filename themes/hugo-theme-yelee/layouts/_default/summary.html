@@ -1,5 +1,6 @@
 <article id="post-Recycler-pbl" class="article article-type-post" itemscope="" itemprop="blogPost">
 
+
     <div class="article-meta">
         <a href="{{ .Permalink }}" class="article-date">
             <time datetime="{{.Date}}" itemprop="datePublished">{{ .Date.Format "2006-01-02" }}</time>
@@ -24,6 +25,7 @@
 
         <div class="article-entry" itemprop="articleBody">
             {{ .Summary }}
+            <img src="/media/{{.Slug}}/preview.jpg" onerror="this.remove()" title="图片预览">
         </div>
 
         <div class="article-info article-info-index">

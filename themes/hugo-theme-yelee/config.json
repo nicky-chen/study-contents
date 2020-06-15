@@ -1,5 +1,6 @@
 {
   "baseURL": "http://nicky-chin.cn/",
+  "summaryLength":25,
   "disablePathToLower": false,
   "params": {
     "author": "nicky_chin",
@@ -61,6 +62,6 @@
     "google_analytics": "UA-159911678-1",
     "fancybox": true,
     "open_in_new": true,
-    "animate": true
+    "animate": false
   }
 }
