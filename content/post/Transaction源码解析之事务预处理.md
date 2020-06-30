@@ -574,7 +574,7 @@ protected final SuspendedResourcesHolder suspend(Object transaction) throws Tran
 
 ```
 
-主要是清空基于_ThreadLocal_的本地线程绑定的事务信息，并将清空的事务信息存入**SuspendedResourcesHolder**挂起资源对象中返回
+主要是清空基于**ThreadLocal**的本地线程绑定的事务信息，并将清空的事务信息存入**SuspendedResourcesHolder**挂起资源对象中返回
 
 
 
@@ -891,7 +891,7 @@ private static Object doUnbindResource(Object actualKey) {
 
 ```
 
-意图很明显，就是将当前事务绑定到本地线程，同时将上一级的事务存放到_oldTransactionInfo_属性中，为什么要这么做呢，这个请看之后的事务提交部分的解析
+意图很明显，就是将当前事务绑定到本地线程，同时将上一级的事务存放到`oldTransactionInfo`属性中，为什么要这么做呢，这个请看之后的事务提交部分的解析
 
 
 
