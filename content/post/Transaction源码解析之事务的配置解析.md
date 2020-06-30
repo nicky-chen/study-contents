@@ -1,6 +1,6 @@
 
 ---
-title: Transaction源码解析之事务的配置解析
+title: Transaction源码解析之事务配置解析
 date: 2020-05-03T11:18:15+08:00
 weight: 70
 slug: spring-transaction-config
