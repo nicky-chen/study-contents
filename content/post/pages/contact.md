@@ -17,5 +17,5 @@ aliases: [/post/external/contact.html]
 
 
 
-![欢迎留言](http://nicky-chin.cn/follow.gif)
+![欢迎留言](http://nicky-chin.cn/media/follow.gif)
 
