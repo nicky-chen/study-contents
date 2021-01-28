@@ -1,6 +1,6 @@
 baseURL = "https://nicky-chin.cn/"
 LanguageCode= "zh-cn"
-Title= "南乡清水"
+Title= "南乡清水的技术积累"
 theme = "hugo-theme-yelee"
 Paginate= 8
 Copyright = "All rights reserved - 2018"
