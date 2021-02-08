@@ -1,6 +1,6 @@
 <footer id="footer">
 
-    {{ if eq .Title "南乡清水的技术积累" }}
+    {{ if eq .Title $.Site.Title }}
     <link rel="stylesheet" href="/css/APlayer.min.css">
     <script src="/js/APlayer.min.js"></script>
     <div id="aplayer" class="aplayer" data-id="865331941" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-listfolded="true" data-order="random" data-theme="#F58EA8" ></div>
@@ -9,6 +9,7 @@
 
 
     <div class="outer">
+        {{ if ne .Title $.Site.Title }}
         {{ if $.Site.Params.visit_counter.on}}
             <div class="footer-right">
                 {{ if $.Site.Params.visit_counter.site_visit }}
@@ -29,6 +30,7 @@
                     </span>
                 {{ end }}
             </div>
+        {{ end }}
         {{ end }}
         <div id="footer-info">
             <div class="footer-left">

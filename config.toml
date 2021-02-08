@@ -22,6 +22,7 @@ summaryLength = 15
   cover = "images/boy_bicycle.jpg"
   author = "nicky_chin"
   authorlocation = "南乡清水@Hangzhou"
+
   authorwebsite = "https://nicky-chin.cn/"
   authorbio= "Every man dies, not every man really lives."
   logo = "images/fish.png"
