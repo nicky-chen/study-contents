@@ -12,7 +12,10 @@
         <p class="header-subtitle">{{ .Site.Params.subtitle }}</p>
         {{ end }}
 
+        {{ if eq .Title $.Site.Title }}
+        <p><br></p>
         <form><input type="text" class="st-default-search-input" placeholder=" 站内搜索"></form>
+        {{ end }}
 
         {{ if .Site.Params.tagcloud }}
             <div id="switch-btn" class="switch-btn">
