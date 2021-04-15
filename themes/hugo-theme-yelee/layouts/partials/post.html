@@ -44,6 +44,12 @@
             </div>
             {{ end }}
 
+            {{ if .Params.author }}
+            <div class="article-category tagcloud">
+                <a class="article-category-link" style="font-size: 12px;"> posted by {{.Params.author}}</a>
+            </div>
+            {{ end }}
+
             <div class="clearfix"></div>
         </div>
 
