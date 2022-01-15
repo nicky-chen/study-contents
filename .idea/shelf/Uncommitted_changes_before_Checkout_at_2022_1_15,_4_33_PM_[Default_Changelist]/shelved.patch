@@ -1,0 +1,1519 @@
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Created by .ignore support plugin (hsz.mobi)\n.idea/inspectionProfiles/\n.idea/misc.xml\n.idea/modules.xml\n.idea/my_blog.iml\n.idea/workspace.xml\n/.idea/vcs.xml\n.public
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .gitignore	(revision 3d0a59133b98a59e4983d6de290348ec665bcc36)
++++ .gitignore	(date 1618481192749)
+@@ -5,4 +5,980 @@
+ .idea/my_blog.iml
+ .idea/workspace.xml
+ /.idea/vcs.xml
+-.public
+\ No newline at end of file
++.public
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_classic/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_normal/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_swimwear/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoire/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoirenohover/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear_extra/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgearswim/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepmaid/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepswim/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_classic/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_santa/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir_classic/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir_santa/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/noireswim/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_classic/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_normal/textures.1024/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_swimwear/textures.1024/00.png
++/public/live2d_api/model/KantaiCollection/murakumo/textures.1024/00.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/00.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/00.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_classic/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_normal/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_swimwear/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoire/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoirenohover/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear_extra/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgearswim/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepmaid/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepswim/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_classic/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_santa/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir_classic/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir_santa/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/noireswim/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_classic/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_normal/textures.1024/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_swimwear/textures.1024/01.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/01.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/01.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/snd/001.ogg
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_classic/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_normal/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_swimwear/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoire/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoirenohover/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear_extra/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgearswim/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepmaid/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepswim/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_classic/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_santa/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir_classic/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/noir_santa/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/noireswim/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_classic/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_normal/textures.1024/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_swimwear/textures.1024/02.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/02.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/02.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_classic/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_normal/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoire/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/histoirenohover/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear_extra/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepgearswim/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_classic/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_normal/textures.1024/03.png
++/public/live2d_api/model/HyperdimensionNeptunia/vert_swimwear/textures.1024/03.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/03.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/03.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/04.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/04.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/05.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/05.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/06.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/06.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.512/07.png
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/07.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/snd/007.ogg
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.512/08.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/snd/013.ogg
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/snd/014.ogg
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/snd/101.ogg
++/public/404.html
++/public/highlight/styles/agate.css
++/public/js/analytics.js
++/public/highlight/styles/androidstudio.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/animal-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/animal-costume-racoon.png
++/public/css/APlayer.min.css
++/public/css/APlayer.min.css.map
++/public/js/APlayer.min.js
++/public/js/APlayer.min.js.map
++/public/apple-touch-icon.png
++/public/highlight/styles/arduino-light.css
++/public/highlight/styles/arta.css
++/public/highlight/styles/ascetic.css
++/public/highlight/styles/atelier-cave-dark.css
++/public/highlight/styles/atelier-cave-light.css
++/public/highlight/styles/atelier-dune-dark.css
++/public/highlight/styles/atelier-dune-light.css
++/public/highlight/styles/atelier-estuary-dark.css
++/public/highlight/styles/atelier-estuary-light.css
++/public/highlight/styles/atelier-forest-dark.css
++/public/highlight/styles/atelier-forest-light.css
++/public/highlight/styles/atelier-heath-dark.css
++/public/highlight/styles/atelier-heath-light.css
++/public/highlight/styles/atelier-lakeside-dark.css
++/public/highlight/styles/atelier-lakeside-light.css
++/public/highlight/styles/atelier-plateau-dark.css
++/public/highlight/styles/atelier-plateau-light.css
++/public/highlight/styles/atelier-savanna-dark.css
++/public/highlight/styles/atelier-savanna-light.css
++/public/highlight/styles/atelier-seaside-dark.css
++/public/highlight/styles/atelier-seaside-light.css
++/public/highlight/styles/atelier-sulphurpool-dark.css
++/public/highlight/styles/atelier-sulphurpool-light.css
++/public/highlight/styles/atom-one-dark.css
++/public/highlight/styles/atom-one-light.css
++/public/img/avatar.png
++/public/img/avatar11.png
++/public/media/spring-transaction-config/BeanFactoryTransactionAttributeSourceAdvisor-diagram.png
++/public/background/bg-1.jpg
++/public/background/bg-2.jpg
++/public/background/bg-3.jpg
++/public/background/bg-4.jpg
++/public/background/bg-5.jpg
++/public/background/bg-6.jpg
++/public/background/bg-7.jpg
++/public/background/bg-8.jpg
++/public/background/bg-9.jpg
++/public/background/bg-10.jpg
++/public/live2d_api/model/Potion-Maker/Tia/textures/bikini-costume-blue.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/bikini-costume-pink.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/blackcat-costume.png
++/public/fancybox/blank.gif
++/public/live2d_api/model/Potion-Maker/Tia/textures/blazer-costume-black.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/blazer-costume-brown.png
++/public/blog.zip
++/public/live2d_api/model/Potion-Maker/Tia/textures/blueround-costume.png
++/public/post/external/book_list.html
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath Dere1.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath Dere1.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath Dere2.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath Dere2.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath Dere3.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath Dere3.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath1.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath1.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath2.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath2.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath3.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath3.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath4.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath4.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath5.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath5.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath6.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath6.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath7.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath7.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Breath8.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath8.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Breath9.mtn
++/public/highlight/styles/brown-paper.css
++/public/highlight/styles/brown-papersq.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/bunny-girl-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/bunny-girl-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/bunny-girl-costume-red.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/bunny-girl-costume-red.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/cake-costume-choco.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/cake-costume-cream.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/cami-dress-costume-pink.png
++/public/live2d_api/model/bilibili-live/22/texture_03/cba-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/cba-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/cba-normal-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/cba-normal-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/cba-normal-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/cba-normal-upper.png
++/public/live2d_api/model/bilibili-live/22/texture_02/cba-super-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/cba-super-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/cba-super-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/cba-super-upper.png
++/public/highlight/CHANGES.md
++/public/js/clipboard.min.js
++/public/live2d_api/model/bilibili-live/22/texture_00/closet-default-v2.png
++/public/live2d_api/model/bilibili-live/33/texture_00/closet-default-v2.png
++/public/highlight/styles/codepen-embed.css
++/public/img/coderwall.png
++/public/highlight/styles/color-brewer.css
++/public/highlight/styles/common.css
++/public/js/common.js
++/public/post/external/contact.html
++/public/live2d_api/model/Potion-Maker/Tia/textures/cute-pajamas-costume-purple.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/cute-pajamas-costume-skyblue.png
++/public/highlight/styles/darcula.css
++/public/highlight/styles/dark.css
++/public/highlight/styles/darkula.css
++/public/media/spring-transaction-prepare/DataSourceTransactionManager-diagram.png
++/public/highlight/styles/default.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/default-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/default-costume.png
++/public/live2d_api/model/bilibili-live/22/texture_03/default-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/default-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/default-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/default-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/default-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/default-upper.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/exp/deformed.json
++/public/img/delicious.png
++/public/highlight/styles/docco.css
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/double_tap1.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/double_tap1.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/double_tap2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/double_tap2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/double_tap3.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/double_tap3.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/double_tap4.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/double_tap4.mtn
++/public/highlight/styles/dracula.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/dress-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/dress-costume-brown.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/elementary-school-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/elementary-school-costume-navy.png
++/public/js/embed.js
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/exp/enjoy.json
++/public/highlight/styles/errorPage.css
++/public/js/errorPage.js
++/public/live2d_api/model/KantaiCollection/murakumo/expressions/f01.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f01.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f01.exp.json
++/public/live2d_api/model/KantaiCollection/murakumo/expressions/f02.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f02.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f02.exp.json
++/public/live2d_api/model/KantaiCollection/murakumo/expressions/f03.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f03.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f03.exp.json
++/public/live2d_api/model/KantaiCollection/murakumo/expressions/f04.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-48/expressions/f04.exp.json
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/expressions/f04.exp.json
++/public/img/facebook.png
++/public/live2d_api/model/Potion-Maker/Pio/motions/Fail.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Fail.mtn
++/public/live2d_api/model/Potion-Maker/Pio/textures/fall-dress-costume-beige.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/fall-dress-costume-brown.png
++/public/fancybox/helpers/fancybox_buttons.png
++/public/fancybox/fancybox_loading.gif
++/public/fancybox/fancybox_loading@2x.gif
++/public/fancybox/fancybox_overlay.png
++/public/fancybox/fancybox_sprite.png
++/public/fancybox/fancybox_sprite@2x.png
++/public/highlight/styles/far.css
++/public/img/favicon.ico
++/public/favicon11.png
++/public/assets/flat-ui-icons-regular.eot
++/public/assets/flat-ui-icons-regular.svg
++/public/assets/flat-ui-icons-regular.ttf
++/public/assets/flat-ui-icons-regular.woff
++/public/media/follow.gif
++/public/font-awesome/css/font-awesome.css
++/public/font-awesome/css/font-awesome.min.css
++/public/font-awesome/fonts/FontAwesome.otf
++/public/font-awesome/fonts/fontawesome-webfont.eot
++/public/font-awesome/fonts/fontawesome-webfont.svg
++/public/font-awesome/fonts/fontawesome-webfont.ttf
++/public/font-awesome/fonts/fontawesome-webfont.woff
++/public/font-awesome/fonts/fontawesome-webfont.woff2
++/public/highlight/styles/foundation.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/frill-bikini-costume-green.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/frill-bikini-costume-purple.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/frill-blouse-costume-green.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/frill-blouse-costume-green.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/frill-blouse-costume-red.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/frill-blouse-costume-red.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/furisode-costume.png
++/public/highlight/styles/github.css
++/public/img/GitHub.png
++/public/highlight/styles/github-gist.css
++/public/js/GithubRepoWidget.js
++/public/img/google.png
++/public/highlight/styles/googlecode.css
++/public/highlight/styles/grayscale.css
++/public/highlight/styles/gruvbox-dark.css
++/public/highlight/styles/gruvbox-light.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/halloween-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/halloween-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/hanbok-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/hanbok-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/hanbok-costume-gorgeous.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/hanbok-costume-pink.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/hanbok-costume-red.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/hanbok-costume-skyblue.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/hanbok-costume-yellow.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/exp/happy.json
++/public/live2d_api/model/Potion-Maker/Pio/textures/healer-costume.png
++/public/highlight/highlight.pack.js
++/public/live2d_api/model/Potion-Maker/Tia/textures/hood-costume-gray.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/hood-costume-red.png
++/public/highlight/styles/hopscotch.css
++/public/highlight/styles/hybrid.css
++/public/highlight/styles/idea.css
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idl_00.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idl_00.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idl_01.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idl_01.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idl_02.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idl_02.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idl_03.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idl_03.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idl_04.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idl_04.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idl_05.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idl_05.mtn
++/public/live2d_api/model/bilibili-live/22/motions/idle-01.mtn
++/public/live2d_api/model/bilibili-live/33/motions/idle-01.mtn
++/public/live2d_api/model/bilibili-live/22/motions/idle-02.mtn
++/public/live2d_api/model/bilibili-live/33/motions/idle-02.mtn
++/public/live2d_api/model/bilibili-live/22/motions/idle-03.mtn
++/public/live2d_api/model/bilibili-live/33/motions/idle-03.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/general/mtn/idle_00.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/idle_00.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/general/mtn/idle_01.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/idle_01.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_01.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_01.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/general/mtn/idle_02.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/idle_02.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_02.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_02.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_03.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_03.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_04.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_04.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_05.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_05.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_06.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_06.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_07.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_07.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_08.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_08.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_09.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_09.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_A.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_A.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_A2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_A2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_B.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_B.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_B2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_B2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_C.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_C.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_C2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_C2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/idle_C2_copy.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/idle_C2_copy.mtn
++/public/img/img-err.png
++/public/img/img-loading.png
++/public/2017/01/23/externalizable-interface/index.html
++/public/2017/02/19/info/index.html
++/public/2017/02/19/open_source/index.html
++/public/2017/02/19/tools/index.html
++/public/2017/03/17/book_list/index.html
++/public/2017/05/07/design-rule/index.html
++/public/2017/05/16/thread-communication/index.html
++/public/2017/06/13/optimize-picture/index.html
++/public/2017/09/12/show-global-status/index.html
++/public/2017/11/03/recursive-lock/index.html
++/public/2017/12/07/builder-factory/index.html
++/public/2017/12/19/builder/index.html
++/public/2018/03/08/classloader-chapter01/index.html
++/public/2018/03/13/introspector/index.html
++/public/2018/03/20/classloader-chapter02/index.html
++/public/2018/03/21/binary-operation/index.html
++/public/2018/03/26/interface-idempotency/index.html
++/public/2018/03/28/decorator/index.html
++/public/2018/04/03/thread-jmm-happens-before/index.html
++/public/2018/04/17/exception-introduce/index.html
++/public/2018/04/21/string-builder-question/index.html
++/public/2018/04/25/cap-base-flp/index.html
++/public/2018/04/27/process-fun/index.html
++/public/2018/04/28/high-event/index.html
++/public/2018/05/04/volatile-feature/index.html
++/public/2018/05/06/strategy/index.html
++/public/2018/05/13/juc-tree-info/index.html
++/public/2018/05/14/synchronized-principle/index.html
++/public/2018/05/18/template/index.html
++/public/2018/05/27/adapter/index.html
++/public/2018/06/02/fail-fast-safe/index.html
++/public/2018/06/07/singletion/index.html
++/public/2018/06/13/distribution-knowledge/index.html
++/public/2018/06/17/architect/index.html
++/public/2018/06/25/jndi-introdution/index.html
++/public/2018/06/29/responsibility-chain/index.html
++/public/2018/07/05/spi-introduction/index.html
++/public/2018/07/13/java-securitymanager/index.html
++/public/2018/07/16/junit-codeanalysis/index.html
++/public/2018/07/31/aqs_chapter01/index.html
++/public/2018/08/01/cache-redis-slowlog/index.html
++/public/2018/08/04/aqs_chapter02/index.html
++/public/2018/08/07/cache-redis-optimize/index.html
++/public/2018/08/09/aqs-condition/index.html
++/public/2018/08/12/spring-bean-lifecycle/index.html
++/public/2018/08/16/spring-bean-ioc/index.html
++/public/2018/08/22/java-methodhandler/index.html
++/public/2018/08/25/spring-springmvc/index.html
++/public/2018/09/19/id-snowflake/index.html
++/public/2018/09/25/id-flicker/index.html
++/public/2018/10/15/id-redis/index.html
++/public/2018/11/17/btree-info/index.html
++/public/2018/12/19/state-machine/index.html
++/public/2019/02/15/filter/index.html
++/public/2019/05/03/apt_lombok_implement/index.html
++/public/2019/07/11/mysql-page-detail/index.html
++/public/2020/03/02/float-precision/index.html
++/public/2020/04/15/spring-bean-instantiation/index.html
++/public/2020/04/23/spurious-wakeup/index.html
++/public/2020/05/03/spring-transaction-config/index.html
++/public/2020/05/11/spring-transaction-prepare/index.html
++/public/2020/05/19/spring-transaction-commit/index.html
++/public/categories/algorithm/page/1/index.html
++/public/categories/algorithm/index.html
++/public/categories/cache/page/1/index.html
++/public/categories/cache/index.html
++/public/categories/classloader/page/1/index.html
++/public/categories/classloader/index.html
++/public/categories/concurrent/page/1/index.html
++/public/categories/concurrent/index.html
++/public/categories/design-pattern/page/1/index.html
++/public/categories/design-pattern/index.html
++/public/categories/distribution/page/1/index.html
++/public/categories/distribution/index.html
++/public/categories/java-base/page/1/index.html
++/public/categories/java-base/page/2/index.html
++/public/categories/java-base/index.html
++/public/categories/mysql/page/1/index.html
++/public/categories/mysql/index.html
++/public/categories/security/page/1/index.html
++/public/categories/security/index.html
++/public/categories/source-code/page/1/index.html
++/public/categories/source-code/index.html
++/public/categories/spring/page/1/index.html
++/public/categories/spring/index.html
++/public/categories/index.html
++/public/page/1/index.html
++/public/post/page/1/index.html
++/public/post/page/2/index.html
++/public/post/page/3/index.html
++/public/post/page/4/index.html
++/public/post/page/5/index.html
++/public/post/page/6/index.html
++/public/post/page/7/index.html
++/public/post/page/8/index.html
++/public/post/index.html
++/public/tags/junit/page/1/index.html
++/public/tags/junit/index.html
++/public/tags/redis/page/1/index.html
++/public/tags/redis/index.html
++/public/tags/spring-base/page/1/index.html
++/public/tags/spring-base/index.html
++/public/tags/spring-transaction/page/1/index.html
++/public/tags/spring-transaction/index.html
++/public/tags/优化/page/1/index.html
++/public/tags/优化/index.html
++/public/tags/分布式id方案/page/1/index.html
++/public/tags/分布式id方案/index.html
++/public/tags/创建型/page/1/index.html
++/public/tags/创建型/index.html
++/public/tags/基础/page/1/index.html
++/public/tags/基础/page/2/index.html
++/public/tags/基础/index.html
++/public/tags/多线程/page/1/index.html
++/public/tags/多线程/index.html
++/public/tags/思维导图/page/1/index.html
++/public/tags/思维导图/index.html
++/public/tags/数据结构/page/1/index.html
++/public/tags/数据结构/index.html
++/public/tags/框架基础/page/1/index.html
++/public/tags/框架基础/index.html
++/public/tags/源码/page/1/index.html
++/public/tags/源码/index.html
++/public/tags/理论/page/1/index.html
++/public/tags/理论/index.html
++/public/tags/结构型/page/1/index.html
++/public/tags/结构型/index.html
++/public/tags/行为型/page/1/index.html
++/public/tags/行为型/index.html
++/public/tags/锁优化/page/1/index.html
++/public/tags/锁优化/index.html
++/public/tags/index.html
++/public/index.html
++/public/live2d_api/model/bilibili-live/22/index.json
++/public/live2d_api/model/bilibili-live/33/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_classic/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_normal/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_swimwear/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/histoire/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/histoirenohover/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear_extra/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepgearswim/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepmaid/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepswim/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_classic/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_santa/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/noir/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/noir_classic/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/noir_santa/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/noireswim/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/vert_classic/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/vert_normal/index.json
++/public/live2d_api/model/HyperdimensionNeptunia/vert_swimwear/index.json
++/public/live2d_api/model/KantaiCollection/murakumo/index.json
++/public/live2d_api/model/Potion-Maker/Pio/index.json
++/public/live2d_api/model/Potion-Maker/Tia/index.json
++/public/live2d_api/model/ShizukuTalk/shizuku-48/index.json
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/index.json
++/public/categories/algorithm/index.xml
++/public/categories/cache/index.xml
++/public/categories/classloader/index.xml
++/public/categories/concurrent/index.xml
++/public/categories/design-pattern/index.xml
++/public/categories/distribution/index.xml
++/public/categories/java-base/index.xml
++/public/categories/mysql/index.xml
++/public/categories/security/index.xml
++/public/categories/source-code/index.xml
++/public/categories/spring/index.xml
++/public/categories/index.xml
++/public/post/index.xml
++/public/tags/junit/index.xml
++/public/tags/redis/index.xml
++/public/tags/spring-base/index.xml
++/public/tags/spring-transaction/index.xml
++/public/tags/优化/index.xml
++/public/tags/分布式id方案/index.xml
++/public/tags/创建型/index.xml
++/public/tags/基础/index.xml
++/public/tags/多线程/index.xml
++/public/tags/思维导图/index.xml
++/public/tags/数据结构/index.xml
++/public/tags/框架基础/index.xml
++/public/tags/源码/index.xml
++/public/tags/理论/index.xml
++/public/tags/结构型/index.xml
++/public/tags/行为型/index.xml
++/public/tags/锁优化/index.xml
++/public/tags/index.xml
++/public/index.xml
++/public/media/spring-transaction-config/InfrastructureAdvisorAutoProxyCreator-diagram.png
++/public/media/mysql-page-detail/innodb-engine-struct.png
++/public/media/mysql-page-detail/innodb-page-dir-1024x959.jpg
++/public/media/mysql-page-detail/innodb-page-struct.jpg
++/public/media/mysql-page-detail/innodb-page-struct2-1024x415.jpg
++/public/media/mysql-page-detail/innodb-page-struct3-1024x237.jpg
++/public/js/instagram.js
++/public/highlight/styles/ir-black.css
++/public/live2d_api/model/Potion-Maker/Tia/textures/jersey-costume-blue.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/jersey-costume-red.png
++/public/fancybox/jquery.fancybox.css
++/public/fancybox/jquery.fancybox.js
++/public/fancybox/jquery.fancybox.pack.js
++/public/fancybox/helpers/jquery.fancybox-buttons.css
++/public/fancybox/helpers/jquery.fancybox-buttons.js
++/public/fancybox/helpers/jquery.fancybox-media.js
++/public/fancybox/helpers/jquery.fancybox-thumbs.css
++/public/fancybox/helpers/jquery.fancybox-thumbs.js
++/public/js/jquery.lazyload.js
++/public/live2d_api/model/Potion-Maker/Pio/textures/kids-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/kids-costume-navy.png
++/public/highlight/styles/kimbie.dark.css
++/public/highlight/styles/kimbie.light.css
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/exp/kira.json
++/public/live2d_api/model/Potion-Maker/Tia/textures/knight-costume.png
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/kurakura1.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/kurakura1.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/kurakura2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/kurakura2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/kurakura3.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/kurakura3.mtn
++/public/highlight/LICENSE
++/public/img/linkedin.png
++/public/assets/live2d.js
++/public/assets/live2d.min.js
++/public/live2d_api/model/Potion-Maker/Tia/textures/macaron-dress-costume-green.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/macaron-dress-costume-pink.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/magical-girl-costume.png
++/public/highlight/styles/magula.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/maid-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/maid-costume-black.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/maid-costume-blue.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/maid-costume-red.png
++/public/img/mail.png
++/public/js/main.js
++/public/live2d_api/model/Potion-Maker/Tia/textures/marine-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/marine-costume-navy.png
++/public/js/md5.js
++/public/js/Meting.min.js
++/public/js/mobile.js
++/public/live2d_api/model/bilibili-live/22/model.moc
++/public/live2d_api/model/bilibili-live/33/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_classic/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_normal/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_swimwear/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/histoire/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/histoirenohover/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear_extra/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/nepgearswim/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/nepmaid/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/nepswim/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_classic/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/neptune_santa/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/noir/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/noir_classic/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/noir_santa/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/noireswim/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/vert_classic/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/vert_normal/model.moc
++/public/live2d_api/model/HyperdimensionNeptunia/vert_swimwear/model.moc
++/public/live2d_api/model/KantaiCollection/murakumo/model.moc
++/public/live2d_api/model/Potion-Maker/Pio/model.moc
++/public/live2d_api/model/Potion-Maker/Tia/model.moc
++/public/live2d_api/model/ShizukuTalk/shizuku-48/model.moc
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/model.moc
++/public/model_list.json
++/public/highlight/styles/mono-blue.css
++/public/highlight/styles/monokai.css
++/public/highlight/styles/monokai-sublime.css
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_idle_01.mtn
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_idle_02.mtn
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_idle_03.mtn
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_m_01.mtn
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_m_02.mtn
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_tap_bust_01.mtn
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_tap_bust_02.mtn
++/public/live2d_api/model/KantaiCollection/murakumo/motions/murakumo_tap_ear_01.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/nep_slide_head_2.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/nep_touch_belly_1.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/nep_touch_belly_2.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/nep_touch_boobs_1.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/nep_touch_head_1.mtn
++/public/live2d_api/model/Potion-Maker/Pio/textures/new2015-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/new2015-costume-pajamas.png
++/public/live2d_api/model/bilibili-live/22/texture_03/newyear-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/newyear-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/newyear-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/newyear-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/newyear-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/newyear-upper.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/night-witch-costume-black.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/night-witch-costume-gray.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/nightsky-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/nordic-costume-beige.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/nordic-costume-navy.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/exp/normal.json
++/public/live2d_api/model/Potion-Maker/Tia/textures/nurse-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/nurse-costume-red.png
++/public/highlight/styles/obsidian.css
++/public/highlight/styles/ocean.css
++/public/post/external/open_source.html
++/public/live2d_api/model/Potion-Maker/Pio/textures/overalls-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/overalls-costume-white.png
++/public/media/mysql-page-detail/page-struct.jpeg
++/public/media/mysql-page-detail/page-struct2-1024x423.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/pajamas-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/pajamas-costume-blue.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/pajamas-costume-green.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/pajamas-costume-pink.png
++/public/highlight/styles/paraiso-dark.css
++/public/highlight/styles/paraiso-light.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/party-dress-costume-brown.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/party-dress-costume-purple.png
++/public/js/pc.js
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_classic/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_normal/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/blanc_swimwear/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/histoire/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/histoirenohover/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepgear_extra/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepgearswim/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepmaid/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepswim/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/noir/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/noir_classic/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/noir_santa/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/noireswim/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/vert_classic/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/vert_normal/physics.json
++/public/live2d_api/model/HyperdimensionNeptunia/vert_swimwear/physics.json
++/public/live2d_api/model/KantaiCollection/murakumo/physics.json
++/public/live2d_api/model/ShizukuTalk/shizuku-48/physics.json
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/physics.json
++/public/img/pinboard.png
++/public/img/pinterest.png
++/public/highlight/styles/pojoaque.css
++/public/highlight/styles/pojoaque.jpg
++/public/live2d_api/model/HyperdimensionNeptunia/general/pose.json
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/pose.json
++/public/live2d_api/model/ShizukuTalk/shizuku-48/pose.json
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/pose.json
++/public/media/float-precision/preview.jpg
++/public/media/mysql-page-detail/preview.jpg
++/public/media/spring-bean-instantiation/preview.jpg
++/public/media/spring-transaction-commit/preview.jpg
++/public/media/spring-transaction-config/preview.jpg
++/public/media/spring-transaction-prepare/preview.jpg
++/public/media/spurious-wakeup/preview.jpg
++/public/highlight/styles/purebasic.css
++/public/live2d_api/model/Potion-Maker/Tia/textures/pushcat-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/qipao-costume-pink.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/qipao-costume-red.png
++/public/img/qrcode_wechat.jpg
++/public/highlight/styles/qtcreator_dark.css
++/public/highlight/styles/qtcreator_light.css
++/public/highlight/styles/railscasts.css
++/public/highlight/styles/rainbow.css
++/public/highlight/README.md
++/public/highlight/README.ru.md
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/refuse.mtn
++/public/js/require-2.1.6,jquery-1.9.1.min.js
++/public/live2d_api/model/Potion-Maker/Pio/textures/ribbon-dress-costume-red.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/ribbon-dress-costume-yellow.png
++/public/robots.txt
++/public/highlight/styles/routeros.css
++/public/img/rss.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sabori-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sailor-bikini-costume-black.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sailor-bikini-costume-white.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sailor-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sailor-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sailor-costume-black.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sailor-costume-black.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sakura-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sakura-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sakura-costume-navy.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sakura-costume-navy.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/santa2016-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/santa-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/santa-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/santa-costume-green.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sarori-costume.png
++/public/live2d_api/model/bilibili-live/22/texture_03/school2017-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/school2017-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/school2017-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/school2017-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/school2017-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/school2017-upper.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/school-2017-costume-gray.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/school-2017-costume-yellow.png
++/public/highlight/styles/school-book.css
++/public/highlight/styles/school-book.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/school-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/school-costume-red.png
++/public/img/scrollbar_arrow.png
++/public/img/SegmentFault.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sfc-uniform-costume-red.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sfc-uniform-costume-yellow.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/shake.mtn
++/public/live2d_api/model/Potion-Maker/Pio/textures/shaman-costume-black.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/shaman-costume-blue.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sinsiroad-shop-costume-junior.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sinsiroad-shop-costume-senior.png
++/public/sitemap.xml
++/public/live2d_api/model/Potion-Maker/Pio/motions/Sleeping.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Sleeping.mtn
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/smile.mtn
++/public/highlight/styles/solarized-dark.css
++/public/highlight/styles/solarized-light.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/sorceress-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sports-bikini-costume-green.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sports-bikini-costume-navy.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sporty-hood-costume-black.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sporty-hood-costume-blue.png
++/public/live2d_api/model/bilibili-live/22/texture_03/spring-2018-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/spring-2018-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/spring-2018-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/spring-2018-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/spring-2018-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/spring-2018-upper.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/spring-dress-costume-brown.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/spring-dress-costume-navy.png
++/public/img/stackoverflow.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/star-witch-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/star-witch-costume-brown.png
++/public/css/style.css
++/public/live2d_api/model/Potion-Maker/Pio/motions/Success.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Success.mtn
++/public/live2d_api/model/Potion-Maker/Pio/textures/succubus-costume-black.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/succubus-costume-red.png
++/public/live2d_api/model/Potion-Maker/Pio/motions/Sukebei1.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Sukebei1.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Sukebei2.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Sukebei2.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Sukebei3.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Sukebei3.mtn
++/public/live2d_api/model/Potion-Maker/Pio/textures/sukumizu-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sukumizu-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/sukumizu-costume-white.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sukumizu-costume-white.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sulbim-costume-rainbow.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/sulbim-costume-snowflake.png
++/public/live2d_api/model/bilibili-live/22/texture_03/summer2017-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/summer2017-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/summer2017-high-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/summer2017-high-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/summer2017-high-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/summer2017-high-upper.png
++/public/live2d_api/model/bilibili-live/22/texture_02/summer2017-low-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/summer2017-low-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/summer2017-low-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/summer2017-low-upper.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/summer-dress-costume-blue.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/summer-dress-costume-white.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/summer-uniform-costume-blue.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/summer-uniform-costume-green.png
++/public/highlight/styles/sunburst.css
++/public/live2d_api/model/Potion-Maker/Pio/textures/swimsuit-2017-costume-navy.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/swimsuit-2017-costume-red.png
++/public/post/external/teach_pic.html
++/public/live2d_api/model/bilibili-live/22/textures.cache
++/public/live2d_api/model/bilibili-live/33/textures.cache
++/public/live2d_api/model/KantaiCollection/murakumo/textures.cache
++/public/live2d_api/model/Potion-Maker/Pio/textures.cache
++/public/live2d_api/model/Potion-Maker/Tia/textures.cache
++/public/live2d_api/model/ShizukuTalk/shizuku-48/textures.cache
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/textures.cache
++/public/live2d_api/model/bilibili-live/22/textures_order.json
++/public/live2d_api/model/bilibili-live/33/textures_order.json
++/public/live2d_api/model/bilibili-live/22/motions/thanking.mtn
++/public/live2d_api/model/bilibili-live/33/motions/thanking.mtn
++/public/live2d_api/model/Potion-Maker/Tia/textures/thief-costume.png
++/public/img/TiddlyWiki.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/mtn/tilt_head.mtn
++/public/live2d_api/model/Potion-Maker/Pio/textures/tirami1-costume.png
++/public/live2d_api/model/bilibili-live/22/texture_03/tomo-high-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/tomo-high-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/tomo-high-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/tomo-high-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/tomo-high-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/tomo-high-upper.png
++/public/live2d_api/model/bilibili-live/22/texture_03/tomo-low-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/tomo-low-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/tomo-low-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/tomo-low-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/tomo-low-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/tomo-low-upper.png
++/public/highlight/styles/tomorrow.css
++/public/highlight/styles/tomorrow-night.css
++/public/highlight/styles/tomorrow-night-blue.css
++/public/highlight/styles/tomorrow-night-bright.css
++/public/highlight/styles/tomorrow-night-eighties.css
++/public/post/external/tools.html
++/public/live2d_api/model/bilibili-live/22/motions/touch.mtn
++/public/live2d_api/model/bilibili-live/33/motions/touch.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch Dere1.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch Dere1.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch Dere2.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch Dere2.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch Dere3.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch Dere3.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch Dere4.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch Dere4.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch Dere5.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch Dere5.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch Dere6.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch Dere6.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch1.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch1.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/touch1.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/touch1.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch2.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/touch2.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/touch2.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch3.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch3.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/touch3.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/touch3.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch4.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch4.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/touch4.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/touch4.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch5.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch5.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/Touch6.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/Touch6.mtn
++/public/media/spring-transaction-commit/transaction-process.png
++/public/media/spring-transaction-config/TransactionAttributeSourcePointcut-diagram.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/traveler-costume-brown.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/traveler-costume-white.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/turtleneck-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/turtleneck-costume-red.png
++/public/img/twitter.png
++/public/live2d_api/model/HyperdimensionNeptunia/nepnep/general/exp/unhappy.json
++/public/img/V2EX.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/valentine-costume-brown.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/valentine-costume-pink.png
++/public/live2d_api/model/bilibili-live/22/texture_03/valley2017-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/valley2017-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/valley2017-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/valley2017-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/valley2017-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/valley2017-upper.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/vampire-costume.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/vampire-costume-real.png
++/public/live2d_api/model/bilibili-live/22/texture_03/vdays-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/vdays-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_02/vdays-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/vdays-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/vdays-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/vdays-upper.png
++/public/highlight/styles/vs.css
++/public/highlight/styles/vs2015.css
++/public/assets/waifu.css
++/public/assets/waifu.min.css
++/public/assets/waifu-tips.js
++/public/assets/waifu-tips.json
++/public/assets/waifu-tips.min.js
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/wait_01.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/wait_01.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/wait_02.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/wait_02.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/wait_03.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/wait_03.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/wait_04.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/wait_04.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-48/motions/wait_05.mtn
++/public/live2d_api/model/ShizukuTalk/shizuku-pajama/motions/wait_05.mtn
++/public/live2d_api/model/Potion-Maker/Pio/motions/WakeUp.mtn
++/public/live2d_api/model/Potion-Maker/Tia/motions/WakeUp.mtn
++/public/live2d_api/model/Potion-Maker/Tia/textures/warrior-costume.png
++/public/web.ico
++/public/img/wechat.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/whiteday-costume-purple.png
++/public/live2d_api/model/Potion-Maker/Tia/textures/whiteday-costume-red.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/winter-coat-2017-costume-brown.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/winter-coat-2017-costume-white.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/winter-coat-costume-pink.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/winter-coat-costume-white.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/winter-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/winter-costume-white.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/witch-costume.png
++/public/live2d_api/model/Potion-Maker/Pio/textures/witch-costume-white.png
++/public/highlight/styles/xcode.css
++/public/live2d_api/model/bilibili-live/22/texture_03/xmas-hat.png
++/public/live2d_api/model/bilibili-live/33/texture_03/xmas-hat.png
++/public/live2d_api/model/bilibili-live/22/texture_03/xmas-headwear.png
++/public/live2d_api/model/bilibili-live/33/texture_03/xmas-headwear.png
++/public/live2d_api/model/bilibili-live/22/texture_02/xmas-lower.png
++/public/live2d_api/model/bilibili-live/33/texture_02/xmas-lower.png
++/public/live2d_api/model/bilibili-live/22/texture_01/xmas-upper.png
++/public/live2d_api/model/bilibili-live/33/texture_01/xmas-upper.png
++/public/highlight/styles/xt256.css
++/public/highlight/styles/zenburn.css
++/public/js/zepto.min.js
++/public/img/新浪微博.png
++/public/img/知乎.png
++/public/img/网易云音乐.png
++/public/img/虾米音乐.png
++/public/img/豆瓣.png
+Index: public/nicky-chen.github.io/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>body {\n    width: 100%;\n}\n\nbody:before,\nbody:after {\n    content: \"\";\n    display: table;\n}\n\nbody:after {\n    clear: both;\n}\n\n@font-face {\n    font-family: 'FontAwesome';\n    src: url(\"../font-awesome/fonts/fontawesome-webfont.eot\");\n    src: url(\"../font-awesome/fonts/fontawesome-webfont.eot?#iefix\") format(\"embedded-opentype\"), url(\"../font-awesome/fonts/fontawesome-webfont.woff\") format(\"woff\"), url(\"../font-awesome/fonts/fontawesome-webfont.ttf\") format(\"truetype\"), url(\"../font-awesome/fonts/fontawesome-webfont.svg#FontAwesomeRegular\") format(\"svg\"), url(\"../font-awesome/fonts/fontawesome-webfont.svg#FontAwesomeRegular\") format(\"svg\");\n    font-weight: normal;\n    font-style: normal;\n}\n\nhtml,\nbody,\ndiv,\nspan,\napplet,\nobject,\niframe,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\np,\nblockquote,\npre,\na,\nabbr,\nacronym,\naddress,\nbig,\ncite,\ncode,\ndel,\ndfn,\nem,\nimg,\nins,\nkbd,\nq,\ns,\nsamp,\nsmall,\nstrike,\nstrong,\nsub,\nsup,\ntt,\nvar,\ndl,\ndt,\ndd,\nol,\nul,\nli,\nfieldset,\nform,\nlabel,\nlegend,\ntable,\ncaption,\ntbody,\ntfoot,\nthead,\ntr,\nth,\ntd {\n    margin: 0;\n    padding: 0;\n    border: 0;\n    outline: 0;\n    font-weight: inherit;\n    font-style: inherit;\n    font-family: inherit;\n    font-size: 100%;\n    vertical-align: baseline;\n}\n\nbody {\n    line-height: 1;\n    color: #000;\n    background: #fff;\n}\n\nol,\nul {\n    list-style: none;\n}\n\ntable {\n    border-collapse: separate;\n    border-spacing: 0;\n    vertical-align: middle;\n}\n\ncaption,\nth,\ntd {\n    text-align: left;\n    font-weight: normal;\n    vertical-align: middle;\n}\n\na img {\n    border: none;\n}\n\nol {\n    list-style: decimal;\n    padding-left: 20px;\n}\n\nul {\n    list-style: none;\n}\n\ninput,\nbutton {\n    margin: 0;\n    padding: 0;\n}\n\ninput::-moz-focus-inner,\nbutton::-moz-focus-inner {\n    border: 0;\n    padding: 0;\n}\n\n@font-face {\n    font-family: FontAwesome;\n    font-style: normal;\n    font-weight: normal;\n    src: url(\"../font-awesome/fonts/fontawesome-webfont.eot?v=#4.5.0\");\n    src: url(\"../font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=#4.5.0\") format(\"embedded-opentype\"), url(\"../font-awesome/fonts/fontawesome-webfont.woff?v=#4.5.0\") format(\"woff\"), url(\"../font-awesome/fonts/fontawesome-webfont.ttf?v=#4.5.0\") format(\"truetype\"), url(\"../font-awesome/fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.5.0\") format(\"svg\");\n}\n\nbody {\n    font-family: \"Lucida Grande\", Verdana, \"Helvetica Neue\", Arial, sans-serif, \"Microsoft YaHei\", \"Hiragino Sans GB\", \"WenQuanYi Micro Hei\", sans-serif;\n    font-size: 16px;\n    background: #fff;\n    color: rgba(0, 0, 0, 0.6);\n    -webkit-overflow-scrolling: touch;\n}\n\n::selection {\n    background: rgba(147, 181, 224, 0.6);\n    color: #fff;\n}\n\nh2,\nh3,\nh4,\nh5,\nh6 {\n    font-family: Times, Georgia, serif, \"Microsoft YaHei\", \"Hiragino Sans GB\", \"WenQuanYi Micro Hei\", sans-serif;\n}\n\nh1,\nh2,\nh3 {\n    display: block;\n}\n\nh1 {\n    font-size: 1.5em;\n    font-family: \"Segoe UI\", \"Lucida Grande\", Verdana, \"Helvetica Neue\", Arial, sans-serif, \"Microsoft YaHei\", \"Hiragino Sans GB\", \"WenQuanYi Micro Hei\", sans-serif;\n}\n\nh2 {\n    font-size: 1.3em;\n}\n\nh3 {\n    font-size: 1.1em;\n}\n\nh4,\nh5,\nh6 {\n    font-size: 1em;\n}\n\na {\n    text-decoration: none;\n    outline-width: 0;\n    color: #258fb8;\n    outline: none;\n}\n\n.alignleft {\n    float: left;\n}\n\n.alignright {\n    float: right;\n}\n\n.clearfix {\n    *zoom: 1;\n}\n\n.clearfix:after {\n    content: \"\";\n    display: table;\n    clear: both;\n}\n\n.inner {\n    width: 1000px;\n    margin: 0 auto;\n}\n\n.hide {\n    display: none;\n}\n\n@media screen and (max-width: 1040px) {\n    .inner {\n        width: 100%;\n    }\n}\n\n#container {\n    min-height: 100%;\n}\n\n#container #mobile-nav {\n    display: none;\n}\n\n#container #mobile-nav .overlay {\n    height: 110px;\n    position: absolute;\n    width: 100%;\n    background: #4d4d4d;\n}\n\n#container #mobile-nav .overlay.fixed {\n    position: fixed;\n    height: 42px;\n    z-index: 99;\n}\n\n#container #mobile-nav #header {\n    padding: 10px 0 0 0;\n}\n\n#container #mobile-nav #header .profilepic {\n    display: block;\n    position: relative;\n    z-index: 100;\n}\n\n#container #mobile-nav #header .header-menu {\n    height: auto;\n    margin: 10px;\n}\n\n#container #mobile-nav #header .header-menu ul {\n    text-align: center;\n    cursor: default;\n}\n\n#container #mobile-nav #header .header-menu li {\n    display: inline-block;\n    margin: 3px;\n}\n\n#container .left-col {\n    background: rgba(255, 255, 255, 0.85);\n    width: 300px;\n    position: fixed;\n    opacity: 1;\n    -webkit-transition: all 0.2s ease-in;\n    -moz-transition: all 0.2s ease-in;\n    -ms-transition: all 0.2s ease-in;\n    transition: all 0.2s ease-in;\n    height: 100%;\n}\n\n#container .left-col .overlay {\n    width: 100%;\n    height: 180px;\n    background-color: #000;\n    position: absolute;\n    opacity: 0.7;\n}\n\n#container .left-col .intrude-less {\n    width: 76%;\n    text-align: center;\n    margin: 112px auto 0;\n}\n\n#container .left-col li:hover {\n    background: none;\n    font-weight: bold;\n}\n\n#container .mid-col {\n    position: absolute;\n    right: 0;\n    min-height: 100%;\n    background: rgba(255, 255, 255, 0.8);\n    left: 300px;\n    width: auto;\n}\n\n@media screen and (max-width: 800px) {\n    #container .left-col {\n        display: none;\n    }\n\n    #container .mid-col {\n        left: 0;\n    }\n\n    #container #header .header-nav {\n        position: relative;\n    }\n\n    #container .header-author.fixed {\n        position: fixed;\n        top: -8px;\n        width: 100%;\n        color: #ddd;\n    }\n\n    #container .header-author.fixed a {\n        color: #fff;\n    }\n\n    #container .overlay .slider-trigger {\n        position: absolute;\n        z-index: 101;\n        bottom: 0;\n        left: 0;\n        width: 42px;\n        height: 42px;\n    }\n\n    #container .overlay .slider-trigger:hover {\n        background: #444;\n    }\n\n    #container .overlay .slider-trigger:before {\n        color: #ddd;\n        content: \"\\f00b\";\n        font: 16px FontAwesome;\n        width: 16px;\n        height: 16px;\n        margin-left: 9px;\n        margin-top: 14px;\n        display: block;\n    }\n\n    #container .article-header {\n        border-left: none;\n        padding: 0;\n        border-bottom: 1px dotted #ddd;\n    }\n\n    #container .article-header h1 {\n        margin-bottom: 10px;\n    }\n\n    #container #header .header-subtitle {\n        padding: 0 3em;\n        font-size: 1em;\n    }\n\n    #container .article-info-index.article-info {\n        padding-top: 10px;\n        margin: 0;\n        border-top: 1px solid #ddd;\n    }\n\n    #container .article-info-post.article-info {\n        margin: 0;\n        padding-top: 10px;\n        border: none;\n    }\n\n    #container .article-more-link a {\n        float: right;\n    }\n\n    #container #viewer-box .viewer-box-l {\n        font-size: 14px;\n    }\n\n    #container .article {\n        /*    padding: 10px;*/\n        margin: 10px;\n        font-size: 14px;\n    }\n\n    #container .article .article-entry {\n        padding-left: 0;\n        padding-right: 0;\n        padding-top: 10px;\n    }\n\n    #container .article .article-title {\n        font-size: 18px;\n        /*max-width: 185px;*/\n        padding-right: 5em;\n        display: block;\n        margin: 0;\n    }\n\n    #container .article .article-meta {\n        width: auto;\n    }\n\n    #container .article .article-meta .article-date {\n        margin: 0;\n    }\n\n    #container .article .article-meta .article-date time {\n        padding-right: 0.5em;\n    }\n\n    #container .article .article-meta .article-tag-list {\n        margin-top: 7px;\n        position: absolute;\n        right: 10px;\n        top: 0;\n    }\n\n    #container .article .article-meta .article-tag-list:before {\n        float: left;\n        margin-top: 1px;\n        left: 0;\n    }\n\n    #container .article .article-meta .article-tag-list .article-tag-list-item {\n        float: left;\n        padding-left: 0;\n        width: auto;\n        max-width: 83px;\n    }\n\n    #container .article .article-meta .article-category {\n        margin-top: 7px;\n        position: absolute;\n        right: 10px;\n        top: -30px;\n    }\n\n    #container .article .article-meta .article-category:before {\n        float: left;\n        margin-top: 1px;\n        left: 15px;\n    }\n\n    #container .article .article-meta .article-category .article-category-link {\n        max-width: 83px;\n        width: auto;\n        padding-left: 10px;\n    }\n\n    #container .article-inner {\n        padding: 12px;\n    }\n\n    #container .archive-article-inner .article-meta {\n        top: 0;\n        margin-top: 0.5em;\n    }\n\n    #container .archives .archive-article {\n        padding: 0;\n    }\n\n    #container .archives .archive-article-date {\n        margin-right: 0;\n    }\n\n    #container .archives .article-info {\n        display: none;\n    }\n\n    #container .archive-article-inner .article-meta .archive-article-date,\n    #container .share {\n        padding: 3px 10px;\n    }\n\n    #container .duoshuo {\n        padding: 0 13px;\n    }\n\n    #container #disqus_thread {\n        padding: 0 13px;\n    }\n\n    #container #mobile-nav {\n        display: block;\n    }\n\n    #container #page-nav .extend {\n        opacity: 1;\n    }\n\n    #container #page-nav {\n        margin-top: 1em;\n    }\n\n    #container #page-nav .page-number {\n        margin-bottom: 1.5em;\n    }\n\n    #container .instagram .open-ins {\n        left: 2px;\n        top: -30px;\n        color: #aaa;\n    }\n\n    #container .info-on-right {\n        float: initial;\n    }\n\n    #container .archives-wrap {\n        margin: 10px 10px 0px;\n        padding: 10px;\n        padding-right: 0;\n    }\n\n    #container .archives-wrap .archive-year-wrap {\n        position: relative;\n        padding: 0 0 0 0;\n    }\n\n    #container .archives-wrap .archive-year-wrap a {\n        padding: 0 0 0 0;\n    }\n\n    #container .archives-wrap h1 {\n        font-size: 1.2em;\n        margin-bottom: 0.3em;\n    }\n\n    #container .archives .archive-article {\n        padding: 10px 0;\n        margin-left: 0;\n    }\n\n    #container #footer .footer-left {\n        float: initial;\n        margin-bottom: 0.5em;\n    }\n\n    #container #footer .footer-right {\n        float: initial;\n        margin-bottom: 1em;\n    }\n\n    #container #footer .visit {\n        margin: 0;\n    }\n\n    #container .article-category::before {\n        display: none;\n    }\n\n    #container .article-tag::before {\n        display: none;\n    }\n\n    #container .article-meta time:before {\n        display: none;\n    }\n\n    #container .visit {\n        margin-top: 1em;\n    }\n\n    #container #tocButton {\n        z-index: 100;\n        position: fixed;\n        left: 0.5em;\n        top: auto; /*In order to cover style in article.styl*/\n        bottom: 10px;\n        padding: 0.2em 0.4em;\n        border-radius: 6px;\n        border-style: outset;\n        background: rgba(255, 255, 255, 0.7);\n        font-size: 1em;\n        font-weight: bold;\n        color: #808080;\n    }\n\n    #container #tocButton:hover {\n        color: #88acdb;\n        font-size: 1em;\n    }\n\n    #container .toc-article {\n        display: none;\n        z-index: 99;\n        left: 0;\n        top: 38%;\n        bottom: 1em;\n        height: auto;\n        max-height: 58%;\n        width: none;\n        width: auto;\n        min-width: 7em;\n        max-width: 61.8%;\n        overflow: auto;\n        margin-left: 0;\n        padding: 10px;\n        padding-left: 0;\n        border-radius: 2.8%;\n        background: none;\n        font-size: 1em;\n        line-height: 1.25em;\n    }\n\n    #container .toc-article .toc-title {\n        display: none;\n    }\n\n    #container .toc-article .toc {\n        padding: 0.5em;\n    }\n\n    #container .toc-article ol {\n        margin: 0;\n        padding: 0.5em;\n        border-radius: 5px;\n        background: rgba(255, 255, 255, 0.75);\n    }\n\n    #container .toc-article ol ol {\n        padding: 0.1em 0;\n        padding-left: 1.2em;\n    }\n\n    #container .toc-article a {\n        color: #767676;\n    }\n\n    #container .copyright {\n        width: 90%;\n        padding: 0.5em 1.3em;\n    }\n\n    #container .scroll {\n        right: 1.2em;\n    }\n\n    #container .scroll li {\n        font-size: 1.7em;\n    }\n\n    #container .hide-labels {\n        z-index: 100;\n        position: fixed;\n        left: 0.5em;\n        top: auto;\n        bottom: 10px;\n        padding: 0.2em 0.4em;\n        border-radius: 6px;\n        border-style: outset;\n        opacity: 0.9;\n        background: rgba(255, 255, 255, 0.8);\n        font-weight: bold;\n        color: #808080;\n    }\n\n    #container #post-nav-button {\n        display: none;\n    }\n\n    #container .post-list {\n        visibility: hidden;\n    }\n\n    #container .ua {\n        display: none !important;\n    }\n}\n\n.header-author {\n    text-align: center;\n    margin: 13px 0;\n    font-family: Roboto, \"Roboto\", serif;\n    font-size: 30px;\n    -webkit-transition: 0.3s;\n    -moz-transition: 0.3s;\n    -ms-transition: 0.3s;\n    transition: 0.3s;\n}\n\n.header-author:hover {\n    -webkit-animation: tada 1s;\n    -moz-animation: tada 1s;\n    -ms-animation: tada 1s;\n    -webkit-animation: tada 1s;\n    -moz-animation: tada 1s;\n    -ms-animation: tada 1s;\n    animation: tada 1s;\n}\n\n#header {\n    width: 100%;\n}\n\n#header a {\n    color: #696969;\n}\n\n#header a:hover {\n    color: #b0a0aa;\n}\n\n#header .profilepic {\n    text-align: center;\n    display: block;\n    border: 5px solid #fff;\n    border-radius: 50%;\n    width: 128px;\n    height: 128px;\n    margin: 0 auto;\n    position: relative;\n    overflow: hidden;\n    background: #88acdb;\n    -webkit-box-orient: horizontal;\n    -webkit-box-pack: center;\n    -webkit-box-align: center;\n    text-align: center;\n}\n\n#header .profilepic img {\n    width: 100%;\n    height: 100%;\n    border-radius: 50%;\n    -webkit-animation-duration: 0.4s;\n    -moz-animation-duration: 0.4s;\n    -ms-animation-duration: 0.4s;\n    animation-duration: 0.4s;\n    -webkit-animation-delay: 0.3s;\n    -moz-animation-delay: 0.3s;\n    -ms-animation-delay: 0.3s;\n    animation-delay: 0.3s;\n    -webkit-animation-duration: 0.4s;\n    -webkit-animation-delay: 0.3s;\n}\n\n#header .profilepic:hover {\n    border: 5px solid #88acdb;\n    -webkit-animation: rubberBand 1s;\n    -moz-animation: rubberBand 1s;\n    -ms-animation: rubberBand 1s;\n    -webkit-animation: rubberBand 1s;\n    -moz-animation: rubberBand 1s;\n    -ms-animation: rubberBand 1s;\n    animation: rubberBand 1s;\n}\n\n@-moz-keyframes profilepic {\n    0% {\n        right: 4px;\n        top: 1x;\n    }\n    100% {\n        right: 0px;\n        top: -1px;\n    }\n}\n\n@-webkit-keyframes profilepic {\n    0% {\n        right: 4px;\n        top: 1x;\n    }\n    100% {\n        right: 0px;\n        top: -1px;\n    }\n}\n\n@-o-keyframes profilepic {\n    0% {\n        right: 4px;\n        top: 1x;\n    }\n    100% {\n        right: 0px;\n        top: -1px;\n    }\n}\n\n@keyframes profilepic {\n    0% {\n        right: 4px;\n        top: 1x;\n    }\n    100% {\n        right: 0px;\n        top: -1px;\n    }\n}\n\n#header .header-subtitle {\n    text-align: center;\n    color: #999;\n    font-size: 14px;\n    line-height: 25px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    display: -webkit-box;\n    -webkit-line-clamp: 2;\n    -webkit-box-orient: vertical;\n}\n\n#header .header-menu {\n    font-weight: 550;\n    line-height: 28px;\n    font-family: inherit;\n    cursor: pointer;\n    text-transform: uppercase;\n    float: none;\n    min-height: 84px;\n    max-height: 140px;\n    overflow: auto;\n    text-align: center;\n    display: -webkit-box;\n    -webkit-box-orient: horizontal;\n    -webkit-box-pack: center;\n    -webkit-box-align: center;\n}\n\n#header .header-menu li {\n    cursor: default;\n}\n\n#header .header-menu li a {\n    font-size: 14px;\n    min-width: 300px;\n}\n\n#header .switch-area {\n    position: relative;\n    width: 100%;\n    overflow: hidden;\n    min-height: 500px;\n    font-size: 14px;\n}\n\n#header .switch-area .switch-wrap {\n    -webkit-transition: -webkit-transform 0.3s ease-in;\n    -moz-transition: -moz-transform 0.3s ease-in;\n    -ms-transition: -ms-transform 0.3s ease-in;\n    transition: transform 0.3s ease-in;\n    position: relative;\n}\n\n#header .turn-left {\n    -webkit-transform: translate(-100%, 0);\n    -moz-transform: translate(-100%, 0);\n    -ms-transform: translate(-100%, 0);\n    transform: translate(-100%, 0);\n}\n\n#header .header-nav {\n    width: 100%;\n    position: absolute;\n    -webkit-transition: -webkit-transform 0.3s ease-in;\n    -moz-transition: -moz-transform 0.3s ease-in;\n    -ms-transition: -ms-transform 0.3s ease-in;\n    transition: transform 0.3s ease-in;\n}\n\n#header .switch-part {\n    width: 100%;\n    position: absolute;\n}\n\n#header .switch-part1 {\n    left: 0;\n}\n\n#header .switch-part2 {\n    left: 100%;\n    top: 20px;\n    overlay-x: hidden;\n    overflow-y: auto;\n    max-height: 200px;\n}\n\n#header .switch-part3 {\n    left: 200%;\n    line-height: 30px;\n}\n\n#header .switch-part3 .switch-friends-link {\n    margin-right: 9px;\n    border-radius: 3px;\n    padding: 5px;\n}\n\n#header .switch-part3 .switch-friends-link:hover {\n    background: #88acdb;\n    color: #fff;\n}\n\n#header .switch-part4 {\n    left: 300%;\n    text-align: left;\n    line-height: 30px;\n}\n\n#header .header-nav .social {\n    margin-top: 10px;\n    text-align: center;\n    font-family: Arial;\n}\n\n#header .header-nav .social li {\n    display: inline-block;\n    width: 37px;\n    border-radius: 50%;\n    margin: 0 2px 6px;\n    font: 23px FontAwesome;\n    background: #6f7170;\n    opacity: 0.75;\n    text-align: center;\n    -webkit-box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1), 1px 1px 3px rgba(0, 0, 0, 0.3);\n    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.1), 1px 1px 3px rgba(0, 0, 0, 0.3);\n}\n\n#header .header-nav .social li a {\n    line-height: 37px;\n    color: #fff;\n}\n\n#header .header-nav .social li:hover {\n    opacity: 1;\n    -webkit-transform: scale(1.1);\n    -moz-transform: scale(1.1);\n    -ms-transform: scale(1.1);\n    transform: scale(1.1);\n}\n\n#header .header-nav .social .新浪微博:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #新浪微博 {\n    background: url(\"/img/新浪微博.png\") center no-repeat #ecc260;\n}\n\n#header .header-nav .social .知乎:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #知乎 {\n    background: url(\"/img/知乎.png\") center no-repeat #0078d8;\n}\n\n#header .header-nav .social .豆瓣:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #豆瓣 {\n    background: url(\"/img/豆瓣.png\") center no-repeat #06c611;\n}\n\n#header .header-nav .social .GitHub:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social .github:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #GitHub {\n    background: url(\"/img/GitHub.png\") center no-repeat #fff;\n}\n\n#header .header-nav .social #github {\n    background: url(\"/img/GitHub.png\") center no-repeat #fff;\n}\n\n#header .header-nav .social .V2EX:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #V2EX {\n    background: url(\"/img/V2EX.png\") center no-repeat #e4cdb4;\n}\n\n#header .header-nav .social #v2ex {\n    background: url(\"/img/V2EX.png\") center no-repeat #e4cdb4;\n}\n\n#header .header-nav .social .TiddlyWiki:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social .tiddlywiki:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #TiddlyWiki {\n    background: url(\"/img/TiddlyWiki.png\") center no-repeat #6283dd;\n}\n\n#header .header-nav .social #tiddlywiki {\n    background: url(\"/img/TiddlyWiki.png\") center no-repeat #6283dd;\n}\n\n#header .header-nav .social .wechat:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #wechat {\n    background: url(\"/img/wechat.png\") center no-repeat #e99888;\n}\n\n#header .header-nav .social .SegmentFault:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social .segmentfault:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #SegmentFault {\n    background: url(\"/img/SegmentFault.png\") center no-repeat #018f56;\n}\n\n#header .header-nav .social #segmentfault {\n    background: url(\"/img/SegmentFault.png\") center no-repeat #018f56;\n}\n\n#header .header-nav .social .网易云音乐:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #网易云音乐 {\n    background: url(\"/img/网易云音乐.png\") center no-repeat #e51e02;\n}\n\n#header .header-nav .social .虾米音乐:before {\n    content: '\\f18a';\n    color: transparent;\n}\n\n#header .header-nav .social #虾米音乐 {\n    background: url(\"/img/虾米音乐.png\") center no-repeat #ff6a00;\n}\n\n#header .header-nav .social .RSS:before {\n    content: '\\f09e';\n}\n\n#header .header-nav .social .rss:before {\n    content: '\\f09e';\n}\n\n#header .header-nav .social #RSS {\n    background: #ef7522;\n}\n\n#header .header-nav .social #rss {\n    background: #ef7522;\n}\n\n#header .header-nav .social .Google:before {\n    content: '\\f1a0';\n}\n\n#header .header-nav .social .google:before {\n    content: '\\f1a0';\n}\n\n#header .header-nav .social #Google {\n    background: #c83d20;\n}\n\n#header .header-nav .social #google {\n    background: #c83d20;\n}\n\n#header .header-nav .social .Twitter:before {\n    content: '\\f099';\n}\n\n#header .header-nav .social .twitter:before {\n    content: '\\f099';\n}\n\n#header .header-nav .social #Twitter {\n    background: #55cff8;\n}\n\n#header .header-nav .social #twitter {\n    background: #55cff8;\n}\n\n#header .header-nav .social .LinkedIn:before {\n    content: '\\f0e1';\n}\n\n#header .header-nav .social .linkedin:before {\n    content: '\\f0e1';\n}\n\n#header .header-nav .social #LinkedIn {\n    background: #005a87;\n}\n\n#header .header-nav .social #linkedin {\n    background: #005a87;\n}\n\n#header .header-nav .social .Email:before {\n    content: '\\f003';\n}\n\n#header .header-nav .social .email:before {\n    content: '\\f003';\n}\n\n#header .header-nav .social #Email {\n    background: #6fc0e4;\n}\n\n#header .header-nav .social #email {\n    background: #6fc0e4;\n}\n\n#header .header-nav .social .Facebook:before {\n    content: '\\f09a';\n}\n\n#header .header-nav .social .facebook:before {\n    content: '\\f09a';\n}\n\n#header .header-nav .social #Facebook {\n    background: #3b5998;\n}\n\n#header .header-nav .social #facebook {\n    background: #3b5998;\n}\n\n#header .header-nav .social .QQ:before {\n    content: '\\f1d6';\n}\n\n#header .header-nav .social .qq:before {\n    content: '\\f1d6';\n}\n\n#header .header-nav .social #QQ {\n    background: #1cbcef;\n}\n\n#header .header-nav .social #qq {\n    background: #1cbcef;\n}\n\n#header .header-nav .social .微信:before {\n    content: '\\f1d7';\n}\n\n#header .header-nav .social #微信 {\n    background: #8cdc49;\n}\n\n#header .header-nav .social .PayPal:before {\n    content: '\\f1ed';\n}\n\n#header .header-nav .social .paypal:before {\n    content: '\\f1ed';\n}\n\n#header .header-nav .social #PayPal {\n    background: #03a4e4;\n}\n\n#header .header-nav .social #paypal {\n    background: #03a4e4;\n}\n\n#header .header-nav .social .StackOverflow:before {\n    content: '\\f16c';\n}\n\n#header .header-nav .social .stackoverflow:before {\n    content: '\\f16c';\n}\n\n#header .header-nav .social #StackOverflow {\n    background: #f48024;\n}\n\n#header .header-nav .social #stackoverflow {\n    background: #f48024;\n}\n\n#header .header-nav .social .Instagram:before {\n    content: '\\f16d';\n}\n\n#header .header-nav .social .instagram:before {\n    content: '\\f16d';\n}\n\n#header .header-nav .social #Instagram {\n    background: #bab0a6;\n}\n\n#header .header-nav .social #instagram {\n    background: #bab0a6;\n}\n\n#header .header-nav .social .Flickr:before {\n    content: '\\f16e';\n}\n\n#header .header-nav .social .flickr:before {\n    content: '\\f16e';\n}\n\n#header .header-nav .social #Flickr {\n    background: #0365c8;\n}\n\n#header .header-nav .social #flickr {\n    background: #0365c8;\n}\n\n#header .header-nav .social .reddit:before {\n    content: '\\f281';\n}\n\n#header .header-nav .social #reddit {\n    background: #0278d1;\n}\n\n#header .header-nav .social .Medium:before {\n    content: '\\f23a';\n}\n\n#header .header-nav .social .medium:before {\n    content: '\\f23a';\n}\n\n#header .header-nav .social #Medium {\n    background: #00ab6b;\n}\n\n#header .header-nav .social #medium {\n    background: #00ab6b;\n}\n\n#header .header-nav .social .Tumblr:before {\n    content: '\\f173';\n}\n\n#header .header-nav .social .tumblr:before {\n    content: '\\f173';\n}\n\n#header .header-nav .social #Tumblr {\n    background: #3a5976;\n}\n\n#header .header-nav .social #tumblr {\n    background: #3a5976;\n}\n\n#header .header-nav .social ._500px:before {\n    content: '\\f26e';\n}\n\n#header .header-nav .social #_500px {\n    background: #0099e5;\n}\n\n.duoshuo {\n    padding: 0 40px;\n}\n\n#disqus_thread {\n    padding: 0 40px;\n}\n\n.search {\n    width: 68%;\n    height: 18px;\n    margin-top: 1px;\n    padding: 0;\n    font-family: inherit;\n    border: 2px solid transparent;\n    border-bottom: 2px solid #d3d3d3;\n    border-radius: 2px;\n    opacity: 0.2;\n    background: none;\n}\n\n.st-default-search-input {\n    width: 68%;\n    height: 18px;\n    margin-top: 1px;\n    padding: 0;\n    font-family: inherit;\n    border: 2px solid transparent;\n    border-bottom: 2px solid #d3d3d3;\n    border-radius: 2px;\n    opacity: 0.2;\n    background: none;\n}\n\n.search:hover {\n    border: 2px solid #d3d3d3;\n    opacity: 1;\n    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);\n    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);\n}\n\n#scroll {\n    right: 0;\n}\n\n.scroll {\n    z-index: 999;\n    position: fixed;\n    top: 61.8%;\n    text-align: center;\n    line-height: 42px;\n}\n\n.scroll a {\n    display: block;\n    width: 29px;\n    height: 42px;\n    font-size: 28px;\n    background: rgba(215, 216, 215, 0.4);\n}\n\n.scroll a .fa {\n    color: rgba(255, 255, 255, 0.8);\n}\n\n.scroll a:hover {\n    background: rgba(147, 181, 224, 0.3) !important;\n}\n\n.scroll a:hover .fa {\n    color: #fff;\n}\n\n.scroll a:not(:last-child) {\n    border-bottom: 1px solid #fff;\n}\n\n.hide-labels {\n    position: fixed;\n    left: 378px;\n    top: 30px;\n    padding: 1px;\n    border: none;\n    border-radius: 5px;\n    cursor: pointer;\n    outline: none;\n    font-family: inherit;\n    font-size: 0.9em;\n    font-weight: bold;\n    color: #666;\n    background: none;\n    opacity: 0.32;\n    -webkit-appearance: none;\n}\n\n.hide-labels:hover {\n    color: #88acdb;\n    opacity: 1;\n}\n\n#post-nav-button {\n    left: 300px;\n    top: 61.8%;\n}\n\n#post-nav-button a {\n    border-bottom-color: transparent;\n    background: none;\n    cursor: pointer;\n}\n\n#post-nav-button a .fa-times {\n    display: none;\n}\n\n.post-list {\n    display: none;\n    text-align: left;\n    font-size: 0.9em;\n    line-height: 1.3em;\n    list-style: decimal;\n}\n\n.post-list li {\n    margin: 0.4em 0 0.1em 0.7em;\n}\n\n.post-list li a {\n    color: #808080;\n}\n\n.post-list li a:hover {\n    color text-decoration: none;\n}\n\n.post-list li:hover a {\n    color: #88acdb;\n}\n\n.archives-wrap {\n    position: relative;\n    margin: 0 30px;\n    padding-right: 1.5em;\n    border-bottom: 1px solid #eee;\n    background: #fff;\n}\n\n.archives-wrap:first-child {\n    margin-top: 30px;\n}\n\n.archives-wrap:last-child {\n    margin-bottom: 80px;\n}\n\n.archives-wrap .archive-year-wrap {\n    line-height: 35px;\n    width: 200px;\n    position: absolute;\n    padding-top: 20px;\n    font-size: 1.8em;\n}\n\n.archives-wrap .archive-year-wrap a {\n    color: #666;\n    font-weight: bold;\n    padding-left: 48px;\n}\n\n.archives {\n    position: relative;\n}\n\n.archives .article-info {\n    border: none;\n}\n\n.archives .archive-article {\n    margin-left: 160px;\n    padding: 0.5em 0;\n    border-bottom: 1px solid #eee;\n    border-top: 1px solid #fff;\n    position: relative;\n}\n\n.archives .archive-article:first-child {\n    border-top: 1em;\n    padding-top: 20px;\n}\n\n.archives .archive-article:last-child {\n    border-bottom: none;\n}\n\n.archives .archive-article-title {\n    font-size: 18px;\n    color: #333;\n    -webkit-transition: color 0.3s;\n    -moz-transition: color 0.3s;\n    -ms-transition: color 0.3s;\n    transition: color 0.3s;\n}\n\n.archives .archive-article-title:hover {\n    color: #657b83;\n}\n\n.archives .archive-article-title span {\n    display: block;\n    color: #a8a8a8;\n    font-size: 12px;\n    line-height: 14px;\n    height: 7px;\n    padding-left: 2px;\n}\n\n.archives .archive-article-title span:before {\n    display: inline-block;\n    content: \"“\";\n    font-family: serif;\n    font-size: 30px;\n    float: left;\n    margin: 4px 4px 0 -12px;\n    color: #c8c8c8;\n}\n\n.archive-article-inner .archive-article-header {\n    position: relative;\n}\n\n.archive-article-inner .article-meta {\n    position: relative;\n    float: right;\n    margin-top: -10px;\n    color: #555;\n    background: none;\n    text-align: right;\n    width: auto;\n}\n\n.archive-article-inner .article-meta .article-date time {\n    color: #aaa;\n}\n\n.archive-article-inner .article-meta .archive-article-date,\n.archive-article-inner .article-meta .article-tag-list {\n    margin-right: 1em;\n    display: -moz-inline-stack;\n    display: inline-block;\n    vertical-align: middle;\n    zoom: 1;\n    color: #666;\n    font-size: 14px;\n}\n\n.archive-article-inner .article-meta .archive-article-date {\n    cursor: default;\n    font-size: 14px;\n    margin-bottom: 5px;\n    margin-top: -10px;\n}\n\n.archive-article-inner .article-meta .archive-article-date time:before {\n    content: \"\\f073\";\n    color: #999;\n    position: relative;\n    margin-right: 10px;\n    font: 16px FontAwesome;\n}\n\n.archive-article-inner .article-meta .article-category:before {\n    float: left;\n    margin-top: 1px;\n    left: 15px;\n}\n\n.archive-article-inner .article-meta .article-category .article-category-link {\n    width: auto;\n    max-width: 83px;\n    padding-left: 10px;\n}\n\n.archive-article-inner .article-meta .article-tag-list {\n    margin-top: 0px;\n}\n\n.archive-article-inner .article-meta .article-tag-list:before {\n    left: 15px;\n}\n\n.archive-article-inner .article-meta .article-tag-list .article-tag-list-item {\n    display: inline-block;\n    width: auto;\n    max-width: 83px;\n    padding-left: 8px;\n    font-size: 12px;\n}\n\n.archives-wrap {\n    background: rgba(255, 255, 255, 0.4);\n}\n\n.archives-wrap .archives {\n    background: transparent;\n}\n\n.body-wrap {\n    margin-bottom: 126px;\n    overflow: hidden;\n}\n\n.article {\n    margin: 30px;\n    margin-bottom: 5px;\n    position: relative;\n    background: rgba(255, 255, 255, 0.45);\n    opacity: 0;\n    -webkit-transition: all 0.2s ease-in;\n}\n\n.article.show {\n    visibility: visible;\n    -webkit-animation: cd-bounce-1 0.6s;\n    -moz-animation: cd-bounce-1 0.6s;\n    -webkit-animation: cd-bounce-1 0.6s;\n    -moz-animation: cd-bounce-1 0.6s;\n    -ms-animation: cd-bounce-1 0.6s;\n    animation: cd-bounce-1 0.6s;\n}\n\n.article.hidden {\n    visibility: hidden;\n}\n\n.article img {\n    max-width: 100%;\n    margin: 0.5em auto;\n}\n\n.article {\n    opacity: 1;\n}\n\n@-webkit-keyframes cd-bounce-1 {\n    0% {\n        opacity: 0;\n        -webkit-transform: scale(1);\n    }\n    60% {\n        opacity: 1;\n        -webkit-transform: scale(1.01);\n    }\n    100% {\n        -webkit-transform: scale(1);\n    }\n}\n\n@-moz-keyframes cd-bounce-1 {\n    0% {\n        opacity: 0;\n        -moz-transform: scale(1);\n    }\n    60% {\n        opacity: 1;\n        -moz-transform: scale(1.01);\n    }\n    100% {\n        -moz-transform: scale(1);\n    }\n}\n\n.article-index {\n    margin-left: 200px;\n    padding: 15px 0;\n    margin-right: 75px;\n}\n\n.article-index .brief {\n    display: block;\n    color: #a8a8a8;\n    font-size: 12px;\n    line-height: 14px;\n    height: 7px;\n    padding-left: 2px;\n}\n\n.article-index .brief:before {\n    display: inline-block;\n    content: \"“\";\n    font-family: serif;\n    font-size: 30px;\n    float: left;\n    margin: 4px 4px 0 -12px;\n    color: #c8c8c8;\n}\n\n.article-title {\n    color: #696969;\n    margin-left: 0px;\n    font-weight: 300;\n    line-height: 35px;\n    margin-bottom: 20px;\n    font-size: 26px;\n    -webkit-transition: color 0.3s;\n    -moz-transition: color 0.3s;\n    -o-transition: color 0.3s;\n    -webkit-transition: color 0.3s;\n    -moz-transition: color 0.3s;\n    -ms-transition: color 0.3s;\n    transition: color 0.3s;\n}\n\n.article-title:hover {\n    color: #b0a0aa;\n}\n\n.article-inner {\n    position: relative;\n    margin-bottom: 0px;\n    padding-bottom: 0.5em;\n    word-break: break-word;\n    -webkit-box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.07);\n    box-shadow: 3px 2px 8px rgba(0, 0, 0, 0.07);\n}\n\n.article-header {\n    border-left: 6px solid #eee;\n    padding: 15px 8.2em 15px 25px;\n}\n\n.article-header:hover {\n    border-left: 5px solid #9c9;\n}\n\n.article-info li:hover {\n    background: none;\n}\n\n.article-info-index.article-info {\n    padding-top: 20px;\n    margin: 30px 30px 0 30px;\n    border-top: 1px solid #ddd;\n}\n\n.article-info-post.article-info {\n    padding: 0;\n    border: none;\n    margin: -30px 0 20px 30px;\n}\n\n.article-entry {\n    line-height: 1.65em;\n    padding: 0 2em;\n}\n\n.article-entry blockquote {\n    padding: 0.4em 20px;\n    margin: 0.5em auto;\n    border-left: 4px solid rgba(147, 181, 224, 0.4);\n    background: rgba(255, 255, 255, 0.4);\n}\n\n.article-entry blockquote p {\n    margin: 0.4em auto;\n}\n\n.article-entry blockquote blockquote {\n    border-left: none;\n}\n\n.article-entry a:hover {\n    text-decoration: underline;\n    color: #9c9;\n}\n\n.article-entry p {\n    margin: 0.85em auto;\n    line-height: 1.7em;\n    font-size: 1em;\n}\n\n.article-entry li {\n    margin: 0.1em;\n    font-size: 1.1em;\n}\n\n.article-entry em {\n    font-style: italic;\n}\n\n.article-entry ul li:before {\n    display: inline-block;\n    content: \"\";\n    width: 0.4em;\n    height: 0.4em;\n    margin-right: 0.5em;\n    margin-bottom: 0.11em;\n    border: 1px solid #d3d3d3;\n    border-radius: 50%;\n    background: #d3d3d3;\n}\n\n.article-entry ul,\n.article-entry ol {\n    font-size: 14px;\n    margin: 10px 0px;\n}\n\n.article-entry li ul,\n.article-entry li ol {\n    margin-left: 30px;\n}\n\n.article-entry li ul li:before,\n.article-entry li ol li:before {\n    content: \"\";\n    background: #dedede;\n}\n\n.article-entry h1 {\n    margin-top: 30px;\n}\n\n.article-entry h2 {\n    margin: 0.5em auto;\n    font-weight: bold;\n    color: #9c9;\n    padding-bottom: 5px;\n    border-bottom: 1px solid #ddd;\n    text-align: center;\n}\n\n.article-entry h2:hover {\n    color: #88acdb;\n}\n\n.article-entry h2::before,\n.article-entry h2::after {\n    content: \" —— \";\n    font-family: Arial;\n}\n\n.article-entry h3 {\n    margin: 0.5em auto;\n    color: #438aac;\n    background: rgba(243, 248, 253, 0.6);\n    border: 1px solid #d2e8fa;\n    padding: 0.2em 0.6em;\n    font-weight: normal;\n}\n\n.article-entry h3:hover a {\n    text-decoration: underline;\n}\n\n.article-entry h3::after {\n    content: \" >\";\n}\n\n.article-entry h4,\n.article-entry h5,\n.article-entry h6 {\n    margin-top: 20px;\n    font-weight: bold;\n    color: #574c4c;\n    padding-bottom: 5px;\n    border-bottom: 1px solid #ddd;\n}\n\n.article-entry h4:hover,\n.article-entry h5:hover,\n.article-entry h6:hover {\n    color: #88acdb;\n}\n\n.article-entry video {\n    max-width: 100%;\n}\n\n.article-entry strong {\n    font-weight: bold;\n}\n\n.article-entry .caption {\n    display: block;\n    font-size: 0.8em;\n    color: #aaa;\n}\n\n.article-entry hr {\n    height: 0;\n    margin-top: 20px;\n    margin-bottom: 20px;\n    border-left: 0;\n    border-right: 0;\n    border-top: 1px solid #ddd;\n    border-bottom: 1px solid #fff;\n}\n\n.article-entry .table-area {\n    overflow: auto;\n}\n\n.article-entry table {\n    width: 100%;\n    max-width: 65em;\n    border: 1px solid #dedede;\n    margin: 15px auto;\n    border-collapse: collapse;\n    empty-cells: show;\n}\n\n.article-entry table tr,\n.article-entry table td {\n    height: 35px;\n}\n\n.article-entry table th {\n    font-weight: bold;\n    text-align: center;\n    background: rgba(158, 188, 226, 0.2);\n    white-space: nowrap;\n}\n\n.article-entry table tbody tr:hover {\n    background: #efefef;\n}\n\n.article-entry table td,\n.article-entry table th {\n    border: 1px solid #dedede;\n    padding: 0 10px;\n}\n\n.article-entry table tr:nth-child(2n) {\n    background: rgba(158, 188, 226, 0.12);\n}\n\n.article-entry table td:nth-child(1) {\n    white-space: nowrap;\n}\n\n.article-entry figure table {\n    border: none;\n    width: auto;\n    margin: 0;\n}\n\n.article-entry figure table tbody tr:hover {\n    background: none;\n}\n\n.article-meta {\n    position: absolute;\n    right: 0;\n    top: 23px;\n    width: 150px;\n    font-size: 14;\n    text-align: center;\n    z-index: 1;\n}\n\n.article-meta time {\n    color: #aaa;\n}\n\n.article-meta time:before {\n    margin-top: 0px;\n    margin-right: 4px;\n    content: \"\\f073\";\n    font: 1em FontAwesome;\n    color: #999;\n}\n\n.article-more-link {\n    float: right;\n    margin-top: 5px;\n}\n\n.article-more-link a {\n    padding: 2px 4px;\n    -webkit-border-radius: 2px;\n    -moz-border-radius: 2px;\n    border-radius: 2px;\n    background: #88acdb;\n    color: #fff;\n    font-size: 0.9em;\n    line-height: 1em;\n    -webkit-transition: background 0.3s;\n    -moz-transition: background 0.3s;\n    -ms-transition: background 0.3s;\n    transition: background 0.3s;\n    opacity: 0.75;\n}\n\n.article-more-link a:hover {\n    background: #9c9;\n    opacity: 1;\n}\n\n.article-more-link a.hidden {\n    visibility: hidden;\n}\n\n.article-more-link:hover {\n    -webkit-transform: scale(1.06);\n    -moz-transform: scale(1.06);\n    -ms-transform: scale(1.06);\n    transform: scale(1.06);\n}\n\n#article-nav {\n    display: table;\n    width: 100%;\n    height: 2.5em;\n    margin: 1em auto;\n    background: rgba(158, 188, 226, 0.75);\n}\n\n#article-nav:hover {\n    background: #93b5e0;\n}\n\n.article-nav-title {\n    display: table-cell;\n    vertical-align: middle;\n}\n\n.article-nav-title a {\n    color: #fff;\n}\n\n.article-nav-title a:hover {\n    font-style: italic;\n}\n\n#article-nav-older {\n    padding-right: 1em;\n    text-align: right;\n}\n\n#article-nav-older::after {\n    padding-left: 0.5em;\n    content: \"→\";\n    color: #fff;\n    font-weight: bold;\n    font-family: Calibri;\n}\n\n#article-nav-newer {\n    padding-left: 1em;\n    text-align: left;\n}\n\n#article-nav-newer::before {\n    padding-right: 0.5em;\n    content: \"←\";\n    color: #fff;\n    font-weight: bold;\n    font-family: Calibri;\n}\n\n#intro {\n    display: inline;\n    font-weight: normal;\n    font-size: inherit;\n    opacity: 0;\n    color: #fff;\n}\n\n#intro::before,\n#intro::after {\n    content: none;\n}\n\nli:hover {\n    background: rgba(158, 188, 226, 0.21);\n}\n\n.article-entry > ol:last-child > li:nth-child(2n) {\n    background: rgba(158, 188, 226, 0.12);\n}\n\n.article-entry > ol:last-child li {\n    word-break: break-all;\n}\n\n.article-entry > ol:last-child li:hover {\n    background: #f0f0f0;\n}\n\n#tocButton {\n    position: fixed;\n    border: none;\n    left: 220px;\n    top: 382px;\n    background: none;\n    font-size: 0.9em;\n    font-weight: bold;\n    color: #d3d3d3;\n    cursor: pointer;\n    font-family: inherit;\n    outline: none; /*Remove button border when clicked.*/\n    -webkit-appearance: none; /*Remove iOS button style*/\n}\n\n#tocButton:hover {\n    color: #88acdb;\n}\n\n.toc-article {\n    position: fixed;\n    width: 230px;\n    top: 378px;\n    bottom: 1em;\n    left: 0;\n    margin-left: 0em;\n    padding: 6px 10px 10px 50px;\n    border-radius: 2.8%;\n    overflow: auto;\n}\n\n#toc {\n    float: right;\n    font-size: 0.9em;\n    line-height: 1.65em;\n}\n\n#toc a {\n    color: #808080;\n}\n\n#toc a:visited {\n    color: #f48385;\n}\n\n#toc a:hover {\n    color: #88acdb;\n    text-decoration: none;\n}\n\n#toc li:hover {\n    background: none;\n}\n\n#toc li:hover li:hover {\n    background: rgba(158, 188, 226, 0.21);\n}\n\n#toc .toc-title {\n    font-weight: bold;\n    color: #808080;\n}\n\n#toc .toc {\n    padding: 0.7em;\n    padding-right: 0;\n}\n\n#toc .toc li {\n    list-style-type: none;\n}\n\n#toc ol {\n    margin-left: 0;\n}\n\n#toc .toc-child {\n    padding-left: 1.25em;\n    margin: 4px 0;\n}\n\n#toc .toc-link:hover {\n    background: rgba(158, 188, 226, 0.21);\n}\n\n.copyright {\n    width: 85%;\n    max-width: 45em;\n    margin: 1.2em auto 0;\n    padding: 0.5em 1.8em;\n    border: 1px solid #d3d3d3;\n    font-size: 0.93em;\n    line-height: 1.6em;\n    word-break: break-all;\n    background: rgba(255, 255, 255, 0.4);\n}\n\n.copyright span {\n    display: inline-block;\n    margin-right: 1em;\n    color: #b5b5b5;\n    font-weight: bold;\n}\n\n.copyright a {\n    color: #808080;\n}\n\n.copyright a:hover {\n    color: #a3d2a3;\n    text-decoration: underline;\n}\n\n.copyright:hover p .copy-path::after {\n    content: \"复制\";\n}\n\n.copyright .copy-path {\n    display: inline-block;\n    margin-left: 1em;\n}\n\n.copyright .copy-path:hover {\n    color: #808080;\n    cursor: pointer;\n}\n\n@-moz-keyframes cd-bounce-1 {\n    0% {\n        opacity: 0;\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n    60% {\n        opacity: 1;\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        -o-transform: scale(1.01);\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        transform: scale(1.01);\n    }\n    100% {\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n}\n\n@-webkit-keyframes cd-bounce-1 {\n    0% {\n        opacity: 0;\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n    60% {\n        opacity: 1;\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        -o-transform: scale(1.01);\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        transform: scale(1.01);\n    }\n    100% {\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n}\n\n@-o-keyframes cd-bounce-1 {\n    0% {\n        opacity: 0;\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n    60% {\n        opacity: 1;\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        -o-transform: scale(1.01);\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        transform: scale(1.01);\n    }\n    100% {\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n}\n\n@keyframes cd-bounce-1 {\n    0% {\n        opacity: 0;\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n    60% {\n        opacity: 1;\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        -o-transform: scale(1.01);\n        -webkit-transform: scale(1.01);\n        -moz-transform: scale(1.01);\n        -ms-transform: scale(1.01);\n        transform: scale(1.01);\n    }\n    100% {\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        -o-transform: scale(1);\n        -webkit-transform: scale(1);\n        -moz-transform: scale(1);\n        -ms-transform: scale(1);\n        transform: scale(1);\n    }\n}\n\n.archives-wrap {\n    position: relative;\n    margin: 0 30px;\n    padding-right: 1.5em;\n    border-bottom: 1px solid #eee;\n    background: #fff;\n}\n\n.archives-wrap:first-child {\n    margin-top: 30px;\n}\n\n.archives-wrap:last-child {\n    margin-bottom: 80px;\n}\n\n.archives-wrap .archive-year-wrap {\n    line-height: 35px;\n    width: 200px;\n    position: absolute;\n    padding-top: 20px;\n    font-size: 1.8em;\n}\n\n.archives-wrap .archive-year-wrap a {\n    color: #666;\n    font-weight: bold;\n    padding-left: 48px;\n}\n\n.archives {\n    position: relative;\n}\n\n.archives .article-info {\n    border: none;\n}\n\n.archives .archive-article {\n    margin-left: 160px;\n    padding: 0.5em 0;\n    border-bottom: 1px solid #eee;\n    border-top: 1px solid #fff;\n    position: relative;\n}\n\n.archives .archive-article:first-child {\n    border-top: 1em;\n    padding-top: 20px;\n}\n\n.archives .archive-article:last-child {\n    border-bottom: none;\n}\n\n.archives .archive-article-title {\n    font-size: 18px;\n    color: #333;\n    -webkit-transition: color 0.3s;\n    -moz-transition: color 0.3s;\n    -ms-transition: color 0.3s;\n    transition: color 0.3s;\n}\n\n.archives .archive-article-title:hover {\n    color: #657b83;\n}\n\n.archives .archive-article-title span {\n    display: block;\n    color: #a8a8a8;\n    font-size: 12px;\n    line-height: 14px;\n    height: 7px;\n    padding-left: 2px;\n}\n\n.archives .archive-article-title span:before {\n    display: inline-block;\n    content: \"“\";\n    font-family: serif;\n    font-size: 30px;\n    float: left;\n    margin: 4px 4px 0 -12px;\n    color: #c8c8c8;\n}\n\n.archive-article-inner .archive-article-header {\n    position: relative;\n}\n\n.archive-article-inner .article-meta {\n    position: relative;\n    float: right;\n    margin-top: -10px;\n    color: #555;\n    background: none;\n    text-align: right;\n    width: auto;\n}\n\n.archive-article-inner .article-meta .article-date time {\n    color: #aaa;\n}\n\n.archive-article-inner .article-meta .archive-article-date,\n.archive-article-inner .article-meta .article-tag-list {\n    margin-right: 1em;\n    display: -moz-inline-stack;\n    display: inline-block;\n    vertical-align: middle;\n    zoom: 1;\n    color: #666;\n    font-size: 14px;\n}\n\n.archive-article-inner .article-meta .archive-article-date {\n    cursor: default;\n    font-size: 14px;\n    margin-bottom: 5px;\n    margin-top: -10px;\n}\n\n.archive-article-inner .article-meta .archive-article-date time:before {\n    content: \"\\f073\";\n    color: #999;\n    position: relative;\n    margin-right: 10px;\n    font: 16px FontAwesome;\n}\n\n.archive-article-inner .article-meta .article-category:before {\n    float: left;\n    margin-top: 1px;\n    left: 15px;\n}\n\n.archive-article-inner .article-meta .article-category .article-category-link {\n    width: auto;\n    max-width: 83px;\n    padding-left: 10px;\n}\n\n.archive-article-inner .article-meta .article-tag-list {\n    margin-top: 0px;\n}\n\n.archive-article-inner .article-meta .article-tag-list:before {\n    left: 15px;\n}\n\n.archive-article-inner .article-meta .article-tag-list .article-tag-list-item {\n    display: inline-block;\n    width: auto;\n    max-width: 83px;\n    padding-left: 8px;\n    font-size: 12px;\n}\n\n.archives-wrap {\n    background: rgba(255, 255, 255, 0.4);\n}\n\n.archives-wrap .archives {\n    background: transparent;\n}\n\n.article-entry pre,\n.article-entry .highlight {\n    background: rgba(51, 51, 51, 0.85);\n    margin: auto;\n    padding: 0.35em 1.5em;\n    border-style: solid;\n    border-color: #ddd;\n    border-width: 1px;\n    overflow: auto;\n    color: #ccc;\n    line-height: 22.400000000000002px;\n}\n\n.article-entry .highlight .gutter pre,\n.article-entry .gist .gist-file .gist-data .line-numbers {\n    color: #d3d3d3;\n    font-size: 0.85em;\n}\n\n.article-entry pre,\n.article-entry code {\n    font-family: Menlo, Consolas, \"Source Code Pro\", Inconsolata, Monaco, monospace, \"Microsoft YaHei\", \"Hiragino Sans GB\", \"WenQuanYi Micro Hei\", sans-serif;\n    font-size: 1em;\n}\n\n.article-entry pre code {\n    text-shadow: none;\n    padding: 0;\n\n    background-color: transparent;\n}\n\n.article-entry .highlight {\n    border-radius: 2px;\n    margin-top: 0.5em;\n    margin-bottom: 1em;\n    overflow: auto;\n}\n\n.article-entry .highlight pre {\n    background: none;\n    border: none;\n    margin: 0;\n    padding: 0;\n}\n\n.article-entry .highlight table {\n    margin: 0;\n    width: auto;\n}\n\n.article-entry .highlight td {\n    border: none;\n    padding: 0;\n}\n\n.article-entry .highlight figcaption {\n    font-size: 0.85em;\n    color: #999;\n    line-height: 1em;\n    margin-bottom: 1em;\n}\n\n.article-entry .highlight figcaption:before,\n.article-entry .highlight figcaption:after {\n    content: \"\";\n    display: table;\n}\n\n.article-entry .highlight figcaption:after {\n    clear: both;\n}\n\n.article-entry .highlight figcaption a {\n    float: right;\n}\n\n.article-entry .highlight .gutter pre {\n    text-align: right;\n    padding-right: 1em;\n}\n\n.article-entry .highlight .line {\n    height: 22.400000000000002px;\n}\n\n.article-entry .gist {\n    margin: 0 -20px;\n    border-style: solid;\n    border-color: #ddd;\n    border-width: 1px 0;\n    background: rgba(51, 51, 51, 0.85);\n    padding: 15px 20px 15px 0;\n}\n\n.article-entry .gist .gist-file {\n    border: none;\n    font-family: Menlo, Consolas, \"Source Code Pro\", Inconsolata, Monaco, monospace;\n    margin: 0;\n}\n\n.article-entry .gist .gist-file .gist-data {\n    background: none;\n    border: none;\n}\n\n.article-entry .gist .gist-file .gist-data .line-numbers {\n    background: none;\n    border: none;\n    padding: 0 20px 0 0;\n}\n\n.article-entry .gist .gist-file .gist-data .line-data {\n    padding: 0 !important;\n}\n\n.article-entry .gist .gist-file .highlight {\n    margin: 0;\n    padding: 0;\n    border: none;\n}\n\n.article-entry .gist .gist-file .gist-meta {\n    background: rgba(51, 51, 51, 0.85);\n    color: #999;\n    font: 0.85em \"Lucida Grande\", Verdana, \"Helvetica Neue\", Arial, sans-serif;\n    text-shadow: 0 0;\n    padding: 0;\n    margin-top: 1em;\n    margin-left: 20px;\n}\n\n.article-entry .gist .gist-file .gist-meta a {\n    color: #258fb8;\n    font-weight: normal;\n}\n\n.article-entry .gist .gist-file .gist-meta a:hover {\n    text-decoration: underline;\n}\n\n.article-entry code {\n    color: #808080;\n    background: rgba(248, 237, 223, 0.5);\n    padding: 0.05em 0.3em;\n    border-radius: 3px;\n    var: 1;\n    color: #fff;\n    background: rgba(153, 204, 153, 0.7);\n}\n\npre .comment,\npre .title {\n    color: #999;\n}\n\npre .variable,\npre .attribute,\npre .tag,\npre .regexp,\npre .ruby .constant,\npre .xml .tag .title,\npre .xml .pi,\npre .xml .doctype,\npre .html .doctype,\npre .css .id,\npre .css .class,\npre .css .pseudo {\n    color: #f2777a;\n}\n\npre .number,\npre .preprocessor,\npre .built_in,\npre .literal,\npre .params,\npre .constant {\n    color: #f99157;\n}\n\npre .class,\npre .ruby .class .title,\npre .css .rules .attribute {\n    color: #9c9;\n}\n\npre .string,\npre .value,\npre .inheritance,\npre .header,\npre .ruby .symbol,\npre .xml .cdata {\n    color: #9c9;\n}\n\npre .css .hexcolor {\n    color: #6cc;\n}\n\npre .function,\npre .python .decorator,\npre .python .title,\npre .ruby .function .title,\npre .ruby .title .keyword,\npre .perl .sub,\npre .javascript .title,\npre .coffeescript .title {\n    color: #69c;\n}\n\npre .keyword,\npre .javascript .function {\n    color: #c9c;\n}\n\n#footer {\n    font-size: 0.8em;\n    font-family: \"Microsoft YaHei\", \"Hiragino Sans GB\", \"WenQuanYi Micro Hei\", sans-serif;\n    text-shadow: 0 1px #fff;\n    position: absolute;\n    bottom: 20px;\n    opacity: 0.75;\n    width: 100%;\n    text-align: center;\n}\n\n#footer .outer {\n    padding: 0 30px;\n}\n\n.footer-left {\n    float: left;\n}\n\n.footer-right {\n    float: right;\n}\n\n.share {\n    padding-left: 40px;\n    margin-bottom: 5px;\n    opacity: 0.2;\n}\n\n.share:hover {\n    opacity: 0.7;\n}\n\n.back_home {\n    float: right;\n}\n\n.back_home a {\n    font-weight: bold;\n    margin-left: 10px;\n}\n\n.back_home a:hover {\n    color: #6e6e6e;\n}\n\n.share:hover a:last-child::after {\n    content: \"\\f029\"; /*fa fa-qrcode*/\n    font: 28px FontAwesome;\n    color: #000;\n}\n\n#page-nav {\n    text-align: center;\n    margin-top: 30px;\n}\n\n#page-nav .page-number {\n    width: 20px;\n    height: 20px;\n    background: #4d4d4d;\n    -webkit-border-radius: 50%;\n    -moz-border-radius: 50%;\n    border-radius: 50%;\n    display: inline-block;\n    color: #fff;\n    line-height: 20px;\n    font-size: 12px;\n    margin: 0 3px 30px;\n}\n\n#page-nav .page-number:hover {\n    background: #5e5e5e;\n}\n\n#page-nav .current {\n    background: #88acdb;\n    cursor: default;\n}\n\n#page-nav .current:hover {\n    background: #88acdb;\n}\n\n#page-nav .extend {\n    color: #4d4d4d;\n    margin: 0 27px;\n    opacity: 0;\n}\n\n#page-nav .extend:hover {\n    color: #5e5e5e;\n}\n\n#page-nav:hover .extend {\n    opacity: 1;\n}\n\n#post-instagram {\n    padding: 30px;\n}\n\n#post-instagram .article-entry {\n    padding-right: 0;\n}\n\n.instagram {\n    position: relative;\n    min-height: 500px;\n}\n\n.instagram .open-ins {\n    display: block;\n    padding: 10px 0;\n    position: absolute;\n    right: 28px;\n    top: -75px;\n    color: #333;\n}\n\n.instagram .open-ins:hover {\n    color: #657b83;\n}\n\n.instagram .year {\n    display: inline;\n}\n\n.instagram .album h1 em {\n    font-style: normal;\n    font-size: 14px;\n    margin-left: 10px;\n}\n\n.instagram .album ul {\n    min-height: 149px;\n    padding-top: 17px;\n    border-bottom: 1px solid #ddd;\n    list-style: none;\n}\n\n.instagram .album li {\n    position: relative;\n    display: inline-block;\n    min-width: 157px;\n    margin: 0;\n}\n\n.instagram .album li:before {\n    display: none;\n}\n\n.instagram .album div.img-box {\n    position: relative;\n    margin: 0 20px 10px;\n    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 0 1px rgba(255, 255, 255, 0.1);\n    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 0 1px rgba(255, 255, 255, 0.1);\n    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 0 1px rgba(255, 255, 255, 0.1);\n    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 0 1px rgba(255, 255, 255, 0.1);\n}\n\n.instagram .album div.img-box .img-bg {\n    position: absolute;\n    top: 0;\n    left: 0;\n    bottom: 0px;\n    width: 100%;\n    margin: -5px;\n    padding: 5px;\n    background: rgba(204, 204, 204, 0.8);\n    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.1);\n    -moz-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.1);\n    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.1);\n    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.04), 0 1px 5px rgba(0, 0, 0, 0.1);\n    -webkit-transition: all 0.15s ease-out 0.1s;\n    -moz-transition: all 0.15s ease-out 0.1s;\n    -o-transition: all 0.15s ease-out 0.1s;\n    -webkit-transition: all 0.15s ease-out 0.1s;\n    -moz-transition: all 0.15s ease-out 0.1s;\n    -ms-transition: all 0.15s ease-out 0.1s;\n    transition: all 0.15s ease-out 0.1s;\n    opacity: 0.2;\n    cursor: pointer;\n    display: block;\n}\n\n.instagram .album div.img-box .img-bg:hover {\n    opacity: 0;\n}\n\n.instagram .album div.img-box img {\n    width: 100%;\n    height: auto;\n    display: block;\n}\n\n@media screen and (max-width: 600px) {\n    .instagram .album ul {\n        margin-left: 0;\n        padding: 0;\n        text-align: center;\n    }\n\n    .instagram .album li {\n        max-width: 300px;\n    }\n\n    .instagram .album div.img-box {\n        margin: 0;\n    }\n}\n\n.switch-btn {\n    margin: 0 auto;\n    margin-top: 23px;\n    position: relative;\n    width: 70px;\n    text-align: center;\n}\n\n.switch-btn .tips-box {\n    position: relative;\n}\n\n.switch-btn .tips-box .tips-arrow {\n    width: 0;\n    height: 0;\n    border-left: 5px solid transparent;\n    border-right: 5px solid transparent;\n    border-bottom: 6px solid #000;\n    opacity: 0.8;\n    position: absolute;\n    top: -6px;\n    left: 30px;\n}\n\n.switch-btn .tips-box .tips-inner {\n    padding: 5px 8px 4px 8px;\n    background-color: #000;\n    color: #fff;\n    width: 80px;\n    text-align: center;\n    border-radius: 3px;\n    opacity: 0.8;\n    position: absolute;\n    z-index: 99;\n    left: -13px;\n}\n\n.switch-btn .tips-box .tips-inner li {\n    padding: 4px 0;\n    cursor: pointer;\n    font-size: 13px;\n    color: #ddd;\n}\n\n.switch-btn .tips-box .tips-inner li:hover {\n    background: #111;\n}\n\n.switch-btn .icon {\n    height: 32px;\n    width: 32px;\n    background: #cecece;\n    border-radius: 100px;\n    position: relative;\n    overflow: hidden;\n    display: inline-block;\n    padding: 10px;\n    -webkit-transform: scale(0.6);\n    -moz-transform: scale(0.6);\n    -ms-transform: scale(0.6);\n    transform: scale(0.6);\n    cursor: pointer;\n}\n\n.switch-btn .icon-ctn {\n    width: 34px;\n    height: 34px;\n    position: relative;\n    overflow: hidden;\n}\n\n.switch-btn .icon-ctn .birdhouse {\n    width: 0;\n    height: 0;\n    position: absolute;\n    top: 0;\n    left: 0;\n    border-style: solid;\n    border-color: transparent transparent #4d4d4d transparent;\n    border-width: 0 16px 14px;\n}\n\n.switch-btn .icon-ctn .birdhouse:after {\n    content: '';\n    position: absolute;\n    top: 12px;\n    left: -12px;\n    border-style: solid;\n    border-color: #4d4d4d transparent transparent transparent;\n    border-width: 100px 12px;\n}\n\n.switch-btn .icon-ctn .birdhouse_holes {\n    width: 12px;\n    height: 12px;\n    background: #ddd;\n    position: absolute;\n    -webkit-border-radius: 60px;\n    -moz-border-radius: 60px;\n    border-radius: 60px;\n    left: 10px;\n    top: 8px;\n}\n\n.switch-btn .icon-ctn .birdhouse_holes:after {\n    content: '';\n    position: absolute;\n    width: 4px;\n    height: 4px;\n    background: #ccc;\n    bottom: -8px;\n    left: 4px;\n    -webkit-border-radius: 60px;\n    -moz-border-radius: 60px;\n    border-radius: 60px;\n}\n\n.switch-btn .icon-ctn .ribbon {\n    width: 12px;\n    height: 20px;\n    background: #333;\n    margin: 2px 0 0 10px;\n}\n\n.switch-btn .icon-ctn .ribbon:after {\n    content: '';\n    position: absolute;\n    left: 10px;\n    top: 16px;\n    width: 0;\n    height: 0;\n    border: solid #333;\n    border-color: transparent #333 transparent #333;\n    border-width: 6px 6px 8px 6px;\n}\n\n.switch-btn .icon-ctn .loopback_l {\n    width: 10px;\n    height: 5px;\n    border-style: solid;\n    border-width: 0px 3px 3px 3px;\n    border-color: #333;\n    border-radius: 0 0 50px 50px;\n    position: absolute;\n    top: 16px;\n    left: 1px;\n}\n\n.switch-btn .icon-ctn .loopback_l:before {\n    content: '';\n    position: absolute;\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 4px;\n    border-color: transparent transparent transparent #333;\n    bottom: 7px;\n    left: 5px;\n}\n\n.switch-btn .icon-ctn .loopback_l:after {\n    content: '';\n    width: 5px;\n    height: 5px;\n    border-style: solid;\n    border-width: 3px 0 0 3px;\n    border-color: #333;\n    border-radius: 50px 0 0 0;\n    position: absolute;\n    left: -3px;\n    bottom: 5px;\n}\n\n.switch-btn .icon-ctn .loopback_r {\n    width: 10px;\n    height: 5px;\n    border-style: solid;\n    border-width: 3px 3px 0 3px;\n    border-color: #333;\n    border-radius: 50px 50px 0 0;\n    position: absolute;\n    top: 8px;\n    right: 2px;\n}\n\n.switch-btn .icon-ctn .loopback_r:before {\n    content: '';\n    position: absolute;\n    width: 0;\n    height: 0;\n    border-style: solid;\n    border-width: 4px;\n    border-color: transparent #333 transparent transparent;\n    top: 7px;\n    right: 5px;\n}\n\n.switch-btn .icon-ctn .loopback_r:after {\n    content: '';\n    width: 5px;\n    height: 5px;\n    border-style: solid;\n    border-width: 0 3px 3px 0;\n    border-color: #333;\n    border-radius: 0 0 50px 0;\n    position: absolute;\n    left: 5px;\n    top: 5px;\n}\n\n.switch-btn .icon-ctn .user {\n    width: 12px;\n    height: 14px;\n    background: #333;\n    border-radius: 5px 5px 0 0;\n    margin-left: 10px;\n    margin-top: 2px;\n}\n\n.switch-btn .icon-ctn .user:before {\n    content: '';\n    width: 0px;\n    height: 0px;\n    position: absolute;\n    top: 17px;\n    left: 0px;\n    border-style: solid;\n    border-color: transparent transparent #333 transparent;\n    border-width: 0 16px 6px 16px;\n}\n\n.switch-btn .icon-ctn .user:after {\n    content: '';\n    width: 8px;\n    height: 5px;\n    background: #333;\n    position: absolute;\n    margin-top: 13px;\n    margin-left: -4px;\n}\n\n.switch-btn .icon-ctn .shoulder {\n    width: 32px;\n    height: 6px;\n    background: #333;\n    position: absolute;\n    bottom: 6px;\n}\n\n#header .tagcloud a {\n    color: #fff;\n}\n\n.tagcloud a {\n    display: inline-block;\n    text-decoration: none;\n    font-weight: normal;\n    font-size: 10px;\n    color: #fff;\n    height: 18px;\n    line-height: 18px;\n    float: left;\n    padding: 0 5px 0px 10px;\n    position: relative;\n    border-radius: 0 5px 5px 0;\n    margin: 5px 9px 5px 8px;\n    opacity: 0.75;\n    font-family: inherit;\n}\n\n.tagcloud a:hover {\n    opacity: 1;\n    -webkit-transform: scale(1.06);\n    -moz-transform: scale(1.06);\n    -ms-transform: scale(1.06);\n    transform: scale(1.06);\n}\n\n.tagcloud a:before {\n    content: \" \";\n    width: 0px;\n    height: 0px;\n    position: absolute;\n    top: 0;\n    left: -18px;\n    border: 9px solid transparent;\n}\n\n.tagcloud a:after {\n    content: \" \";\n    width: 4px;\n    height: 4px;\n    background-color: #fff;\n    border-radius: 4px;\n    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);\n    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.3);\n    position: absolute;\n    top: 7px;\n    left: 2px;\n}\n\n.tagcloud a.color1 {\n    background: #ff945c;\n}\n\n.tagcloud a.color1:before {\n    border-right-color: #ff945c;\n}\n\n.tagcloud a.color2 {\n    background: #f5c7b7;\n}\n\n.tagcloud a.color2:before {\n    border-right-color: #f5c7b7;\n}\n\n.tagcloud a.color3 {\n    background: #ba8f6c;\n}\n\n.tagcloud a.color3:before {\n    border-right-color: #ba8f6c;\n}\n\n.tagcloud a.color4 {\n    background: #cfb7c4;\n}\n\n.tagcloud a.color4:before {\n    border-right-color: #cfb7c4;\n}\n\n.tagcloud a.color5 {\n    background: #88acdb;\n}\n\n.tagcloud a.color5:before {\n    border-right-color: #88acdb;\n}\n\n.tagcloud a:hover {\n    background-color: #9c9;\n    border-color: #9c9;\n}\n\n.tagcloud a:hover::before {\n    border-right-color: #9c9;\n}\n\n.article-tag::before {\n    float: left;\n    color: #999;\n    content: \"\\f02b\";\n    font: 16px FontAwesome;\n    margin-left: 1em;\n    margin-right: 5px;\n    margin-top: 6px;\n}\n\n.article-category::before {\n    float: left;\n    color: #999;\n    content: \"\\f02d\";\n    font: 16px FontAwesome;\n    margin-right: 5px;\n    margin-top: 6px;\n}\n\n.article-pop-out {\n    float: left;\n}\n\n.article-pop-out:before {\n    float: left;\n    color: #999;\n    content: \"\\f08d\";\n    font: 16px FontAwesome;\n    float: left;\n    margin-right: 5px;\n    margin-top: 6px;\n}\n\n.article-pop-out:after {\n    float: left;\n    content: \"\";\n    margin-right: 20px;\n    margin-top: 9px;\n    float: left;\n}\n\n::-webkit-scrollbar {\n    width: 10px;\n    height: 10px;\n}\n\n::-webkit-scrollbar-button {\n    width: 0;\n    height: 0;\n}\n\n::-webkit-scrollbar-button:start:increment,\n::-webkit-scrollbar-button:end:decrement {\n    display: none;\n}\n\n::-webkit-scrollbar-corner {\n    display: block;\n}\n\n::-webkit-scrollbar-thumb {\n    border-radius: 8px;\n    background-color: rgba(0, 0, 0, 0.2);\n}\n\n::-webkit-scrollbar-thumb:hover {\n    border-radius: 8px;\n    background-color: rgba(0, 0, 0, 0.5);\n}\n\n::-webkit-scrollbar-track,\n::-webkit-scrollbar-thumb {\n    border-right: 1px solid transparent;\n    border-left: 1px solid transparent;\n}\n\n::-webkit-scrollbar-track:hover {\n    background-color: rgba(0, 0, 0, 0.15);\n}\n\n::-webkit-scrollbar-button:start {\n    width: 10px;\n    height: 10px;\n    background: url(\"../img/scrollbar_arrow.png\") no-repeat 0 0;\n}\n\n::-webkit-scrollbar-button:start:hover {\n    background: url(\"../img/scrollbar_arrow.png\") no-repeat -15px 0;\n}\n\n::-webkit-scrollbar-button:start:active {\n    background: url(\"../img/scrollbar_arrow.png\") no-repeat -30px 0;\n}\n\n::-webkit-scrollbar-button:end {\n    width: 10px;\n    height: 10px;\n    background: url(\"../img/scrollbar_arrow.png\") no-repeat 0 -18px;\n}\n\n::-webkit-scrollbar-button:end:hover {\n    background: url(\"../img/scrollbar_arrow.png\") no-repeat -15px -18px;\n}\n\n::-webkit-scrollbar-button:end:active {\n    background: url(\"../img/scrollbar_arrow.png\") no-repeat -30px -18px;\n}\n\n#viewer {\n    position: fixed;\n    z-index: 1000000;\n    top: 0;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    overflow: hidden;\n}\n\n#viewer-box {\n    width: 100%;\n    height: 100%;\n    position: relative;\n    color: #ccc;\n    -webkit-transform: translate3d(-100%, 0, 0);\n    -webkit-transition: -webkit-transform 0.25s ease-in-out;\n}\n\n#viewer-box .viewer-box-l {\n    background: rgba(20, 20, 20, 0.9);\n    width: 80%;\n    height: 100%;\n    float: left;\n}\n\n#viewer-box .viewer-box-l .viewer-box-wrap {\n    margin: 20px 10px 0px 20px;\n}\n\n#viewer-box .viewer-box-l .viewer-title {\n    line-height: 32px;\n}\n\n#viewer-box .viewer-box-l .viewer-title:before {\n    content: \"\";\n    width: 6px;\n    height: 6px;\n    border: 1px solid #999;\n    -webkit-border-radius: 10px;\n    border-radius: 10px;\n    background: #aaa;\n    display: inline-block;\n    margin-right: 10px;\n}\n\n#viewer-box .viewer-box-l .viewer-div {\n    border-bottom: 1px dotted #666;\n    padding-bottom: 13px;\n    line-height: 20px;\n}\n\n#viewer-box .viewer-box-l .viewer-div:last-child {\n    border-bottom: none;\n}\n\n#viewer-box .viewer-box-l .viewer-div .switch-friends-link {\n    line-height: 20px;\n}\n\n#viewer-box .viewer-box-r {\n    background: rgba(0, 0, 0, 0);\n    width: 20%;\n    height: 100%;\n    float: right;\n}\n\n#viewer-box.anm-swipe {\n    -webkit-transform: translate3d(0, 0, 0);\n}\n\n#viewer-box.anm-swipe .viewer-box-r {\n    background: rgba(0, 0, 0, 0);\n}\n\n.hide {\n    display: none;\n}\n\n#viewer-box .viewer-list {\n    margin: 0;\n    padding: 0;\n    height: 100%;\n    overflow: hidden;\n}\n\n.youyan {\n    padding: 20px 40px;\n}\n\n@media (max-width: 767px) {\n    .youyan {\n        padding: 20px 10px;\n    }\n}\n\nbody {\n    background: #d3d3d3;\n}\n\n#container .left-col {\n    background: #fff;\n}\n\n.article .article-inner {\n    margin-bottom: 1em;\n}\n\n.article .article-more-link a {\n    opacity: 0.9;\n}\n\n.tagcloud a {\n    opacity: 0.9;\n}\n\n#header .header-nav .social li {\n    opacity: 0.8;\n}\n\n.archives-wrap {\n    background: #fff;\n}\n\n.scroll a .fa {\n    color: #fff;\n}\n\n.post-nav-button {\n    background: #ececec;\n}\n\n#post-nav-button a {\n    background: rgba(215, 216, 215, 0.5);\n}\n\n.post-list {\n    background: #fff;\n}\n\n#article-nav {\n    background: rgba(158, 188, 226, 0.9);\n}\n\n#toc li {\n    margin-left: 15px;\n    /*list-style: decimal;*/\n}\n\n#toc > #TableOfContents > ul > li {\n    margin-left: -10px;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- public/nicky-chen.github.io/css/style.css	(revision d67129d6c53719818296f1dc20b7647690f03bbc)
++++ public/nicky-chen.github.io/css/style.css	(date 1612861022000)
+@@ -14,8 +14,8 @@
+ 
+ @font-face {
+     font-family: 'FontAwesome';
+-    src: url("../font-awesome/fonts/fontawesome-webfont.eot");
+-    src: url("../font-awesome/fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../font-awesome/fonts/fontawesome-webfont.woff") format("woff"), url("../font-awesome/fonts/fontawesome-webfont.ttf") format("truetype"), url("../font-awesome/fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg"), url("../font-awesome/fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
++    src: url("fonts/fontawesome-webfont.eot");
++    src: url("fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/fontawesome-webfont.woff") format("woff"), url("fonts/fontawesome-webfont.ttf") format("truetype"), url("fonts/fontawesome-webfont.svgz#FontAwesomeRegular") format("svg"), url("fonts/fontawesome-webfont.svg#FontAwesomeRegular") format("svg");
+     font-weight: normal;
+     font-style: normal;
+ }
+@@ -142,8 +142,8 @@
+     font-family: FontAwesome;
+     font-style: normal;
+     font-weight: normal;
+-    src: url("../font-awesome/fonts/fontawesome-webfont.eot?v=#4.5.0");
+-    src: url("../font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=#4.5.0") format("embedded-opentype"), url("../font-awesome/fonts/fontawesome-webfont.woff?v=#4.5.0") format("woff"), url("../font-awesome/fonts/fontawesome-webfont.ttf?v=#4.5.0") format("truetype"), url("../font-awesome/fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.5.0") format("svg");
++    src: url("font-awesome/fonts/fontawesome-webfont.eot?v=#4.5.0");
++    src: url("font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=#4.5.0") format("embedded-opentype"), url("font-awesome/fonts/fontawesome-webfont.woff?v=#4.5.0") format("woff"), url("font-awesome/fonts/fontawesome-webfont.ttf?v=#4.5.0") format("truetype"), url("font-awesome/fonts/fontawesome-webfont.svg#fontawesomeregular?v=#4.5.0") format("svg");
+ }
+ 
+ body {
+Index: public/nicky-chen.github.io/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b5937023-c407-40d8-b7aa-bcba4a685ed0\" name=\"Default\" comment=\"添加预览图片\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <ignored path=\".idea/vcs.xml\" />\n    <ignored path=\".idea/inspectionProfiles/profiles_settings.xml\" />\n    <ignored path=\".idea/dictionaries/cx520.xml\" />\n    <ignored path=\".idea/encodings.xml\" />\n    <ignored path=\".idea/misc.xml\" />\n    <ignored path=\".idea/modules.xml\" />\n    <ignored path=\".idea/nicky-chen.github.io.iml\" />\n    <option name=\"EXCLUDED_CONVERTED_TO_IGNORED\" value=\"true\" />\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FUSProjectUsageTrigger\">\n    <session id=\"-1739910486\">\n      <usages-collector id=\"statistics.lifecycle.project\">\n        <counts>\n          <entry key=\"project.closed\" value=\"6\" />\n          <entry key=\"project.open.time.1\" value=\"2\" />\n          <entry key=\"project.open.time.2\" value=\"2\" />\n          <entry key=\"project.open.time.3\" value=\"2\" />\n          <entry key=\"project.opened\" value=\"6\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.extensions.open\">\n        <counts>\n          <entry key=\"html\" value=\"9\" />\n          <entry key=\"ico\" value=\"3\" />\n          <entry key=\"jpg\" value=\"2\" />\n          <entry key=\"md\" value=\"1\" />\n          <entry key=\"png\" value=\"2\" />\n          <entry key=\"txt\" value=\"1\" />\n          <entry key=\"yml\" value=\"1\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.types.open\">\n        <counts>\n          <entry key=\"HTML\" value=\"9\" />\n          <entry key=\"Image\" value=\"7\" />\n          <entry key=\"Markdown\" value=\"1\" />\n          <entry key=\"PLAIN_TEXT\" value=\"1\" />\n          <entry key=\"YAML\" value=\"1\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.extensions.edit\">\n        <counts>\n          <entry key=\"html\" value=\"12\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.types.edit\">\n        <counts>\n          <entry key=\"HTML\" value=\"12\" />\n        </counts>\n      </usages-collector>\n    </session>\n    <session id=\"-1250631899\">\n      <usages-collector id=\"statistics.lifecycle.project\">\n        <counts>\n          <entry key=\"project.closed\" value=\"7\" />\n          <entry key=\"project.open.time.1\" value=\"7\" />\n          <entry key=\"project.opened\" value=\"7\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.extensions.open\">\n        <counts>\n          <entry key=\"gitignore\" value=\"1\" />\n          <entry key=\"html\" value=\"17\" />\n          <entry key=\"js\" value=\"2\" />\n          <entry key=\"png\" value=\"1\" />\n          <entry key=\"txt\" value=\"2\" />\n          <entry key=\"xml\" value=\"1\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.types.open\">\n        <counts>\n          <entry key=\"Git file\" value=\"1\" />\n          <entry key=\"HTML\" value=\"17\" />\n          <entry key=\"Image\" value=\"1\" />\n          <entry key=\"JavaScript\" value=\"2\" />\n          <entry key=\"PLAIN_TEXT\" value=\"2\" />\n          <entry key=\"XML\" value=\"1\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.extensions.edit\">\n        <counts>\n          <entry key=\"html\" value=\"1\" />\n          <entry key=\"txt\" value=\"18\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.types.edit\">\n        <counts>\n          <entry key=\"HTML\" value=\"1\" />\n          <entry key=\"PLAIN_TEXT\" value=\"18\" />\n        </counts>\n      </usages-collector>\n    </session>\n    <session id=\"-553256802\">\n      <usages-collector id=\"statistics.lifecycle.project\">\n        <counts>\n          <entry key=\"project.closed\" value=\"22\" />\n          <entry key=\"project.open.time.1\" value=\"17\" />\n          <entry key=\"project.open.time.11\" value=\"1\" />\n          <entry key=\"project.open.time.16\" value=\"1\" />\n          <entry key=\"project.open.time.2\" value=\"1\" />\n          <entry key=\"project.open.time.8\" value=\"1\" />\n          <entry key=\"project.opened\" value=\"21\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.extensions.open\">\n        <counts>\n          <entry key=\"gitignore\" value=\"1\" />\n          <entry key=\"html\" value=\"3\" />\n          <entry key=\"png\" value=\"2\" />\n          <entry key=\"xml\" value=\"1\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.types.open\">\n        <counts>\n          <entry key=\"Git file\" value=\"1\" />\n          <entry key=\"HTML\" value=\"3\" />\n          <entry key=\"Image\" value=\"2\" />\n          <entry key=\"XML\" value=\"1\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.extensions.edit\">\n        <counts>\n          <entry key=\"txt\" value=\"73\" />\n        </counts>\n      </usages-collector>\n      <usages-collector id=\"statistics.file.types.edit\">\n        <counts>\n          <entry key=\"PLAIN_TEXT\" value=\"73\" />\n        </counts>\n      </usages-collector>\n    </session>\n  </component>\n  <component name=\"FileEditorManager\">\n    <leaf SIDE_TABS_SIZE_LIMIT_KEY=\"300\">\n      <file pinned=\"false\" current-in-tab=\"true\">\n        <entry file=\"file://$PROJECT_DIR$/sitemap.xml\">\n          <provider selected=\"true\" editor-type-id=\"text-editor\">\n            <state relative-caret-position=\"108\">\n              <caret line=\"6\" selection-start-line=\"6\" selection-end-line=\"6\" />\n            </state>\n          </provider>\n        </entry>\n      </file>\n      <file pinned=\"false\" current-in-tab=\"false\">\n        <entry file=\"file://$PROJECT_DIR$/2017/01/23/externalizable-interface/index.html\">\n          <provider selected=\"true\" editor-type-id=\"text-editor\" />\n        </entry>\n      </file>\n      <file pinned=\"false\" current-in-tab=\"false\">\n        <entry file=\"file://$PROJECT_DIR$/404.html\">\n          <provider selected=\"true\" editor-type-id=\"text-editor\" />\n        </entry>\n      </file>\n      <file pinned=\"false\" current-in-tab=\"false\">\n        <entry file=\"file://$PROJECT_DIR$/2019/02/15/filter/index.html\">\n          <provider selected=\"true\" editor-type-id=\"text-editor\" />\n        </entry>\n      </file>\n    </leaf>\n  </component>\n  <component name=\"FindInProjectRecents\">\n    <findStrings>\n      <find>&lt;loc&gt;https://github.com/nicky-chen/</find>\n      <find>&lt;loc&gt;/</find>\n      <find>favicon.ico</find>\n      <find>disqus</find>\n      <find>comments</find>\n      <find>search</find>\n      <find>网站首页</find>\n      <find>api/js/share.js</find>\n      <find>//bdimg.share.baidu.com</find>\n      <find>share_api</find>\n      <find>bdimg</find>\n      <find>http://bdimg.share.baidu.com</find>\n      <find>share.j</find>\n      <find>简书</find>\n      <find>wechat</find>\n    </findStrings>\n    <replaceStrings>\n      <replace>&lt;loc&gt;https://github.com/nicky-chen/</replace>\n      <replace>&lt;loc&gt;/</replace>\n      <replace>&lt;loc&gt;</replace>\n      <replace>//bdimg.share.baidu.com</replace>\n      <replace>http://bdimg.share.baidu.com</replace>\n      <replace />\n    </replaceStrings>\n    <dirStrings>\n      <dir>E:\\my_blog\\output\\nicky-chen.github.io</dir>\n    </dirStrings>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"IdeDocumentHistory\">\n    <option name=\"CHANGED_PATHS\">\n      <list>\n        <option value=\"$PROJECT_DIR$/robot.txt\" />\n        <option value=\"$PROJECT_DIR$/robots.txt\" />\n        <option value=\"$PROJECT_DIR$/theme/gumby.css\" />\n        <option value=\"$PROJECT_DIR$/.idea/workspace.xml\" />\n        <option value=\"$PROJECT_DIR$/404.html\" />\n        <option value=\"$PROJECT_DIR$/2017/02/19/tools/index.html\" />\n        <option value=\"$PROJECT_DIR$/sitemap.xml\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"JsBuildToolGruntFileManager\" detection-done=\"true\" sorting=\"DEFINITION_ORDER\" />\n  <component name=\"JsBuildToolPackageJson\" detection-done=\"true\" sorting=\"DEFINITION_ORDER\" />\n  <component name=\"JsGulpfileManager\">\n    <detection-done>true</detection-done>\n    <sorting>DEFINITION_ORDER</sorting>\n  </component>\n  <component name=\"ProjectFrameBounds\" fullScreen=\"true\">\n    <option name=\"y\" value=\"23\" />\n    <option name=\"width\" value=\"1440\" />\n    <option name=\"height\" value=\"877\" />\n  </component>\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectView\">\n    <navigator proportions=\"\" version=\"1\">\n      <foldersAlwaysOnTop value=\"true\" />\n    </navigator>\n    <panes>\n      <pane id=\"Scope\" />\n      <pane id=\"ProjectPane\">\n        <subPane>\n          <expand>\n            <path>\n              <item name=\"nicky-chen.github.io\" type=\"b2602c69:ProjectViewProjectNode\" />\n              <item name=\"nicky-chen.github.io\" type=\"462c0819:PsiDirectoryNode\" />\n            </path>\n          </expand>\n          <select />\n        </subPane>\n      </pane>\n      <pane id=\"AndroidView\" />\n      <pane id=\"PackagesPane\" />\n    </panes>\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"aspect.path.notification.shown\" value=\"true\" />\n    <property name=\"com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp\" value=\"1557314138831\" />\n    <property name=\"ignore_missing_gitignore\" value=\"true\" />\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"editor.preferences.import\" />\n  </component>\n  <component name=\"PyConsoleOptionsProvider\">\n    <option name=\"myPythonConsoleState\">\n      <console-settings sdk-home=\"C:\\Python27\\python.exe\">\n        <option name=\"mySdkHome\" value=\"C:\\Python27\\python.exe\" />\n      </console-settings>\n    </option>\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"$PROJECT_DIR$/.idea\" />\n      <recent name=\"E:\\my_blog\\output\\nicky-chen.github.io\\theme\\images\" />\n    </key>\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$\" />\n      <recent name=\"E:\\my_blog\\output\\nicky-chen.github.io\" />\n      <recent name=\"E:\\my_blog\\output\\nicky-chen.github.io\\theme\\js\" />\n      <recent name=\"E:\\my_blog\\output\\nicky-chen.github.io\\theme\\images\" />\n    </key>\n  </component>\n  <component name=\"RunDashboard\">\n    <option name=\"ruleStates\">\n      <list>\n        <RuleState>\n          <option name=\"name\" value=\"ConfigurationTypeDashboardGroupingRule\" />\n        </RuleState>\n        <RuleState>\n          <option name=\"name\" value=\"StatusDashboardGroupingRule\" />\n        </RuleState>\n      </list>\n    </option>\n  </component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"BashConfigurationType\" factoryName=\"Bash\">\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"INTERPRETER_PATH\" value=\"C:\\Program Files (x86)\\Git\\bin\\bash.exe\" />\n      <option name=\"PROJECT_INTERPRETER\" value=\"false\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <option name=\"SCRIPT_NAME\" value=\"\" />\n      <option name=\"PARAMETERS\" value=\"\" />\n      <module name=\"\" />\n      <method v=\"2\" />\n    </configuration>\n    <configuration default=\"true\" type=\"js.build_tools.gulp\" factoryName=\"Gulp.js\">\n      <node-interpreter>project</node-interpreter>\n      <node-options />\n      <gulpfile />\n      <tasks />\n      <arguments />\n      <envs />\n      <method v=\"2\" />\n    </configuration>\n    <configuration default=\"true\" type=\"tests\" factoryName=\"Unittests\">\n      <module name=\"nicky-chen.github.io\" />\n      <option name=\"INTERPRETER_OPTIONS\" value=\"\" />\n      <option name=\"PARENT_ENVS\" value=\"true\" />\n      <option name=\"SDK_HOME\" value=\"\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"\" />\n      <option name=\"IS_MODULE_SDK\" value=\"false\" />\n      <option name=\"ADD_CONTENT_ROOTS\" value=\"true\" />\n      <option name=\"ADD_SOURCE_ROOTS\" value=\"true\" />\n      <EXTENSION ID=\"PythonCoverageRunConfigurationExtension\" runner=\"coverage.py\" />\n      <option name=\"_new_additionalArguments\" value=\"&quot;&quot;\" />\n      <option name=\"_new_target\" value=\"&quot;.&quot;\" />\n      <option name=\"_new_targetType\" value=\"&quot;PATH&quot;\" />\n      <method v=\"2\" />\n    </configuration>\n  </component>\n  <component name=\"SvnConfiguration\">\n    <configuration />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b5937023-c407-40d8-b7aa-bcba4a685ed0\" name=\"Default\" comment=\"\" />\n      <created>1527558042553</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1527558042553</updated>\n      <workItem from=\"1557048776397\" duration=\"1529000\" />\n      <workItem from=\"1557111716450\" duration=\"1195000\" />\n      <workItem from=\"1557113583655\" duration=\"590000\" />\n      <workItem from=\"1557222702960\" duration=\"832000\" />\n      <workItem from=\"1557227120636\" duration=\"872000\" />\n      <workItem from=\"1557287237381\" duration=\"531000\" />\n      <workItem from=\"1557292674220\" duration=\"23000\" />\n      <workItem from=\"1557292707074\" duration=\"162000\" />\n      <workItem from=\"1557294280561\" duration=\"3991000\" />\n      <workItem from=\"1557305670841\" duration=\"1030000\" />\n      <workItem from=\"1557306763456\" duration=\"1769000\" />\n      <workItem from=\"1557313972015\" duration=\"95000\" />\n      <workItem from=\"1557314070324\" duration=\"125000\" />\n      <workItem from=\"1557367034076\" duration=\"7000\" />\n      <workItem from=\"1557367052571\" duration=\"469000\" />\n      <workItem from=\"1557368418428\" duration=\"173000\" />\n      <workItem from=\"1557368665028\" duration=\"16000\" />\n      <workItem from=\"1557385385278\" duration=\"124000\" />\n      <workItem from=\"1557392459930\" duration=\"339000\" />\n      <workItem from=\"1557463701021\" duration=\"614000\" />\n      <workItem from=\"1557464648063\" duration=\"146000\" />\n      <workItem from=\"1557464888336\" duration=\"109000\" />\n      <workItem from=\"1557465080765\" duration=\"29000\" />\n      <workItem from=\"1557465182914\" duration=\"643000\" />\n      <workItem from=\"1557710945192\" duration=\"2000\" />\n      <workItem from=\"1557712728428\" duration=\"71000\" />\n      <workItem from=\"1558101020671\" duration=\"308000\" />\n      <workItem from=\"1559392991696\" duration=\"30000\" />\n      <workItem from=\"1559523604719\" duration=\"15000\" />\n      <workItem from=\"1559523880293\" duration=\"678000\" />\n    </task>\n    <task id=\"LOCAL-00027\" summary=\"fix(sitemap.xml): 站点地图更新&#10;&#10;格式问题\">\n      <created>1530421618208</created>\n      <option name=\"number\" value=\"00027\" />\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1530421618208</updated>\n    </task>\n    <task id=\"LOCAL-00028\" summary=\"feat(SPI机制文章):\">\n      <created>1530785929471</created>\n      <option name=\"number\" value=\"00028\" />\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1530785929471</updated>\n    </task>\n    <task id=\"LOCAL-00029\" summary=\"sitemap\">\n      <created>1530786232453</created>\n      <option name=\"number\" value=\"00029\" />\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1530786232453</updated>\n    </task>\n    <task id=\"LOCAL-00030\" summary=\"java 安全和架构师图谱\">\n      <created>1532140537948</created>\n      <option name=\"number\" value=\"00030\" />\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532140537948</updated>\n    </task>\n    <task id=\"LOCAL-00031\" summary=\"更新网站地图\">\n      <created>1532140891917</created>\n      <option name=\"number\" value=\"00031\" />\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532140891917</updated>\n    </task>\n    <task id=\"LOCAL-00032\" summary=\"java 安全和架构师图谱\">\n      <created>1532141834987</created>\n      <option name=\"number\" value=\"00032\" />\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532141834987</updated>\n    </task>\n    <task id=\"LOCAL-00033\" summary=\"sitemap\">\n      <created>1532142141873</created>\n      <option name=\"number\" value=\"00033\" />\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532142141873</updated>\n    </task>\n    <task id=\"LOCAL-00034\" summary=\"java 安全和架构师图谱\">\n      <created>1532142490878</created>\n      <option name=\"number\" value=\"00034\" />\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532142490878</updated>\n    </task>\n    <task id=\"LOCAL-00035\" summary=\"java 安全和架构师图谱\">\n      <created>1532142553055</created>\n      <option name=\"number\" value=\"00035\" />\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532142553056</updated>\n    </task>\n    <task id=\"LOCAL-00036\" summary=\"sitemap\">\n      <created>1532142703523</created>\n      <option name=\"number\" value=\"00036\" />\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532142703523</updated>\n    </task>\n    <task id=\"LOCAL-00037\" summary=\"junit源码分析\">\n      <created>1532483860379</created>\n      <option name=\"number\" value=\"00037\" />\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532483860379</updated>\n    </task>\n    <task id=\"LOCAL-00038\" summary=\"更新网站地图\">\n      <created>1532484119602</created>\n      <option name=\"number\" value=\"00038\" />\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532484119603</updated>\n    </task>\n    <task id=\"LOCAL-00039\" summary=\"状态模式\">\n      <created>1532654185230</created>\n      <option name=\"number\" value=\"00039\" />\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532654185230</updated>\n    </task>\n    <task id=\"LOCAL-00040\" summary=\"更新sitemap\">\n      <created>1532654600105</created>\n      <option name=\"number\" value=\"00040\" />\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1532654600105</updated>\n    </task>\n    <task id=\"LOCAL-00041\" summary=\"同步器分析 redis慢查询\">\n      <created>1533523323893</created>\n      <option name=\"number\" value=\"00041\" />\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1533523323893</updated>\n    </task>\n    <task id=\"LOCAL-00042\" summary=\"提交sitemap\">\n      <created>1533524013242</created>\n      <option name=\"number\" value=\"00042\" />\n      <option name=\"presentableId\" value=\"LOCAL-00042\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1533524013242</updated>\n    </task>\n    <task id=\"LOCAL-00043\" summary=\"并发基础之Condition(等待队列)&#10;redis常规优化\">\n      <created>1533868650707</created>\n      <option name=\"number\" value=\"00043\" />\n      <option name=\"presentableId\" value=\"LOCAL-00043\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1533868650707</updated>\n    </task>\n    <task id=\"LOCAL-00044\" summary=\"并发基础之Condition(等待队列)&#10;redis常规优化\">\n      <created>1533869204124</created>\n      <option name=\"number\" value=\"00044\" />\n      <option name=\"presentableId\" value=\"LOCAL-00044\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1533869204124</updated>\n    </task>\n    <task id=\"LOCAL-00045\" summary=\"站点地图修改\">\n      <created>1533869621312</created>\n      <option name=\"number\" value=\"00045\" />\n      <option name=\"presentableId\" value=\"LOCAL-00045\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1533869621312</updated>\n    </task>\n    <task id=\"LOCAL-00046\" summary=\"springbean and IOC\">\n      <created>1534726797416</created>\n      <option name=\"number\" value=\"00046\" />\n      <option name=\"presentableId\" value=\"LOCAL-00046\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1534726797416</updated>\n    </task>\n    <task id=\"LOCAL-00047\" summary=\"SpringBean生命周期分析 和 IOC动手实现\">\n      <created>1534726847103</created>\n      <option name=\"number\" value=\"00047\" />\n      <option name=\"presentableId\" value=\"LOCAL-00047\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1534726847103</updated>\n    </task>\n    <task id=\"LOCAL-00048\" summary=\"update sitemap\">\n      <created>1534726974039</created>\n      <option name=\"number\" value=\"00048\" />\n      <option name=\"presentableId\" value=\"LOCAL-00048\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1534726974039</updated>\n    </task>\n    <task id=\"LOCAL-00049\" summary=\"fix: 404\">\n      <created>1557287505272</created>\n      <option name=\"number\" value=\"00049\" />\n      <option name=\"presentableId\" value=\"LOCAL-00049\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557287505272</updated>\n    </task>\n    <task id=\"LOCAL-00050\" summary=\"404问题\">\n      <created>1557292856147</created>\n      <option name=\"number\" value=\"00050\" />\n      <option name=\"presentableId\" value=\"LOCAL-00050\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557292856147</updated>\n    </task>\n    <task id=\"LOCAL-00051\" summary=\"404问题\">\n      <created>1557298159879</created>\n      <option name=\"number\" value=\"00051\" />\n      <option name=\"presentableId\" value=\"LOCAL-00051\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557298159879</updated>\n    </task>\n    <task id=\"LOCAL-00052\" summary=\"fix: 图标问题\">\n      <created>1557299230789</created>\n      <option name=\"number\" value=\"00052\" />\n      <option name=\"presentableId\" value=\"LOCAL-00052\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557299230789</updated>\n    </task>\n    <task id=\"LOCAL-00053\" summary=\"fix: 图标问题\">\n      <created>1557299583843</created>\n      <option name=\"number\" value=\"00053\" />\n      <option name=\"presentableId\" value=\"LOCAL-00053\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557299583844</updated>\n    </task>\n    <task id=\"LOCAL-00054\" summary=\"fix: 图标问题\">\n      <created>1557300121239</created>\n      <option name=\"number\" value=\"00054\" />\n      <option name=\"presentableId\" value=\"LOCAL-00054\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557300121239</updated>\n    </task>\n    <task id=\"LOCAL-00055\" summary=\"fix: 图标问题\">\n      <created>1557301294672</created>\n      <option name=\"number\" value=\"00055\" />\n      <option name=\"presentableId\" value=\"LOCAL-00055\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557301294672</updated>\n    </task>\n    <task id=\"LOCAL-00056\" summary=\"fix: 显示问题\">\n      <created>1557306001261</created>\n      <option name=\"number\" value=\"00056\" />\n      <option name=\"presentableId\" value=\"LOCAL-00056\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557306001261</updated>\n    </task>\n    <task id=\"LOCAL-00057\" summary=\"fix: 显示问题\">\n      <created>1557306424614</created>\n      <option name=\"number\" value=\"00057\" />\n      <option name=\"presentableId\" value=\"LOCAL-00057\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557306424616</updated>\n    </task>\n    <task id=\"LOCAL-00058\" summary=\"fix: 显示问题\">\n      <created>1557306928718</created>\n      <option name=\"number\" value=\"00058\" />\n      <option name=\"presentableId\" value=\"LOCAL-00058\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557306928718</updated>\n    </task>\n    <task id=\"LOCAL-00059\" summary=\"fix: 分享问题\">\n      <created>1557307686675</created>\n      <option name=\"number\" value=\"00059\" />\n      <option name=\"presentableId\" value=\"LOCAL-00059\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557307686675</updated>\n    </task>\n    <task id=\"LOCAL-00060\" summary=\"fix: 分享问题\">\n      <created>1557310013622</created>\n      <option name=\"number\" value=\"00060\" />\n      <option name=\"presentableId\" value=\"LOCAL-00060\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557310013622</updated>\n    </task>\n    <task id=\"LOCAL-00061\" summary=\"fix: 分享问题\">\n      <created>1557310489215</created>\n      <option name=\"number\" value=\"00061\" />\n      <option name=\"presentableId\" value=\"LOCAL-00061\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557310489215</updated>\n    </task>\n    <task id=\"LOCAL-00062\" summary=\"fix: 更新格式问题\">\n      <created>1557367336379</created>\n      <option name=\"number\" value=\"00062\" />\n      <option name=\"presentableId\" value=\"LOCAL-00062\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557367336379</updated>\n    </task>\n    <task id=\"LOCAL-00063\" summary=\"fix: 加入百度推送\">\n      <created>1557368605313</created>\n      <option name=\"number\" value=\"00063\" />\n      <option name=\"presentableId\" value=\"LOCAL-00063\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557368605313</updated>\n    </task>\n    <task id=\"LOCAL-00064\" summary=\"fix: 加入微信公众号\">\n      <created>1557385529187</created>\n      <option name=\"number\" value=\"00064\" />\n      <option name=\"presentableId\" value=\"LOCAL-00064\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557385529187</updated>\n    </task>\n    <task id=\"LOCAL-00065\" summary=\"fix: 修改图片源\">\n      <created>1557392621051</created>\n      <option name=\"number\" value=\"00065\" />\n      <option name=\"presentableId\" value=\"LOCAL-00065\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557392621051</updated>\n    </task>\n    <task id=\"LOCAL-00066\" summary=\"fix: 修改图片源\">\n      <created>1557463866974</created>\n      <option name=\"number\" value=\"00066\" />\n      <option name=\"presentableId\" value=\"LOCAL-00066\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557463866974</updated>\n    </task>\n    <task id=\"LOCAL-00067\" summary=\"fix: 修改wechat\">\n      <created>1557464769671</created>\n      <option name=\"number\" value=\"00067\" />\n      <option name=\"presentableId\" value=\"LOCAL-00067\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557464769672</updated>\n    </task>\n    <task id=\"LOCAL-00068\" summary=\"fix: 修改wechat\">\n      <created>1557465017394</created>\n      <option name=\"number\" value=\"00068\" />\n      <option name=\"presentableId\" value=\"LOCAL-00068\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1557465017394</updated>\n    </task>\n    <task id=\"LOCAL-00069\" summary=\"fix: 修改归档地址\">\n      <created>1558101143990</created>\n      <option name=\"number\" value=\"00069\" />\n      <option name=\"presentableId\" value=\"LOCAL-00069\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1558101143991</updated>\n    </task>\n    <task id=\"LOCAL-00070\" summary=\"fix: 过滤器模式\">\n      <created>1559524213391</created>\n      <option name=\"number\" value=\"00070\" />\n      <option name=\"presentableId\" value=\"LOCAL-00070\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1559524213392</updated>\n    </task>\n    <task id=\"LOCAL-00071\" summary=\"fix: 过滤器模式\">\n      <created>1583655208939</created>\n      <option name=\"number\" value=\"00071\" />\n      <option name=\"presentableId\" value=\"LOCAL-00071\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1583655208940</updated>\n    </task>\n    <task id=\"LOCAL-00072\" summary=\"fix: 修改sitemap\">\n      <created>1583718970546</created>\n      <option name=\"number\" value=\"00072\" />\n      <option name=\"presentableId\" value=\"LOCAL-00072\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1583718970546</updated>\n    </task>\n    <task id=\"LOCAL-00073\" summary=\"添加预览图片\">\n      <created>1592184345337</created>\n      <option name=\"number\" value=\"00073\" />\n      <option name=\"presentableId\" value=\"LOCAL-00073\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1592184345337</updated>\n    </task>\n    <task id=\"LOCAL-00074\" summary=\"添加预览图片\">\n      <created>1592185987380</created>\n      <option name=\"number\" value=\"00074\" />\n      <option name=\"presentableId\" value=\"LOCAL-00074\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1592185987382</updated>\n    </task>\n    <task id=\"LOCAL-00075\" summary=\"添加预览图片\">\n      <created>1592186080840</created>\n      <option name=\"number\" value=\"00075\" />\n      <option name=\"presentableId\" value=\"LOCAL-00075\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1592186080840</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"76\" />\n    <servers />\n  </component>\n  <component name=\"TimeTrackingManager\">\n    <option name=\"totallyTimeSpent\" value=\"17226000\" />\n  </component>\n  <component name=\"ToolWindowManager\">\n    <frame x=\"0\" y=\"0\" width=\"1440\" height=\"900\" extended-state=\"0\" />\n    <layout>\n      <window_info content_ui=\"combo\" id=\"Project\" order=\"0\" visible=\"true\" weight=\"0.4234621\" />\n      <window_info id=\"Structure\" order=\"1\" weight=\"0.25\" />\n      <window_info id=\"Favorites\" order=\"2\" side_tool=\"true\" />\n      <window_info id=\"JRebel\" order=\"3\" side_tool=\"true\" />\n      <window_info id=\"Image Layers\" order=\"4\" />\n      <window_info id=\"UI Designer\" order=\"5\" />\n      <window_info id=\"Capture Tool\" order=\"6\" />\n      <window_info id=\"Designer\" order=\"7\" />\n      <window_info anchor=\"bottom\" id=\"Message\" order=\"0\" />\n      <window_info anchor=\"bottom\" id=\"Find\" order=\"1\" weight=\"0.32960895\" />\n      <window_info anchor=\"bottom\" id=\"Run\" order=\"2\" />\n      <window_info anchor=\"bottom\" id=\"Debug\" order=\"3\" weight=\"0.4\" />\n      <window_info anchor=\"bottom\" id=\"Cvs\" order=\"4\" weight=\"0.25\" />\n      <window_info anchor=\"bottom\" id=\"Inspection\" order=\"5\" weight=\"0.4\" />\n      <window_info anchor=\"bottom\" id=\"TODO\" order=\"6\" />\n      <window_info active=\"true\" anchor=\"bottom\" id=\"Version Control\" order=\"7\" visible=\"true\" weight=\"0.3120482\" />\n      <window_info anchor=\"bottom\" id=\"Terminal\" order=\"8\" weight=\"0.32950193\" />\n      <window_info anchor=\"bottom\" id=\"Python Console\" order=\"9\" weight=\"0.32960895\" />\n      <window_info anchor=\"bottom\" id=\"Event Log\" order=\"10\" side_tool=\"true\" />\n      <window_info anchor=\"bottom\" id=\"Messages\" order=\"11\" />\n      <window_info anchor=\"bottom\" id=\"FindBugs-IDEA\" order=\"12\" />\n      <window_info anchor=\"bottom\" id=\"Statistic\" order=\"13\" />\n      <window_info anchor=\"bottom\" id=\"Database Changes\" order=\"14\" show_stripe_button=\"false\" />\n      <window_info anchor=\"bottom\" id=\"JRebel Console\" order=\"15\" side_tool=\"true\" />\n      <window_info anchor=\"bottom\" id=\"Run with VisualVM\" order=\"16\" />\n      <window_info anchor=\"bottom\" id=\"MyBatis Sql Log\" order=\"17\" />\n      <window_info anchor=\"bottom\" id=\"JRebel Executor\" order=\"18\" />\n      <window_info anchor=\"bottom\" id=\"Debug with VisualVM\" order=\"19\" />\n      <window_info anchor=\"bottom\" id=\"Tail\" order=\"20\" />\n      <window_info anchor=\"bottom\" id=\"Docker\" order=\"21\" show_stripe_button=\"false\" />\n      <window_info anchor=\"right\" id=\"Commander\" order=\"0\" weight=\"0.4\" />\n      <window_info anchor=\"right\" id=\"Ant Build\" order=\"1\" weight=\"0.25\" />\n      <window_info anchor=\"right\" content_ui=\"combo\" id=\"Hierarchy\" order=\"2\" weight=\"0.25\" />\n      <window_info anchor=\"right\" id=\"Data View\" order=\"3\" />\n      <window_info anchor=\"right\" id=\"Database\" order=\"4\" />\n      <window_info anchor=\"right\" id=\"LuaJ\" order=\"5\" />\n      <window_info anchor=\"right\" id=\"Palette\" order=\"6\" />\n      <window_info anchor=\"right\" id=\"Capture Analysis\" order=\"7\" />\n      <window_info anchor=\"right\" id=\"Maven Projects\" order=\"8\" />\n      <window_info anchor=\"right\" id=\"ASM\" order=\"9\" />\n      <window_info anchor=\"right\" id=\"Palette&#9;\" order=\"10\" />\n      <window_info anchor=\"right\" id=\"Theme Preview\" order=\"11\" />\n      <window_info anchor=\"right\" id=\"SciView\" order=\"12\" />\n      <window_info anchor=\"right\" id=\"PlantUML\" order=\"13\" />\n    </layout>\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"1\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State>\n              <option name=\"RECENTLY_FILTERED_USER_GROUPS\">\n                <collection />\n              </option>\n              <option name=\"RECENTLY_FILTERED_BRANCH_GROUPS\">\n                <collection />\n              </option>\n              <option name=\"COLUMN_ORDER\">\n                <list>\n                  <option value=\"0\" />\n                  <option value=\"1\" />\n                  <option value=\"2\" />\n                  <option value=\"3\" />\n                </list>\n              </option>\n            </State>\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsContentAnnotationSettings\">\n    <option name=\"myLimit\" value=\"2678400000\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"junit源码分析\" />\n    <MESSAGE value=\"更新网站地图\" />\n    <MESSAGE value=\"状态模式\" />\n    <MESSAGE value=\"更新sitemap\" />\n    <MESSAGE value=\"同步器分析 redis慢查询\" />\n    <MESSAGE value=\"提交sitemap\" />\n    <MESSAGE value=\"并发基础之Condition(等待队列)&#10;redis常规优化\" />\n    <MESSAGE value=\"站点地图修改\" />\n    <MESSAGE value=\"springbean and IOC\" />\n    <MESSAGE value=\"SpringBean生命周期分析 和 IOC动手实现\" />\n    <MESSAGE value=\"update sitemap\" />\n    <MESSAGE value=\"fix: 404\" />\n    <MESSAGE value=\"404问题\" />\n    <MESSAGE value=\"fix: 图标问题\" />\n    <MESSAGE value=\"fix: 显示问题\" />\n    <MESSAGE value=\"fix: 分享问题\" />\n    <MESSAGE value=\"fix: 更新格式问题\" />\n    <MESSAGE value=\"fix: 加入百度推送\" />\n    <MESSAGE value=\"fix: 加入微信公众号\" />\n    <MESSAGE value=\"fix: 修改图片源\" />\n    <MESSAGE value=\"fix: 修改wechat\" />\n    <MESSAGE value=\"fix: 修改归档地址\" />\n    <MESSAGE value=\"fix: 过滤器模式\" />\n    <MESSAGE value=\"fix: 修改sitemap\" />\n    <MESSAGE value=\"添加预览图片\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"添加预览图片\" />\n    <option name=\"OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT\" value=\"true\" />\n  </component>\n  <component name=\"editorHistoryManager\">\n    <entry file=\"file://$PROJECT_DIR$/baidu_verify_h0zR314COo.html\" />\n    <entry file=\"file://$PROJECT_DIR$/zai-xian-gong-ju.html\" />\n    <entry file=\"file://$PROJECT_DIR$/design-pattern/adapter.html\" />\n    <entry file=\"file://$PROJECT_DIR$/tags.html\" />\n    <entry file=\"file://$PROJECT_DIR$/java-base/fail-fast-safe.html\" />\n    <entry file=\"file://$PROJECT_DIR$/theme/gumby.css\" />\n    <entry file=\"file://$PROJECT_DIR$/theme/js/toc.js\" />\n    <entry file=\"file://$PROJECT_DIR$/feeds/all.rss.xml\" />\n    <entry file=\"file://$PROJECT_DIR$/.idea/workspace.xml\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/theme/img/glyphicons-halflings-white.png\" />\n    <entry file=\"file://$PROJECT_DIR$/theme/img/glyphicons-halflings.png\" />\n    <entry file=\"file://$PROJECT_DIR$/theme/images/favicon.ico\" />\n    <entry file=\"file://$PROJECT_DIR$/authors.html\" />\n    <entry file=\"file://$PROJECT_DIR$/distrubuted/cap-base-flp.html\" />\n    <entry file=\"file://$PROJECT_DIR$/favicon.ico\" />\n    <entry file=\"file://$PROJECT_DIR$/README.md\" />\n    <entry file=\"file://$PROJECT_DIR$/concurrent/recursive-Lock.html\" />\n    <entry file=\"file://$PROJECT_DIR$/about-me-999.html\" />\n    <entry file=\"file://$PROJECT_DIR$/theme/images/home-bg.jpg\" />\n    <entry file=\"file://$PROJECT_DIR$/theme/images/post-bg.jpg\" />\n    <entry file=\"file://$PROJECT_DIR$/ge-ren-kai-yuan-xiang-mu.html\" />\n    <entry file=\"file://$PROJECT_DIR$/search.html\" />\n    <entry file=\"file://$PROJECT_DIR$/_config.yml\" />\n    <entry file=\"file://$PROJECT_DIR$/robots.txt\" />\n    <entry file=\"file://$PROJECT_DIR$/2017/02/19/tools/index.html\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"150\">\n          <caret line=\"427\" lean-forward=\"true\" selection-start-line=\"427\" selection-end-line=\"427\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/1/01/01/index.html\" />\n    <entry file=\"file://$PROJECT_DIR$/static/api/img/share/icons_0_24.png\">\n      <provider selected=\"true\" editor-type-id=\"images\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/.gitignore\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/google69c9f2bd4612e0c7.html\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/BingSiteAuth.xml\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/baidu_verify_hQv78SaWqG.html\" />\n    <entry file=\"file://$PROJECT_DIR$/66eb9d80f3286c2c541ee3a02987f952.txt\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/static/api/js/conf/define.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/static/api/js/base/class.js\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state>\n          <caret column=\"5\" selection-start-column=\"5\" selection-end-column=\"5\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/img/简书.png\">\n      <provider selected=\"true\" editor-type-id=\"images\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/img/wechat.png\">\n      <provider selected=\"true\" editor-type-id=\"images\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/sitemap.xml\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\">\n        <state relative-caret-position=\"108\">\n          <caret line=\"6\" selection-start-line=\"6\" selection-end-line=\"6\" />\n        </state>\n      </provider>\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/2017/01/23/externalizable-interface/index.html\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/404.html\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n    <entry file=\"file://$PROJECT_DIR$/2019/02/15/filter/index.html\">\n      <provider selected=\"true\" editor-type-id=\"text-editor\" />\n    </entry>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- public/nicky-chen.github.io/.idea/workspace.xml	(revision d67129d6c53719818296f1dc20b7647690f03bbc)
++++ public/nicky-chen.github.io/.idea/workspace.xml	(date 1618481977349)
+@@ -3,170 +3,13 @@
+   <component name="ChangeListManager">
+     <list default="true" id="b5937023-c407-40d8-b7aa-bcba4a685ed0" name="Default" comment="添加预览图片">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sitemap.xml" afterDir="false" />
+     </list>
+-    <ignored path=".idea/vcs.xml" />
+-    <ignored path=".idea/inspectionProfiles/profiles_settings.xml" />
+-    <ignored path=".idea/dictionaries/cx520.xml" />
+-    <ignored path=".idea/encodings.xml" />
+-    <ignored path=".idea/misc.xml" />
+-    <ignored path=".idea/modules.xml" />
+-    <ignored path=".idea/nicky-chen.github.io.iml" />
+-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="FUSProjectUsageTrigger">
+-    <session id="-1739910486">
+-      <usages-collector id="statistics.lifecycle.project">
+-        <counts>
+-          <entry key="project.closed" value="6" />
+-          <entry key="project.open.time.1" value="2" />
+-          <entry key="project.open.time.2" value="2" />
+-          <entry key="project.open.time.3" value="2" />
+-          <entry key="project.opened" value="6" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.extensions.open">
+-        <counts>
+-          <entry key="html" value="9" />
+-          <entry key="ico" value="3" />
+-          <entry key="jpg" value="2" />
+-          <entry key="md" value="1" />
+-          <entry key="png" value="2" />
+-          <entry key="txt" value="1" />
+-          <entry key="yml" value="1" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.types.open">
+-        <counts>
+-          <entry key="HTML" value="9" />
+-          <entry key="Image" value="7" />
+-          <entry key="Markdown" value="1" />
+-          <entry key="PLAIN_TEXT" value="1" />
+-          <entry key="YAML" value="1" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.extensions.edit">
+-        <counts>
+-          <entry key="html" value="12" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.types.edit">
+-        <counts>
+-          <entry key="HTML" value="12" />
+-        </counts>
+-      </usages-collector>
+-    </session>
+-    <session id="-1250631899">
+-      <usages-collector id="statistics.lifecycle.project">
+-        <counts>
+-          <entry key="project.closed" value="7" />
+-          <entry key="project.open.time.1" value="7" />
+-          <entry key="project.opened" value="7" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.extensions.open">
+-        <counts>
+-          <entry key="gitignore" value="1" />
+-          <entry key="html" value="17" />
+-          <entry key="js" value="2" />
+-          <entry key="png" value="1" />
+-          <entry key="txt" value="2" />
+-          <entry key="xml" value="1" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.types.open">
+-        <counts>
+-          <entry key="Git file" value="1" />
+-          <entry key="HTML" value="17" />
+-          <entry key="Image" value="1" />
+-          <entry key="JavaScript" value="2" />
+-          <entry key="PLAIN_TEXT" value="2" />
+-          <entry key="XML" value="1" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.extensions.edit">
+-        <counts>
+-          <entry key="html" value="1" />
+-          <entry key="txt" value="18" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.types.edit">
+-        <counts>
+-          <entry key="HTML" value="1" />
+-          <entry key="PLAIN_TEXT" value="18" />
+-        </counts>
+-      </usages-collector>
+-    </session>
+-    <session id="-553256802">
+-      <usages-collector id="statistics.lifecycle.project">
+-        <counts>
+-          <entry key="project.closed" value="22" />
+-          <entry key="project.open.time.1" value="17" />
+-          <entry key="project.open.time.11" value="1" />
+-          <entry key="project.open.time.16" value="1" />
+-          <entry key="project.open.time.2" value="1" />
+-          <entry key="project.open.time.8" value="1" />
+-          <entry key="project.opened" value="21" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.extensions.open">
+-        <counts>
+-          <entry key="gitignore" value="1" />
+-          <entry key="html" value="3" />
+-          <entry key="png" value="2" />
+-          <entry key="xml" value="1" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.types.open">
+-        <counts>
+-          <entry key="Git file" value="1" />
+-          <entry key="HTML" value="3" />
+-          <entry key="Image" value="2" />
+-          <entry key="XML" value="1" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.extensions.edit">
+-        <counts>
+-          <entry key="txt" value="73" />
+-        </counts>
+-      </usages-collector>
+-      <usages-collector id="statistics.file.types.edit">
+-        <counts>
+-          <entry key="PLAIN_TEXT" value="73" />
+-        </counts>
+-      </usages-collector>
+-    </session>
+-  </component>
+-  <component name="FileEditorManager">
+-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+-      <file pinned="false" current-in-tab="true">
+-        <entry file="file://$PROJECT_DIR$/sitemap.xml">
+-          <provider selected="true" editor-type-id="text-editor">
+-            <state relative-caret-position="108">
+-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+-            </state>
+-          </provider>
+-        </entry>
+-      </file>
+-      <file pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/2017/01/23/externalizable-interface/index.html">
+-          <provider selected="true" editor-type-id="text-editor" />
+-        </entry>
+-      </file>
+-      <file pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/404.html">
+-          <provider selected="true" editor-type-id="text-editor" />
+-        </entry>
+-      </file>
+-      <file pinned="false" current-in-tab="false">
+-        <entry file="file://$PROJECT_DIR$/2019/02/15/filter/index.html">
+-          <provider selected="true" editor-type-id="text-editor" />
+-        </entry>
+-      </file>
+-    </leaf>
+   </component>
+   <component name="FindInProjectRecents">
+     <findStrings>
+@@ -201,52 +44,12 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="IdeDocumentHistory">
+-    <option name="CHANGED_PATHS">
+-      <list>
+-        <option value="$PROJECT_DIR$/robot.txt" />
+-        <option value="$PROJECT_DIR$/robots.txt" />
+-        <option value="$PROJECT_DIR$/theme/gumby.css" />
+-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+-        <option value="$PROJECT_DIR$/404.html" />
+-        <option value="$PROJECT_DIR$/2017/02/19/tools/index.html" />
+-        <option value="$PROJECT_DIR$/sitemap.xml" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+-  <component name="JsGulpfileManager">
+-    <detection-done>true</detection-done>
+-    <sorting>DEFINITION_ORDER</sorting>
+-  </component>
+   <component name="ProjectFrameBounds" fullScreen="true">
+     <option name="y" value="23" />
+     <option name="width" value="1440" />
+     <option name="height" value="877" />
+   </component>
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+-  <component name="ProjectView">
+-    <navigator proportions="" version="1">
+-      <foldersAlwaysOnTop value="true" />
+-    </navigator>
+-    <panes>
+-      <pane id="Scope" />
+-      <pane id="ProjectPane">
+-        <subPane>
+-          <expand>
+-            <path>
+-              <item name="nicky-chen.github.io" type="b2602c69:ProjectViewProjectNode" />
+-              <item name="nicky-chen.github.io" type="462c0819:PsiDirectoryNode" />
+-            </path>
+-          </expand>
+-          <select />
+-        </subPane>
+-      </pane>
+-      <pane id="AndroidView" />
+-      <pane id="PackagesPane" />
+-    </panes>
+-  </component>
+   <component name="PropertiesComponent">
+     <property name="WebServerToolWindowFactoryState" value="false" />
+     <property name="aspect.path.notification.shown" value="true" />
+@@ -275,18 +78,6 @@
+       <recent name="E:\my_blog\output\nicky-chen.github.io\theme\images" />
+     </key>
+   </component>
+-  <component name="RunDashboard">
+-    <option name="ruleStates">
+-      <list>
+-        <RuleState>
+-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+-        </RuleState>
+-        <RuleState>
+-          <option name="name" value="StatusDashboardGroupingRule" />
+-        </RuleState>
+-      </list>
+-    </option>
+-  </component>
+   <component name="RunManager">
+     <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+       <option name="INTERPRETER_OPTIONS" value="" />
+@@ -299,7 +90,7 @@
+       <module name="" />
+       <method v="2" />
+     </configuration>
+-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
++    <configuration default="true" type="js.build_tools.gulp">
+       <node-interpreter>project</node-interpreter>
+       <node-options />
+       <gulpfile />
+@@ -365,20 +156,6 @@
+       <workItem from="1559523604719" duration="15000" />
+       <workItem from="1559523880293" duration="678000" />
+     </task>
+-    <task id="LOCAL-00027" summary="fix(sitemap.xml): 站点地图更新&#10;&#10;格式问题">
+-      <created>1530421618208</created>
+-      <option name="number" value="00027" />
+-      <option name="presentableId" value="LOCAL-00027" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1530421618208</updated>
+-    </task>
+-    <task id="LOCAL-00028" summary="feat(SPI机制文章):">
+-      <created>1530785929471</created>
+-      <option name="number" value="00028" />
+-      <option name="presentableId" value="LOCAL-00028" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1530785929471</updated>
+-    </task>
+     <task id="LOCAL-00029" summary="sitemap">
+       <created>1530786232453</created>
+       <option name="number" value="00029" />
+@@ -708,61 +485,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1592186080840</updated>
+     </task>
+-    <option name="localTasksCounter" value="76" />
++    <task id="LOCAL-00076" summary="添加预览图片">
++      <created>1618481160228</created>
++      <option name="number" value="00076" />
++      <option name="presentableId" value="LOCAL-00076" />
++      <option name="project" value="LOCAL" />
++      <updated>1618481160228</updated>
++    </task>
++    <task id="LOCAL-00077" summary="添加预览图片">
++      <created>1618481168620</created>
++      <option name="number" value="00077" />
++      <option name="presentableId" value="LOCAL-00077" />
++      <option name="project" value="LOCAL" />
++      <updated>1618481168620</updated>
++    </task>
++    <option name="localTasksCounter" value="78" />
+     <servers />
+   </component>
+-  <component name="TimeTrackingManager">
+-    <option name="totallyTimeSpent" value="17226000" />
+-  </component>
+-  <component name="ToolWindowManager">
+-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+-    <layout>
+-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.4234621" />
+-      <window_info id="Structure" order="1" weight="0.25" />
+-      <window_info id="Favorites" order="2" side_tool="true" />
+-      <window_info id="JRebel" order="3" side_tool="true" />
+-      <window_info id="Image Layers" order="4" />
+-      <window_info id="UI Designer" order="5" />
+-      <window_info id="Capture Tool" order="6" />
+-      <window_info id="Designer" order="7" />
+-      <window_info anchor="bottom" id="Message" order="0" />
+-      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
+-      <window_info anchor="bottom" id="Run" order="2" />
+-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+-      <window_info anchor="bottom" id="TODO" order="6" />
+-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.3120482" />
+-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32950193" />
+-      <window_info anchor="bottom" id="Python Console" order="9" weight="0.32960895" />
+-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+-      <window_info anchor="bottom" id="Messages" order="11" />
+-      <window_info anchor="bottom" id="FindBugs-IDEA" order="12" />
+-      <window_info anchor="bottom" id="Statistic" order="13" />
+-      <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
+-      <window_info anchor="bottom" id="JRebel Console" order="15" side_tool="true" />
+-      <window_info anchor="bottom" id="Run with VisualVM" order="16" />
+-      <window_info anchor="bottom" id="MyBatis Sql Log" order="17" />
+-      <window_info anchor="bottom" id="JRebel Executor" order="18" />
+-      <window_info anchor="bottom" id="Debug with VisualVM" order="19" />
+-      <window_info anchor="bottom" id="Tail" order="20" />
+-      <window_info anchor="bottom" id="Docker" order="21" show_stripe_button="false" />
+-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+-      <window_info anchor="right" id="Data View" order="3" />
+-      <window_info anchor="right" id="Database" order="4" />
+-      <window_info anchor="right" id="LuaJ" order="5" />
+-      <window_info anchor="right" id="Palette" order="6" />
+-      <window_info anchor="right" id="Capture Analysis" order="7" />
+-      <window_info anchor="right" id="Maven Projects" order="8" />
+-      <window_info anchor="right" id="ASM" order="9" />
+-      <window_info anchor="right" id="Palette&#9;" order="10" />
+-      <window_info anchor="right" id="Theme Preview" order="11" />
+-      <window_info anchor="right" id="SciView" order="12" />
+-      <window_info anchor="right" id="PlantUML" order="13" />
+-    </layout>
+-  </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="1" />
+   </component>
+@@ -771,29 +510,12 @@
+       <map>
+         <entry key="MAIN">
+           <value>
+-            <State>
+-              <option name="RECENTLY_FILTERED_USER_GROUPS">
+-                <collection />
+-              </option>
+-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+-                <collection />
+-              </option>
+-              <option name="COLUMN_ORDER">
+-                <list>
+-                  <option value="0" />
+-                  <option value="1" />
+-                  <option value="2" />
+-                  <option value="3" />
+-                </list>
+-              </option>
+-            </State>
++            <State />
+           </value>
+         </entry>
+       </map>
+     </option>
+-  </component>
+-  <component name="VcsContentAnnotationSettings">
+-    <option name="myLimit" value="2678400000" />
++    <option name="oldMeFiltersMigrated" value="true" />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="junit源码分析" />
+@@ -824,88 +546,18 @@
+     <option name="LAST_COMMIT_MESSAGE" value="添加预览图片" />
+     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+   </component>
+-  <component name="editorHistoryManager">
+-    <entry file="file://$PROJECT_DIR$/baidu_verify_h0zR314COo.html" />
+-    <entry file="file://$PROJECT_DIR$/zai-xian-gong-ju.html" />
+-    <entry file="file://$PROJECT_DIR$/design-pattern/adapter.html" />
+-    <entry file="file://$PROJECT_DIR$/tags.html" />
+-    <entry file="file://$PROJECT_DIR$/java-base/fail-fast-safe.html" />
+-    <entry file="file://$PROJECT_DIR$/theme/gumby.css" />
+-    <entry file="file://$PROJECT_DIR$/theme/js/toc.js" />
+-    <entry file="file://$PROJECT_DIR$/feeds/all.rss.xml" />
+-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/theme/img/glyphicons-halflings-white.png" />
+-    <entry file="file://$PROJECT_DIR$/theme/img/glyphicons-halflings.png" />
+-    <entry file="file://$PROJECT_DIR$/theme/images/favicon.ico" />
+-    <entry file="file://$PROJECT_DIR$/authors.html" />
+-    <entry file="file://$PROJECT_DIR$/distrubuted/cap-base-flp.html" />
+-    <entry file="file://$PROJECT_DIR$/favicon.ico" />
+-    <entry file="file://$PROJECT_DIR$/README.md" />
+-    <entry file="file://$PROJECT_DIR$/concurrent/recursive-Lock.html" />
+-    <entry file="file://$PROJECT_DIR$/about-me-999.html" />
+-    <entry file="file://$PROJECT_DIR$/theme/images/home-bg.jpg" />
+-    <entry file="file://$PROJECT_DIR$/theme/images/post-bg.jpg" />
+-    <entry file="file://$PROJECT_DIR$/ge-ren-kai-yuan-xiang-mu.html" />
+-    <entry file="file://$PROJECT_DIR$/search.html" />
+-    <entry file="file://$PROJECT_DIR$/_config.yml" />
+-    <entry file="file://$PROJECT_DIR$/robots.txt" />
+-    <entry file="file://$PROJECT_DIR$/2017/02/19/tools/index.html">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="150">
+-          <caret line="427" lean-forward="true" selection-start-line="427" selection-end-line="427" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/1/01/01/index.html" />
+-    <entry file="file://$PROJECT_DIR$/static/api/img/share/icons_0_24.png">
+-      <provider selected="true" editor-type-id="images" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/.gitignore">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/google69c9f2bd4612e0c7.html">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/BingSiteAuth.xml">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/baidu_verify_hQv78SaWqG.html" />
+-    <entry file="file://$PROJECT_DIR$/66eb9d80f3286c2c541ee3a02987f952.txt">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/static/api/js/conf/define.js">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/static/api/js/base/class.js">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state>
+-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/img/简书.png">
+-      <provider selected="true" editor-type-id="images" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/img/wechat.png">
+-      <provider selected="true" editor-type-id="images" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/sitemap.xml">
+-      <provider selected="true" editor-type-id="text-editor">
+-        <state relative-caret-position="108">
+-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+-        </state>
+-      </provider>
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/2017/01/23/externalizable-interface/index.html">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/404.html">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
+-    <entry file="file://$PROJECT_DIR$/2019/02/15/filter/index.html">
+-      <provider selected="true" editor-type-id="text-editor" />
+-    </entry>
++  <component name="WindowStateProjectService">
++    <state x="240" y="25" key="CommitChangelistDialog2" timestamp="1618481168513">
++      <screen x="0" y="0" width="1440" height="900" />
++    </state>
++    <state x="240" y="25" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1618481168513" />
++    <state x="405" y="159" key="RollbackChangesDialog" timestamp="1618481145475">
++      <screen x="0" y="0" width="1440" height="900" />
++    </state>
++    <state x="405" y="159" key="RollbackChangesDialog/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1618481145475" />
++    <state x="320" y="177" key="Vcs.Push.Dialog.v2" timestamp="1618481169702">
++      <screen x="0" y="0" width="1440" height="900" />
++    </state>
++    <state x="320" y="177" key="Vcs.Push.Dialog.v2/0.0.1440.900/1440.0.1920.1080@0.0.1440.900" timestamp="1618481169702" />
+   </component>
+ </project>
+\ No newline at end of file
