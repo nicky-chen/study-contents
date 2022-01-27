@@ -23,10 +23,11 @@ innodb存储引擎的快照读是基于多版本并发控制 MVCC 和 undolog �
 
 
 * 提高并发的思路
+
 > 并发数据一致性通常实现: 锁 + 多数据版本
->
+
 > 提高并发读的思路: 通过共享锁保证读读并发，独占锁实现读写互斥
->
+
 > 提高并发读写的思路: 一致性折衷，通过数据多版本控制，读使用快照版本，读写不互斥，提高读写并发能力 
 
 
@@ -87,9 +88,13 @@ INSERT INTO `user`(`id`, `name`, `score`) VALUES (9, 'zhang3', 60)
 
 
 >1 对 id 为9的数据行加X锁
+
 >2 写旧版本数据到 undo log
+
 >3 更新数据行，修改 DB_TRX_ID 为667, 回滚指针指向拷贝到 undo log 的旧版本
+
 >4 更新聚簇索引所在行的 DB_TRX_ID 和 DB_ROLL_PTR
+
 >5 事务提交，释放锁
 
 
@@ -112,11 +117,17 @@ INSERT INTO `user`(`id`, `name`, `score`) VALUES (9, 'zhang3', 60)
  ![undolog-update003](/media/mysql-snapshot-read/undolog-update003.png)
 
 > 1 对 id 为9的数据行加X锁
+
 > 2 写旧版本数据到 undo log
+
 > 3 更新数据行，修改 DB_TRX_ID 为668, 回滚指针指向拷贝到 undo log 的旧版本
+
 > 4 标记Page当前所在行 **DELETED BIT** 为被删除
+
 > 5 插入新的索引行记录并更新所在 Page 页的最大**trx_id**
+
 > 6 更新聚簇索引所在行的 DB_TRX_ID 和 DB_ROLL_PTR
+
 > 7 事务提交，释放锁
 
 
