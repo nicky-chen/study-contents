@@ -1,6 +1,6 @@
 
 ---
-title: MySQL之Innodb之快照读原理实现
+title: mysql快照读原理实现
 date: 2022-01-13T11:14:15+08:00
 weight: 70
 slug: mysql-snapshot-read
