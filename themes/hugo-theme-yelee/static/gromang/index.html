@@ -347,14 +347,14 @@
      两端融入 muted 底色；与品牌渐变同一色系） */
   .feature-label { display: inline-flex; align-items: center; gap: 7px; margin: 20px 0 8px; }
   .feature-label .fd {
-    font-size: 13px; line-height: 1;
+    font-size: 16px; line-height: 1;
     background: linear-gradient(135deg, #00e5ff, #8b5cf6);
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent; color: transparent;
     animation: brand-pulse 3s ease-in-out infinite;
   }
   .feature-label .ft {
-    font-size: 13.5px; font-weight: 600; letter-spacing: .02em;
+    font-size: 16px; font-weight: 700; letter-spacing: .02em;
     background: linear-gradient(110deg, var(--page-muted) 15%, #06b6d4 38%, #3b82f6 50%, #8b5cf6 62%, var(--page-muted) 85%);
     background-size: 300% 100%;
     -webkit-background-clip: text; background-clip: text;
@@ -373,8 +373,28 @@
     display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
     font-size: 15px; font-weight: 500;
   }
-  .feature-jump .items a { color: var(--page-fg); }
-  .feature-jump .items a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  /* 四个模块链接：颜色保持不变，动效只有两处——
+     1. 入场依次淡入上浮（stagger）；
+     2. 悬停时下划线从左向右生长（currentColor，不引入新颜色） */
+  .feature-jump .items a {
+    position: relative; color: var(--page-fg); text-decoration: none;
+    animation: feat-link-in .5s ease backwards;
+  }
+  .feature-jump .items a::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px;
+    border-radius: 2px; background: currentColor;
+    transform: scaleX(0); transform-origin: left center;
+    transition: transform .25s ease;
+  }
+  .feature-jump .items a:hover::after, .feature-jump .items a:focus-visible::after { transform: scaleX(1); }
+  .feature-jump .items a:nth-child(1) { animation-delay: .04s; }
+  .feature-jump .items a:nth-child(3) { animation-delay: .12s; }
+  .feature-jump .items a:nth-child(5) { animation-delay: .2s; }
+  .feature-jump .items a:nth-child(7) { animation-delay: .28s; }
+  @keyframes feat-link-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
   .feature-jump .items span[aria-hidden] { color: var(--page-muted); }
 
   /* 适配的编码代理图标行（名单 = 客户端记忆面板「存储 Agent」下拉的运行时
@@ -509,7 +529,7 @@
       <div class="hero-copy">
         <h1>让 AI Agent<br>不需要人值守</h1>
         <p class="sub">终端哨兵替你盯着每个代理会话：该批的权限立刻批，跑偏的任务及时拦，长跑任务托管到结束。</p>
-        <p class="meta"><span id="meta-version">v1.0.0</span> · 支持 macOS 与 Windows</p>
+        <p class="meta"><span id="meta-version">v1.0.0</span> · <span id="pub-date">2026-10-08</span> 发布 · 支持 macOS 与 Windows</p>
 
         <div class="dl-row" id="download">
           <!-- macOS：主按钮下载「已识别」的芯片版本，悬停/聚焦展开另一个 -->
@@ -522,26 +542,26 @@
             <div class="dl-menu">
               <div class="dl-menu-panel" role="menu">
                 <a class="dl-item" id="dl-mac-arm" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_aarch64.dmg">
-                  <span>Apple 芯片</span><span class="tag rec" id="tag-mac-arm"></span>
+                  <span id="lbl-mac-arm">M 系列芯片 · ˜90M</span><span class="tag rec" id="tag-mac-arm"></span>
                 </a>
                 <a class="dl-item" id="dl-mac-x64" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x86_64.dmg">
-                  <span id="lbl-mac-x64">Intel 芯片</span><span class="tag" id="tag-mac-x64"></span>
+                  <span id="lbl-mac-x64">Intel 芯片 · ˜95M</span><span class="tag" id="tag-mac-x64"></span>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Windows：仅当最新发版带 setup.exe 时由脚本展示（v0.2.2 后未再随发版提供） -->
-          <div class="dl-group" id="win-group" hidden>
-            <a class="btn" id="dl-win" href="#" aria-haspopup="menu">
+          <!-- Windows：仅当最新发版带 setup.exe 时由脚本展示（数据失败时静态兜底同样显示） -->
+          <div class="dl-group" id="win-group">
+            <a class="btn" id="dl-win" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x64-setup.exe" aria-haspopup="menu">
               <svg class="dl-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4.2 10.5 3v8.15H2V4.2Zm9.5-1.34L22 1.35v9.8H11.5V2.86ZM2 12.15h8.5V20.3L2 19.1v-6.95Zm9.5 0H22v9.8l-10.5-1.51v-8.29Z"/></svg>
               下载 Windows 版
               <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </a>
             <div class="dl-menu">
               <div class="dl-menu-panel" role="menu">
-                <a class="dl-item" id="dl-win-item" role="menuitem" href="#">
-                  <span id="lbl-win">.exe 安装包（x64）</span>
+                <a class="dl-item" id="dl-win-item" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x64-setup.exe">
+                  <span id="lbl-win">.exe 安装包（x64） · ˜80M</span>
                 </a>
               </div>
             </div>
@@ -702,7 +722,7 @@
     <div class="wrap">
       <h2>安装</h2>
       <ol class="steps">
-        <li>下载上面与你系统对应的安装包（macOS 选 Apple 芯片或 Intel 版）。</li>
+        <li>下载上面与你系统对应的安装包（macOS 选 M 系列芯片或 Intel 版）。</li>
         <li>macOS 打开 <code>.dmg</code> 拖入「应用程序」；Windows 双击 <code>.exe</code> 按向导安装。</li>
         <li>启动后桌宠出现在屏幕角落，进入 <b>设置 → 提供商</b> 填入 API Key 或 OAuth 登录即可。</li>
       </ol>
@@ -911,52 +931,30 @@
       });
     }
 
-    /* ============ 下载区：版本与链接实时读取 Gitee 最新发版 ============
-       静态 HTML 里的 v1.0.0 是兜底（API 请求失败时仍可下载）。Gitee
-       releases API 公开且允许跨域。Windows 安装包自 v0.2.2 后未再随
-       发版提供——仅当某个最新发版带 setup.exe 资产时才展示 Windows 按钮，
-       避免挂出 404 死链。
-       文件大小分两级：优先同源函数 /api/dl-size（api/dl-size.js，服务端
-       HEAD Gitee 实时拿 Content-Length——浏览器直连被 CORS 拦）；函数不可
-       用时回落构建时生成的 dl-meta.json（node scripts/gen-dl-meta.mjs）。
-       两级都按资产文件名匹配——版本更新后匹配不到就不显示，不会拿旧大小
-       配新版本。 */
+    /* ============ 下载区：读仓库根的 updater.json（应用更新源） ============
+       经 Gitee contents API 读取（api.gitee.com 允许跨域；raw 直连无 CORS
+       头读不了）。updater.json 给出 version / pub_date / mac 更新包链接，
+       安装包链接按发版命名规则推导：
+         句芒智元_{版本}_aarch64.dmg / _x86_64.dmg / _x64-setup.exe
+       文件大小统一展示 <100M，不再实时探测。API 读取失败（限流等）时用
+       本文件 HTML 里写死的静态兜底，发版后建议同步更新一次兜底数据。 */
     var $ = function (id) { return document.getElementById(id); };
-    var GITEE_API = 'https://gitee.com/api/v5/repos/nicky-chin/gromang/releases?per_page=20&direction=desc';
+    var UPDATER_API = 'https://api.gitee.com/api/v5/repos/nicky-chin/gromang/contents/updater.json';
 
     var dl = {
-      arm:   { ver: '1.0.0', name: '句芒智元_1.0.0_aarch64.dmg', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_aarch64.dmg' },
-      x64:   { ver: '1.0.0', name: '句芒智元_1.0.0_x86_64.dmg', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x86_64.dmg' },
-      targz: { ver: '1.0.0', name: '句芒智元-aarch64.app.tar.gz', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz' },
-      win: null,
-      latestTag: 'v1.0.0'
+      arm:   { ver: '1.0.0', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_aarch64.dmg' },
+      x64:   { ver: '1.0.0', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x86_64.dmg' },
+      targz: { ver: '1.0.0', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz' },
+      win:   { ver: '1.0.0', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x64-setup.exe' },
+      latestTag: 'v1.0.0',
+      pubDate: '2026-10-08'
     };
     var os = null;         // 'mac' | 'win'（UA 识别）
     var pickedArch = null; // 'arm' | 'x64'（Mac 芯片识别，决定主按钮指向）
-    var szMap = {};        // dl-meta.json：{ 资产文件名: 字节数 }
 
-    function fmtMB(bytes) { return (bytes / 1024 / 1024).toFixed(1) + ' MB'; }
-    function setLabel(id, base, name) {
+    function setLabel(id, base, size) {
       var el = $(id);
-      if (!el) return;
-      var sz = name && szMap[name];
-      el.textContent = sz ? base + ' · ' + fmtMB(sz) : base;
-    }
-
-    /* 实时大小优先：同源 Vercel 函数（api/dl-size.js）服务端 HEAD Gitee 拿
-       Content-Length——浏览器直连被 CORS 拦，只能这样转一手。失败静默回落
-       构建时生成的 dl-meta.json。 */
-    function fetchSize(item) {
-      if (!item || !item.url) return;
-      fetch('/api/dl-size?url=' + encodeURIComponent(item.url))
-        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(function (j) {
-          if (j && j.size && szMap[item.name] !== j.size) {
-            szMap[item.name] = j.size;
-            applyDl();
-          }
-        })
-        .catch(function () { /* 静默：保持 dl-meta.json 或不显示 */ });
+      if (el) el.textContent = base + ' · ' + size;
     }
 
     // 把 dl 状态写回 DOM；UA 识别结果与发版数据无论谁先到达都收敛到同一渲染
@@ -964,17 +962,13 @@
       if ($('dl-mac-arm')) $('dl-mac-arm').href = dl.arm.url;
       if ($('dl-mac-x64')) $('dl-mac-x64').href = dl.x64.url;
       if ($('dl-targz')) $('dl-targz').href = dl.targz.url;
+      if ($('dl-win')) $('dl-win').href = dl.win.url;
+      if ($('dl-win-item')) $('dl-win-item').href = dl.win.url;
       if ($('meta-version')) $('meta-version').textContent = dl.latestTag;
-      setLabel('lbl-mac-arm', 'Apple 芯片', dl.arm.name);
-      setLabel('lbl-mac-x64', 'Intel 芯片', dl.x64.name);
-
-      var hasWin = !!dl.win;
-      if ($('win-group')) $('win-group').hidden = !hasWin;
-      if (hasWin) {
-        if ($('dl-win')) $('dl-win').href = dl.win.url;
-        if ($('dl-win-item')) $('dl-win-item').href = dl.win.url;
-        setLabel('lbl-win', '.exe 安装包（x64）', dl.win.name);
-      }
+      if ($('pub-date')) $('pub-date').textContent = dl.pubDate;
+      setLabel('lbl-mac-arm', 'M 系列芯片', '˜90M');
+      setLabel('lbl-mac-x64', 'Intel 芯片', '˜95M');
+      setLabel('lbl-win', '.exe 安装包（x64）', '˜80M');
 
       var banner = $('detectBanner'), label = $('detectText');
       if (os === 'mac' && pickedArch) {
@@ -985,10 +979,10 @@
           $('dl-mac').href = (pickedArch === 'x64' ? dl.x64 : dl.arm).url;
         }
         if (banner && label) {
-          label.textContent = pickedArch === 'x64' ? 'macOS · Intel' : 'macOS · Apple 芯片';
+          label.textContent = pickedArch === 'x64' ? 'macOS · Intel' : 'macOS · M 系列芯片';
           banner.style.display = ''; /* 行内 span，与前后的发行版链接同排 */
         }
-      } else if (os === 'win' && hasWin) {
+      } else if (os === 'win') {
         if ($('dl-win')) $('dl-win').classList.add('primary');
         if (banner && label) {
           label.textContent = 'Windows x64';
@@ -997,60 +991,34 @@
       }
     }
 
-    // 从上往下找第一个带目标资产的 release，即该平台的最新可用版本
-    function fromReleases(list) {
-      function find(test) {
-        for (var i = 0; i < list.length; i++) {
-          var r = list[i] || {};
-          var assets = r.assets || [];
-          for (var j = 0; j < assets.length; j++) {
-            if (test(assets[j].name || '')) {
-              return {
-                ver: String(r.tag_name || '').replace(/^v/, ''),
-                name: assets[j].name,
-                url: assets[j].browser_download_url
-              };
-            }
-          }
-        }
-        return null;
-      }
-      var arm = find(function (n) { return /_aarch64\.dmg$/.test(n); });
-      var x64 = find(function (n) { return /_x86_64\.dmg$/.test(n); });
-      var targz = find(function (n) { return /-aarch64\.app\.tar\.gz$/.test(n); });
-      var win = find(function (n) { return /setup\.exe$/.test(n); });
-      if (arm) dl.arm = arm;
-      if (x64) dl.x64 = x64;
-      if (targz) dl.targz = targz;
-      dl.win = win; // 找不到即置空：隐藏 Windows 按钮
-      if (list[0] && list[0].tag_name) dl.latestTag = list[0].tag_name;
+    function fromUpdater(u) {
+      var plat = (u && u.platforms) || {};
+      var armUrl = (plat['darwin-aarch64'] || {}).url;
+      if (!u || !u.version || !armUrl) return false;
+      var base = armUrl.replace(/[^/]*$/, ''); // 发版下载目录（…/download/v1.0.0/）
+      var enc = encodeURIComponent;
+      dl.arm = { ver: u.version, url: base + enc('句芒智元_' + u.version + '_aarch64.dmg') };
+      dl.x64 = { ver: u.version, url: base + enc('句芒智元_' + u.version + '_x86_64.dmg') };
+      dl.targz = { ver: u.version, url: armUrl };
+      // updater.json 不含 Windows 平台条目，exe 链接按命名规则推导（每版都发 exe）
+      dl.win = { ver: u.version, url: base + enc('句芒智元_' + u.version + '_x64-setup.exe') };
+      dl.latestTag = 'v' + u.version;
+      var d = String(u.pub_date || '');
+      if (d) dl.pubDate = d.slice(0, 10);
+      return true;
     }
 
-    fetch(GITEE_API)
+    fetch(UPDATER_API)
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-      .then(function (list) {
-        if (Array.isArray(list) && list.length) {
-          fromReleases(list);
-          applyDl();
-          [dl.arm, dl.x64, dl.targz, dl.win].forEach(fetchSize);
-        }
+      .then(function (j) {
+        if (!j || typeof j.content !== 'string') return Promise.reject('shape');
+        var bin = atob(j.content.replace(/\s/g, ''));
+        var bytes = new Uint8Array(bin.length);
+        for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        var u = JSON.parse(new TextDecoder('utf-8').decode(bytes));
+        if (fromUpdater(u)) applyDl();
       })
       .catch(function () { /* 静默：保留静态兜底版本与链接 */ });
-
-    // 同源的大小元数据（构建时由 scripts/gen-dl-meta.mjs 生成），到达后补进菜单。
-    // 只填 szMap 里还没有的键：实时接口（fetchSize）先返回的值不能被这份
-    // 构建时数据整体覆盖（两个异步源的到达顺序不定，整体替换会丢实时值）。
-    fetch('dl-meta.json')
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
-      .then(function (m) {
-        if (m && typeof m === 'object') {
-          Object.keys(m).forEach(function (k) {
-            if (szMap[k] === undefined) szMap[k] = m[k];
-          });
-          applyDl();
-        }
-      })
-      .catch(function () { /* 静默：不显示大小 */ });
 
     var ua = navigator.userAgent || '';
     if (/Macintosh|Mac OS X/i.test(ua)) {
