@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>句芒智元 Gromang · 让 AI 编码代理不需要人守在终端前</title>
+<title>句芒智元 Gromang · 让 AI Agent 不需要人值守</title>
 <meta name="description" content="句芒智元（Gromang）—— 给 AI 编码代理配一个常驻哨兵：识别六类「需要人回来」的时刻，权限请求秒级代答，长跑任务托管到结束。支持 macOS（Apple Silicon / Intel）与 Windows。">
 <meta name="theme-color" content="#0e0e0e">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e0e0e'/%3E%3Cpath d='M16 6c-1 4-4 6-8 7 4 1 7 3 8 7 1-4 4-6 8-7-4-1-7-3-8-7z' fill='%2363d8be'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="favicon.png">
 <style>
   /* 背景基准 = /authorize/login 已登录态：同底色、同径向渐变、同遮罩网格与光斑 */
   :root {
@@ -17,7 +17,6 @@
     --card-hover: rgba(255, 255, 255, 0.055);
     --border: rgba(255, 255, 255, 0.1);
     --border-strong: rgba(255, 255, 255, 0.2);
-    --header-bg: rgba(14, 14, 14, 0.68);
     --code-bg: rgba(255, 255, 255, 0.06);
     --radius: 10px;
   }
@@ -30,7 +29,6 @@
       --card-hover: rgba(0, 0, 0, 0.04);
       --border: rgba(0, 0, 0, 0.1);
       --border-strong: rgba(0, 0, 0, 0.22);
-      --header-bg: rgba(255, 255, 255, 0.75);
       --code-bg: rgba(0, 0, 0, 0.05);
     }
   }
@@ -82,32 +80,132 @@
 
   .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; position: relative; }
 
-  /* ---------- 顶栏（安静的信息条，不做 CTA） ---------- */
-  header {
-    position: sticky; top: 0; z-index: 20;
-    background: var(--header-bg);
-    backdrop-filter: saturate(150%) blur(12px);
-    border-bottom: 1px solid var(--border);
+  /* ---------- 顶部品牌：/authorize/login .success-brand 完整复刻 ----------
+     左上角悬浮（top 20 / left 24），无导航条、无背景、无交互 */
+  .brand {
+    position: fixed; top: 20px; left: 24px; z-index: 10;
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 34px; /* 与右上 .gitee-corner 同高同 top，两侧严格同一水平线 */
   }
-  .nav { display: flex; align-items: center; gap: 18px; height: 56px; font-size: 13.5px; }
-  .brand { display: inline-flex; align-items: center; gap: 8px; }
-  .brand:hover { text-decoration: none; }
   .brand .diamond {
-    font-size: 15px; line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+    width: 22px; height: 22px; font-size: 16px; line-height: 1;
     background: linear-gradient(135deg, #00e5ff, #8b5cf6);
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent; color: transparent;
+    animation: brand-pulse 3s ease-in-out infinite;
   }
-  .brand .name {
-    font-size: 17px; font-weight: 800; letter-spacing: -0.02em;
+  @keyframes brand-pulse {
+    0%, 100% { opacity: 1; text-shadow: 0 0 10px rgba(139, 92, 246, 0.3); }
+    50% { opacity: 0.4; text-shadow: 0 0 4px rgba(139, 92, 246, 0.1); }
+  }
+  .brand .title {
+    font-size: 19px; font-weight: 800; letter-spacing: -0.025em;
     background: linear-gradient(135deg, #00e5ff 0%, #06b6d4 40%, #a855f7 100%);
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent; color: transparent;
   }
-  .brand .tagline { color: var(--page-muted); font-size: 13px; }
-  .nav-links { margin-left: auto; display: flex; align-items: center; gap: 18px; }
-  .nav-links a { color: var(--page-muted); }
-  .nav-links a:hover { color: var(--page-fg); text-decoration: none; }
+
+  /* ---------- 右上角悬浮入口组：全部功能 + Gitee 仓库（与左上品牌对称） ---------- */
+  .corner-nav {
+    position: fixed; top: 20px; right: 24px; z-index: 10;
+    height: 34px;
+    display: inline-flex; align-items: center; gap: 18px;
+  }
+  .all-feat-btn {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: none; border: 0; padding: 0; cursor: pointer;
+    font: inherit; font-size: 13px; font-weight: 500; color: var(--page-muted);
+    opacity: 0.85;
+    transition: opacity .15s ease, color .15s ease;
+  }
+  .all-feat-btn:hover { opacity: 1; color: var(--page-fg); }
+  .all-feat-btn svg { width: 16px; height: 16px; }
+  .gitee-corner {
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 13px; font-weight: 500; color: var(--page-muted);
+    opacity: 0.85;
+    transition: opacity .15s ease, color .15s ease;
+  }
+  .gitee-corner:hover { opacity: 1; color: var(--page-fg); text-decoration: none; }
+  .gitee-corner svg { width: 22px; height: 22px; display: block; }
+
+  /* ---------- 全部功能面板 ---------- */
+  .feat-modal { position: fixed; inset: 0; z-index: 100; }
+  .feat-modal[hidden] { display: none; }
+  .feat-modal-mask {
+    position: absolute; inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(4px);
+  }
+  .feat-modal-panel {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: min(760px, calc(100vw - 32px)); max-height: min(80vh, 720px);
+    display: flex; flex-direction: column; overflow: hidden;
+    border-radius: 14px; border: 1px solid var(--border-strong);
+    background: color-mix(in srgb, var(--page-bg) 92%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+    animation: feat-pop .22s ease;
+  }
+  @keyframes feat-pop {
+    from { opacity: 0; transform: translate(-50%, -47%) scale(0.97); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  }
+  .feat-modal-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px 12px; border-bottom: 1px solid var(--border);
+  }
+  .feat-modal-title {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 17px; font-weight: 700;
+  }
+  .feat-modal-title .diamond {
+    font-size: 14px; line-height: 1;
+    background: linear-gradient(135deg, #00e5ff, #8b5cf6);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    animation: brand-pulse 3s ease-in-out infinite;
+  }
+  .feat-modal-close {
+    width: 30px; height: 30px; border-radius: 8px; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 17px; line-height: 1; color: var(--page-muted);
+    background: none; border: 1px solid var(--border);
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .feat-modal-close:hover { color: var(--page-fg); border-color: var(--border-strong); }
+  .feat-modal-body { overflow-y: auto; padding: 14px 20px 20px; }
+  .feat-group-label { margin: 8px 0 10px; font-size: 12.5px; color: var(--page-muted); }
+  .feat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .feat-card {
+    display: block; padding: 12px 14px;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--card);
+    text-decoration: none;
+  }
+  .feat-card h4 {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--page-fg);
+  }
+  .feat-card p { font-size: 12.5px; color: var(--page-muted); line-height: 1.6; }
+  .feat-card p .k {
+    display: inline-block; width: 6px; height: 6px; margin-right: 7px;
+    border-radius: 2px; background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    vertical-align: middle;
+  }
+  .feat-card.hl { border-color: rgba(59, 130, 246, 0.35); cursor: pointer; transition: background .15s ease, border-color .15s ease; }
+  .feat-card.hl:hover { background: var(--card-hover); border-color: rgba(59, 130, 246, 0.6); }
+  .feat-tag {
+    font-size: 10px; font-weight: 600; letter-spacing: .08em;
+    padding: 1.5px 7px; border-radius: 999px; flex: none;
+    color: #67e8f9;
+    border: 1px solid rgba(103, 232, 249, 0.35); background: rgba(103, 232, 249, 0.08);
+  }
+  @media (max-width: 720px) {
+    .feat-grid { grid-template-columns: 1fr; }
+    .all-feat-btn span.txt, .gitee-corner span { display: none; }
+    .all-feat-btn { gap: 0; }
+  }
 
   /* ---------- Hero ---------- */
   /* 复刻 dshdesktop 的 hero 栅格：
@@ -151,7 +249,7 @@
   .hero .meta { margin-top: 24px; color: var(--page-muted); font-size: 13.5px; }
 
   /* 截图完整展示（不裁切）：宽度撑满右栏、等比缩放，圆角 + 细描边 + 投影 */
-  .hero-shot { display: flex; align-items: center; min-width: 0; }
+  .hero-shot { display: flex; flex-direction: column; align-items: center; min-width: 0; }
   /* 桌面端截图整体上移 24px */
   @media (min-width: 1200px) { .hero-shot { transform: translateY(-24px); } }
   .shot {
@@ -159,6 +257,33 @@
     border-radius: 12px; border: 1px solid var(--border-strong); background: var(--card);
     box-shadow: 0 34px 70px -30px rgba(0, 0, 0, 0.7);
   }
+
+  /* ---------- Hero 截图轮播：3s 自动切换；切换控件（箭头+圆点）在图片下方 ---------- */
+  .carousel { position: relative; width: 90%; }
+  .carousel .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .45s ease; pointer-events: none; }
+  .carousel .slide.active { position: relative; opacity: 1; pointer-events: auto; }
+  .car-controls {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    margin-top: 12px;
+  }
+  .car-btn {
+    width: 28px; height: 28px; border-radius: 9999px; cursor: pointer;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-size: 16px; line-height: 1; color: var(--page-muted);
+    border: 1px solid var(--border);
+    background: var(--card);
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .car-btn:hover { color: var(--page-fg); border-color: var(--border-strong); }
+  .car-dots {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .car-dot {
+    width: 8px; height: 8px; border-radius: 9999px; padding: 0; border: 0; cursor: pointer;
+    background: var(--border-strong);
+    transition: background .15s ease, width .2s ease;
+  }
+  .car-dot.active { width: 18px; background: linear-gradient(to right, #3b82f6, #06b6d4); }
   /* ---------- 下载按钮：Mac（可下拉选芯片）/ Windows ---------- */
   .dl-row {
     margin-top: 28px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-start;
@@ -212,24 +337,82 @@
   }
   .dl-item .tag.rec { color: #63d8be; }
 
-  /* 次入口：与 dshdesktop 的「在 GitHub 上查看」同款（h-10 描边按钮，图标 + 文案） */
-  .dl-links { margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
-  .ghost-link {
-    display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 14px;
-    border-radius: 10px; border: 1px solid var(--border-strong);
-    font-size: 14px; font-weight: 500; color: var(--page-muted);
-    transition: border-color .15s ease, background .15s ease, color .15s ease;
-  }
-  .ghost-link:hover { border-color: var(--page-muted); background: var(--card-hover); color: var(--page-fg); text-decoration: none; }
-  .ghost-link svg { width: 16px; height: 16px; flex: none; }
-
   .dl-note { margin-top: 14px; color: var(--page-muted); font-size: 12.5px; text-align: left; }
   .dl-note a { color: var(--page-muted); }
+
+  /* 下载区下方两个说明块共用的小标题 */
+  .block-label { margin: 20px 0 8px; font-size: 12.5px; color: var(--page-muted); }
+
+  /* 特色功能介绍：重点突出——菱形呼吸 + 文字流光横扫（青→蓝→紫，
+     两端融入 muted 底色；与品牌渐变同一色系） */
+  .feature-label { display: inline-flex; align-items: center; gap: 7px; margin: 20px 0 8px; }
+  .feature-label .fd {
+    font-size: 13px; line-height: 1;
+    background: linear-gradient(135deg, #00e5ff, #8b5cf6);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    animation: brand-pulse 3s ease-in-out infinite;
+  }
+  .feature-label .ft {
+    font-size: 13.5px; font-weight: 600; letter-spacing: .02em;
+    background: linear-gradient(110deg, var(--page-muted) 15%, #06b6d4 38%, #3b82f6 50%, #8b5cf6 62%, var(--page-muted) 85%);
+    background-size: 300% 100%;
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+    animation: ft-shimmer 3.2s linear infinite;
+  }
+  @keyframes ft-shimmer {
+    from { background-position: 150% 0; }
+    to { background-position: -50% 0; }
+  }
+
+  /* 特色功能介绍：四个模块跳转（比 dl-note 大一档，点击切到对应 tab）。
+     margin-top 加大：与上方图标块再空一行，独立成段更突出 */
+  .feature-jump { margin-top: 34px; }
+  .feature-jump .items {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px;
+    font-size: 15px; font-weight: 500;
+  }
+  .feature-jump .items a { color: var(--page-fg); }
+  .feature-jump .items a:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .feature-jump .items span[aria-hidden] { color: var(--page-muted); }
+
+  /* 适配的编码代理图标行（名单 = 客户端记忆面板「存储 Agent」下拉的运行时
+     注册表全集，13 家；图标拷贝自 gromang src/public/agent-icons） */
+  .agents-block .agents-row {
+    margin-top: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  }
+  .agents-row img { height: 20px; width: auto; display: block; opacity: .9; }
 
   /* ---------- Sections ---------- */
   section { padding: 76px 0 0; }
   h2 { font-size: 20px; font-weight: 700; letter-spacing: -0.01em; text-align: center; }
   .lead { margin: 10px auto 0; max-width: 560px; color: var(--page-muted); text-align: center; }
+
+  /* ---------- 功能模块 Tab ---------- */
+  .tabs {
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 4px;
+    border-bottom: 1px solid var(--border); margin-bottom: 30px;
+  }
+  .tab {
+    appearance: none; background: none; border: 0; cursor: pointer;
+    position: relative; padding: 10px 16px 12px;
+    font: inherit; font-size: 14.5px; font-weight: 500; color: var(--page-muted);
+    transition: color .15s;
+  }
+  .tab:hover { color: var(--page-fg); }
+  .tab[aria-selected="true"] { color: var(--page-fg); font-weight: 600; }
+  .tab[aria-selected="true"]::after {
+    content: ""; position: absolute; left: 12px; right: 12px; bottom: -1px; height: 2px;
+    border-radius: 2px;
+    background: linear-gradient(to right, #3b82f6, #06b6d4); /* 与下载主按钮同一渐变 */
+  }
+  .tab-panel[hidden] { display: none; }
+  .tab-panel { animation: tab-fade .25s ease; }
+  @keyframes tab-fade {
+    from { opacity: 0; transform: translateY(4px); }
+    to { opacity: 1; transform: none; }
+  }
 
   .feats { margin-top: 26px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .feat {
@@ -269,19 +452,21 @@
   }
   summary { cursor: pointer; color: var(--page-fg); font-weight: 500; }
 
-  /* ---------- Footer ---------- */
-  footer { margin-top: 72px; border-top: 1px solid var(--border); }
-  .foot {
-    display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between;
-    padding: 20px 0; font-size: 12.5px; color: var(--page-muted);
+  /* ---------- 底部法务栏：/authorize/login .success-footer 同款样式，
+     但放文档流末尾（跟随页面滚动），不悬浮挡内容 ---------- */
+  .footer {
+    margin: 56px auto 28px; padding: 0 24px;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    font-size: 13px; color: var(--page-muted); opacity: 0.8;
   }
-  .foot .links { display: flex; flex-wrap: wrap; gap: 16px; }
-  .foot a { color: var(--page-muted); }
-  .foot a:hover { color: var(--page-fg); }
+  .footer button {
+    background: none; border: 0; padding: 0; cursor: pointer;
+    font: inherit; color: inherit; transition: color 0.15s;
+  }
+  .footer button:hover { color: var(--page-fg); text-decoration: underline; text-underline-offset: 4px; }
 
   @media (max-width: 720px) {
     .feats { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
   }
 </style>
 </head>
@@ -294,20 +479,27 @@
   <div class="glow-bottom"></div>
 </div>
 
-<header>
-  <div class="wrap nav">
-    <a class="brand" href="#top">
-      <span class="diamond">◆</span>
-      <span class="name">句芒智元</span>
-      <span class="tagline">Gromang</span>
-    </a>
-    <nav class="nav-links">
-      <a href="#sentinel">终端哨兵</a>
-      <a href="#install">安装</a>
-      <a href="https://gitee.com/nicky-chin/gromang" target="_blank" rel="noopener">源码仓库</a>
-    </nav>
-  </div>
-</header>
+<!-- 顶部品牌：授权页 .success-brand 同款（左上角悬浮，替换原导航条） -->
+<div class="brand"><span class="diamond">◆</span><span class="title">句芒智元</span></div>
+
+<!-- 右上角入口组：全部功能 + Gitee 仓库（与左上品牌对称） -->
+<div class="corner-nav">
+  <button class="all-feat-btn" type="button" id="all-feat-btn" aria-haspopup="dialog">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
+      <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+    </svg>
+    <span class="txt">全部功能</span>
+  </button>
+  <a class="gitee-corner" href="https://gitee.com/nicky-chin/gromang" target="_blank" rel="noopener"
+     aria-label="Gitee 源码仓库" title="Gitee 源码仓库">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="11.4" fill="#C71D23"/>
+      <path d="M16.6 8.9A5.7 5.7 0 1 0 17.7 13.4H12.1" fill="none" stroke="#fff" stroke-width="2.7" stroke-linecap="round"/>
+    </svg>
+    <span>Gitee 仓库</span>
+  </a>
+</div>
 
 <main id="top">
 
@@ -315,96 +507,193 @@
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>让 AI 编码代理<br>不用守在终端前</h1>
+        <h1>让 AI Agent<br>不需要人值守</h1>
         <p class="sub">终端哨兵替你盯着每个代理会话：该批的权限立刻批，跑偏的任务及时拦，长跑任务托管到结束。</p>
-        <p class="meta">v0.2.3 · 完全免费开源 · MIT</p>
+        <p class="meta"><span id="meta-version">v1.0.0</span> · 支持 macOS 与 Windows</p>
 
         <div class="dl-row" id="download">
           <!-- macOS：主按钮下载「已识别」的芯片版本，悬停/聚焦展开另一个 -->
           <div class="dl-group">
-            <a class="btn" id="dl-mac" href="https://gitee.com/nicky-chin/gromang/releases/download/v0.2.3/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_0.2.3_aarch64.dmg" aria-haspopup="menu">
+            <a class="btn" id="dl-mac" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_aarch64.dmg" aria-haspopup="menu">
               <svg class="dl-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.54c-.02-2.27 1.86-3.37 1.95-3.42a4.2 4.2 0 0 0-3.31-1.79c-1.39-.15-2.74.83-3.45.83-.72 0-1.81-.82-2.98-.8a4.38 4.38 0 0 0-3.69 2.25c-1.6 2.77-.41 6.84 1.12 9.08.76 1.09 1.64 2.31 2.81 2.27 1.14-.05 1.57-.73 2.95-.73 1.36 0 1.77.73 2.96.7 1.23-.02 2-1.1 2.73-2.2a9.08 9.08 0 0 0 1.25-2.55 3.93 3.93 0 0 1-2.34-3.64ZM14.78 5.85a4 4 0 0 0 .92-2.86 4.1 4.1 0 0 0-2.66 1.36 3.8 3.8 0 0 0-.95 2.75 3.39 3.39 0 0 0 2.69-1.25Z"/></svg>
               下载 Mac 版
               <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </a>
             <div class="dl-menu">
               <div class="dl-menu-panel" role="menu">
-                <a class="dl-item" id="dl-mac-arm" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v0.2.3/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_0.2.3_aarch64.dmg">
-                  <span>Apple 芯片 · 72.2 MB</span><span class="tag rec" id="tag-mac-arm"></span>
+                <a class="dl-item" id="dl-mac-arm" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_aarch64.dmg">
+                  <span>Apple 芯片</span><span class="tag rec" id="tag-mac-arm"></span>
                 </a>
-                <a class="dl-item" id="dl-mac-x64" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v0.2.3/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_0.2.3_x86_64.dmg">
-                  <span>Intel · 75.8 MB</span><span class="tag" id="tag-mac-x64"></span>
+                <a class="dl-item" id="dl-mac-x64" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x86_64.dmg">
+                  <span id="lbl-mac-x64">Intel 芯片</span><span class="tag" id="tag-mac-x64"></span>
                 </a>
               </div>
             </div>
           </div>
 
-          <!-- Windows：单安装包 + 一个备用入口 -->
-          <div class="dl-group">
-            <a class="btn" id="dl-win" href="https://gitee.com/nicky-chin/gromang/releases/download/v0.2.2/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_0.2.2_x64-setup.exe" aria-haspopup="menu">
+          <!-- Windows：仅当最新发版带 setup.exe 时由脚本展示（v0.2.2 后未再随发版提供） -->
+          <div class="dl-group" id="win-group" hidden>
+            <a class="btn" id="dl-win" href="#" aria-haspopup="menu">
               <svg class="dl-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4.2 10.5 3v8.15H2V4.2Zm9.5-1.34L22 1.35v9.8H11.5V2.86ZM2 12.15h8.5V20.3L2 19.1v-6.95Zm9.5 0H22v9.8l-10.5-1.51v-8.29Z"/></svg>
               下载 Windows 版
               <svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
             </a>
             <div class="dl-menu">
               <div class="dl-menu-panel" role="menu">
-                <a class="dl-item" role="menuitem" href="https://gitee.com/nicky-chin/gromang/releases/download/v0.2.2/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_0.2.2_x64-setup.exe">
-                  <span>.exe 安装包（x64） · 50.2 MB</span>
+                <a class="dl-item" id="dl-win-item" role="menuitem" href="#">
+                  <span id="lbl-win">.exe 安装包（x64）</span>
                 </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="dl-links">
-          <a class="ghost-link" href="https://gitee.com/nicky-chin/gromang/releases" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/>
-            </svg>
-            在 Gitee 上查看
-          </a>
+        <p class="dl-note">
+          <span id="detectBanner" style="display:none">已为你选中 <b id="detectText">macOS</b> · </span>
+          <a href="https://gitee.com/nicky-chin/gromang/releases" target="_blank" rel="noopener">全部发行版</a> ·
+          <a id="dl-targz" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz">备用格式</a>
+        </p>
+
+        <div class="agents-block">
+          <div class="block-label">已适配 13 家 agent</div>
+          <div class="agents-row" aria-label="适配的编码代理">
+            <img src="agent-icons/claude_code.svg" alt="Claude Code" title="Claude Code" loading="lazy" decoding="async">
+            <img src="agent-icons/codex.svg" alt="Codex" title="Codex" loading="lazy" decoding="async">
+            <img src="agent-icons/gemini_cli.svg" alt="Gemini CLI" title="Gemini CLI" loading="lazy" decoding="async">
+            <img src="agent-icons/opencode.png" alt="OpenCode" title="OpenCode" loading="lazy" decoding="async">
+            <img src="agent-icons/hermes.png" alt="Hermes" title="Hermes" loading="lazy" decoding="async">
+            <img src="agent-icons/cursor.png" alt="Cursor" title="Cursor" loading="lazy" decoding="async">
+            <img src="agent-icons/github_copilot.png" alt="Copilot" title="Copilot" loading="lazy" decoding="async">
+            <img src="agent-icons/qwen_code.png" alt="Qwen Code" title="Qwen Code" loading="lazy" decoding="async">
+            <img src="agent-icons/kiro.svg" alt="Kiro" title="Kiro" loading="lazy" decoding="async">
+            <img src="agent-icons/codebuddy.svg" alt="CodeBuddy" title="CodeBuddy" loading="lazy" decoding="async">
+            <img src="agent-icons/deepseek-harness.png" alt="DSH" title="DSH" loading="lazy" decoding="async">
+            <img src="agent-icons/pi.svg" alt="Pi" title="Pi" loading="lazy" decoding="async">
+            <img src="agent-icons/zcode.png" alt="ZCode" title="ZCode" loading="lazy" decoding="async">
+          </div>
         </div>
 
-        <p class="dl-note" id="detectBanner" style="display:none">
-          已为你选中 <b id="detectText">macOS</b>
-        </p>
-
-        <p class="dl-note">
-          Mac 版 v0.2.3（Apple 芯片 / Intel）· Windows 版 v0.2.2 ·
-          <a href="https://gitee.com/nicky-chin/gromang/releases" target="_blank" rel="noopener">全部发行版</a> ·
-          <a href="https://gitee.com/nicky-chin/gromang/releases/download/v0.2.3/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz">备用格式</a>
-        </p>
+        <div class="feature-jump">
+          <div class="feature-label block-label"><span class="fd" aria-hidden="true">◆</span><span class="ft">特色功能介绍</span></div>
+          <div class="items">
+            <a href="#tab-sentinel">终端哨兵</a><span aria-hidden="true">·</span>
+            <a href="#tab-memory">记忆共享</a><span aria-hidden="true">·</span>
+            <a href="#tab-browser">网页自动化</a><span aria-hidden="true">·</span>
+            <a href="#tab-mobile">移动端远程控制</a>
+          </div>
+        </div>
       </div>
 
       <div class="hero-shot">
-        <img class="shot" src="screenshot.jpg" width="1200" height="780"
-             alt="句芒智元 · 会话与终端哨兵界面" loading="eager" decoding="async" />
+        <div class="carousel" id="carousel" aria-roledescription="carousel" aria-label="句芒智元界面截图">
+          <img class="shot slide active" src="shots/1.png" alt="句芒智元 · 界面截图 1" loading="eager" decoding="async">
+          <img class="shot slide" src="shots/2.png" alt="句芒智元 · 界面截图 2" loading="lazy" decoding="async">
+          <img class="shot slide" src="shots/3.png" alt="句芒智元 · 界面截图 3" loading="lazy" decoding="async">
+          <img class="shot slide" src="shots/4.png" alt="句芒智元 · 界面截图 4" loading="lazy" decoding="async">
+          <img class="shot slide" src="shots/5.png" alt="句芒智元 · 界面截图 5" loading="lazy" decoding="async">
+        </div>
+        <div class="car-controls">
+          <button class="car-btn prev" type="button" id="car-prev" aria-label="上一张">‹</button>
+          <div class="car-dots" id="car-dots"></div>
+          <button class="car-btn next" type="button" id="car-next" aria-label="下一张">›</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================ 终端哨兵 ============================ -->
-  <section id="sentinel">
+  <!-- ============================ 四大功能模块（Tab 切换） ============================ -->
+  <section id="features">
     <div class="wrap">
-      <h2>终端哨兵</h2>
-      <p class="lead">一个常驻的值守层：所有 AI 编码代理的会话都在它视野里，你只在真正需要人的时刻出现。</p>
-      <div class="feats">
-        <div class="feat">
-          <h3><span class="k"></span>会话值守</h3>
-          <p>自动识别六类「需要人回来」的时刻（等待确认、报错、长跑结束…），直接推到你桌面。</p>
-        </div>
-        <div class="feat">
-          <h3><span class="k"></span>权限秒批</h3>
-          <p>权限请求弹气泡，批准 / 拒绝 / 始终允许一键决定；120 秒无响应自动拒绝，决策落审计表。</p>
-        </div>
-        <div class="feat">
-          <h3><span class="k"></span>长跑 · 分级放权</h3>
-          <p>长命令跑完即通知，断了也能接着看；MCP 写操作默认 dry_run 必须人审，不再只有「全问」和「全放」。</p>
-        </div>
+      <div class="tabs" role="tablist" aria-label="功能模块">
+        <button class="tab" type="button" role="tab" id="tab-sentinel" aria-controls="panel-sentinel" aria-selected="true">Agent · 终端哨兵</button>
+        <button class="tab" type="button" role="tab" id="tab-memory" aria-controls="panel-memory" aria-selected="false">记忆共享</button>
+        <button class="tab" type="button" role="tab" id="tab-browser" aria-controls="panel-browser" aria-selected="false">网页自动化</button>
+        <button class="tab" type="button" role="tab" id="tab-mobile" aria-controls="panel-mobile" aria-selected="false">移动端远程控制</button>
       </div>
-      <p class="more">
-        <span>18 家 agent 接入</span><span>账户级成本与容灾</span><span>模型路由</span><span>工具 · 技能编排</span><span>用量洞察</span><span>计划任务</span>
-      </p>
+
+      <div class="tab-panel" role="tabpanel" id="panel-sentinel" aria-labelledby="tab-sentinel">
+        <p class="lead">一个常驻的值守层：所有 AI 编码代理的会话都在它视野里，你只在真正需要人的时刻出现。</p>
+        <div class="feats">
+          <div class="feat">
+            <h3><span class="k"></span>会话值守</h3>
+            <p>自动识别六类「需要人回来」的时刻（等待确认、报错、长跑结束…），直接推到你桌面。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>权限秒批</h3>
+            <p>权限请求弹气泡，批准 / 拒绝 / 始终允许一键决定；120 秒无响应自动拒绝，决策落审计表。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>长跑 · 分级放权</h3>
+            <p>长命令跑完即通知，断了也能接着看；MCP 写操作默认 dry_run 必须人审，不再只有「全问」和「全放」。</p>
+          </div>
+        </div>
+        <p class="more">
+          <span>13 家 agent 接入</span><span>账户级成本与容灾</span><span>模型路由</span><span>工具 · 技能编排</span><span>用量洞察</span><span>计划任务</span>
+        </p>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-memory" aria-labelledby="tab-memory" hidden>
+        <p class="lead">一个跨 agent 的记忆池：gromang 记住的偏好与约定，你机器上其他编码代理也能读到——换个 CLI 不用从头教。</p>
+        <div class="feats">
+          <div class="feat">
+            <h3><span class="k"></span>跨 agent 同池</h3>
+            <p>ZCode、Claude Code 等独立运行的 agent CLI，经 gromang-memory MCP 读写同一个记忆池，全局与项目两个作用域。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>自动收割沉淀</h3>
+            <p>会话收尾自动反思提取跨会话事实——用户偏好、项目约定、环境怪癖，不用你手动记笔记。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>规则块 · 投影</h3>
+            <p>「先查再存」的会话纪律自动注入各 agent 全局规则；高价值条目投影进 AGENTS.md，每个新会话开箱即用。</p>
+          </div>
+        </div>
+        <p class="more">
+          <span>记忆图谱</span><span>情景语料</span><span>稳定度分级</span><span>全局 · 项目作用域</span><span>共享只读视图</span>
+        </p>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-browser" aria-labelledby="tab-browser" hidden>
+        <p class="lead">给 agent 一双会用浏览器的手：打开页面、读懂渲染结果、点击填写、截图取证，网页上的活也能交出去。</p>
+        <div class="feats">
+          <div class="feat">
+            <h3><span class="k"></span>观察 → 行动循环</h3>
+            <p>以页面快照为事实依据构建定位再操作，动作前后都有观察，不靠盲猜选择器，点错率低、失败可自愈。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>GUI 黑盒测试</h3>
+            <p>像真人一样从界面走场景：逐检查点截图留证，测试报告可回溯，适合当回归测试跑。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>隔离运行</h3>
+            <p>浏览器跑在专用 worker 里，调试端口、模型凭据不暴露给页面，本地与远程站点都适用。</p>
+          </div>
+        </div>
+        <p class="more">
+          <span>导航</span><span>点击 · 表单填写</span><span>截图取证</span><span>本地与远程站点</span><span>端到端回归</span>
+        </p>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-mobile" aria-labelledby="tab-mobile" hidden>
+        <p class="lead">人不在电脑前也能管：手机扫码连上桌面端，会话进展与权限审批尽在掌中。</p>
+        <div class="feats">
+          <div class="feat">
+            <h3><span class="k"></span>扫码即连</h3>
+            <p>客户端生成二维码，手机扫一下完成登录并装成 PWA，不用在手机上输账号密码。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>会话监控</h3>
+            <p>手机上实时盯所有 agent 会话的进展，长跑任务跑到哪一步随时打开看。</p>
+          </div>
+          <div class="feat">
+            <h3><span class="k"></span>远程权限审批</h3>
+            <p>权限请求直接推到手机，批准 / 拒绝一点生效，任务不用卡在电脑前等你回来。</p>
+          </div>
+        </div>
+        <p class="more">
+          <span>PWA 安装</span><span>扫码登录</span><span>局域网 · 远程访问开关</span><span>与客户端同一前端</span>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -418,7 +707,7 @@
         <li>启动后桌宠出现在屏幕角落，进入 <b>设置 → 提供商</b> 填入 API Key 或 OAuth 登录即可。</li>
       </ol>
       <details>
-        <summary>macOS 提示：提示「无法验证开发者 / 已损坏」怎么办</summary>
+        <summary>macOS 提示「Apple 无法验证“句芒智元”是否包含可能危害Mac安全或泄漏隐私 / 已损坏」怎么办</summary>
         <p style="margin-top:8px">
           前往 <b>系统设置 → 隐私与安全性</b> 点击「仍要打开」；或在终端执行
           <code>xattr -cr /Applications/句芒智元.app</code> 后重新打开。
@@ -429,66 +718,356 @@
 
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <div>© 2026 句芒智元 · Gromang Neuron · MIT License</div>
-    <div class="links">
-      <a href="/static">博客首页</a>
-      <a href="https://gitee.com/nicky-chin/gromang" target="_blank" rel="noopener">代码仓库</a>
-      <a href="https://gitee.com/nicky-chin/gromang/releases" target="_blank" rel="noopener">发行版</a>
-      <a href="https://gitee.com/nicky-chin/gromang/issues" target="_blank" rel="noopener">反馈问题</a>
+<!-- 底部法务栏：授权页 .success-footer 同款（视口底部居中悬浮，替换原页脚） -->
+<div class="footer">
+  <button type="button">服务协议</button>
+  <span aria-hidden="true">•</span>
+  <button type="button">隐私政策</button>
+  <span aria-hidden="true">•</span>
+  <button type="button" id="copyright-link">© 2026 句芒智元</button>
+</div>
+
+<!-- ============================ 全部功能面板 ============================ -->
+<div class="feat-modal" id="feat-modal" hidden>
+  <div class="feat-modal-mask" id="feat-modal-mask"></div>
+  <div class="feat-modal-panel" role="dialog" aria-modal="true" aria-label="全部功能">
+    <div class="feat-modal-head">
+      <div class="feat-modal-title"><span class="diamond" aria-hidden="true">◆</span>全部功能</div>
+      <button class="feat-modal-close" type="button" id="feat-modal-close" aria-label="关闭">✕</button>
+    </div>
+    <div class="feat-modal-body">
+      <div class="feat-group-label">特色功能（点击查看介绍）</div>
+      <div class="feat-grid">
+        <a class="feat-card hl" href="#tab-sentinel">
+          <h4>Agent · 终端哨兵<span class="feat-tag">特色</span></h4>
+          <p>识别六类「需要人回来」的时刻：权限秒批、长跑托管、决策审计，你只在关键节点出现。</p>
+        </a>
+        <a class="feat-card hl" href="#tab-memory">
+          <h4>记忆共享<span class="feat-tag">特色</span></h4>
+          <p>跨 agent 记忆池：偏好与约定一处沉淀，ZCode、Claude Code 等 CLI 共用，自动收割免手记。</p>
+        </a>
+        <a class="feat-card hl" href="#tab-browser">
+          <h4>网页自动化<span class="feat-tag">特色</span></h4>
+          <p>观察 → 行动循环 + 截图取证，让 agent 真正会用浏览器干活，还能跑 GUI 回归测试。</p>
+        </a>
+        <a class="feat-card hl" href="#tab-mobile">
+          <h4>移动端远程控制<span class="feat-tag">特色</span></h4>
+          <p>手机扫码连上桌面端，会话监控与权限审批随身携带，人不在电脑前也不误事。</p>
+        </a>
+      </div>
+
+      <div class="feat-group-label" style="margin-top: 18px;">更多功能</div>
+      <div class="feat-grid">
+        <div class="feat-card">
+          <h4>会话与渠道</h4>
+          <p>钉钉、微信、企业微信、邮件、Discord 里直接指挥 agent；渠道收件箱可查每条消息的来龙去脉。</p>
+        </div>
+        <div class="feat-card">
+          <h4>助手与套餐</h4>
+          <p>自定义助手（系统提示 / 规则 / 知识库 / 快捷短语）；套餐把常用任务预组装成一键运行。</p>
+        </div>
+        <div class="feat-card">
+          <h4>知识库</h4>
+          <p>助手可挂载的知识库工作区；代码图谱按仓库沉淀代码结构知识，与记忆一套体系。</p>
+        </div>
+        <div class="feat-card">
+          <h4>技能与工具</h4>
+          <p>技能市场一键安装；MCP 内置 / 本机 / 市场三分区管理，桥接 MCP 把 HTTP、Dubbo、命令包成工具。</p>
+        </div>
+        <div class="feat-card">
+          <h4>计划任务</h4>
+          <p>cron 定时执行助手与套餐，到点自动跑；调度守护独立常驻，不开窗口也能运转。</p>
+        </div>
+        <div class="feat-card">
+          <h4>统计与用量</h4>
+          <p>账户级成本与用量统计、多维度洞察；统一供应商让多套 CLI 共用一份模型配置。</p>
+        </div>
+        <div class="feat-card">
+          <h4>桌面伴侣</h4>
+          <p>常驻桌面角落的伴侣窗口，消息与提醒贴身可达，也可静音只做值守。</p>
+        </div>
+        <div class="feat-card">
+          <h4>趋势热榜</h4>
+          <p>聚合 AI 圈热点内容，在榜 / 新增 / 今日多个维度浏览，选题不落伍。</p>
+        </div>
+      </div>
     </div>
   </div>
-</footer>
+</div>
 
 <script>
   (function () {
-    var ua = navigator.userAgent || '';
-    var isMac = /Macintosh|Mac OS X/i.test(ua);
-    var isWin = /Windows/i.test(ua);
+    /* ============ 功能模块 Tab ============
+       四个 panel 单选显示；hash（#tab-memory 等）是唯一状态源——tab 点击、
+       下载区模块链接、刷新/前进后退（hashchange）都收敛到 selectTab。
+       dl-note 的四个模块链接靠浏览器原生锚点滚动到 tab 栏，再由
+       hashchange 完成切换。 */
+    var FEATURE_TABS = ['sentinel', 'memory', 'browser', 'mobile'];
 
-    var MAC_ARM = 'https://gitee.com/nicky-chin/gromang/releases/download/v0.2.3/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_0.2.3_aarch64.dmg';
-    var MAC_X64 = 'https://gitee.com/nicky-chin/gromang/releases/download/v0.2.3/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_0.2.3_x86_64.dmg';
-
-    function makePrimary(id) {
-      var el = document.getElementById(id);
-      if (el) el.classList.add('primary');
+    function selectTab(name) {
+      if (FEATURE_TABS.indexOf(name) === -1) name = 'sentinel';
+      FEATURE_TABS.forEach(function (t) {
+        var btn = document.getElementById('tab-' + t), panel = document.getElementById('panel-' + t);
+        if (btn) btn.setAttribute('aria-selected', t === name ? 'true' : 'false');
+        if (panel) panel.hidden = t !== name;
+      });
     }
 
-    function showBanner(text) {
-      var banner = document.getElementById('detectBanner');
-      var label = document.getElementById('detectText');
-      if (!banner || !label) return;
-      label.textContent = text;
-      banner.style.display = 'block';
+    function tabFromHash() {
+      var m = (location.hash || '').match(/^#tab-([a-z]+)/);
+      return m ? m[1] : null;
     }
 
-    // 主按钮跟随识别结果；下拉里对应的那一项打「推荐」
-    function pickMac(arch) {
-      var main = document.getElementById('dl-mac');
-      var rec = document.getElementById(arch === 'x64' ? 'tag-mac-x64' : 'tag-mac-arm');
-      if (main) main.href = arch === 'x64' ? MAC_X64 : MAC_ARM;
-      if (rec) rec.textContent = '推荐';
-      makePrimary('dl-mac');
-      showBanner(arch === 'x64' ? 'macOS · Intel' : 'macOS · Apple 芯片');
+    FEATURE_TABS.forEach(function (t) {
+      var btn = document.getElementById('tab-' + t);
+      if (btn) btn.addEventListener('click', function () {
+        if (location.hash !== '#tab-' + t) history.pushState(null, '', '#tab-' + t);
+        selectTab(t);
+      });
+    });
+    window.addEventListener('hashchange', function () {
+      var t = tabFromHash();
+      if (t) selectTab(t);
+    });
+    var initial = tabFromHash();
+    if (initial) selectTab(initial);
+
+    /* ============ Hero 截图轮播 ============
+       3 秒自动切换；箭头 / 圆点手动切换（手动后重置 3s 计时）；
+       鼠标悬停在图上时暂停，移开恢复。 */
+    var carSlides = Array.prototype.slice.call(document.querySelectorAll('.carousel .slide'));
+    if (carSlides.length > 1) {
+      var dotsBox = document.getElementById('car-dots');
+      var carIdx = 0, carTimer = null;
+      var carDots = carSlides.map(function (_, i) {
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.className = 'car-dot';
+        d.setAttribute('aria-label', '第 ' + (i + 1) + ' 张');
+        d.addEventListener('click', function () { carShow(i); carRestart(); });
+        if (dotsBox) dotsBox.appendChild(d);
+        return d;
+      });
+      function carShow(i) {
+        carIdx = ((i % carSlides.length) + carSlides.length) % carSlides.length;
+        carSlides.forEach(function (s, j) { s.classList.toggle('active', j === carIdx); });
+        carDots.forEach(function (d, j) { d.classList.toggle('active', j === carIdx); });
+      }
+      function carRestart() {
+        clearInterval(carTimer);
+        carTimer = setInterval(function () { carShow(carIdx + 1); }, 3000);
+      }
+      var carPrev = document.getElementById('car-prev');
+      var carNext = document.getElementById('car-next');
+      if (carPrev) carPrev.addEventListener('click', function () { carShow(carIdx - 1); carRestart(); });
+      if (carNext) carNext.addEventListener('click', function () { carShow(carIdx + 1); carRestart(); });
+      var carBox = document.getElementById('carousel');
+      if (carBox) {
+        carBox.addEventListener('mouseenter', function () { clearInterval(carTimer); });
+        carBox.addEventListener('mouseleave', carRestart);
+      }
+      carShow(0);
+      carRestart();
     }
 
-    // 优先尝试高熵 API 判断 Apple Silicon（M 芯片）
-    function resolveArch(cb) {
-      if (isMac && navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
-        navigator.userAgentData.getHighEntropyValues(['architecture']).then(function (h) {
-          cb(h && h.architecture === 'arm' ? 'arm' : 'x64');
-        }).catch(function () { cb(null); });
-      } else {
-        cb(null);
+    /* ============ 全部功能面板 ============
+       右上角「全部功能」打开模态；Esc / 遮罩 / ✕ 关闭；
+       面板里点特色功能卡片 = 关面板 + 锚点跳 tab（tab 切换由上面的
+       hashchange 处理）。 */
+    var featModal = document.getElementById('feat-modal');
+    var featBtn = document.getElementById('all-feat-btn');
+    function openFeat() {
+      if (!featModal) return;
+      featModal.hidden = false;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeFeat() {
+      if (!featModal) return;
+      featModal.hidden = true;
+      document.body.style.overflow = '';
+    }
+    if (featBtn) featBtn.addEventListener('click', openFeat);
+    var featClose = document.getElementById('feat-modal-close');
+    var featMask = document.getElementById('feat-modal-mask');
+    if (featClose) featClose.addEventListener('click', closeFeat);
+    if (featMask) featMask.addEventListener('click', closeFeat);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeFeat();
+    });
+    if (featModal) {
+      featModal.addEventListener('click', function (e) {
+        var a = e.target.closest ? e.target.closest('a[href^="#tab-"]') : null;
+        if (a) closeFeat();
+      });
+    }
+
+    // 版权年份跨年自动滚动（与授权页行为一致）；点击回页面顶部
+    // （授权页版权行点开的是产品站，产品站自身是终点，所以回到顶部）
+    var cr = document.getElementById('copyright-link');
+    if (cr) {
+      cr.textContent = '© ' + new Date().getFullYear() + ' 句芒智元';
+      cr.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    /* ============ 下载区：版本与链接实时读取 Gitee 最新发版 ============
+       静态 HTML 里的 v1.0.0 是兜底（API 请求失败时仍可下载）。Gitee
+       releases API 公开且允许跨域。Windows 安装包自 v0.2.2 后未再随
+       发版提供——仅当某个最新发版带 setup.exe 资产时才展示 Windows 按钮，
+       避免挂出 404 死链。
+       文件大小分两级：优先同源函数 /api/dl-size（api/dl-size.js，服务端
+       HEAD Gitee 实时拿 Content-Length——浏览器直连被 CORS 拦）；函数不可
+       用时回落构建时生成的 dl-meta.json（node scripts/gen-dl-meta.mjs）。
+       两级都按资产文件名匹配——版本更新后匹配不到就不显示，不会拿旧大小
+       配新版本。 */
+    var $ = function (id) { return document.getElementById(id); };
+    var GITEE_API = 'https://gitee.com/api/v5/repos/nicky-chin/gromang/releases?per_page=20&direction=desc';
+
+    var dl = {
+      arm:   { ver: '1.0.0', name: '句芒智元_1.0.0_aarch64.dmg', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_aarch64.dmg' },
+      x64:   { ver: '1.0.0', name: '句芒智元_1.0.0_x86_64.dmg', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.0_x86_64.dmg' },
+      targz: { ver: '1.0.0', name: '句芒智元-aarch64.app.tar.gz', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.0/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz' },
+      win: null,
+      latestTag: 'v1.0.0'
+    };
+    var os = null;         // 'mac' | 'win'（UA 识别）
+    var pickedArch = null; // 'arm' | 'x64'（Mac 芯片识别，决定主按钮指向）
+    var szMap = {};        // dl-meta.json：{ 资产文件名: 字节数 }
+
+    function fmtMB(bytes) { return (bytes / 1024 / 1024).toFixed(1) + ' MB'; }
+    function setLabel(id, base, name) {
+      var el = $(id);
+      if (!el) return;
+      var sz = name && szMap[name];
+      el.textContent = sz ? base + ' · ' + fmtMB(sz) : base;
+    }
+
+    /* 实时大小优先：同源 Vercel 函数（api/dl-size.js）服务端 HEAD Gitee 拿
+       Content-Length——浏览器直连被 CORS 拦，只能这样转一手。失败静默回落
+       构建时生成的 dl-meta.json。 */
+    function fetchSize(item) {
+      if (!item || !item.url) return;
+      fetch('/api/dl-size?url=' + encodeURIComponent(item.url))
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+        .then(function (j) {
+          if (j && j.size && szMap[item.name] !== j.size) {
+            szMap[item.name] = j.size;
+            applyDl();
+          }
+        })
+        .catch(function () { /* 静默：保持 dl-meta.json 或不显示 */ });
+    }
+
+    // 把 dl 状态写回 DOM；UA 识别结果与发版数据无论谁先到达都收敛到同一渲染
+    function applyDl() {
+      if ($('dl-mac-arm')) $('dl-mac-arm').href = dl.arm.url;
+      if ($('dl-mac-x64')) $('dl-mac-x64').href = dl.x64.url;
+      if ($('dl-targz')) $('dl-targz').href = dl.targz.url;
+      if ($('meta-version')) $('meta-version').textContent = dl.latestTag;
+      setLabel('lbl-mac-arm', 'Apple 芯片', dl.arm.name);
+      setLabel('lbl-mac-x64', 'Intel 芯片', dl.x64.name);
+
+      var hasWin = !!dl.win;
+      if ($('win-group')) $('win-group').hidden = !hasWin;
+      if (hasWin) {
+        if ($('dl-win')) $('dl-win').href = dl.win.url;
+        if ($('dl-win-item')) $('dl-win-item').href = dl.win.url;
+        setLabel('lbl-win', '.exe 安装包（x64）', dl.win.name);
+      }
+
+      var banner = $('detectBanner'), label = $('detectText');
+      if (os === 'mac' && pickedArch) {
+        var rec = $(pickedArch === 'x64' ? 'tag-mac-x64' : 'tag-mac-arm');
+        if (rec) rec.textContent = '推荐';
+        if ($('dl-mac')) {
+          $('dl-mac').classList.add('primary');
+          $('dl-mac').href = (pickedArch === 'x64' ? dl.x64 : dl.arm).url;
+        }
+        if (banner && label) {
+          label.textContent = pickedArch === 'x64' ? 'macOS · Intel' : 'macOS · Apple 芯片';
+          banner.style.display = ''; /* 行内 span，与前后的发行版链接同排 */
+        }
+      } else if (os === 'win' && hasWin) {
+        if ($('dl-win')) $('dl-win').classList.add('primary');
+        if (banner && label) {
+          label.textContent = 'Windows x64';
+          banner.style.display = '';
+        }
       }
     }
 
-    if (isMac) {
-      resolveArch(function (arch) { pickMac(arch === 'x64' ? 'x64' : 'arm'); });
-    } else if (isWin) {
-      makePrimary('dl-win');
-      showBanner('Windows x64');
+    // 从上往下找第一个带目标资产的 release，即该平台的最新可用版本
+    function fromReleases(list) {
+      function find(test) {
+        for (var i = 0; i < list.length; i++) {
+          var r = list[i] || {};
+          var assets = r.assets || [];
+          for (var j = 0; j < assets.length; j++) {
+            if (test(assets[j].name || '')) {
+              return {
+                ver: String(r.tag_name || '').replace(/^v/, ''),
+                name: assets[j].name,
+                url: assets[j].browser_download_url
+              };
+            }
+          }
+        }
+        return null;
+      }
+      var arm = find(function (n) { return /_aarch64\.dmg$/.test(n); });
+      var x64 = find(function (n) { return /_x86_64\.dmg$/.test(n); });
+      var targz = find(function (n) { return /-aarch64\.app\.tar\.gz$/.test(n); });
+      var win = find(function (n) { return /setup\.exe$/.test(n); });
+      if (arm) dl.arm = arm;
+      if (x64) dl.x64 = x64;
+      if (targz) dl.targz = targz;
+      dl.win = win; // 找不到即置空：隐藏 Windows 按钮
+      if (list[0] && list[0].tag_name) dl.latestTag = list[0].tag_name;
+    }
+
+    fetch(GITEE_API)
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (list) {
+        if (Array.isArray(list) && list.length) {
+          fromReleases(list);
+          applyDl();
+          [dl.arm, dl.x64, dl.targz, dl.win].forEach(fetchSize);
+        }
+      })
+      .catch(function () { /* 静默：保留静态兜底版本与链接 */ });
+
+    // 同源的大小元数据（构建时由 scripts/gen-dl-meta.mjs 生成），到达后补进菜单。
+    // 只填 szMap 里还没有的键：实时接口（fetchSize）先返回的值不能被这份
+    // 构建时数据整体覆盖（两个异步源的到达顺序不定，整体替换会丢实时值）。
+    fetch('dl-meta.json')
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (m) {
+        if (m && typeof m === 'object') {
+          Object.keys(m).forEach(function (k) {
+            if (szMap[k] === undefined) szMap[k] = m[k];
+          });
+          applyDl();
+        }
+      })
+      .catch(function () { /* 静默：不显示大小 */ });
+
+    var ua = navigator.userAgent || '';
+    if (/Macintosh|Mac OS X/i.test(ua)) {
+      os = 'mac';
+      // 优先用高熵 API 判断 Apple Silicon（M 芯片）
+      if (navigator.userAgentData && navigator.userAgentData.getHighEntropyValues) {
+        navigator.userAgentData.getHighEntropyValues(['architecture'])
+          .then(function (h) { pickedArch = (h && h.architecture === 'arm') ? 'arm' : 'x64'; })
+          .catch(function () { pickedArch = 'arm'; })
+          .then(applyDl);
+      } else {
+        pickedArch = 'arm';
+        applyDl();
+      }
+    } else if (/Windows/i.test(ua)) {
+      os = 'win';
+      applyDl();
     }
   })();
 </script>
