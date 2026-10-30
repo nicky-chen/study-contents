@@ -1,0 +1,19 @@
+{
+  "version": "1.0.4",
+  "notes": "1.0.4 发布\n\n## 会话记忆（context-mode）十家全接\n- hooks 安装从 claude/codex 扩至十家 agent（gemini/cursor/codebuddy/zcode 配置写入，hermes/pi/opencode/dsh 走捕获 shim）\n- agent 卡片行内摘要（N 会话·M 事件/最近项目/最近活跃），归属匹配复用会话页单一真源\n- 会话行展开改全量事件明细（计数与内容对齐），统计徽标精简至标题行\n\n## 发版前复查修复\n- opencode 配置解析失败不再覆写用户 opencode.json（P0）\n- dsh plugin add 300s 看门狗 + CLI 路径兜底 ~/.local/bin（安装版 GUI PATH 场景）\n- sync_agent hooks 失败回滚 MCP（消除半态）；hermes 卸载清理 __pycache__\n- shims 子进程走 quiet_command（Windows 不闪黑窗）\n- zcode 模型下拉：显式配置的 personal provider 全量入清单（新配未用不再缺失）\n\n## 其他\n- 会话记忆库与全局记忆库卡片/问答入口对齐（问答只在图谱悬浮圆钮）\n- 知识库标题行显示名优化；dist/formatRelativeTime 共享工具\n\n## 10-28 重发包补充\n- 记忆项目作用域：活跃会话目录推断兜底归属（无显式会话上下文时也能落对项目）\n- 启动性能：启动期耗时任务延后执行，消除首屏卡顿\n- 本包为仅 macOS（aarch64 + x86_64）重发包；Windows 1.0.4 待 Windows 机出包后补挂",
+  "pub_date": "2026-10-28T03:27:16.085Z",
+  "platforms": {
+    "windows-x86_64": {
+      "url": "https://gitee.com/nicky-chin/gromang/releases/download/v1.0.4/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.4_x64-setup-x86_64.exe",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUOXBhVkEwM3h2QTl3VjMybXBlYnM3SkMyUzZrTE41OThMMnV5V1o2UmMrNHFaSEs3N3NmbG1DR3Z3RGJNNERqV1Q0U2syUkNkcWdMZ0pCNUxSZm1ydFJDVjFLbXZNTlE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTYzODgyCWZpbGU65Y+l6IqS5pm65YWDXzEuMC40X3g2NC1zZXR1cC5leGUKWFdEODJPaDI1SVhoZkorSDIyb1JubUdjSVBDaUFGVk54K0dqeGJBTlV6M2lGWGlWWEE2ekllakJlVGNmdTJnWmV0R3BTVUd0N2M0WTMzZnlpNUhJQWc9PQo="
+    },
+    "darwin-aarch64": {
+      "url": "https://gitee.com/nicky-chin/gromang/releases/download/v1.0.4/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUOXBhVkEwM3h2QTZscUZ4bE1BRlBxbjVQSzlJeWhoVWs5amRRMVBodGlvNFR3YzRkcmZZS2hLSGtIamNMaHJqTWhFa1JoaUw4dElQdmllT010OXZsMUR4Wk5hcE4xaFFJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTU3Mjk5CWZpbGU65Y+l6IqS5pm65YWDLmFwcC50YXIuZ3oKbEMxdW1EMnBxMWpTcGZWZGRZNW5uSitWK3ZRak1TbWFDVGVBYjJ3NDdIK1Zza2dtVUZXRFRjQnBMQ0oxMklGazgxdVZVTWI1Q2kvUnpYVmZFQWR0RGc9PQo="
+    },
+    "darwin-x86_64": {
+      "url": "https://gitee.com/nicky-chin/gromang/releases/download/v1.0.4/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-x86_64.app.tar.gz",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUOXBhVkEwM3h2QXcxQVN5bzJzZVFVOXhMN3lUNlM3V01GMG04WmkxRTBLaDBKY2VENTlaZHFQNDhpWVg1M3l3UnJrNTkrVFVxZDZuR0tOcmZveUNmWXF4M2ZnTS9nNGdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTU3NzQ5CWZpbGU65Y+l6IqS5pm65YWDLmFwcC50YXIuZ3oKWlJMUTMvQXNCR0hQWk9tY2VBWjcxTjVQYXBKZk9HczlldFB6Yld0Qi93a1pWM1ZoRlJ1azZYZGFvbTVxYTVmd2lJTm9wRVlWNWxzdDBRbmZac3ZkRGc9PQo="
+    }
+  }
+}
