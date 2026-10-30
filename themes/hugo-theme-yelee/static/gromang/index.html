@@ -368,7 +368,7 @@
     to { background-position: -50% 0; }
   }
 
-  /* 特色功能介绍：四个模块跳转（比 dl-note 大一档，点击切到对应 tab）。
+  /* 特色功能介绍：三个大类跳转（比 dl-note 大一档，点击切到对应 tab）。
      margin-top 加大：与上方图标块再空一行，独立成段更突出 */
   .feature-jump { margin-top: 34px; }
   .feature-jump .items {
@@ -399,12 +399,32 @@
   }
   .feature-jump .items span[aria-hidden] { color: var(--page-muted); }
 
-  /* 适配的编码代理图标行（名单 = 客户端记忆面板「存储 Agent」下拉的运行时
-     注册表全集，13 家；图标拷贝自 gromang src/public/agent-icons） */
-  .agents-block .agents-row {
-    margin-top: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px;
+  /* hero 底部向下引导：浮动箭头提示下方还有特色功能介绍（tab 区），
+     点击锚点滚到 #features（html 已开 scroll-behavior: smooth） */
+  .scroll-hint {
+    display: flex; justify-content: center; margin-top: 36px;
+    color: var(--page-muted); opacity: .85; transition: color .15s ease;
   }
+  .scroll-hint:hover { color: var(--page-fg); }
+  .scroll-hint svg { animation: hint-bounce 2.2s ease-in-out infinite; }
+  @keyframes hint-bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-hint svg { animation: none; }
+  }
+
+  /* 适配的编码代理图标行（名单 = 客户端记忆面板「存储 Agent」下拉的运行时
+     注册表全集，按字母序 6 个一排、两排列对齐；图标拷贝自 gromang
+     src/public/agent-icons） */
+  .agents-block .agents-row {
+    margin-top: 0; display: grid; grid-template-columns: repeat(6, auto);
+    justify-content: start; column-gap: 18px; row-gap: 14px;
+  }
+  .agent-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
   .agents-row img { height: 20px; width: auto; display: block; opacity: .9; }
+  .agent-item span { font-size: 11px; color: var(--page-muted); line-height: 1; white-space: nowrap; }
 
   /* ---------- Sections ---------- */
   section { padding: 76px 0 0; }
@@ -496,6 +516,7 @@
 
   @media (max-width: 720px) {
     .feats { grid-template-columns: 1fr; }
+    .agents-block .agents-row { grid-template-columns: repeat(4, auto); justify-content: space-between; }
   }
 </style>
 </head>
@@ -583,21 +604,20 @@
         </p>
 
         <div class="agents-block">
-          <div class="block-label">已适配 13 家 agent</div>
+          <div class="block-label">已适配如下 Agent：</div>
           <div class="agents-row" aria-label="适配的编码代理">
-            <img src="agent-icons/claude_code.svg" alt="Claude Code" title="Claude Code" loading="lazy" decoding="async">
-            <img src="agent-icons/codex.svg" alt="Codex" title="Codex" loading="lazy" decoding="async">
-            <img src="agent-icons/gemini_cli.svg" alt="Gemini CLI" title="Gemini CLI" loading="lazy" decoding="async">
-            <img src="agent-icons/opencode.png" alt="OpenCode" title="OpenCode" loading="lazy" decoding="async">
-            <img src="agent-icons/hermes.png" alt="Hermes" title="Hermes" loading="lazy" decoding="async">
-            <img src="agent-icons/cursor.png" alt="Cursor" title="Cursor" loading="lazy" decoding="async">
-            <img src="agent-icons/github_copilot.png" alt="Copilot" title="Copilot" loading="lazy" decoding="async">
-            <img src="agent-icons/qwen_code.png" alt="Qwen Code" title="Qwen Code" loading="lazy" decoding="async">
-            <img src="agent-icons/kiro.svg" alt="Kiro" title="Kiro" loading="lazy" decoding="async">
-            <img src="agent-icons/codebuddy.svg" alt="CodeBuddy" title="CodeBuddy" loading="lazy" decoding="async">
-            <img src="agent-icons/deepseek-harness.png" alt="DSH" title="DSH" loading="lazy" decoding="async">
-            <img src="agent-icons/pi.svg" alt="Pi" title="Pi" loading="lazy" decoding="async">
-            <img src="agent-icons/zcode.png" alt="ZCode" title="ZCode" loading="lazy" decoding="async">
+            <div class="agent-item"><img src="agent-icons/claude_code.svg" alt="Claude Code" loading="lazy" decoding="async"><span>Claude Code</span></div>
+            <div class="agent-item"><img src="agent-icons/codebuddy.svg" alt="CodeBuddy" loading="lazy" decoding="async"><span>CodeBuddy</span></div>
+            <div class="agent-item"><img src="agent-icons/codex.svg" alt="Codex" loading="lazy" decoding="async"><span>Codex</span></div>
+            <div class="agent-item"><img src="agent-icons/github_copilot.png" alt="Copilot" loading="lazy" decoding="async"><span>Copilot</span></div>
+            <div class="agent-item"><img src="agent-icons/cursor.png" alt="Cursor" loading="lazy" decoding="async"><span>Cursor</span></div>
+            <div class="agent-item"><img src="agent-icons/deepseek-harness.png" alt="DSH" loading="lazy" decoding="async"><span>DSH</span></div>
+            <div class="agent-item"><img src="agent-icons/gemini_cli.svg" alt="Gemini CLI" loading="lazy" decoding="async"><span>Gemini CLI</span></div>
+            <div class="agent-item"><img src="agent-icons/hermes.png" alt="Hermes" loading="lazy" decoding="async"><span>Hermes</span></div>
+            <div class="agent-item"><img src="agent-icons/kiro.svg" alt="Kiro" loading="lazy" decoding="async"><span>Kiro</span></div>
+            <div class="agent-item"><img src="agent-icons/opencode.png" alt="OpenCode" loading="lazy" decoding="async"><span>OpenCode</span></div>
+            <div class="agent-item"><img src="agent-icons/pi.svg" alt="Pi" loading="lazy" decoding="async"><span>Pi</span></div>
+            <div class="agent-item"><img src="agent-icons/zcode.png" alt="ZCode" loading="lazy" decoding="async"><span>ZCode</span></div>
           </div>
         </div>
 
@@ -626,6 +646,10 @@
         </div>
       </div>
     </div>
+
+    <a class="scroll-hint" href="#features" aria-label="向下查看特色功能介绍">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+    </a>
   </section>
 
   <!-- ============================ 三大特色功能（Tab 切换） ============================ -->
@@ -654,7 +678,7 @@
           </div>
         </div>
         <p class="more">
-          <span>13 家 agent 接入</span><span>长跑任务托管</span><span>微信 · 钉钉渠道</span><span>扫码即连</span><span>PWA 远程审批</span>
+          <span>12 家 agent 接入</span><span>长跑任务托管</span><span>微信 · 钉钉渠道</span><span>扫码即连</span><span>PWA 远程审批</span>
         </p>
       </div>
 
