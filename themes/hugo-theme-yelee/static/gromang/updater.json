@@ -4,7 +4,7 @@
   "pub_date": "2026-10-28T03:27:16.085Z",
   "platforms": {
     "windows-x86_64": {
-      "url": "https://gitee.com/nicky-chin/gromang/releases/download/v1.0.4/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.4_x64-setup-x86_64.exe",
+      "url": "https://gitee.com/nicky-chin/gromang/releases/download/v1.0.4/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.4_x64-setup.exe",
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUOXBhVkEwM3h2QTl3VjMybXBlYnM3SkMyUzZrTE41OThMMnV5V1o2UmMrNHFaSEs3N3NmbG1DR3Z3RGJNNERqV1Q0U2syUkNkcWdMZ0pCNUxSZm1ydFJDVjFLbXZNTlE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTYzODgyCWZpbGU65Y+l6IqS5pm65YWDXzEuMC40X3g2NC1zZXR1cC5leGUKWFdEODJPaDI1SVhoZkorSDIyb1JubUdjSVBDaUFGVk54K0dqeGJBTlV6M2lGWGlWWEE2ekllakJlVGNmdTJnWmV0R3BTVUd0N2M0WTMzZnlpNUhJQWc9PQo="
     },
     "darwin-aarch64": {
