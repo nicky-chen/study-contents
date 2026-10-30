@@ -18,6 +18,7 @@
     --border: rgba(255, 255, 255, 0.1);
     --border-strong: rgba(255, 255, 255, 0.2);
     --code-bg: rgba(255, 255, 255, 0.06);
+    --accent: #60a5fa;
     --radius: 10px;
   }
   @media (prefers-color-scheme: light) {
@@ -30,6 +31,7 @@
       --border: rgba(0, 0, 0, 0.1);
       --border-strong: rgba(0, 0, 0, 0.22);
       --code-bg: rgba(0, 0, 0, 0.05);
+      --accent: #2563eb;
     }
   }
 
@@ -446,11 +448,18 @@
     vertical-align: middle;
   }
   .feat p { font-size: 13px; color: var(--page-muted); }
+  .feat p b { color: var(--page-fg); }
 
-  .more { margin-top: 16px; text-align: center; font-size: 13px; color: var(--page-muted); }
+  .more { margin-top: 16px; text-align: center; font-size: 13px; }
   .more span {
     display: inline-block; margin: 4px 4px 0; padding: 2px 10px;
-    border: 1px solid var(--border); border-radius: 999px; background: var(--card);
+    border: 1px solid rgba(59, 130, 246, 0.32); border-radius: 999px;
+    background: rgba(59, 130, 246, 0.08); color: var(--accent);
+    transition: background .15s ease, border-color .15s ease, transform .15s ease;
+  }
+  .more span:hover {
+    background: rgba(59, 130, 246, 0.18); border-color: rgba(59, 130, 246, 0.6);
+    transform: translateY(-1px);
   }
 
   /* ---------- 安装 ---------- */
@@ -527,8 +536,8 @@
   <section class="hero">
     <div class="hero-grid">
       <div class="hero-copy">
-        <h1>让 AI Agent<br>不需要人值守</h1>
-        <p class="sub">终端哨兵替你盯着每个代理会话：该批的权限立刻批，跑偏的任务及时拦，长跑任务托管到结束。</p>
+        <h1>让所有 AI Agent<br>都不需要人值守</h1>
+        <p class="sub">主流 Agent，一个应用接管：权限秒批、定时巡检、手机远程审批；供应商路由一键切换，顺手替掉 CC Switch；AI Neuron 牛人技能一键装，桌面伴侣常驻桌角，经验沉淀越用越懂你，网页上的活也接走。</p>
         <p class="meta"><span id="meta-version">v1.0.2</span> · <span id="pub-date">2026-10-20</span> 发布 · 支持 macOS 与 Windows</p>
 
         <div class="dl-row" id="download">
@@ -570,8 +579,7 @@
 
         <p class="dl-note">
           <span id="detectBanner" style="display:none">已为你选中 <b id="detectText">macOS</b> · </span>
-          <a href="https://gitee.com/nicky-chin/gromang/releases" target="_blank" rel="noopener">全部发行版</a> ·
-          <a id="dl-targz" href="https://gitee.com/nicky-chin/gromang/releases/download/v1.0.2/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz">备用格式</a>
+          <a href="https://gitee.com/nicky-chin/gromang/releases" target="_blank" rel="noopener">全部发行版</a>
         </p>
 
         <div class="agents-block">
@@ -596,10 +604,9 @@
         <div class="feature-jump">
           <div class="feature-label block-label"><span class="fd" aria-hidden="true">◆</span><span class="ft">特色功能介绍</span></div>
           <div class="items">
-            <a href="#tab-sentinel">终端哨兵</a><span aria-hidden="true">·</span>
-            <a href="#tab-memory">记忆共享</a><span aria-hidden="true">·</span>
-            <a href="#tab-browser">网页自动化</a><span aria-hidden="true">·</span>
-            <a href="#tab-mobile">移动端远程控制</a>
+            <a href="#tab-sentinel">智能哨兵</a><span aria-hidden="true">·</span>
+            <a href="#tab-memory">经验沉淀</a><span aria-hidden="true">·</span>
+            <a href="#tab-browser">网页自动化</a>
           </div>
         </div>
       </div>
@@ -621,97 +628,75 @@
     </div>
   </section>
 
-  <!-- ============================ 四大功能模块（Tab 切换） ============================ -->
+  <!-- ============================ 三大特色功能（Tab 切换） ============================ -->
   <section id="features">
     <div class="wrap">
       <div class="tabs" role="tablist" aria-label="功能模块">
-        <button class="tab" type="button" role="tab" id="tab-sentinel" aria-controls="panel-sentinel" aria-selected="true">Agent · 终端哨兵</button>
-        <button class="tab" type="button" role="tab" id="tab-memory" aria-controls="panel-memory" aria-selected="false">记忆共享</button>
+        <button class="tab" type="button" role="tab" id="tab-sentinel" aria-controls="panel-sentinel" aria-selected="true">智能哨兵</button>
+        <button class="tab" type="button" role="tab" id="tab-memory" aria-controls="panel-memory" aria-selected="false">经验沉淀</button>
         <button class="tab" type="button" role="tab" id="tab-browser" aria-controls="panel-browser" aria-selected="false">网页自动化</button>
-        <button class="tab" type="button" role="tab" id="tab-mobile" aria-controls="panel-mobile" aria-selected="false">移动端远程控制</button>
       </div>
 
       <div class="tab-panel" role="tabpanel" id="panel-sentinel" aria-labelledby="tab-sentinel">
-        <p class="lead">一个常驻的值守层：所有 AI 编码代理的会话都在它视野里，你只在真正需要人的时刻出现。</p>
+        <p class="lead">三类值守把「需要人回来」的时刻都接管掉：代理会话有人盯，定时业务有人巡，人不在电脑前也有人报。</p>
         <div class="feats">
           <div class="feat">
-            <h3><span class="k"></span>会话值守</h3>
-            <p>自动识别六类「需要人回来」的时刻（等待确认、报错、长跑结束…），直接推到你桌面。</p>
+            <h3><span class="k"></span>Agent 哨兵</h3>
+            <p><b>权限气泡</b>：请求弹成浮动卡片，全局快捷键随手 Allow / Deny，长跑任务可切自动放行，条条决策落审计；<b>会话一目了然</b>：桌宠旁的 HUD 与在线会话仪表盘抬头可见，一键跳回终端，额度环盯消耗，活动回顾只存本机。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>权限秒批</h3>
-            <p>权限请求弹气泡，批准 / 拒绝 / 始终允许一键决定；120 秒无响应自动拒绝，决策落审计表。</p>
+            <h3><span class="k"></span>值班哨兵</h3>
+            <p><b>定时巡检</b>：dutyctl 只读巡检服务状态与登录态（白名单命令），异常置顶成报告投递钉钉或留本机，写操作必须人工确认；<b>钉钉消息监控</b>：按过滤规则盯群消息，单事件 AI 分析定位问题，值班引擎托管与环境体检也在此。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>长跑 · 分级放权</h3>
-            <p>长命令跑完即通知，断了也能接着看；MCP 写操作默认 dry_run 必须人审，不再只有「全问」和「全放」。</p>
+            <h3><span class="k"></span>手机监控</h3>
+            <p><b>远程链路</b>：局域网 WebUI 扫码即连，手机装成 PWA；微信、钉钉里也能直接指挥 agent、接收提醒。<b>掌上值守</b>：会话进展实时可盯，权限请求推到手机一点审批，人不在电脑前也不误事。</p>
           </div>
         </div>
         <p class="more">
-          <span>13 家 agent 接入</span><span>账户级成本与容灾</span><span>模型路由</span><span>工具 · 技能编排</span><span>用量洞察</span><span>计划任务</span>
+          <span>13 家 agent 接入</span><span>长跑任务托管</span><span>微信 · 钉钉渠道</span><span>扫码即连</span><span>PWA 远程审批</span>
         </p>
       </div>
 
       <div class="tab-panel" role="tabpanel" id="panel-memory" aria-labelledby="tab-memory" hidden>
-        <p class="lead">一个跨 agent 的记忆池：gromang 记住的偏好与约定，你机器上其他编码代理也能读到——换个 CLI 不用从头教。</p>
+        <p class="lead">一次成功的过程不浪费：事实进记忆、套路进技能，agent 越用越懂你，也越用越能干。</p>
         <div class="feats">
           <div class="feat">
-            <h3><span class="k"></span>跨 agent 同池</h3>
-            <p>ZCode、Claude Code 等独立运行的 agent CLI，经 gromang-memory MCP 读写同一个记忆池，全局与项目两个作用域。</p>
+            <h3><span class="k"></span>记忆沉淀</h3>
+            <p><b>自动反思</b>：对话收尾自动提取跨会话事实——用户偏好、项目约定、环境怪癖，不用手动记笔记；<b>外部收割</b>：其他 agent 的会话定时扫描提炼，稳定度分级、自动整固去重。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>自动收割沉淀</h3>
-            <p>会话收尾自动反思提取跨会话事实——用户偏好、项目约定、环境怪癖，不用你手动记笔记。</p>
+            <h3><span class="k"></span>技能沉淀</h3>
+            <p><b>轨迹蒸馏</b>：任务跑完把执行轨迹蒸馏成候选技能；<b>评审分发</b>：草稿箱人工评审后采纳进中央技能库，勾选分发到各家 agent——每次成功干完一件事，都炼成可复用的技能。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>规则块 · 投影</h3>
-            <p>「先查再存」的会话纪律自动注入各 agent 全局规则；高价值条目投影进 AGENTS.md，每个新会话开箱即用。</p>
+            <h3><span class="k"></span>记忆外挂</h3>
+            <p><b>MCP 同池</b>：gromang-memory 把记忆池外挂给任意 CLI，ZCode、Claude Code 等注册即同池读写；<b>规则投影</b>：高价值条目投影进 AGENTS.md，换个 CLI 不用从头教。</p>
           </div>
         </div>
         <p class="more">
-          <span>记忆图谱</span><span>情景语料</span><span>稳定度分级</span><span>全局 · 项目作用域</span><span>共享只读视图</span>
+          <span>跨 agent 同池</span><span>稳定度自进化</span><span>轨迹蒸馏</span><span>技能草稿评审</span><span>AI Neuron 技能社区</span><span>全局 · 项目作用域</span>
         </p>
       </div>
 
       <div class="tab-panel" role="tabpanel" id="panel-browser" aria-labelledby="tab-browser" hidden>
-        <p class="lead">给 agent 一双会用浏览器的手：打开页面、读懂渲染结果、点击填写、截图取证，网页上的活也能交出去。</p>
+        <p class="lead">给 agent 一双会用浏览器的手：实时镜像可人工接管，无头任务可定时跑，全程审计可回放。</p>
         <div class="feats">
           <div class="feat">
             <h3><span class="k"></span>观察 → 行动循环</h3>
-            <p>以页面快照为事实依据构建定位再操作，动作前后都有观察，不靠盲猜选择器，点错率低、失败可自愈。</p>
+            <p><b>快照为据</b>：以页面快照为事实依据构建定位再操作，不靠盲猜选择器；<b>失败自愈</b>：动作前后都有观察，点错率低、错了能自己纠正。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>GUI 黑盒测试</h3>
-            <p>像真人一样从界面走场景：逐检查点截图留证，测试报告可回溯，适合当回归测试跑。</p>
+            <h3><span class="k"></span>登录态 · 凭证代填</h3>
+            <p><b>四种登录态</b>：专用 profile 手动登录、快照复用、CDP 接管已登录浏览器、cookie 导入；<b>凭证库代填</b>：账号密码一键代填，密码仅存本机。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>隔离运行</h3>
-            <p>浏览器跑在专用 worker 里，调试端口、模型凭据不暴露给页面，本地与远程站点都适用。</p>
+            <h3><span class="k"></span>模板 · 定时 · 审计</h3>
+            <p><b>六模板开箱用</b>：截图 / 提表格 / 翻页采集 / 填表提交 / 采集成报告 / 导出 Playwright 脚本；<b>无人值守</b>：可挂计划任务定时跑，录屏回放、命令流统计全程留痕。</p>
           </div>
         </div>
         <p class="more">
-          <span>导航</span><span>点击 · 表单填写</span><span>截图取证</span><span>本地与远程站点</span><span>端到端回归</span>
-        </p>
-      </div>
-
-      <div class="tab-panel" role="tabpanel" id="panel-mobile" aria-labelledby="tab-mobile" hidden>
-        <p class="lead">人不在电脑前也能管：手机扫码连上桌面端，会话进展与权限审批尽在掌中。</p>
-        <div class="feats">
-          <div class="feat">
-            <h3><span class="k"></span>扫码即连</h3>
-            <p>客户端生成二维码，手机扫一下完成登录并装成 PWA，不用在手机上输账号密码。</p>
-          </div>
-          <div class="feat">
-            <h3><span class="k"></span>会话监控</h3>
-            <p>手机上实时盯所有 agent 会话的进展，长跑任务跑到哪一步随时打开看。</p>
-          </div>
-          <div class="feat">
-            <h3><span class="k"></span>远程权限审批</h3>
-            <p>权限请求直接推到手机，批准 / 拒绝一点生效，任务不用卡在电脑前等你回来。</p>
-          </div>
-        </div>
-        <p class="more">
-          <span>PWA 安装</span><span>扫码登录</span><span>局域网 · 远程访问开关</span><span>与客户端同一前端</span>
+          <span>GUI 黑盒回归</span><span>浏览器隔离运行</span><span>本地与远程站点</span><span>写操作预审放行</span>
         </p>
       </div>
     </div>
@@ -759,20 +744,16 @@
       <div class="feat-group-label">特色功能（点击查看介绍）</div>
       <div class="feat-grid">
         <a class="feat-card hl" href="#tab-sentinel">
-          <h4>Agent · 终端哨兵<span class="feat-tag">特色</span></h4>
-          <p>识别六类「需要人回来」的时刻：权限秒批、长跑托管、决策审计，你只在关键节点出现。</p>
+          <h4>智能哨兵<span class="feat-tag">特色</span></h4>
+          <p>Agent 哨兵权限气泡秒批、值班哨兵定时巡检 + 钉钉消息盯防、微信 / 钉钉 / 手机多链路远程审批——「需要人回来」的时刻都接管掉。</p>
         </a>
         <a class="feat-card hl" href="#tab-memory">
-          <h4>记忆共享<span class="feat-tag">特色</span></h4>
-          <p>跨 agent 记忆池：偏好与约定一处沉淀，ZCode、Claude Code 等 CLI 共用，自动收割免手记。</p>
+          <h4>经验沉淀<span class="feat-tag">特色</span></h4>
+          <p>事实进记忆、套路进技能：自动反思提取、外部会话收割、轨迹蒸馏成技能，再经 MCP 外挂给任意 CLI 共用。</p>
         </a>
         <a class="feat-card hl" href="#tab-browser">
           <h4>网页自动化<span class="feat-tag">特色</span></h4>
-          <p>观察 → 行动循环 + 截图取证，让 agent 真正会用浏览器干活，还能跑 GUI 回归测试。</p>
-        </a>
-        <a class="feat-card hl" href="#tab-mobile">
-          <h4>移动端远程控制<span class="feat-tag">特色</span></h4>
-          <p>手机扫码连上桌面端，会话监控与权限审批随身携带，人不在电脑前也不误事。</p>
+          <p>观察 → 行动循环 + 登录态代填 + 定时无人值守，录屏回放全程留痕，网页上的活也能交出去。</p>
         </a>
       </div>
 
@@ -792,7 +773,7 @@
         </div>
         <div class="feat-card">
           <h4>技能与工具</h4>
-          <p>技能市场一键安装；MCP 内置 / 本机 / 市场三分区管理，桥接 MCP 把 HTTP、Dubbo、命令包成工具。</p>
+          <p>技能市场与 AI Neuron 社区一键安装；MCP 内置 / 本机 / 市场三分区管理，桥接 MCP 把 HTTP、Dubbo、命令包成工具。</p>
         </div>
         <div class="feat-card">
           <h4>计划任务</h4>
@@ -818,11 +799,11 @@
 <script>
   (function () {
     /* ============ 功能模块 Tab ============
-       四个 panel 单选显示；hash（#tab-memory 等）是唯一状态源——tab 点击、
+       三个 panel 单选显示；hash（#tab-memory 等）是唯一状态源——tab 点击、
        下载区模块链接、刷新/前进后退（hashchange）都收敛到 selectTab。
-       dl-note 的四个模块链接靠浏览器原生锚点滚动到 tab 栏，再由
+       feature-jump 的三个模块链接靠浏览器原生锚点滚动到 tab 栏，再由
        hashchange 完成切换。 */
-    var FEATURE_TABS = ['sentinel', 'memory', 'browser', 'mobile'];
+    var FEATURE_TABS = ['sentinel', 'memory', 'browser'];
 
     function selectTab(name) {
       if (FEATURE_TABS.indexOf(name) === -1) name = 'sentinel';
@@ -945,7 +926,6 @@
     var dl = {
       arm:   { ver: '1.0.2', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.2/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.2_aarch64.dmg' },
       x64:   { ver: '1.0.2', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.2/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.2_x86_64.dmg' },
-      targz: { ver: '1.0.2', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.2/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-aarch64.app.tar.gz' },
       win:   { ver: '1.0.2', url: 'https://gitee.com/nicky-chin/gromang/releases/download/v1.0.2/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83_1.0.2_x64-setup-x86_64.exe' },
       latestTag: 'v1.0.2',
       pubDate: '2026-10-20'
@@ -962,7 +942,6 @@
     function applyDl() {
       if ($('dl-mac-arm')) $('dl-mac-arm').href = dl.arm.url;
       if ($('dl-mac-x64')) $('dl-mac-x64').href = dl.x64.url;
-      if ($('dl-targz')) $('dl-targz').href = dl.targz.url;
       if ($('dl-win')) $('dl-win').href = dl.win.url;
       if ($('dl-win-item')) $('dl-win-item').href = dl.win.url;
       if ($('meta-version')) $('meta-version').textContent = dl.latestTag;
@@ -1000,7 +979,6 @@
       var enc = encodeURIComponent;
       dl.arm = { ver: u.version, url: base + enc('句芒智元_' + u.version + '_aarch64.dmg') };
       dl.x64 = { ver: u.version, url: base + enc('句芒智元_' + u.version + '_x86_64.dmg') };
-      dl.targz = { ver: u.version, url: armUrl };
       // exe 直读 windows-x86_64 条目（产物名带 -x86_64 后缀，推导必错）；
       // 个别版本缺该条目时退回短名推导兜底
       var winUrl = (plat['windows-x86_64'] || {}).url;
