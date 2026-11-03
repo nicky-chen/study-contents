@@ -704,23 +704,23 @@
       </div>
 
       <div class="tab-panel" role="tabpanel" id="panel-browser" aria-labelledby="tab-browser" hidden>
-        <p class="lead">给 agent 一双会用浏览器的手：实时镜像可人工接管，无头任务可定时跑，全程审计可回放。</p>
+        <p class="lead">两条路任选：让 Agent 现场观察着干，或自己录一遍、之后零 token 确定性回放——登录态、参数、定时回归全套齐。</p>
         <div class="feats">
           <div class="feat">
             <h3><span class="k"></span>观察 → 行动循环</h3>
             <p><b>快照为据</b>：以页面快照为事实依据构建定位再操作，不靠盲猜选择器；<b>失败自愈</b>：动作前后都有观察，点错率低、错了能自己纠正。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>登录态 · 凭证代填</h3>
-            <p><b>四种登录态</b>：专用 profile 手动登录、快照复用、CDP 接管已登录浏览器、cookie 导入；<b>凭证库代填</b>：账号密码一键代填，密码仅存本机。</p>
+            <h3><span class="k"></span>手动录制 · 回放</h3>
+            <p><b>录一遍就能重跑</b>：自己操作浏览器，拾取模式点选元素插检查点，录成可回放的 E2E 流程；<b>零 token 回归</b>：确定性重放不派 Agent，页面不变结果恒定，断言编辑器改期望值即可，一条流程还能 × N 行参数跑数据驱动。</p>
           </div>
           <div class="feat">
-            <h3><span class="k"></span>模板 · 定时 · 审计</h3>
-            <p><b>六模板开箱用</b>：截图 / 提表格 / 翻页采集 / 填表提交 / 采集成报告 / 导出 Playwright 脚本；<b>无人值守</b>：可挂计划任务定时跑，录屏回放、命令流统计全程留痕。</p>
+            <h3><span class="k"></span>登录态 · 调度</h3>
+            <p><b>登录态快照</b>：cookies 与 localStorage 按站点存快照（最小权限），回放任务绑定注入，免反复登录；<b>定时回归</b>：回放任务挂计划调度、带执行历史，CI 可导出 Playwright 脚本或原生运行器，失败自动留诊断包一键出 Bug 单。</p>
           </div>
         </div>
         <p class="more">
-          <span>GUI 黑盒回归</span><span>浏览器隔离运行</span><span>本地与远程站点</span><span>写操作预审放行</span>
+          <span>录制 · 回放</span><span>零 token 回归</span><span>数据驱动</span><span>登录态快照</span><span>CI 双轨导出</span><span>失败诊断包</span>
         </p>
       </div>
     </div>
@@ -777,7 +777,7 @@
         </a>
         <a class="feat-card hl" href="#tab-browser">
           <h4>网页自动化<span class="feat-tag">特色</span></h4>
-          <p>观察 → 行动循环 + 登录态代填 + 定时无人值守，录屏回放全程留痕，网页上的活也能交出去。</p>
+          <p>Agent 现场观察行动，或手动录制后零 token 确定性回放：登录态快照、数据驱动、定时回归与 CI 导出双轨，网页上的活和 E2E 测试一起交出去。</p>
         </a>
       </div>
 
