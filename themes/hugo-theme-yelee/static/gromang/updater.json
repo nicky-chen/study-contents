@@ -122,7 +122,7 @@
         "id": "HyperdimensionNeptunia/vert_classic",
         "name": "贝儿经典装",
         "version": "1.0.0",
-        "url": "https://nicky-chin.cn/gromang/pet-themes/vert_classic.zip",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/vert_classic.zip",
         "sha256": "2f28ac6045e78b847ee0284af5f5129b056e7441e87e05490ba3f8e50ff8ad15",
         "size": 3316888,
         "licenseNote": "角色版权：Idea Factory / Compile Heart"
@@ -131,7 +131,7 @@
         "id": "HyperdimensionNeptunia/blanc_normal",
         "name": "布兰",
         "version": "1.0.0",
-        "url": "https://nicky-chin.cn/gromang/pet-themes/blanc_normal.zip",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/blanc_normal.zip",
         "sha256": "19db5023516e46af7a2f793e7dbca9d6f6190165b50d10bb9b74523fb189ff03",
         "size": 1732950,
         "licenseNote": "角色版权：Idea Factory / Compile Heart"
@@ -140,7 +140,7 @@
         "id": "HyperdimensionNeptunia/noir_santa",
         "name": "圣诞诺瓦",
         "version": "1.0.0",
-        "url": "https://nicky-chin.cn/gromang/pet-themes/noir_santa.zip",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/noir_santa.zip",
         "sha256": "f20a168ac67aec7ed3383da8b29a26d55be81f54b485dede8aa0b5c7be2456e1",
         "size": 2506019,
         "licenseNote": "角色版权：Idea Factory / Compile Heart"
