@@ -15,5 +15,110 @@
       "url": "https://gitee.com/nicky-chin/gromang/releases/download/v1.0.4/%E5%8F%A5%E8%8A%92%E6%99%BA%E5%85%83-x86_64.app.tar.gz",
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUOXBhVkEwM3h2QXcxQVN5bzJzZVFVOXhMN3lUNlM3V01GMG04WmkxRTBLaDBKY2VENTlaZHFQNDhpWVg1M3l3UnJrNTkrVFVxZDZuR0tOcmZveUNmWXF4M2ZnTS9nNGdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkzMTU3NzQ5CWZpbGU65Y+l6IqS5pm65YWDLmFwcC50YXIuZ3oKWlJMUTMvQXNCR0hQWk9tY2VBWjcxTjVQYXBKZk9HczlldFB6Yld0Qi93a1pWM1ZoRlJ1azZYZGFvbTVxYTVmd2lJTm9wRVlWNWxzdDBRbmZac3ZkRGc9PQo="
     }
+  },
+  "petThemes": {
+    "notice": "主题仅供个人学习使用，禁止商业用途",
+    "themes": [
+      {
+        "id": "HyperdimensionNeptunia/neptune_santa",
+        "name": "圣诞涅普",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/neptune_santa.zip",
+        "sha256": "30c4166b593daad6b73e1cd3157148dc29fcc0d4a74d35b905586f07babe0431",
+        "size": 2175260,
+        "licenseNote": "角色版权：Idea Factory / Compile Heart"
+      },
+      {
+        "id": "HyperdimensionNeptunia/noir",
+        "name": "诺瓦",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/noir.zip",
+        "sha256": "41c6c0c2a454805cb111ad71d53b44c580069eef81d192fefb8df80a4cb0b237",
+        "size": 2109400,
+        "licenseNote": "角色版权：Idea Factory / Compile Heart"
+      },
+      {
+        "id": "HyperdimensionNeptunia/vert_normal",
+        "name": "贝儿",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/vert_normal.zip",
+        "sha256": "ad8ccc4da87ac84462d2b0fc779895d85f397aa7c0936855758d91c665caef64",
+        "size": 2600505,
+        "licenseNote": "角色版权：Idea Factory / Compile Heart"
+      },
+      {
+        "id": "HyperdimensionNeptunia/nepgear",
+        "name": "涅普gear",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/nepgear.zip",
+        "sha256": "f68fb62b270dcf453db909a31eee10c653abeb6f0c0302be3795fe1ea4cf8ada",
+        "size": 2240643,
+        "licenseNote": "角色版权：Idea Factory / Compile Heart"
+      },
+      {
+        "id": "HyperdimensionNeptunia/nepmaid",
+        "name": "女仆涅普",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/nepmaid.zip",
+        "sha256": "d0f90e691a1e42d701782aaa8a0fcabf1bd8b07db979d9eca837659cfb9218f8",
+        "size": 2277890,
+        "licenseNote": "角色版权：Idea Factory / Compile Heart"
+      },
+      {
+        "id": "HyperdimensionNeptunia/histoire",
+        "name": "历史教母",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/histoire.zip",
+        "sha256": "7738a0f0dc0f06f8d49b39bc0ff574a8744392c5e723d35644587306ae07ad9a",
+        "size": 2250056,
+        "licenseNote": "角色版权：Idea Factory / Compile Heart"
+      },
+      {
+        "id": "HyperdimensionNeptunia/nepnep",
+        "name": "涅普",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/nepnep.zip",
+        "sha256": "39e4fd2984895cf83b5e4806539e543a8499e12a3c2eedc275c2d0f9c8634a79",
+        "size": 2443726,
+        "licenseNote": "角色版权：Idea Factory / Compile Heart"
+      },
+      {
+        "id": "Potion-Maker/Tia",
+        "name": "蒂亚",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/Tia.zip",
+        "sha256": "2accb918db35142d9111b4192da52f6645b0d66706d7a5bde6826b77d3559b43",
+        "size": 507972,
+        "licenseNote": "角色版权：Sinsiroad（Potion Maker）"
+      },
+      {
+        "id": "Potion-Maker/Pio",
+        "name": "皮奥",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/Pio.zip",
+        "sha256": "d094b832781068aedade49ce41d24605a80e61e0a8a4964c3d5b2ba8939472eb",
+        "size": 475151,
+        "licenseNote": "角色版权：Sinsiroad（Potion Maker）"
+      },
+      {
+        "id": "KantaiCollection/murakumo",
+        "name": "丛云",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/murakumo.zip",
+        "sha256": "73e88d126aefba3706eaea3be9628a970ab52e65fd0023aa37510633187b092a",
+        "size": 952217,
+        "licenseNote": "角色版权：DMM Games / C2 机关"
+      },
+      {
+        "id": "bilibili-live/22",
+        "name": "22娘",
+        "version": "1.0.0",
+        "url": "https://gitee.com/nicky-chin/gromang/raw/master/pet-themes/22.zip",
+        "sha256": "b5b7a58a538050cfe2dea79986fd1ddc29f865d56f8adacdfbbdb0fa7590e5af",
+        "size": 2435360,
+        "licenseNote": "形象版权：bilibili"
+      }
+    ],
+    "updatedAt": "2026-11-12T05:04:39.431Z"
   }
 }
