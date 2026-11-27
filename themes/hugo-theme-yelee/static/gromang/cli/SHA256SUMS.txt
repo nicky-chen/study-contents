@@ -1,3 +1,0 @@
-ce8ccdead808500229e8bad8170cf236f57480b08d70ecc144ceff37322cb207  gromang-cli-v0.1.0-darwin-arm64.7z
-6fef521e300981d4d113a2f93e79dd68f35e2fa20da983584bc2fb463fc5da41  gromang-cli-v0.1.0-darwin-x64.7z
-441c47c56bd9a1b085ebcc027dee91e172c0bc77480726f55625ff3da79306ca  gromang-cli-v0.1.0-windows-x64.7z
